@@ -10,6 +10,7 @@ Public Class frmPrincipal2
 
         oVentana.cambia_fondoMDI(Me)
 
+
         institucion = My.Settings.institucion
         organizacion = My.Settings.institucion
         Me.Text = My.Settings.institucion
