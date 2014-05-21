@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsCobrosAdelantado" targetNamespace="http://www.tempuri.org/dsCobrosAdelantado.xsd" xmlns:mstns="http://www.tempuri.org/dsCobrosAdelantado.xsd" xmlns="http://www.tempuri.org/dsCobrosAdelantado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsCobrosAdelantado" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="cobros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cobro" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_mat" type="xs:decimal" />
+              <xs:element name="carnet" type="xs:string" />
+              <xs:element name="concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="mes" type="xs:int" minOccurs="0" />
+              <xs:element name="recibo" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_recibo" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="generado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="multa" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cobros" />
+      <xs:field xpath="mstns:id_cobro" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

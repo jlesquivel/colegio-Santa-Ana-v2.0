@@ -1,0 +1,119 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsPlanilla" targetNamespace="http://www.tempuri.org/dsPlanilla.xsd" xmlns:mstns="http://www.tempuri.org/dsPlanilla.xsd" xmlns="http://www.tempuri.org/dsPlanilla.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsPlanilla" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="puesto_empleado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_puesto" type="xs:decimal" />
+              <xs:element name="id_emp" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="departamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_dpto" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="descripcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="puestos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_puesto" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_dpto" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="forma_pago" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tabla_valores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_rubro" type="xs:decimal" />
+              <xs:element name="valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="minimo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="maximo" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="categorias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cat" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="salario_base" type="xs:decimal" />
+              <xs:element name="anualidad" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_emp" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="apellidos" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="categoria" type="xs:decimal" />
+              <xs:element name="nacimiento" type="xs:dateTime" />
+              <xs:element name="cuenta" type="xs:string" />
+              <xs:element name="ingreso" type="xs:dateTime" />
+              <xs:element name="banco" type="xs:string" />
+              <xs:element name="direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="celular" type="xs:string" minOccurs="0" />
+              <xs:element name="sexo" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rubros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rubro" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="categoria" type="xs:string" />
+              <xs:element name="formula" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:puesto_empleado" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="departamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:departamento" />
+      <xs:field xpath="mstns:id_dpto" />
+    </xs:unique>
+    <xs:unique name="puestos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:puestos" />
+      <xs:field xpath="mstns:id_puesto" />
+    </xs:unique>
+    <xs:unique name="tabla_valores_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tabla_valores" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="categorias_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:categorias" />
+      <xs:field xpath="mstns:id_cat" />
+    </xs:unique>
+    <xs:unique name="empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:empleados" />
+      <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+    <xs:unique name="rubros_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rubros" />
+      <xs:field xpath="mstns:id_rubro" />
+    </xs:unique>
+    <xs:keyref name="categoriasempleados" refer="categorias_Constraint1">
+      <xs:selector xpath=".//mstns:empleados" />
+      <xs:field xpath="mstns:categoria" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

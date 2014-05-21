@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Este archivo lo genera de forma automática el diseñador de esquemas XML. Contiene información de diseño para componentes de la superficie de diseño.-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-1213" viewPortTop="-6000" zoom="100">
+    <puesto_empleado_XmlElement left="7276" top="-1879" width="5292" height="2540" selected="0" zOrder="0" index="0" expanded="1" />
+    <departamento_XmlElement left="-212" top="-5318" width="5292" height="2540" selected="0" zOrder="1" index="1" expanded="1" />
+    <puestos_XmlElement left="6959" top="-5424" width="5291" height="2963" selected="0" zOrder="3" index="2" expanded="1" />
+    <tabla_valores_XmlElement left="13123" top="-5080" width="5292" height="3387" selected="0" zOrder="4" index="3" expanded="1" />
+    <rubros_XmlElement left="13123" top="-847" width="5292" height="3387" selected="0" zOrder="5" index="4" expanded="1" />
+    <categorias_XmlElement left="7486" top="2088" width="5292" height="2964" selected="0" zOrder="6" index="5" expanded="1" />
+    <empleados_XmlElement left="-160" top="-1722" width="5292" height="6774" selected="0" zOrder="8" index="6" expanded="1" />
+    <categoriasempleados_XmlKeyref left="6058" top="2366" width="503" height="503" selected="0" zOrder="10" />
+</XSDDesignerLayout>

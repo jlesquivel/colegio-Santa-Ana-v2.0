@@ -1,0 +1,181 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="ds2planilla" targetNamespace="http://www.tempuri.org/ds2planilla.xsd" xmlns:mstns="http://www.tempuri.org/ds2planilla.xsd" xmlns="http://www.tempuri.org/ds2planilla.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="ds2planilla" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="categorias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_cat" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="salario_base" type="xs:decimal" />
+              <xs:element name="anualidad" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="perfil_rubros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_emp" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="apellidos" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="categoria" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nacimiento" type="xs:dateTime" />
+              <xs:element name="cuenta" type="xs:string" />
+              <xs:element name="ingreso" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="banco" type="xs:string" />
+              <xs:element name="direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="celular" type="xs:string" minOccurs="0" />
+              <xs:element name="sexo" type="xs:unsignedByte" />
+              <xs:element name="anualidadReconocida" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="empleado_rubro">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_rubro" type="xs:decimal" />
+              <xs:element name="id_contrato" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="planillas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_planilla" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="fecha_ini" type="xs:dateTime" />
+              <xs:element name="fecha_fin" type="xs:dateTime" />
+              <xs:element name="id_dpto" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlanillaPagoSelect">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_contrato" type="xs:decimal" />
+              <xs:element name="id_pagos" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="apellidos" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="id_cat" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombreCat" type="xs:string" />
+              <xs:element name="salario_base" type="xs:decimal" />
+              <xs:element name="cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="anualidadReconocida" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Expr1" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_emp" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pagos_detalle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="categoria" type="xs:string" />
+              <xs:element name="formula" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="cantidad" type="xs:decimal" />
+              <xs:element name="monto" type="xs:decimal" />
+              <xs:element name="id_rubro" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="contratos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_contrato" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="fecha_ini" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NombCat" type="xs:string" />
+              <xs:element name="DiasVigente" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+              <xs:element name="id_cat" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlanillaResumenMontos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rubro" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="monto" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+              <xs:element name="categoria" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rubros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rubro" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="categoria" type="xs:string" />
+              <xs:element name="formula" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="v_empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_emp" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="nombre" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:categorias" />
+      <xs:field xpath="mstns:id_cat" />
+    </xs:unique>
+    <xs:unique name="perfil_rubros_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:perfil_rubros" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:empleados" />
+      <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+    <xs:unique name="empleado_rubro_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:empleado_rubro" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="planillas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:planillas" />
+      <xs:field xpath="mstns:id_planilla" />
+    </xs:unique>
+    <xs:unique name="PlanillaPagoSelect_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlanillaPagoSelect" />
+      <xs:field xpath="mstns:id_pagos" />
+      <xs:field xpath="mstns:id_cat" />
+      <xs:field xpath="mstns:Expr1" />
+      <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+    <xs:unique name="pagos_detalle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pagos_detalle" />
+      <xs:field xpath="mstns:id_rubro" />
+    </xs:unique>
+    <xs:unique name="contratos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:contratos" />
+      <xs:field xpath="mstns:id_contrato" />
+      <xs:field xpath="mstns:id_cat" />
+    </xs:unique>
+    <xs:unique name="rubros_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rubros" />
+      <xs:field xpath="mstns:id_rubro" />
+    </xs:unique>
+    <xs:unique name="v_empleados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_empleados" />
+      <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

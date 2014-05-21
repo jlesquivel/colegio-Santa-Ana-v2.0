@@ -1,0 +1,105 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsCuotas" targetNamespace="http://www.tempuri.org/dsCuotas.xsd" xmlns:mstns="http://www.tempuri.org/dsCuotas.xsd" xmlns="http://www.tempuri.org/dsCuotas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsCuotas" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="matricula">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="carnet" type="xs:string" minOccurs="0" />
+              <xs:element name="ano" type="xs:string" minOccurs="0" />
+              <xs:element name="encargado" type="xs:string" minOccurs="0" />
+              <xs:element name="nivel" type="xs:string" minOccurs="0" />
+              <xs:element name="grupo" type="xs:string" minOccurs="0" />
+              <xs:element name="monto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="poliza" type="xs:decimal" minOccurs="0" />
+              <xs:element name="beca" type="xs:decimal" minOccurs="0" />
+              <xs:element name="id_mat" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cuotas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descripcion" type="xs:string" />
+              <xs:element name="monto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bncr">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="banco" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="empresa" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="convenio" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="borra" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="tipo_id" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="carnet" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="moneda" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="llave" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="periodo" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="vencimiento" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="exp_recauda" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="monto" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="comision" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="FACTURA" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="SELF" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="RUBROS" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="puestos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_puesto" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="id_dpto" type="xs:decimal" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="forma_pago" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cargar_pagos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tipo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="empresa" type="xs:decimal" minOccurs="0" />
+              <xs:element name="convenio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="banco" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="factura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="verificacion" type="xs:decimal" minOccurs="0" />
+              <xs:element name="moneda" type="xs:decimal" minOccurs="0" />
+              <xs:element name="llave" type="xs:string" minOccurs="0" />
+              <xs:element name="periodo" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="monto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pago" type="xs:decimal" minOccurs="0" />
+              <xs:element name="comision" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Banco_cheque" type="xs:decimal" minOccurs="0" />
+              <xs:element name="No_cuenta_banco" type="xs:decimal" minOccurs="0" />
+              <xs:element name="No_cheque_otro_banco" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cliente" type="xs:string" minOccurs="0" />
+              <xs:element name="operacion" type="xs:string" minOccurs="0" />
+              <xs:element name="archivo" type="xs:string" minOccurs="0" />
+              <xs:element name="deposito" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:matricula" />
+      <xs:field xpath="mstns:id_mat" />
+    </xs:unique>
+    <xs:unique name="cuotas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cuotas" />
+      <xs:field xpath="mstns:descripcion" />
+    </xs:unique>
+    <xs:unique name="puestos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:puestos" />
+      <xs:field xpath="mstns:id_puesto" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

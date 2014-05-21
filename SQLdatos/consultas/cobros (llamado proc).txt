@@ -1,0 +1,122 @@
+-- rellena el string valor con 0 a la izquierda y deja el LARGO ESPECIFICADO
+
+CREATE FUNCTION dbo.rellenar(@valor as decimal, @largo int, @pres int)  
+RETURNS varchar(20)  AS  
+BEGIN 
+	return left(replace(str(@valor,@largo,@pres),' ','0'),@largo)
+END
+
+
+
+*******************************
+
+
+CREATE PROCEDURE actualiza_multas	AS
+
+-- actualiza  multas
+UPDATE cobros
+    SET  multa= m.multa
+    FROM cobros c, multas_monto m
+    WHERE c.id_cobro = m.id_cobro
+GO
+
+
+**********************************
+
+CREATE PROCEDURE cobro 
+	@anno varchar(4),
+	@mes int,
+	@concepto varchar(15)  AS
+
+declare @v1 varchar(15)
+declare @v2 datetime
+
+-- genera nuevos cobros
+INSERT cobros (carnet,concepto,mes,recibo,fecha_recibo,monto,generado,id_mat)  
+	SELECT matricula.carnet,  @concepto as concepto, @mes as mes, @v1 as recibo , @v2 as fecha_recibo,
+	 niveles.cobros * (1 - matricula.beca / 100) AS monto,  getdate() as generado, matricula.id_mat
+	FROM matricula INNER JOIN niveles ON matricula.nivel = niveles.nivel 
+	WHERE (matricula.ano = @anno)
+GO
+
+*******************************************
+CREATE PROCEDURE crea_notas 
+	@periodo varchar(1),
+	@anno varchar(4) AS
+	
+INSERT notas (id_mat,periodo,materia,generado)  
+
+SELECT TOP 100 PERCENT dbo.matricula.id_mat,@periodo as periodo, dbo.materias_nivel.materia ,getdate() as generado
+FROM  dbo.matricula INNER JOIN
+               dbo.materias_nivel ON dbo.matricula.nivel = dbo.materias_nivel.nivel
+WHERE (dbo.matricula.ano = @anno)
+ORDER BY dbo.matricula.id_mat
+
+GO
+
+********************************************  VISTAS
+
+CREATE VIEW dbo.bncr
+AS
+SELECT     '0151' AS banco, '000' AS empresa, '000' AS convenio, '0' AS borra, '001' AS tipo_id, LEFT(dbo.cobros.carnet + SPACE(30), 30) AS carnet, 
+                      LEFT(dbo.estudiantes.nombre + ' ' + dbo.estudiantes.apellido1 + ' ' + dbo.estudiantes.apellido2 + SPACE(60), 50) AS nombre, '001' AS moneda, 
+                      LEFT(dbo.cobros.carnet + SPACE(30), 30) AS llave, LEFT('00' + STR(YEAR(dbo.cobros.generado), 4) + REPLACE(STR(dbo.cobros.mes, 2), ' ', '0') + '  ', 8) 
+                      AS periodo, LEFT(STR(YEAR(dbo.cobros.generado), 4) + LEFT(REPLACE(STR(CAST(dbo.cobros.mes AS int(2)) + 1, 2), ' ', '0') + '15', 8), 8) AS vencimiento,
+                       LEFT(STR(YEAR(dbo.cobros.generado), 4) + LEFT(REPLACE(STR(CAST(dbo.cobros.mes AS int(2)) + 1, 2), ' ', '0') + '15', 8), 8) AS exp_recauda, 
+                      LEFT(dbo.rellenar(dbo.cobros.monto, 17, 2), 17) AS monto, LEFT(dbo.rellenar(dbo.cobros.monto * 0.10, 17, 2), 17) AS comision, 
+                      dbo.rellenar(dbo.cobros.id_cobro, 20, 0) AS FACTURA, '0' AS SELF, '00' AS RUBROS
+FROM         dbo.cobros INNER JOIN
+                      dbo.estudiantes ON dbo.cobros.carnet = dbo.estudiantes.carnet
+
+*************
+
+
+CREATE VIEW dbo.cuenta_matriculas
+AS
+SELECT     COUNT(*) AS Expr1, carnet
+FROM         dbo.matricula
+GROUP BY carnet
+
+***************************
+
+CREATE VIEW dbo.mul1
+AS
+SELECT     TOP 100 PERCENT CAST(SUBSTRING(descripcion, 5, 3) AS int) - 30 AS inicio, CAST(SUBSTRING(descripcion, 5, 3) AS int) - 1 AS fin, monto
+FROM         dbo.cuotas
+WHERE     (SUBSTRING(descripcion, 1, 3) = 'MUL')
+ORDER BY inicio
+
+***************************
+CREATE VIEW dbo.mul2
+AS
+SELECT     TOP 1 CAST(SUBSTRING(descripcion, 5, 3) AS int) AS inicio, 99999 AS fin, monto
+FROM         dbo.cuotas
+WHERE     (SUBSTRING(descripcion, 1, 3) = 'MUL')
+ORDER BY CAST(SUBSTRING(descripcion, 5, 3) AS int) DESC
+
+*****************************
+
+CREATE VIEW dbo.multas
+AS
+SELECT     *
+FROM         dbo.mul1
+UNION
+SELECT     *
+FROM         dbo.mul2
+
+
+*********************************
+
+
+CREATE VIEW dbo.multas_monto
+AS
+SELECT     dbo.cobros.id_cobro, dbo.cobros.monto * dbo.multas.monto AS multa
+FROM         dbo.cobros CROSS JOIN
+                      dbo.multas
+WHERE     (DATEDIFF(day, CAST('01/' + dbo.rellenar(CAST(dbo.cobros.mes AS varchar), 2, 0) + '/' + CAST(YEAR(dbo.cobros.generado) AS varchar) AS datetime), 
+                      GETDATE()) BETWEEN dbo.multas.inicio AND dbo.multas.fin)
+
+
+
+
+

@@ -1,0 +1,14 @@
+CREATE PROCEDURE cobro 
+	@anno varchar(4),
+	@mes int,
+	@concepto varchar(15)  AS
+
+declare @v1 varchar(15)
+declare @v2 datetime
+
+INSERT cobros (carnet,concepto,mes,recibo,fecha_recibo,monto,generado,id_mat)  
+	SELECT matricula.carnet,  @concepto as concepto, @mes as mes, @v1 as recibo , @v2 as fecha_recibo,
+	 niveles.cobros * (1 - matricula.beca / 100) AS monto,  getdate() as generado, matricula.id_mat
+	FROM matricula INNER JOIN niveles ON matricula.nivel = niveles.nivel 
+	WHERE (matricula.ano = @anno)
+GO

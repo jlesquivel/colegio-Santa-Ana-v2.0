@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="DataSet21.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 17</value>
+  </metadata>
+  <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>359, 17</value>
+  </metadata>
+  <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlDeleteCommand2.CommandText" xml:space="preserve">
+    <value>DELETE FROM [matricula] WHERE (([carnet] = @Original_carnet) AND ([ano] = @Original_ano) AND ([nivel] = @Original_nivel) AND ([grupo] = @Original_grupo) AND ([monto] = @Original_monto) AND ([poliza] = @Original_poliza) AND ([beca] = @Original_beca) AND ([id_mat] = @Original_id_mat) AND ((@IsNull_recibo = 1 AND [recibo] IS NULL) OR ([recibo] = @Original_recibo)) AND ([bingo] = @Original_bingo) AND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)) AND ((@IsNull_cuaderno = 1 AND [cuaderno] IS NULL) OR ([cuaderno] = @Original_cuaderno)))</value>
+  </data>
+  <metadata name="SqlConnection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>487, 17</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [matricula] ([carnet], [ano], [nivel], [grupo], [monto], [poliza], [beca], [recibo], [bingo], [fecha], [cuaderno]) VALUES (@carnet, @ano, @nivel, @grupo, @monto, @poliza, @beca, @recibo, @bingo, @fecha, @cuaderno);
+SELECT carnet, ano, nivel, grupo, monto, poliza, beca, id_mat, recibo, bingo, fecha, cuaderno FROM matricula WHERE (id_mat = SCOPE_IDENTITY())</value>
+  </data>
+  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [matricula] SET [carnet] = @carnet, [ano] = @ano, [nivel] = @nivel, [grupo] = @grupo, [monto] = @monto, [poliza] = @poliza, [beca] = @beca, [recibo] = @recibo, [bingo] = @bingo, [fecha] = @fecha, [cuaderno] = @cuaderno WHERE (([carnet] = @Original_carnet) AND ([ano] = @Original_ano) AND ([nivel] = @Original_nivel) AND ([grupo] = @Original_grupo) AND ([monto] = @Original_monto) AND ([poliza] = @Original_poliza) AND ([beca] = @Original_beca) AND ([id_mat] = @Original_id_mat) AND ((@IsNull_recibo = 1 AND [recibo] IS NULL) OR ([recibo] = @Original_recibo)) AND ([bingo] = @Original_bingo) AND ((@IsNull_fecha = 1 AND [fecha] IS NULL) OR ([fecha] = @Original_fecha)) AND ((@IsNull_cuaderno = 1 AND [cuaderno] IS NULL) OR ([cuaderno] = @Original_cuaderno)));
+SELECT carnet, ano, nivel, grupo, monto, poliza, beca, id_mat, recibo, bingo, fecha, cuaderno FROM matricula WHERE (id_mat = @id_mat)</value>
+  </data>
+  <metadata name="SqlDataAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM niveles WHERE (nivel = @Original_nivel) AND (ciclo = @Original_ciclo OR @Original_ciclo IS NULL AND ciclo IS NULL) AND (cobros = @Original_cobros OR @Original_cobros IS NULL AND cobros IS NULL) AND (descripcion = @Original_descripcion OR @Original_descripcion IS NULL AND descripcion IS NULL)</value>
+  </data>
+  <metadata name="SqlInsertCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand5.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand5.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlUpdateCommand5.CommandText" xml:space="preserve">
+    <value>UPDATE niveles SET nivel = @nivel, ciclo = @ciclo, cobros = @cobros, descripcion = @descripcion WHERE (nivel = @Original_nivel) AND (ciclo = @Original_ciclo OR @Original_ciclo IS NULL AND ciclo IS NULL) AND (cobros = @Original_cobros OR @Original_cobros IS NULL AND cobros IS NULL) AND (descripcion = @Original_descripcion OR @Original_descripcion IS NULL AND descripcion IS NULL); SELECT nivel, ciclo, cobros, descripcion FROM niveles WHERE (nivel = @nivel)</value>
+  </data>
+  <metadata name="DsCuotas1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        4n5Pg+rvf1AmkwRwuD5vAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>258, 54</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>98</value>
+  </metadata>
+  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 54</value>
+  </metadata>
+</root>

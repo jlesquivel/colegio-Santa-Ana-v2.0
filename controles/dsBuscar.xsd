@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsBuscar" targetNamespace="http://www.tempuri.org/dsBuscar.xsd" xmlns:mstns="http://www.tempuri.org/dsBuscar.xsd" xmlns="http://www.tempuri.org/dsBuscar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsBuscar" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="estudiantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="carnet" type="xs:string" />
+              <xs:element name="apellido1" type="xs:string" minOccurs="0" />
+              <xs:element name="apellido2" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="sección" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="estado" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

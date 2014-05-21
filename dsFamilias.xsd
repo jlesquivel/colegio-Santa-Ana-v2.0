@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFamilias" targetNamespace="http://tempuri.org/dsFamilias.xsd" xmlns:mstns="http://tempuri.org/dsFamilias.xsd" xmlns="http://tempuri.org/dsFamilias.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFamilias" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsFamilias" msprop:Generator_DataSetName="dsFamilias">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="estudiantes" msprop:Generator_UserTableName="estudiantes" msprop:Generator_RowDeletedName="estudiantesRowDeleted" msprop:Generator_TableClassName="estudiantesDataTable" msprop:Generator_RowChangedName="estudiantesRowChanged" msprop:Generator_RowClassName="estudiantesRow" msprop:Generator_RowChangingName="estudiantesRowChanging" msprop:Generator_RowEvArgName="estudiantesRowChangeEvent" msprop:Generator_RowEvHandlerName="estudiantesRowChangeEventHandler" msprop:Generator_TablePropName="estudiantes" msprop:Generator_TableVarName="tableestudiantes" msprop:Generator_RowDeletingName="estudiantesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="familia" msprop:Generator_UserColumnName="familia" msprop:Generator_ColumnPropNameInRow="familia" msprop:Generator_ColumnVarNameInTable="columnfamilia" msprop:Generator_ColumnPropNameInTable="familiaColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

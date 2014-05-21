@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>149, 17</value>
+  </metadata>
+  <metadata name="DataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>243, 17</value>
+  </metadata>
+  <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>346, 17</value>
+  </metadata>
+  <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 17</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
+    <value>DELETE FROM [estudiantes] WHERE (([carnet] = @Original_carnet) AND ([nombre] = @Original_nombre) AND ([apellido2] = @Original_apellido2) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)) AND ([apellido1] = @Original_apellido1) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_id_pais_nacimiento = 1 AND [id_pais_nacimiento] IS NULL) OR ([id_pais_nacimiento] = @Original_id_pais_nacimiento)) AND ((@IsNull_id_nacionalidad = 1 AND [id_nacionalidad] IS NULL) OR ([id_nacionalidad] = @Original_id_nacionalidad)) AND ((@IsNull_id_pais = 1 AND [id_pais] IS NULL) OR ([id_pais] = @Original_id_pais)) AND ((@IsNull_id_provincia = 1 AND [id_provincia] IS NULL) OR ([id_provincia] = @Original_id_provincia)) AND ((@IsNull_id_canton = 1 AND [id_canton] IS NULL) OR ([id_canton] = @Original_id_canton)) AND ((@IsNull_id_distrito = 1 AND [id_distrito] IS NULL) OR ([id_distrito] = @Original_id_distrito)) AND ((@IsNull_celular = 1 AND [celular] IS NULL) OR ([celular] = @Original_celular)) AND ((@IsNull_celular1 = 1 AND [celular1] IS NULL) OR ([celular1] = @Original_celular1)) AND ((@IsNull_celular2 = 1 AND [celular2] IS NULL) OR ([celular2] = @Original_celular2)) AND ((@IsNull_beca = 1 AND [beca] IS NULL) OR ([beca] = @Original_beca)) AND ((@IsNull_porcentaje = 1 AND [porcentaje] IS NULL) OR ([porcentaje] = @Original_porcentaje)) AND ((@IsNull_dia_pago = 1 AND [dia_pago] IS NULL) OR ([dia_pago] = @Original_dia_pago)))</value>
+  </data>
+  <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
+    <value>INSERT INTO [estudiantes] ([carnet], [nombre], [apellido2], [encargado1], [relacion], [direccion], [trabajo], [telefono], [email], [encargado2], [relacion2], [direccion2], [trabajo2], [telefono2], [email2], [estado], [familia], [nacimiento], [cedula], [apellido1], [ingreso], [sexo], [id_pais_nacimiento], [id_nacionalidad], [id_pais], [id_provincia], [id_canton], [id_distrito], [celular], [celular1], [celular2], [beca], [porcentaje], [dia_pago], [procedencia], [enfermedades], [observaciones]) VALUES (@carnet, @nombre, @apellido2, @encargado1, @relacion, @direccion, @trabajo, @telefono, @email, @encargado2, @relacion2, @direccion2, @trabajo2, @telefono2, @email2, @estado, @familia, @nacimiento, @cedula, @apellido1, @ingreso, @sexo, @id_pais_nacimiento, @id_nacionalidad, @id_pais, @id_provincia, @id_canton, @id_distrito, @celular, @celular1, @celular2, @beca, @porcentaje, @dia_pago, @procedencia, @enfermedades, @observaciones);
+SELECT carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, estado, familia, nacimiento, cedula, apellido1, ingreso, sexo, id_pais_nacimiento, id_nacionalidad, id_pais, id_provincia, id_canton, id_distrito, celular, celular1, celular2, beca, porcentaje, dia_pago, procedencia, enfermedades, observaciones FROM estudiantes WHERE (carnet = @carnet)</value>
+  </data>
+  <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlSelectCommand1.CommandText" xml:space="preserve">
+    <value>SELECT     carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, 
+                      estado, familia, nacimiento, cedula, apellido1, ingreso, sexo, id_pais_nacimiento, id_nacionalidad, id_pais, id_provincia, id_canton, id_distrito, celular,
+                       celular1, celular2, beca, porcentaje, dia_pago, procedencia, enfermedades, observaciones
+FROM         estudiantes
+WHERE     (carnet = @carnet)</value>
+  </data>
+  <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
+    <value>UPDATE [estudiantes] SET [carnet] = @carnet, [nombre] = @nombre, [apellido2] = @apellido2, [encargado1] = @encargado1, [relacion] = @relacion, [direccion] = @direccion, [trabajo] = @trabajo, [telefono] = @telefono, [email] = @email, [encargado2] = @encargado2, [relacion2] = @relacion2, [direccion2] = @direccion2, [trabajo2] = @trabajo2, [telefono2] = @telefono2, [email2] = @email2, [estado] = @estado, [familia] = @familia, [nacimiento] = @nacimiento, [cedula] = @cedula, [apellido1] = @apellido1, [ingreso] = @ingreso, [sexo] = @sexo, [id_pais_nacimiento] = @id_pais_nacimiento, [id_nacionalidad] = @id_nacionalidad, [id_pais] = @id_pais, [id_provincia] = @id_provincia, [id_canton] = @id_canton, [id_distrito] = @id_distrito, [celular] = @celular, [celular1] = @celular1, [celular2] = @celular2, [beca] = @beca, [porcentaje] = @porcentaje, [dia_pago] = @dia_pago, [procedencia] = @procedencia, [enfermedades] = @enfermedades, [observaciones] = @observaciones WHERE (([carnet] = @Original_carnet) AND ([nombre] = @Original_nombre) AND ([apellido2] = @Original_apellido2) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)) AND ([apellido1] = @Original_apellido1) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_id_pais_nacimiento = 1 AND [id_pais_nacimiento] IS NULL) OR ([id_pais_nacimiento] = @Original_id_pais_nacimiento)) AND ((@IsNull_id_nacionalidad = 1 AND [id_nacionalidad] IS NULL) OR ([id_nacionalidad] = @Original_id_nacionalidad)) AND ((@IsNull_id_pais = 1 AND [id_pais] IS NULL) OR ([id_pais] = @Original_id_pais)) AND ((@IsNull_id_provincia = 1 AND [id_provincia] IS NULL) OR ([id_provincia] = @Original_id_provincia)) AND ((@IsNull_id_canton = 1 AND [id_canton] IS NULL) OR ([id_canton] = @Original_id_canton)) AND ((@IsNull_id_distrito = 1 AND [id_distrito] IS NULL) OR ([id_distrito] = @Original_id_distrito)) AND ((@IsNull_celular = 1 AND [celular] IS NULL) OR ([celular] = @Original_celular)) AND ((@IsNull_celular1 = 1 AND [celular1] IS NULL) OR ([celular1] = @Original_celular1)) AND ((@IsNull_celular2 = 1 AND [celular2] IS NULL) OR ([celular2] = @Original_celular2)) AND ((@IsNull_beca = 1 AND [beca] IS NULL) OR ([beca] = @Original_beca)) AND ((@IsNull_porcentaje = 1 AND [porcentaje] IS NULL) OR ([porcentaje] = @Original_porcentaje)) AND ((@IsNull_dia_pago = 1 AND [dia_pago] IS NULL) OR ([dia_pago] = @Original_dia_pago)));
+SELECT carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, estado, familia, nacimiento, cedula, apellido1, ingreso, sexo, id_pais_nacimiento, id_nacionalidad, id_pais, id_provincia, id_canton, id_distrito, celular, celular1, celular2, beca, porcentaje, dia_pago, procedencia, enfermedades, observaciones FROM estudiantes WHERE (carnet = @carnet)</value>
+  </data>
+  <metadata name="SqlDataAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>609, 17</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
+  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 55</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>87</value>
+  </metadata>
+  <metadata name="DsCarnet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 55</value>
+  </metadata>
+</root>

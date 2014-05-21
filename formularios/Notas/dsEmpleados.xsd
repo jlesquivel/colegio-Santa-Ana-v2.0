@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsEmpleados" targetNamespace="http://www.tempuri.org/dsEmpleados.xsd" xmlns:mstns="http://www.tempuri.org/dsEmpleados.xsd" xmlns="http://www.tempuri.org/dsEmpleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsEmpleados" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_emp" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:decimal" />
+              <xs:element name="cedula" type="xs:string" />
+              <xs:element name="apellidos" type="xs:string" />
+              <xs:element name="nombre" type="xs:string" />
+              <xs:element name="categoria" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nacimiento" type="xs:dateTime" />
+              <xs:element name="cuenta" type="xs:string" />
+              <xs:element name="ingreso" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="banco" type="xs:string" />
+              <xs:element name="direccion" type="xs:string" minOccurs="0" />
+              <xs:element name="telefono" type="xs:string" minOccurs="0" />
+              <xs:element name="celular" type="xs:string" minOccurs="0" />
+              <xs:element name="sexo" type="xs:unsignedByte" />
+              <xs:element name="anualidadReconocida" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:empleados" />
+      <xs:field xpath="mstns:id_emp" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

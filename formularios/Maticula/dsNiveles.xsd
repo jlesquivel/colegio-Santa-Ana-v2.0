@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsNiveles" targetNamespace="http://www.tempuri.org/DsNiveles.xsd" xmlns:mstns="http://www.tempuri.org/DsNiveles.xsd" xmlns="http://www.tempuri.org/DsNiveles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsNiveles" msdata:IsDataSet="true" msdata:Locale="es-CR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="niveles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nivel" type="xs:string" />
+              <xs:element name="ciclo" type="xs:string" minOccurs="0" />
+              <xs:element name="cobros" type="xs:decimal" minOccurs="0" />
+              <xs:element name="descripcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:niveles" />
+      <xs:field xpath="mstns:nivel" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

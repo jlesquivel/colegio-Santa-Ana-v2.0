@@ -1,0 +1,12 @@
+CREATE TRIGGER cambiaDatos
+ON matricula 
+FOR update,delete AS
+IF (COLUMNS_UPDATED()>0)
+   INSERT INTO matricula_AUDIT( id_mat,carnet,ano,nivel,grupo,encargado,monto,fecha,poliza,beca,bingo,recibo,matriculado,usuario,s_op)
+         SELECT id_mat,carnet,ano,nivel,grupo,encargado,monto,fecha,poliza,beca,bingo,recibo,matriculado,usuario,'A' FROM deleted del
+ELSE
+    INSERT INTO matricula_AUDIT( id_mat,carnet,ano,nivel,grupo,encargado,monto,fecha,poliza,beca,bingo,recibo,matriculado,usuario,s_op)
+         SELECT id_mat,carnet,ano,nivel,grupo,encargado,monto,fecha,poliza,beca,bingo,recibo,matriculado,usuario,'B' FROM deleted del
+
+
+

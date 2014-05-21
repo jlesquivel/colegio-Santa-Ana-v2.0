@@ -1,0 +1,21 @@
+Data Source=SERVIDOR-BD;Initial Catalog=colegio;Integrated Security=True
+
+# manual de usuario nuevo
+# +  modulo de contancias
+# + modulo de traslado 
+# + reporte historico notas por ciclo (reporte pilar)
+# + generar notas extraordinarias
+# + ventana estudiante dura mucho en cargar
+
+
+
+
+
+*********** INFORMACION IMPORTANTE ************
+
+Gracias por registrar Crystal Report 9.0 for the .NET Platform .
+
+Su número de registro es 8703549303
+El código sin caducidad es: AAP5G-HS00008-WC200WC
+
+	

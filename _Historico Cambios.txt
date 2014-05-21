@@ -1,0 +1,43 @@
+﻿#### TAGs ##
+#BDact	Base de datos actualiza
+#BDcorr  Base de datos corregir error
+#BDx		Base de datos borra
+
+#APPact	Aplicación Actualiza
+#APPcorr Aplicación corregir
+#APPx	Aplicación borra
+
+rendimiento  mejora sobre el rendimiento
+
+=============================================================================
+HISTORICO
+#2008/11/1	#APPact Incorporar cobros de matricula al sistema
+#2008/11/1	#APPact	se creo la formulario frmGenCobroMatricula
+#2008/11/1	#BDact	Se creo la vista bncrMatricula
+#2008/11/1	#BDact	se creo la vista estudiantesAnoSin11
+#2008/11/1	#BDact	Se creo la vista notasTrimestreConCondicion
+#2008/11/1	#BDact	Se creo el procedimiento almacenado cobroMatricula que utiliza
+					las dos ultimas vista para selecciona los estudiantes activo
+					exeptos los de 11o y que su condicion sea de aprovado.
+		
+2008/11/1	#APPact	registrar notas de aplazados	
+				
+2009/1/1	#APPact	se agrego la pantalla de convenios
+2009/1/1	#APPact	se actualizo la base de datos con la informacion de matricula , cobros, notas		
+
+2012/11/1	
+
+2013/11/15	#APPact	===== Nueva Version 2.0 ==========				
+2013/11/17	#BDact PROC cobrosMatricula  Incluye estudiantes nuevo ingreso sin matricular( se corrigio relacion con matricula para que no exija restriccion )
+
+2013/11/18  #APPact Cambio dll DotNetBar 8.5 a 11.5 
+2013/11/18  #APPact frmPrincipal2 nuevo Diseño y programacion 
+2013/11/18	#APPact userControl2 (barra tarea) se reprogramo y cambio control y iconos
+2013/11/18  #APPact BuscaEstud (control usuario) se corrigio para que no carge datos en modo de diseño
+	
+2013/11/19	#APPact clase conexionSQL actualizo método ConexionOK #rendimiento 
+
+2013/11/20	#APPcorr	Titulo formulario configuracion
+
+2013/11/24  #APPact	proyecto migrado a VS2012
+2013/11/24	#APPact	clases sin usar borradas
