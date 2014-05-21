@@ -15,6 +15,7 @@ Public Class frmPrincipal2
         organizacion = My.Settings.institucion
         Me.Text = My.Settings.institucion
         Me.AppImp = New Printing.PrinterSettings
+        'prueba
 
         If Not sqlcon.conexionOK Then
             MessageBoxEx.Show("No se pudo conectar al servido SQL, Intente luego", "SQL Error!", _
