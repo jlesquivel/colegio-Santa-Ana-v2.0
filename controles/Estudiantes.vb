@@ -1461,20 +1461,26 @@ Public Class Estudiantes
 
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
         Try
-            Dim DlgOpenFile As New OpenFileDialog
-            Dim figura As Image
 
-            DlgOpenFile.ShowReadOnly = True
-            If DlgOpenFile.ShowDialog() = DialogResult.OK Then
-                figura = Image.FromFile(DlgOpenFile.FileName)
-                If figura.Size.Height < 320 And figura.Size.Width < 320 Then
-                    PictureBox1.Image = figura
-                    Fnuevo = True
-                    pcarnet = TextBox1.Text
-                Else
-                    MessageBox.Show("Imagen muy grande , Maxima Resolucion 320x320 ", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                End If
-            End If
+            Dim frmWeb As New frmWebCam(Me.PictureBox1, Fnuevo)
+            frmWeb.MdiParent = Me.ParentForm.ParentForm
+            frmWeb.Show()
+
+            'Dim DlgOpenFile As New OpenFileDialog
+            'Dim figura As Image
+
+            'DlgOpenFile.ShowReadOnly = True
+            'If DlgOpenFile.ShowDialog() = DialogResult.OK Then
+            '    figura = Image.FromFile(DlgOpenFile.FileName)
+            '    If figura.Size.Height < 320 And figura.Size.Width < 320 Then
+            '        PictureBox1.Image = figura
+            '        Fnuevo = True
+            '        pcarnet = TextBox1.Text
+            '    Else
+            '        MessageBox.Show("Imagen muy grande , Maxima Resolucion 320x320 ", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            '    End If
+            'End If
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

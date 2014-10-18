@@ -104,6 +104,7 @@ End Class
 '' 
 '     
 'Dim info As NetworkInformation = NetworkInformation.LocalComputer
+
 '        ListBox1.Items.Add(info.ToString())
 
 '        If info.Status = NetworkInformation.JoinStatus.Workgroup Then

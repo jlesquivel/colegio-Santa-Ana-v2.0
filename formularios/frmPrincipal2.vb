@@ -1,3 +1,5 @@
+Imports System.Collections.Generic
+
 Public Class frmPrincipal2
     Public institucion As String
     Dim AppImp As Printing.PrinterSettings
@@ -7,9 +9,7 @@ Public Class frmPrincipal2
     Private Sub frmPrincipal2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim oVentana As Ventanas = New Ventanas
-
         oVentana.cambia_fondoMDI(Me)
-
 
         institucion = My.Settings.institucion
         organizacion = My.Settings.institucion
@@ -25,6 +25,8 @@ Public Class frmPrincipal2
 
         Me.RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
         ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
+
+
     End Sub
     Private Sub ButtonItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem18.Click
         Application.Exit()
@@ -43,6 +45,7 @@ Public Class frmPrincipal2
         oVentana.cargarVentana(New frmConfiguracion, Me)
     End Sub
 
+
 #Region "MATRICULA"
     Private Sub ButtonItem19_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem19.Click
         oVentana.cargarVentana(New frmEstudiantes, Me)
@@ -53,6 +56,8 @@ Public Class frmPrincipal2
     Private Sub ButtonItem20_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem20.Click
         oVentana.cargarVentana(New frmMatriculaV, Me)
     End Sub
+
+
 #End Region
 
 #Region "COBROS"
@@ -107,8 +112,28 @@ Public Class frmPrincipal2
     End Sub
 #End Region
 
+    Private Sub ButtonItem38_Click(sender As Object, e As EventArgs) Handles ButtonItem38.Click
 
+        Dim oCorreo As New cCorreo
+        oCorreo.Enviar_Cobros_correo()
 
+    End Sub
+
+  
+
+    Private Sub RibbonCobros_Click(sender As Object, e As EventArgs) Handles RibbonCobros.Click
+
+        Dim resultado As ArrayList
+        Dim conn As New conexionSQL
+
+        resultado = conn.llena("select * from cobros_cancelado_pendientes")
+        Dim points As New List(Of Double)()
+        points.Add(resultado(0)(0))
+        points.Add(resultado(0)(1))
+        MicroChartItem1.DataPoints = points
+
+        MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
+    End Sub
 
 End Class
 

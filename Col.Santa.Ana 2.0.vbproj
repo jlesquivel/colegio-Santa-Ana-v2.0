@@ -36,7 +36,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <OldToolsVersion>3.5</OldToolsVersion>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <PublishUrl>C:\Documents and Settings\Administrador\Escritorio\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
@@ -55,6 +55,7 @@
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -100,28 +101,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
-    <Reference Include="Microsoft.VisualBasic">
-      <Name>Microsoft.VisualBasic</Name>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
+    <Reference Include="WebCAM, Version=1.0.1814.37443, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\colegio El Pilar v2.0\bin\WebCAM.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="DevComponents.DotNetBar" />
@@ -243,6 +240,11 @@
     <None Include="Resources\nDB.bmp" />
     <None Include="Resources\Misc-Delete-Database-icon.png" />
     <None Include="Resources\Gal02_091.png" />
+    <None Include="Resources\093.png" />
+    <None Include="Resources\0931.png" />
+    <None Include="Resources\422.png" />
+    <None Include="Resources\4221.png" />
+    <None Include="Resources\mail.ico" />
     <Content Include="_Historico Cambios.txt" />
     <Content Include="_ POR HACER.txt" />
     <None Include="Resources\240.png" />
@@ -385,6 +387,7 @@
     <Compile Include="clases\CargarLista.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clases\cCorreo.vb" />
     <Compile Include="clases\conexionSQL.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -473,6 +476,12 @@
     </Compile>
     <Compile Include="formularios\Maticula\dsListaClase.vb">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Maticula\frmWebCam.designer.vb">
+      <DependentUpon>frmWebCam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Maticula\frmWebCam.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Notas\dsMaterias.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -728,6 +737,9 @@
     <EmbeddedResource Include="formularios\Maticula\frmTrasladoGrupo.resx">
       <DependentUpon>frmTrasladoGrupo.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Maticula\frmWebCam.resx">
+      <DependentUpon>frmWebCam.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Notas\frmAsignaProfesor.resx">
       <DependentUpon>frmAsignaProfesor.vb</DependentUpon>
