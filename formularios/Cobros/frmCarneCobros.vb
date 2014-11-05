@@ -1,7 +1,7 @@
 Imports colegioReportes
 
 Public Class frmCarneCobros
-    Inherits System.Windows.Forms.Form
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim anno As String
 #Region " Código generado por el Diseñador de Windows Forms "
 

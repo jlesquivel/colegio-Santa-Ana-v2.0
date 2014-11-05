@@ -1,6 +1,6 @@
 
 Public Class frmMatriculaV
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim dvLista As DataView
     Dim carnet As String
     Friend WithEvents ExplorerBar1 As DevComponents.DotNetBar.ExplorerBar

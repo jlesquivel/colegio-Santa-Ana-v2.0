@@ -1,5 +1,5 @@
 Public Class frmTrasladoGrupo
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim lista As ArrayList
     Dim partes As String()
     Dim ds As New DataSet

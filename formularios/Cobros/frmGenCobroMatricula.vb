@@ -2,7 +2,7 @@ Imports System.Data.SqlClient
 'Imports System
 
 Public Class frmGenCobroMatricula
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     '  Public WithEvents listener As New ThemeListener(Me)
 
 #Region " Código generado por el Diseñador de Windows Forms "

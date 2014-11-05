@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmConfiguracion
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _

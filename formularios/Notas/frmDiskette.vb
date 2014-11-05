@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 Imports System.Drawing
 
 Public Class frmDiskette
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim conn As New conexionSQL
     Dim aPartes As String()

@@ -1,5 +1,5 @@
 Public Class frmAsignaProfesor
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim partes As String()
     Dim primero As Boolean = True

@@ -1,5 +1,5 @@
 Public Class frmReporte
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
 #Region " Código generado por el Diseñador de Windows Forms "
 

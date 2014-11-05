@@ -1,5 +1,5 @@
 Public Class frmCobroAdelantado
-    Inherits System.Windows.Forms.Form
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim conn As New conexionSQL
     Dim lmeses As String() = {"Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", _

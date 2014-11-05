@@ -315,7 +315,7 @@ Public Property organizacion() As String
         '
         'StyleManager1
         '
-        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue
+        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2012Light
         Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(154, Byte), Integer)))
         '
         'PrintDialog1
@@ -347,16 +347,15 @@ Public Property organizacion() As String
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CanCustomize = False
         Me.RibbonControl1.CaptionVisible = True
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ApplicationButton1, Me.RibbonMatricula, Me.RibbonCobros, Me.RibbonNotas})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
-        Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 3)
         Me.RibbonControl1.Size = New System.Drawing.Size(1226, 148)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
@@ -385,10 +384,10 @@ Public Property organizacion() As String
         Me.RibbonPanel2.Controls.Add(Me.RibbonBar3)
         Me.RibbonPanel2.Controls.Add(Me.RibbonBar2)
         Me.RibbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel2.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel2.Location = New System.Drawing.Point(0, 54)
         Me.RibbonPanel2.Name = "RibbonPanel2"
-        Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel2.Size = New System.Drawing.Size(1226, 92)
+        Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
+        Me.RibbonPanel2.Size = New System.Drawing.Size(1226, 94)
         '
         '
         '
@@ -402,6 +401,7 @@ Public Property organizacion() As String
         '
         Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel2.TabIndex = 2
+        Me.RibbonPanel2.Visible = False
         '
         'RibbonBar7
         '
@@ -419,7 +419,7 @@ Public Property organizacion() As String
         Me.RibbonBar7.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MicroChartItem1, Me.ButtonItem38})
         Me.RibbonBar7.Location = New System.Drawing.Point(515, 0)
         Me.RibbonBar7.Name = "RibbonBar7"
-        Me.RibbonBar7.Size = New System.Drawing.Size(155, 89)
+        Me.RibbonBar7.Size = New System.Drawing.Size(155, 92)
         Me.RibbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar7.TabIndex = 2
         Me.RibbonBar7.Text = "controles"
@@ -464,7 +464,7 @@ Public Property organizacion() As String
         Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem25, Me.ButtonItem26})
         Me.RibbonBar3.Location = New System.Drawing.Point(328, 0)
         Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(187, 89)
+        Me.RibbonBar3.Size = New System.Drawing.Size(187, 92)
         Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar3.TabIndex = 1
         Me.RibbonBar3.Text = "Ajustes"
@@ -509,7 +509,7 @@ Public Property organizacion() As String
         Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem22, Me.ButtonItem23, Me.ButtonItem24, Me.ButtonItem27, Me.ButtonItem28})
         Me.RibbonBar2.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(325, 89)
+        Me.RibbonBar2.Size = New System.Drawing.Size(325, 92)
         Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar2.TabIndex = 0
         Me.RibbonBar2.Text = "Tareas"
@@ -567,10 +567,10 @@ Public Property organizacion() As String
         Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
         Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 54)
         Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(1226, 92)
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(1226, 94)
         '
         '
         '
@@ -584,7 +584,6 @@ Public Property organizacion() As String
         '
         Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel1.TabIndex = 1
-        Me.RibbonPanel1.Visible = False
         '
         'RibbonBar1
         '
@@ -602,7 +601,7 @@ Public Property organizacion() As String
         Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem21})
         Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(175, 89)
+        Me.RibbonBar1.Size = New System.Drawing.Size(175, 92)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 0
         Me.RibbonBar1.Text = "Pasos para matricular"
@@ -648,10 +647,10 @@ Public Property organizacion() As String
         Me.RibbonPanel3.Controls.Add(Me.RibbonBar5)
         Me.RibbonPanel3.Controls.Add(Me.RibbonBar4)
         Me.RibbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel3.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel3.Location = New System.Drawing.Point(0, 54)
         Me.RibbonPanel3.Name = "RibbonPanel3"
-        Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel3.Size = New System.Drawing.Size(1226, 92)
+        Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
+        Me.RibbonPanel3.Size = New System.Drawing.Size(1226, 94)
         '
         '
         '
@@ -683,7 +682,7 @@ Public Property organizacion() As String
         Me.RibbonBar6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33, Me.ButtonItem34})
         Me.RibbonBar6.Location = New System.Drawing.Point(384, 0)
         Me.RibbonBar6.Name = "RibbonBar6"
-        Me.RibbonBar6.Size = New System.Drawing.Size(147, 89)
+        Me.RibbonBar6.Size = New System.Drawing.Size(147, 92)
         Me.RibbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar6.TabIndex = 2
         Me.RibbonBar6.Text = "Ajustes"
@@ -728,7 +727,7 @@ Public Property organizacion() As String
         Me.RibbonBar5.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem35, Me.ButtonItem36, Me.ButtonItem37})
         Me.RibbonBar5.Location = New System.Drawing.Point(213, 0)
         Me.RibbonBar5.Name = "RibbonBar5"
-        Me.RibbonBar5.Size = New System.Drawing.Size(171, 89)
+        Me.RibbonBar5.Size = New System.Drawing.Size(171, 92)
         Me.RibbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar5.TabIndex = 1
         Me.RibbonBar5.Text = "Reportes"
@@ -781,7 +780,7 @@ Public Property organizacion() As String
         Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem29, Me.ButtonItem30, Me.ButtonItem31, Me.ButtonItem32})
         Me.RibbonBar4.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar4.Name = "RibbonBar4"
-        Me.RibbonBar4.Size = New System.Drawing.Size(210, 89)
+        Me.RibbonBar4.Size = New System.Drawing.Size(210, 92)
         Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar4.TabIndex = 0
         Me.RibbonBar4.Text = "Tareas"
@@ -835,7 +834,7 @@ Public Property organizacion() As String
         Me.ApplicationButton1.Image = CType(resources.GetObject("ApplicationButton1.Image"), System.Drawing.Image)
         Me.ApplicationButton1.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.ApplicationButton1.ImagePaddingHorizontal = 0
-        Me.ApplicationButton1.ImagePaddingVertical = 0
+        Me.ApplicationButton1.ImagePaddingVertical = 1
         Me.ApplicationButton1.Name = "ApplicationButton1"
         Me.ApplicationButton1.ShowSubItems = False
         Me.ApplicationButton1.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ItemContainer1})
@@ -1028,13 +1027,13 @@ Public Property organizacion() As String
         '
         'RibbonMatricula
         '
+        Me.RibbonMatricula.Checked = True
         Me.RibbonMatricula.Name = "RibbonMatricula"
         Me.RibbonMatricula.Panel = Me.RibbonPanel1
         Me.RibbonMatricula.Text = "Matricula"
         '
         'RibbonCobros
         '
-        Me.RibbonCobros.Checked = True
         Me.RibbonCobros.Name = "RibbonCobros"
         Me.RibbonCobros.Panel = Me.RibbonPanel2
         Me.RibbonCobros.Text = "Cobros"

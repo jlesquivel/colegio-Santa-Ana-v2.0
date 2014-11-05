@@ -1,5 +1,5 @@
 Public Class frmAusencias
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim afectadas As Integer
     Dim conn As New conexionSQL

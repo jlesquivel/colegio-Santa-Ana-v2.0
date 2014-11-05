@@ -46,13 +46,13 @@ Public Class UserControl2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControl2))
-        Me.Bar1 = New DevComponents.DotNetBar.Bar
-        Me.Nuevo = New DevComponents.DotNetBar.ButtonItem
-        Me.salvar = New DevComponents.DotNetBar.ButtonItem
-        Me.Borrar = New DevComponents.DotNetBar.ButtonItem
-        Me.Buscar = New DevComponents.DotNetBar.ButtonItem
-        Me.Imprimir = New DevComponents.DotNetBar.ButtonItem
-        Me.Salir = New DevComponents.DotNetBar.ButtonItem
+        Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.Nuevo = New DevComponents.DotNetBar.ButtonItem()
+        Me.salvar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Borrar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Buscar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Imprimir = New DevComponents.DotNetBar.ButtonItem()
+        Me.Salir = New DevComponents.DotNetBar.ButtonItem()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,7 +113,9 @@ Public Class UserControl2
 
     End Sub
 #End Region
-
+    Private Sub UserControl2_Load(sender As Object, e As EventArgs) Handles Me.Load
+        f = Me.Parent
+    End Sub
     Private Sub Nuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Nuevo.Click
         f.nuevo()
     End Sub
@@ -137,4 +139,6 @@ Public Class UserControl2
     Private Sub Salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Salir.Click
         f.close()
     End Sub
+
+ 
 End Class

@@ -2,7 +2,7 @@ Imports System.Data.SqlClient
 Imports colegioReportes
 
 Public Class frmRepNotas
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim conn As New conexionSQL
 
 #Region " Código generado por el Diseñador de Windows Forms "

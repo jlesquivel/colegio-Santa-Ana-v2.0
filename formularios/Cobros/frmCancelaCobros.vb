@@ -1,6 +1,6 @@
 
 Public Class frmCancelaCobros
-    Inherits System.Windows.Forms.Form
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim conn As New conexionSQL
 
 #Region " Código generado por el Diseñador de Windows Forms "

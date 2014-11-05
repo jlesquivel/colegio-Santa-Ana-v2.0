@@ -3,7 +3,7 @@ Imports System.Threading
 Imports colegioReportes
 
 Public Class frmRegistraNotas
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -83,58 +83,58 @@ Public Class frmRegistraNotas
     Friend WithEvents LabelItem1 As DevComponents.DotNetBar.LabelItem
     Friend WithEvents SqlDataAdapter4 As System.Data.SqlClient.SqlDataAdapter
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRegistraNotas))
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Notas")
-        Me.Splitter1 = New System.Windows.Forms.Splitter
-        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
-        Me.MenuItem2 = New System.Windows.Forms.MenuItem
-        Me.MenuItem3 = New System.Windows.Forms.MenuItem
-        Me.MenuItem4 = New System.Windows.Forms.MenuItem
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu()
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.tree = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection
-        Me.SqlInsertCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection
-        Me.SqlInsertCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDeleteCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker
-        Me.DataGrid1 = New System.Windows.Forms.DataGrid
-        Me.DsNotas1 = New colegio.dsNotas
-        Me.DataGridTableStyle1 = New System.Windows.Forms.DataGridTableStyle
-        Me.DataGridTextBoxColumn1 = New System.Windows.Forms.DataGridTextBoxColumn
-        Me.DataGridTextBoxColumn2 = New System.Windows.Forms.DataGridTextBoxColumn
-        Me.DataGridTextBoxColumn3 = New System.Windows.Forms.DataGridTextBoxColumn
-        Me.DataGridTextBoxColumn4 = New System.Windows.Forms.DataGridTextBoxColumn
-        Me.DataGridTextBoxColumn5 = New System.Windows.Forms.DataGridTextBoxColumn
-        Me.DataView1 = New System.Data.DataView
-        Me.DataView2 = New System.Data.DataView
-        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem
-        Me.Bar1 = New DevComponents.DotNetBar.Bar
-        Me.LabelItem1 = New DevComponents.DotNetBar.LabelItem
-        Me.TreeViewSQL1 = New colegio.TreeViewSQL
+        Me.tree = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlInsertCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlInsertCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDeleteCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.DataGrid1 = New System.Windows.Forms.DataGrid()
+        Me.DsNotas1 = New colegio.dsNotas()
+        Me.DataGridTableStyle1 = New System.Windows.Forms.DataGridTableStyle()
+        Me.DataGridTextBoxColumn1 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn2 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn3 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn4 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn5 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataView1 = New System.Data.DataView()
+        Me.DataView2 = New System.Data.DataView()
+        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
+        Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.LabelItem1 = New DevComponents.DotNetBar.LabelItem()
+        Me.TreeViewSQL1 = New colegio.TreeViewSQL()
         CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsNotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,18 +178,18 @@ Public Class frmRegistraNotas
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "")
-        Me.ImageList1.Images.SetKeyName(1, "")
-        Me.ImageList1.Images.SetKeyName(2, "")
-        Me.ImageList1.Images.SetKeyName(3, "")
-        Me.ImageList1.Images.SetKeyName(4, "")
-        Me.ImageList1.Images.SetKeyName(5, "")
+        Me.ImageList1.Images.SetKeyName(0, "1-tray.gif")
+        Me.ImageList1.Images.SetKeyName(1, "2-calendar.gif")
+        Me.ImageList1.Images.SetKeyName(2, "3-list.gif")
+        Me.ImageList1.Images.SetKeyName(3, "4-list.gif")
+        Me.ImageList1.Images.SetKeyName(4, "5-notes.gif")
+        Me.ImageList1.Images.SetKeyName(5, "6-users.gif")
         Me.ImageList1.Images.SetKeyName(6, "")
         '
         'tree
         '
         Me.tree.CommandText = "SELECT      ano, periodo, nivel, grupo, nombre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM          grupo_periodo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDE" & _
-            "R BY ano DESC, periodo, nivel, grupo, materia"
+    "R BY ano DESC, periodo, nivel, grupo, materia"
         Me.tree.Connection = Me.SqlConnection1
         '
         'SqlConnection1
@@ -208,14 +208,14 @@ Public Class frmRegistraNotas
         'SqlDeleteCommand3
         '
         Me.SqlDeleteCommand3.CommandText = "DELETE FROM notas WHERE (id = @Original_id) AND (nota = @Original_nota OR @Origin" & _
-            "al_nota IS NULL AND nota IS NULL)"
+    "al_nota IS NULL AND nota IS NULL)"
         Me.SqlDeleteCommand3.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nota", System.Data.SqlDbType.Money, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nota", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand3
         '
         Me.SqlInsertCommand3.CommandText = "INSERT INTO notas(nota) VALUES (@nota); SELECT nota, id FROM notas WHERE (id = @@" & _
-            "IDENTITY)"
+    "IDENTITY)"
         Me.SqlInsertCommand3.Connection = Me.SqlConnection1
         Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota")})
         '
@@ -227,8 +227,8 @@ Public Class frmRegistraNotas
         'SqlUpdateCommand3
         '
         Me.SqlUpdateCommand3.CommandText = "UPDATE notas SET nota = @nota WHERE (id = @Original_id) AND (nota = @Original_not" & _
-            "a OR @Original_nota IS NULL AND nota IS NULL); SELECT nota, id FROM notas WHERE " & _
-            "(id = @id)"
+    "a OR @Original_nota IS NULL AND nota IS NULL); SELECT nota, id FROM notas WHERE " & _
+    "(id = @id)"
         Me.SqlUpdateCommand3.Connection = Me.SqlConnection1
         Me.SqlUpdateCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota"), New System.Data.SqlClient.SqlParameter("@Original_id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nota", System.Data.SqlDbType.Money, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nota", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Current, Nothing)})
         '
@@ -241,8 +241,8 @@ Public Class frmRegistraNotas
         'SqlInsertCommand1
         '
         Me.SqlInsertCommand1.CommandText = "INSERT INTO notas(nota, id, profesora, fecha_nota) VALUES (@nota, @id, @profesora" & _
-            ", @fecha_nota); SELECT nota, id, profesora, fecha_nota FROM notas WHERE (id = @i" & _
-            "d)"
+    ", @fecha_nota); SELECT nota, id, profesora, fecha_nota FROM notas WHERE (id = @i" & _
+    "d)"
         Me.SqlInsertCommand1.Connection = Me.SqlConnection1
         Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Int, 4, "nota"), New System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.VarBinary, 8, "id"), New System.Data.SqlClient.SqlParameter("@profesora", System.Data.SqlDbType.VarChar, 15, "profesora"), New System.Data.SqlClient.SqlParameter("@fecha_nota", System.Data.SqlDbType.DateTime, 8, "fecha_nota")})
         '
@@ -265,7 +265,7 @@ Public Class frmRegistraNotas
         'SqlInsertCommand2
         '
         Me.SqlInsertCommand2.CommandText = "INSERT INTO materia(materia, nombre) VALUES (@materia, @nombre); SELECT materia, " & _
-            "nombre FROM materia WHERE (materia = @materia)"
+    "nombre FROM materia WHERE (materia = @materia)"
         Me.SqlInsertCommand2.Connection = Me.SqlConnection1
         Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@materia", System.Data.SqlDbType.VarChar, 15, "materia"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
         '
@@ -278,7 +278,7 @@ Public Class frmRegistraNotas
         'SqlDeleteCommand2
         '
         Me.SqlDeleteCommand2.CommandText = "DELETE FROM materia WHERE (materia = @Original_materia) AND (nombre = @Original_n" & _
-            "ombre OR @Original_nombre IS NULL AND nombre IS NULL)"
+    "ombre OR @Original_nombre IS NULL AND nombre IS NULL)"
         Me.SqlDeleteCommand2.Connection = Me.SqlConnection1
         Me.SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_materia", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "materia", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 30, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing)})
         '
@@ -299,7 +299,7 @@ Public Class frmRegistraNotas
         'SqlSelectCommand4
         '
         Me.SqlSelectCommand4.CommandText = "SELECT      ano, periodo, nivel, grupo, materia, cedula" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM          profesores" & _
-            "_cursos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER BY ano DESC"
+    "_cursos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER BY ano DESC"
         Me.SqlSelectCommand4.Connection = Me.SqlConnection2
         '
         'SqlConnection2
@@ -322,8 +322,8 @@ Public Class frmRegistraNotas
         'SqlSelectCommand5
         '
         Me.SqlSelectCommand5.CommandText = "SELECT id_emp, cedula, apellidos, nombre, categoria, nacimiento, cuenta, ingreso," & _
-            " banco, direccion, telefono, celular, sexo, anualidadReconocida FROM dbo.emplead" & _
-            "os"
+    " banco, direccion, telefono, celular, sexo, anualidadReconocida FROM dbo.emplead" & _
+    "os"
         Me.SqlSelectCommand5.Connection = Me.SqlConnection3
         '
         'SqlConnection3
@@ -362,7 +362,6 @@ Public Class frmRegistraNotas
         '
         'DataGrid1
         '
-        Me.DataGrid1.AlternatingBackColor = System.Drawing.SystemColors.Window
         Me.DataGrid1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGrid1.DataMember = ""
         Me.DataGrid1.DataSource = Me.DsNotas1.notas
@@ -466,6 +465,8 @@ Public Class frmRegistraNotas
         '
         'LabelItem1
         '
+        Me.LabelItem1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelItem1.ForeColor = System.Drawing.Color.Black
         Me.LabelItem1.Name = "LabelItem1"
         Me.LabelItem1.Text = "     "
         '
@@ -496,6 +497,7 @@ Public Class frmRegistraNotas
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.Splitter1)
         Me.Controls.Add(Me.TreeViewSQL1)
+        Me.DoubleBuffered = True
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(800, 700)
         Me.MinimumSize = New System.Drawing.Size(650, 499)

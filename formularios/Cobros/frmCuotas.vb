@@ -1,5 +1,5 @@
 Public Class frmCuotas
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim bd As String = "cuotas"
 
 #Region " Código generado por el Diseñador de Windows Forms "

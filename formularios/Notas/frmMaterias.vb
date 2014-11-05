@@ -1,7 +1,7 @@
 Imports System.Data.SqlClient
 
 Public Class frmMaterias
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim bd As String = "materia"
     Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
     Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX

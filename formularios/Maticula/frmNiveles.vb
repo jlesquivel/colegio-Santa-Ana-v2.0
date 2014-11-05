@@ -1,5 +1,5 @@
 Public Class frmNiveles
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim bd As String = "niveles"
 
 #Region " Código generado por el Diseñador de Windows Forms "

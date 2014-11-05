@@ -1,7 +1,7 @@
 Imports colegioReportes
 
 Public Class frmListaClase
-    Inherits System.Windows.Forms.Form
+     Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim dvLista As DataView
     Dim partes As String()
     Public conn As New conexionSQL
