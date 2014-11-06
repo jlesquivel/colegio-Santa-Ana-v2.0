@@ -1,5 +1,5 @@
 ﻿Public Class frmLogin
-    Inherits DevComponents.DotNetBar.OfficeForm
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()

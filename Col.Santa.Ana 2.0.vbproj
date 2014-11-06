@@ -248,6 +248,7 @@
     <None Include="Resources\422.png" />
     <None Include="Resources\4221.png" />
     <None Include="Resources\mail.ico" />
+    <None Include="Resources\login.png" />
     <Content Include="_Historico Cambios.txt" />
     <Content Include="_ POR HACER.txt" />
     <None Include="Resources\240.png" />
