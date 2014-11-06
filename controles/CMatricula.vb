@@ -85,54 +85,54 @@ Public Class CMatricula
     Friend WithEvents SqlUpdateCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlDeleteCommand2 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CMatricula))
-        Me.DataSet21 = New colegio.DataSet2
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand5 = New System.Data.SqlClient.SqlCommand
-        Me.DsCuotas1 = New colegio.dsCuotas
-        Me.TextBox10 = New System.Windows.Forms.TextBox
-        Me.poliza = New colegio.MonedaTextBox
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.TextBox5 = New System.Windows.Forms.TextBox
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.TextBox3 = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.MonedaTextBox2 = New colegio.MonedaTextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.TextBox4 = New System.Windows.Forms.TextBox
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.TextBox7 = New System.Windows.Forms.TextBox
-        Me.matricula = New colegio.MonedaTextBox
-        Me.bingo = New colegio.MonedaTextBox
+        Me.DataSet21 = New colegio.DataSet2()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand5 = New System.Data.SqlClient.SqlCommand()
+        Me.DsCuotas1 = New colegio.dsCuotas()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.poliza = New colegio.MonedaTextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.MonedaTextBox2 = New colegio.MonedaTextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.matricula = New colegio.MonedaTextBox()
+        Me.bingo = New colegio.MonedaTextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.TextBox8 = New colegio.MonedaTextBox
-        Me.cuaderno = New colegio.MonedaTextBox
-        Me.Label5 = New System.Windows.Forms.Label
+        Me.TextBox8 = New colegio.MonedaTextBox()
+        Me.cuaderno = New colegio.MonedaTextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataSet21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsCuotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,7 +177,7 @@ Public Class CMatricula
         'SqlSelectCommand1
         '
         Me.SqlSelectCommand1.CommandText = "SELECT  carnet, ano, nivel, grupo, monto, poliza, beca, id_mat, recibo, bingo, fe" & _
-            "cha, cuaderno" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM     matricula" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE  (carnet = @carnet) AND (ano = @ano)"
+    "cha, cuaderno" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM     matricula" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE  (carnet = @carnet) AND (ano = @ano)"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection2
         Me.SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano")})
         '
@@ -204,8 +204,8 @@ Public Class CMatricula
         'SqlInsertCommand3
         '
         Me.SqlInsertCommand3.CommandText = "INSERT INTO niveles(nivel, ciclo, cobros, descripcion) VALUES (@nivel, @ciclo, @c" & _
-            "obros, @descripcion); SELECT nivel, ciclo, cobros, descripcion FROM niveles WHER" & _
-            "E (nivel = @nivel)"
+    "obros, @descripcion); SELECT nivel, ciclo, cobros, descripcion FROM niveles WHER" & _
+    "E (nivel = @nivel)"
         Me.SqlInsertCommand3.Connection = Me.SqlConnection1
         Me.SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@ciclo", System.Data.SqlDbType.VarChar, 15, "ciclo"), New System.Data.SqlClient.SqlParameter("@cobros", System.Data.SqlDbType.Money, 8, "cobros"), New System.Data.SqlClient.SqlParameter("@descripcion", System.Data.SqlDbType.VarChar, 50, "descripcion")})
         '
@@ -334,7 +334,7 @@ Public Class CMatricula
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(296, 80)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(50, 48)
+        Me.Button2.Size = New System.Drawing.Size(79, 80)
         Me.Button2.TabIndex = 6
         Me.Button2.Visible = False
         '

@@ -1,4 +1,5 @@
 Imports System.Collections.Generic
+Imports System.Security.Principal
 
 Public Class frmPrincipal2
     Public institucion As String
@@ -16,6 +17,10 @@ Public Class frmPrincipal2
         Me.Text = My.Settings.institucion
         Me.AppImp = New Printing.PrinterSettings
         'prueba
+
+        Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
+        Me.LabelItem2.Text = Format(Now.Date, "D")
+        Me.LabelItem1.Text = sqlcon.servidor
 
         If Not sqlcon.conexionOK Then
             MessageBoxEx.Show("No se pudo conectar al servido SQL, Intente luego", "SQL Error!", _
@@ -119,7 +124,7 @@ Public Class frmPrincipal2
 
     End Sub
 
-  
+
 
     Private Sub RibbonCobros_Click(sender As Object, e As EventArgs) Handles RibbonCobros.Click
 
@@ -135,5 +140,12 @@ Public Class frmPrincipal2
         MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
     End Sub
 
+    Private Sub LabelItem3_Click(sender As Object, e As EventArgs) Handles LabelItem3.Click
+
+    End Sub
+
+    Private Sub LabelItem1_Click(sender As Object, e As EventArgs) Handles LabelItem1.Click
+
+    End Sub
 End Class
 
