@@ -1309,12 +1309,10 @@ Public Class Estudiantes
                     CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
                     CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
                 Else
-                    If Fnuevo Then
-                        Me.BindingContext(DataSet11, "fotos").AddNew()
-                        CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
-                        CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
-                        Fnuevo = False
-                    End If
+                    Me.BindingContext(DataSet11, "fotos").AddNew()
+                    CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
+                    CType(Me.BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
+                    Fnuevo = False
                 End If
             End If
             Me.BindingContext(DataSet11, Me.bd).EndCurrentEdit()
@@ -1462,7 +1460,7 @@ Public Class Estudiantes
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
         Try
 
-            Dim frmWeb As New frmWebCam(Me.PictureBox1, Fnuevo)
+            Dim frmWeb As New frmWebCam2(Me.PictureBox1, Fnuevo)
             frmWeb.MdiParent = Me.ParentForm.ParentForm
             frmWeb.Show()
 

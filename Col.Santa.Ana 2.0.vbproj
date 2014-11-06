@@ -103,11 +103,17 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Camera_NET">
+      <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\Camera_NET.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <Private>True</Private>
+    </Reference>
+    <Reference Include="DirectShowLib-2010">
+      <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\DirectShowLib-2010.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="System" />
@@ -118,10 +124,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
-    <Reference Include="WebCAM, Version=1.0.1814.37443, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\colegio El Pilar v2.0\bin\WebCAM.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="DevComponents.DotNetBar" />
@@ -478,13 +480,19 @@
     <Compile Include="formularios\frmPruebas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Maticula\frmWebCam2.Designer.vb">
+      <DependentUpon>frmWebCam2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Maticula\frmWebCam2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\Maticula\dsListaClase.vb">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\frmWebCam.designer.vb">
-      <DependentUpon>frmWebCam.vb</DependentUpon>
+    <Compile Include="formularios\Maticula\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\frmWebCam.vb">
+    <Compile Include="formularios\Maticula\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Notas\dsMaterias.Designer.vb">
@@ -722,6 +730,9 @@
       <DependentUpon>frmReporte.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Maticula\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Maticula\frmEstudiantes.resx">
       <DependentUpon>frmEstudiantes.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -742,8 +753,8 @@
       <DependentUpon>frmTrasladoGrupo.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmWebCam.resx">
-      <DependentUpon>frmWebCam.vb</DependentUpon>
+    <EmbeddedResource Include="formularios\Maticula\frmWebCam2.resx">
+      <DependentUpon>frmWebCam2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Notas\frmAsignaProfesor.resx">
       <DependentUpon>frmAsignaProfesor.vb</DependentUpon>

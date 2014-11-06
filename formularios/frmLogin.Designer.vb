@@ -73,9 +73,9 @@ Partial Class frmLogin
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(184, 149)
+        Me.ButtonX1.Location = New System.Drawing.Point(184, 127)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonX1.Size = New System.Drawing.Size(85, 45)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 7
         Me.ButtonX1.Text = "Ingresar"
@@ -85,9 +85,9 @@ Partial Class frmLogin
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.ButtonX2.Location = New System.Drawing.Point(266, 148)
+        Me.ButtonX2.Location = New System.Drawing.Point(282, 127)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonX2.Size = New System.Drawing.Size(85, 45)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 8
         Me.ButtonX2.Text = "cancelar"
