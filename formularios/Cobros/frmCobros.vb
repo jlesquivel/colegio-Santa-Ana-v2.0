@@ -36,26 +36,26 @@ Public Class frmCobros
     Friend WithEvents Splitter1 As System.Windows.Forms.Splitter
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel5 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel6 As System.Windows.Forms.LinkLabel
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents LinkLabel7 As System.Windows.Forms.LinkLabel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel6 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel
-        Me.Splitter1 = New System.Windows.Forms.Splitter
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -146,20 +146,9 @@ Public Class frmCobros
         Me.Splitter1.TabIndex = 2
         Me.Splitter1.TabStop = False
         '
-        'CrystalReportViewer1
-        '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(136, 0)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.SelectionFormula = ""
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
-        Me.CrystalReportViewer1.TabIndex = 3
-        Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
-        '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.LinkLabel2)
         Me.Panel1.Controls.Add(Me.LinkLabel7)
@@ -174,6 +163,17 @@ Public Class frmCobros
         Me.Panel1.Size = New System.Drawing.Size(133, 511)
         Me.Panel1.TabIndex = 4
         '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(136, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
+        Me.CrystalReportViewer1.TabIndex = 5
+        '
         'frmCobros
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
@@ -181,6 +181,7 @@ Public Class frmCobros
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Splitter1)
+        Me.DoubleBuffered = True
         Me.Name = "frmCobros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Reporte Cobros"

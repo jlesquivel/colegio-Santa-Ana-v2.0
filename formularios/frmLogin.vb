@@ -22,15 +22,16 @@
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
-        Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
-
-        If dominio.Status = NetworkInformation.JoinStatus.Domain Then
-            Me.Visible = False
-            frmPrincipal2.Show()
-        End If
     End Sub
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
+        'If dominio.Status = NetworkInformation.JoinStatus.Domain Then
+        '    Me.Visible = False
+        '    frmPrincipal2.Show()
+        'End If
+
         Dim conn As New conexionSQL
 
         If Not conn.conexionOK Then
@@ -42,6 +43,8 @@
 
             Me.PictureBox1.Image = colegio.My.Resources.Resources.ndb
         End If
+
+
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click

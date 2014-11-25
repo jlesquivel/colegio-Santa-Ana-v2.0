@@ -135,11 +135,11 @@
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
     <value>DELETE FROM [estudiantes] WHERE (([carnet] = @Original_carnet) AND ([nombre] = @Original_nombre) AND ([apellido2] = @Original_apellido2) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)) AND ([apellido1] = @Original_apellido1) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_id_pais_nacimiento = 1 AND [id_pais_nacimiento] IS NULL) OR ([id_pais_nacimiento] = @Original_id_pais_nacimiento)) AND ((@IsNull_id_nacionalidad = 1 AND [id_nacionalidad] IS NULL) OR ([id_nacionalidad] = @Original_id_nacionalidad)) AND ((@IsNull_id_pais = 1 AND [id_pais] IS NULL) OR ([id_pais] = @Original_id_pais)) AND ((@IsNull_id_provincia = 1 AND [id_provincia] IS NULL) OR ([id_provincia] = @Original_id_provincia)) AND ((@IsNull_id_canton = 1 AND [id_canton] IS NULL) OR ([id_canton] = @Original_id_canton)) AND ((@IsNull_id_distrito = 1 AND [id_distrito] IS NULL) OR ([id_distrito] = @Original_id_distrito)) AND ((@IsNull_celular = 1 AND [celular] IS NULL) OR ([celular] = @Original_celular)) AND ((@IsNull_celular1 = 1 AND [celular1] IS NULL) OR ([celular1] = @Original_celular1)) AND ((@IsNull_celular2 = 1 AND [celular2] IS NULL) OR ([celular2] = @Original_celular2)) AND ((@IsNull_beca = 1 AND [beca] IS NULL) OR ([beca] = @Original_beca)) AND ((@IsNull_porcentaje = 1 AND [porcentaje] IS NULL) OR ([porcentaje] = @Original_porcentaje)) AND ((@IsNull_dia_pago = 1 AND [dia_pago] IS NULL) OR ([dia_pago] = @Original_dia_pago)))</value>
@@ -147,11 +147,11 @@
   <metadata name="SqlInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
     <value>INSERT INTO [estudiantes] ([carnet], [nombre], [apellido2], [encargado1], [relacion], [direccion], [trabajo], [telefono], [email], [encargado2], [relacion2], [direccion2], [trabajo2], [telefono2], [email2], [estado], [familia], [nacimiento], [cedula], [apellido1], [ingreso], [sexo], [id_pais_nacimiento], [id_nacionalidad], [id_pais], [id_provincia], [id_canton], [id_distrito], [celular], [celular1], [celular2], [beca], [porcentaje], [dia_pago], [procedencia], [enfermedades], [observaciones]) VALUES (@carnet, @nombre, @apellido2, @encargado1, @relacion, @direccion, @trabajo, @telefono, @email, @encargado2, @relacion2, @direccion2, @trabajo2, @telefono2, @email2, @estado, @familia, @nacimiento, @cedula, @apellido1, @ingreso, @sexo, @id_pais_nacimiento, @id_nacionalidad, @id_pais, @id_provincia, @id_canton, @id_distrito, @celular, @celular1, @celular2, @beca, @porcentaje, @dia_pago, @procedencia, @enfermedades, @observaciones);
@@ -160,11 +160,11 @@ SELECT carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, tele
   <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlSelectCommand1.CommandText" xml:space="preserve">
     <value>SELECT     carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, 
@@ -176,11 +176,11 @@ WHERE     (carnet = @carnet)</value>
   <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
     <value>UPDATE [estudiantes] SET [carnet] = @carnet, [nombre] = @nombre, [apellido2] = @apellido2, [encargado1] = @encargado1, [relacion] = @relacion, [direccion] = @direccion, [trabajo] = @trabajo, [telefono] = @telefono, [email] = @email, [encargado2] = @encargado2, [relacion2] = @relacion2, [direccion2] = @direccion2, [trabajo2] = @trabajo2, [telefono2] = @telefono2, [email2] = @email2, [estado] = @estado, [familia] = @familia, [nacimiento] = @nacimiento, [cedula] = @cedula, [apellido1] = @apellido1, [ingreso] = @ingreso, [sexo] = @sexo, [id_pais_nacimiento] = @id_pais_nacimiento, [id_nacionalidad] = @id_nacionalidad, [id_pais] = @id_pais, [id_provincia] = @id_provincia, [id_canton] = @id_canton, [id_distrito] = @id_distrito, [celular] = @celular, [celular1] = @celular1, [celular2] = @celular2, [beca] = @beca, [porcentaje] = @porcentaje, [dia_pago] = @dia_pago, [procedencia] = @procedencia, [enfermedades] = @enfermedades, [observaciones] = @observaciones WHERE (([carnet] = @Original_carnet) AND ([nombre] = @Original_nombre) AND ([apellido2] = @Original_apellido2) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)) AND ([apellido1] = @Original_apellido1) AND ((@IsNull_ingreso = 1 AND [ingreso] IS NULL) OR ([ingreso] = @Original_ingreso)) AND ((@IsNull_sexo = 1 AND [sexo] IS NULL) OR ([sexo] = @Original_sexo)) AND ((@IsNull_id_pais_nacimiento = 1 AND [id_pais_nacimiento] IS NULL) OR ([id_pais_nacimiento] = @Original_id_pais_nacimiento)) AND ((@IsNull_id_nacionalidad = 1 AND [id_nacionalidad] IS NULL) OR ([id_nacionalidad] = @Original_id_nacionalidad)) AND ((@IsNull_id_pais = 1 AND [id_pais] IS NULL) OR ([id_pais] = @Original_id_pais)) AND ((@IsNull_id_provincia = 1 AND [id_provincia] IS NULL) OR ([id_provincia] = @Original_id_provincia)) AND ((@IsNull_id_canton = 1 AND [id_canton] IS NULL) OR ([id_canton] = @Original_id_canton)) AND ((@IsNull_id_distrito = 1 AND [id_distrito] IS NULL) OR ([id_distrito] = @Original_id_distrito)) AND ((@IsNull_celular = 1 AND [celular] IS NULL) OR ([celular] = @Original_celular)) AND ((@IsNull_celular1 = 1 AND [celular1] IS NULL) OR ([celular1] = @Original_celular1)) AND ((@IsNull_celular2 = 1 AND [celular2] IS NULL) OR ([celular2] = @Original_celular2)) AND ((@IsNull_beca = 1 AND [beca] IS NULL) OR ([beca] = @Original_beca)) AND ((@IsNull_porcentaje = 1 AND [porcentaje] IS NULL) OR ([porcentaje] = @Original_porcentaje)) AND ((@IsNull_dia_pago = 1 AND [dia_pago] IS NULL) OR ([dia_pago] = @Original_dia_pago)));
@@ -192,38 +192,38 @@ SELECT carnet, nombre, apellido2, encargado1, relacion, direccion, trabajo, tele
   <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlDeleteCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="SqlInsertCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
-  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="SqlUpdateCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 55</value>

@@ -2,35 +2,51 @@ Imports System.Collections.Generic
 Imports System.Security.Principal
 
 Public Class frmPrincipal2
+    Inherits DevComponents.DotNetBar.RibbonForm
+
+
     Public institucion As String
     Dim AppImp As Printing.PrinterSettings
     Dim sqlcon As New conexionSQL
     Dim oVentana As New Ventanas
 
+    Private Sub frmPrincipal2_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+    End Sub
+
+    Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
+        Me.LabelItem2.Text = Format(Now.Date, "D")
+        Me.LabelItem1.Text = sqlcon.servidor
+    End Sub
+
+    Private Sub frmPrincipal2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit()
+    End Sub
+
     Private Sub frmPrincipal2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim oVentana As Ventanas = New Ventanas
-        oVentana.cambia_fondoMDI(Me)
+        '' Dim oVentana As Ventanas = New Ventanas
+        '' oVentana.cambia_fondoMDI(Me)
+
+        'Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
+        'Me.LabelItem2.Text = Format(Now.Date, "D")
+        'Me.LabelItem1.Text = sqlcon.servidor
+
 
         institucion = My.Settings.institucion
         organizacion = My.Settings.institucion
         Me.Text = My.Settings.institucion
         Me.AppImp = New Printing.PrinterSettings
+
         'prueba
-
-        Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
-        Me.LabelItem2.Text = Format(Now.Date, "D")
-        Me.LabelItem1.Text = sqlcon.servidor
-
-        If Not sqlcon.conexionOK Then
-            MessageBoxEx.Show("No se pudo conectar al servido SQL, Intente luego", "SQL Error!", _
-             MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.Close()
-        End If
+        'If Not sqlcon.conexionOK Then
+        '    MessageBoxEx.Show("No se pudo conectar al servido SQL, Intente luego", "SQL Error!", _
+        '     MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    Me.Close()
+        'End If
 
         Me.RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
-        ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
-
+        'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
 
     End Sub
     Private Sub ButtonItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem18.Click
@@ -147,5 +163,6 @@ Public Class frmPrincipal2
     Private Sub LabelItem1_Click(sender As Object, e As EventArgs) Handles LabelItem1.Click
 
     End Sub
+
 End Class
 

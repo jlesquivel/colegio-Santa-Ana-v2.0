@@ -363,6 +363,7 @@ Public Class frmRegistraNotas
         'DataGrid1
         '
         Me.DataGrid1.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid1.DataMember = ""
         Me.DataGrid1.DataSource = Me.DsNotas1.notas
         Me.DataGrid1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -473,6 +474,7 @@ Public Class frmRegistraNotas
         'TreeViewSQL1
         '
         Me.TreeViewSQL1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TreeViewSQL1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TreeViewSQL1.ContextMenu = Me.ContextMenu1
         Me.TreeViewSQL1.Dock = System.Windows.Forms.DockStyle.Left
         Me.TreeViewSQL1.Etiquetas = ",Año ,Periodo ,Nivel ,Grupo "
@@ -520,7 +522,9 @@ Public Class frmRegistraNotas
     Private mHiloArch As Thread
     Dim oVentana As New Ventanas
 
-
+    Private Sub frmRegistraNotas_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Me.TreeViewSQL1.BackColor = Me.BackColor
+    End Sub
     Private Sub frmRegistraNotas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Me.BackgroundWorker1.RunWorkerAsync() 'Carga Datos en un Hilo 
@@ -553,6 +557,7 @@ Public Class frmRegistraNotas
         Me.DataGridTextBoxColumn5.TextBox.BackColor = Color.Red
         ' txtbox5 = DataGridTextBoxColumn5.TextBox
         TreeViewSQL1.Nodes(0).Expand()
+        TreeViewSQL1.Nodes(0).Nodes(0).Expand()
     End Sub
 
     Private Sub TreeViewSQL1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeViewSQL1.AfterSelect
@@ -564,8 +569,6 @@ Public Class frmRegistraNotas
 
             actualiza_lista()
         End If
-
-
     End Sub
 
     Sub actualiza_lista()
@@ -599,8 +602,6 @@ Public Class frmRegistraNotas
             SqlDataAdapter1.SelectCommand.Parameters("@grupo").Value = partes(4)
             SqlDataAdapter1.SelectCommand.Parameters("@materia").Value = partes(5)
             SqlDataAdapter1.Fill(DsNotas1, "notas")
-
-
         End If
     End Sub
     Private Sub DataGrid1_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles DataGrid1.Validating
@@ -686,4 +687,6 @@ Public Class frmRegistraNotas
         Me.BindingContext(Me.DsNotas1, "notas").EndCurrentEdit()
         Me.SqlDataAdapter1.Update(DsNotas1.Tables("notas"))
     End Sub
+
+  
 End Class

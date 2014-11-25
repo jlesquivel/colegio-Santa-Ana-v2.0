@@ -113,32 +113,56 @@ Public Class UserControl2
 
     End Sub
 #End Region
+
+    Private Sub UserControl2_Enter(sender As Object, e As EventArgs) Handles Me.Enter
+
+    End Sub
     Private Sub UserControl2_Load(sender As Object, e As EventArgs) Handles Me.Load
         f = Me.Parent
     End Sub
     Private Sub Nuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Nuevo.Click
-        f.nuevo()
+        If checkField(f, "nuevo") Then
+            f.nuevo()
+        End If
     End Sub
 
     Private Sub salvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles salvar.Click
-        f.guardar()
+
+        If checkField(f, "guardar") Then
+            f.guardar()
+        End If
     End Sub
 
     Private Sub Borrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Borrar.Click
-        f.borrar()
+
+        If checkField(f, "borrar") Then
+            f.borrar()
+        End If
     End Sub
 
     Private Sub Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buscar.Click
-        f.buscar()
+
+        If checkField(f, "buscar") Then
+            f.buscar()
+        End If
     End Sub
 
     Private Sub Imprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Imprimir.Click
-        f.imprimir()
+
+        If checkField(f, "imprimir") Then
+            f.imprimir()
+        End If
     End Sub
 
     Private Sub Salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Salir.Click
-        f.close()
+        If checkField(f, "close") Then
+            f.close()
+        End If
     End Sub
 
+    Public Function checkField(ByVal objectt As Object, ByVal metodo As String) As Boolean
+        Dim type As Type = objectt.GetType
+        Return type.GetMethod(metodo) IsNot Nothing
+    End Function
  
 End Class

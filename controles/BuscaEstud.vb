@@ -90,19 +90,19 @@ Public Class BuscaEstud
         Me.TextBox1.Location = New System.Drawing.Point(55, 24)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(96, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TabIndex = 0
         '
         'ComboBox1
         '
         Me.ComboBox1.Location = New System.Drawing.Point(55, 3)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(112, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.ComboBox1.TabIndex = 1
         '
         'ListBox1
         '
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(0, 54)
         Me.ListBox1.Name = "ListBox1"
@@ -237,4 +237,5 @@ Public Class SeleccionadoEventArgs
             ivalor = Value
         End Set
     End Property
+
 End Class

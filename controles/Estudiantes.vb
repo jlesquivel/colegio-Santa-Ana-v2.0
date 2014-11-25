@@ -157,109 +157,109 @@ Public Class Estudiantes
 
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Estudiantes))
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.DataSet11 = New colegio.DataSet1
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TextBox4 = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.TextBox3 = New System.Windows.Forms.TextBox
-        Me.TextBox14 = New System.Windows.Forms.TextBox
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Label25 = New System.Windows.Forms.Label
-        Me.Label24 = New System.Windows.Forms.Label
-        Me.Label23 = New System.Windows.Forms.Label
-        Me.Label22 = New System.Windows.Forms.Label
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.TextBox15 = New System.Windows.Forms.TextBox
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.TextBox21 = New System.Windows.Forms.TextBox
-        Me.TextBox18 = New System.Windows.Forms.TextBox
-        Me.Label29 = New System.Windows.Forms.Label
-        Me.TextBox17 = New System.Windows.Forms.TextBox
-        Me.Label28 = New System.Windows.Forms.Label
-        Me.Label27 = New System.Windows.Forms.Label
-        Me.Label26 = New System.Windows.Forms.Label
-        Me.TextBox16 = New System.Windows.Forms.TextBox
-        Me.TextBox13 = New System.Windows.Forms.TextBox
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.TextBox7 = New System.Windows.Forms.TextBox
-        Me.TextBox8 = New System.Windows.Forms.TextBox
-        Me.TextBox12 = New System.Windows.Forms.TextBox
-        Me.TextBox9 = New System.Windows.Forms.TextBox
-        Me.TextBox11 = New System.Windows.Forms.TextBox
-        Me.TextBox6 = New System.Windows.Forms.TextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.TextBox10 = New System.Windows.Forms.TextBox
-        Me.TextBox5 = New System.Windows.Forms.TextBox
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.TextBox23 = New System.Windows.Forms.TextBox
-        Me.TextBox22 = New System.Windows.Forms.TextBox
-        Me.Label34 = New System.Windows.Forms.Label
-        Me.Label33 = New System.Windows.Forms.Label
-        Me.Label32 = New System.Windows.Forms.Label
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox
-        Me.CEstadoCuenta1 = New colegio.CEstadoCuenta
-        Me.CNotasEstudiante1 = New colegio.CNotasEstudiante
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DataSet11 = New colegio.DataSet1()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.CEstadoCuenta1 = New colegio.CEstadoCuenta()
+        Me.CNotasEstudiante1 = New colegio.CNotasEstudiante()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.DsCarnet1 = New colegio.dsCarnet
-        Me.UserControl21 = New colegio.UserControl2
-        Me.BuscaEstudiante1 = New colegio.BuscaEstud
-        Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl
-        Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem
-        Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem
-        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem
-        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem
-        Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem
-        Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel
-        Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem
+        Me.DsCarnet1 = New colegio.dsCarnet()
+        Me.UserControl21 = New colegio.UserControl2()
+        Me.BuscaEstudiante1 = New colegio.BuscaEstud()
+        Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl()
+        Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -279,9 +279,9 @@ Public Class Estudiantes
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(259, 18)
+        Me.PictureBox1.Location = New System.Drawing.Point(251, 20)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(192, 240)
+        Me.PictureBox1.Size = New System.Drawing.Size(270, 220)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 38
         Me.PictureBox1.TabStop = False
@@ -290,7 +290,7 @@ Public Class Estudiantes
         '
         Me.TextBox1.AllowDrop = True
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.carnet", True))
-        Me.TextBox1.Location = New System.Drawing.Point(99, 21)
+        Me.TextBox1.Location = New System.Drawing.Point(93, 21)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(144, 20)
         Me.TextBox1.TabIndex = 0
@@ -304,7 +304,7 @@ Public Class Estudiantes
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(19, 46)
+        Me.Label1.Location = New System.Drawing.Point(13, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 16)
         Me.Label1.TabIndex = 34
@@ -315,7 +315,7 @@ Public Class Estudiantes
         '
         Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.nombre", True))
-        Me.TextBox2.Location = New System.Drawing.Point(99, 46)
+        Me.TextBox2.Location = New System.Drawing.Point(93, 46)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(144, 20)
         Me.TextBox2.TabIndex = 1
@@ -323,7 +323,7 @@ Public Class Estudiantes
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(19, 98)
+        Me.Label4.Location = New System.Drawing.Point(13, 98)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 16)
         Me.Label4.TabIndex = 37
@@ -333,7 +333,7 @@ Public Class Estudiantes
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(21, 22)
+        Me.Label2.Location = New System.Drawing.Point(15, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 16)
         Me.Label2.TabIndex = 35
@@ -344,7 +344,7 @@ Public Class Estudiantes
         '
         Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido2", True))
-        Me.TextBox4.Location = New System.Drawing.Point(99, 96)
+        Me.TextBox4.Location = New System.Drawing.Point(93, 96)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(144, 20)
         Me.TextBox4.TabIndex = 3
@@ -352,7 +352,7 @@ Public Class Estudiantes
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(19, 72)
+        Me.Label3.Location = New System.Drawing.Point(13, 72)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 16)
         Me.Label3.TabIndex = 36
@@ -363,7 +363,7 @@ Public Class Estudiantes
         '
         Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido1", True))
-        Me.TextBox3.Location = New System.Drawing.Point(99, 71)
+        Me.TextBox3.Location = New System.Drawing.Point(93, 71)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(144, 20)
         Me.TextBox3.TabIndex = 2
@@ -371,7 +371,7 @@ Public Class Estudiantes
         'TextBox14
         '
         Me.TextBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular", True))
-        Me.TextBox14.Location = New System.Drawing.Point(99, 173)
+        Me.TextBox14.Location = New System.Drawing.Point(93, 173)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(144, 20)
         Me.TextBox14.TabIndex = 51
@@ -379,7 +379,7 @@ Public Class Estudiantes
         'Label18
         '
         Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Location = New System.Drawing.Point(19, 174)
+        Me.Label18.Location = New System.Drawing.Point(13, 174)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 16)
         Me.Label18.TabIndex = 50
@@ -391,7 +391,7 @@ Public Class Estudiantes
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Location = New System.Drawing.Point(99, 202)
+        Me.GroupBox1.Location = New System.Drawing.Point(93, 202)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(144, 56)
         Me.GroupBox1.TabIndex = 47
@@ -417,7 +417,7 @@ Public Class Estudiantes
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Location = New System.Drawing.Point(19, 126)
+        Me.Label16.Location = New System.Drawing.Point(13, 126)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(72, 16)
         Me.Label16.TabIndex = 43
@@ -428,7 +428,7 @@ Public Class Estudiantes
         '
         Me.DateTimePicker2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.ingreso", True))
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(99, 122)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(93, 122)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(144, 20)
         Me.DateTimePicker2.TabIndex = 42
@@ -436,7 +436,7 @@ Public Class Estudiantes
         'Label15
         '
         Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Location = New System.Drawing.Point(19, 152)
+        Me.Label15.Location = New System.Drawing.Point(13, 152)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(72, 16)
         Me.Label15.TabIndex = 41
@@ -447,7 +447,7 @@ Public Class Estudiantes
         '
         Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.estado", True))
         Me.ComboBox3.Items.AddRange(New Object() {"ACTIVO", "REPROBADO", "TRASLADADO", "EGRESADO", "EXPULSADO"})
-        Me.ComboBox3.Location = New System.Drawing.Point(99, 146)
+        Me.ComboBox3.Location = New System.Drawing.Point(93, 146)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(144, 21)
         Me.ComboBox3.TabIndex = 40
@@ -455,11 +455,12 @@ Public Class Estudiantes
         'Label17
         '
         Me.Label17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.sexo", True))
-        Me.Label17.Location = New System.Drawing.Point(267, 234)
+        Me.Label17.Location = New System.Drawing.Point(271, 173)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(8, 16)
         Me.Label17.TabIndex = 49
         Me.Label17.Text = "0"
+        Me.Label17.Visible = False
         '
         'GroupBox2
         '
@@ -948,7 +949,7 @@ Public Class Estudiantes
         'SqlConnection1
         '
         Me.SqlConnection1.ConnectionString = "Data Source=colegio-server;Initial Catalog=colegio;Persist Security Info=True;Use" & _
-            "r ID=sa;Password=123"
+    "r ID=sa;Password=123"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
@@ -1000,7 +1001,7 @@ Public Class Estudiantes
         'SqlInsertCommand2
         '
         Me.SqlInsertCommand2.CommandText = "INSERT INTO fotos(carnet, foto) VALUES (@carnet, @foto); SELECT carnet, foto FROM" & _
-            " fotos WHERE (carnet = @carnet)"
+    " fotos WHERE (carnet = @carnet)"
         Me.SqlInsertCommand2.Connection = Me.SqlConnection1
         Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@foto", System.Data.SqlDbType.VarBinary, 2147483647, "foto")})
         '
@@ -1013,7 +1014,7 @@ Public Class Estudiantes
         'SqlUpdateCommand2
         '
         Me.SqlUpdateCommand2.CommandText = "UPDATE fotos SET carnet = @carnet, foto = @foto WHERE (carnet = @Original_carnet)" & _
-            "; SELECT carnet, foto FROM fotos WHERE (carnet = @carnet)"
+    "; SELECT carnet, foto FROM fotos WHERE (carnet = @carnet)"
         Me.SqlUpdateCommand2.Connection = Me.SqlConnection1
         Me.SqlUpdateCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@foto", System.Data.SqlDbType.VarBinary, 2147483647, "foto"), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing)})
         '
@@ -1031,9 +1032,9 @@ Public Class Estudiantes
         '
         Me.UserControl21.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
         Me.UserControl21.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UserControl21.Location = New System.Drawing.Point(200, 0)
+        Me.UserControl21.Location = New System.Drawing.Point(240, 0)
         Me.UserControl21.Name = "UserControl21"
-        Me.UserControl21.Size = New System.Drawing.Size(575, 32)
+        Me.UserControl21.Size = New System.Drawing.Size(535, 32)
         Me.UserControl21.TabIndex = 4
         '
         'BuscaEstudiante1
@@ -1042,11 +1043,12 @@ Public Class Estudiantes
         Me.BuscaEstudiante1.Dock = System.Windows.Forms.DockStyle.Left
         Me.BuscaEstudiante1.Location = New System.Drawing.Point(0, 0)
         Me.BuscaEstudiante1.Name = "BuscaEstudiante1"
-        Me.BuscaEstudiante1.Size = New System.Drawing.Size(200, 468)
+        Me.BuscaEstudiante1.Size = New System.Drawing.Size(240, 468)
         Me.BuscaEstudiante1.TabIndex = 0
         '
         'SuperTabControl1
         '
+        Me.SuperTabControl1.BackColor = System.Drawing.Color.White
         '
         '
         '
@@ -1060,19 +1062,20 @@ Public Class Estudiantes
         Me.SuperTabControl1.ControlBox.MenuBox.Name = ""
         Me.SuperTabControl1.ControlBox.Name = ""
         Me.SuperTabControl1.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl1.ControlBox.MenuBox, Me.SuperTabControl1.ControlBox.CloseBox})
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel6)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControl1.Location = New System.Drawing.Point(200, 32)
+        Me.SuperTabControl1.ForeColor = System.Drawing.Color.Black
+        Me.SuperTabControl1.Location = New System.Drawing.Point(240, 32)
         Me.SuperTabControl1.Name = "SuperTabControl1"
         Me.SuperTabControl1.ReorderTabsEnabled = True
         Me.SuperTabControl1.SelectedTabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.SuperTabControl1.SelectedTabIndex = 0
-        Me.SuperTabControl1.Size = New System.Drawing.Size(575, 436)
+        Me.SuperTabControl1.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControl1.TabFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabControl1.TabIndex = 41
         Me.SuperTabControl1.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1, Me.SuperTabItem2, Me.SuperTabItem3, Me.SuperTabItem4, Me.SuperTabItem5, Me.SuperTabItem6})
@@ -1100,7 +1103,7 @@ Public Class Estudiantes
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 23)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(535, 413)
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -1115,9 +1118,9 @@ Public Class Estudiantes
         '
         Me.SuperTabControlPanel6.Controls.Add(Me.CNotasEstudiante1)
         Me.SuperTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel6.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel6.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel6.Name = "SuperTabControlPanel6"
-        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControlPanel6.TabIndex = 0
         Me.SuperTabControlPanel6.TabItem = Me.SuperTabItem6
         '
@@ -1132,9 +1135,9 @@ Public Class Estudiantes
         '
         Me.SuperTabControlPanel5.Controls.Add(Me.CEstadoCuenta1)
         Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
-        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControlPanel5.TabIndex = 0
         Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
         '
@@ -1154,9 +1157,9 @@ Public Class Estudiantes
         Me.SuperTabControlPanel4.Controls.Add(Me.Label34)
         Me.SuperTabControlPanel4.Controls.Add(Me.Label33)
         Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
-        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControlPanel4.TabIndex = 0
         Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
         '
@@ -1196,9 +1199,9 @@ Public Class Estudiantes
         Me.SuperTabControlPanel3.Controls.Add(Me.Label11)
         Me.SuperTabControlPanel3.Controls.Add(Me.Label8)
         Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
-        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControlPanel3.TabIndex = 0
         Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
         '
@@ -1219,9 +1222,9 @@ Public Class Estudiantes
         Me.SuperTabControlPanel2.Controls.Add(Me.Label19)
         Me.SuperTabControlPanel2.Controls.Add(Me.ComboBox4)
         Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
-        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(575, 413)
+        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(535, 436)
         Me.SuperTabControlPanel2.TabIndex = 0
         Me.SuperTabControlPanel2.TabItem = Me.SuperTabItem2
         '
