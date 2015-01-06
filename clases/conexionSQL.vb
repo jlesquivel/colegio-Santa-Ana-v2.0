@@ -98,7 +98,11 @@ Public Class conexionSQL
     End Sub
 
 #Region "CONEXION OK"
-
+    ''' <summary>
+    ''' Verifica si se puede establecer conexion con el servidor
+    ''' </summary>
+    ''' <returns>Valor booleano true indicando que conecto con el servidor</returns>
+    ''' <remarks></remarks>
     Function conexionOK() As Boolean
         Return QuickOpen(colegioConnection, 5)
     End Function
@@ -136,7 +140,13 @@ Public Class conexionSQL
 
 
 #End Region
-
+    ''' <summary>
+    ''' Llena un dataset con la instruccion que recibe como parámetro
+    ''' </summary>
+    ''' <param name="ds"> devuelve el resultado</param>
+    ''' <param name="tabla">nombre tabla string</param>
+    ''' <param name="instruccion">instruccion sql </param>
+    ''' <remarks></remarks>
     Sub llena(ByRef ds As DataSet, ByVal tabla As String, ByVal instruccion As String)
         Try
             If colegioConnection.State = ConnectionState.Closed Then
@@ -154,6 +164,13 @@ Public Class conexionSQL
         End Try
 
     End Sub
+    ''' <summary>
+    ''' LLena ds con la instruccion en el  sqlcommand
+    ''' </summary>
+    ''' <param name="ds">dataset donde se entregara el resultado</param>
+    ''' <param name="tabla">tabla tipo string</param>
+    ''' <param name="instruccion">tipo SQLCommand</param>
+    ''' <remarks></remarks>
     Sub llena(ByRef ds As DataSet, ByVal tabla As String, ByVal instruccion As SqlCommand)
         Try
             If colegioConnection.State = ConnectionState.Closed Then
@@ -198,7 +215,11 @@ Public Class conexionSQL
         End Try
         Return arreglo
     End Function
-
+    ''' <summary>
+    ''' Ejecuta la instruccion pasada por parametro
+    ''' </summary>
+    ''' <param name="comando"></param>
+    ''' <remarks></remarks>
     Public Sub ejecuta(ByVal comando As String)
         Try
             Dim myCommand As New SqlCommand(comando)

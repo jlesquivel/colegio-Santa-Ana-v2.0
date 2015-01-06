@@ -17,6 +17,9 @@ Public Class frmPrincipal2
         Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
         Me.LabelItem2.Text = Format(Now.Date, "D")
         Me.LabelItem1.Text = sqlcon.servidor
+
+        Me.ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
+        Me.ButtonItem41.Enabled = (DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
     End Sub
 
     Private Sub frmPrincipal2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -127,10 +130,7 @@ Public Class frmPrincipal2
     Private Sub ButtonItem30_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem30.Click
         oVentana.cargarVentana(New frmDiskette, Me)
     End Sub
-    Private Sub ButtonItem29_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem29.Click
-        Dim oNotas As New Notas
-        oNotas.CreaNotasBD()
-    End Sub
+
 #End Region
 
     Private Sub ButtonItem38_Click(sender As Object, e As EventArgs) Handles ButtonItem38.Click
@@ -156,13 +156,22 @@ Public Class frmPrincipal2
         MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
     End Sub
 
-    Private Sub LabelItem3_Click(sender As Object, e As EventArgs) Handles LabelItem3.Click
-
+    Private Sub ButtonItem39_Click(sender As Object, e As EventArgs) Handles ButtonItem39.Click
+        Dim oNotas As New Notas
+        oNotas.CreaNotasBD()
+        oNotas = Nothing
     End Sub
 
-    Private Sub LabelItem1_Click(sender As Object, e As EventArgs) Handles LabelItem1.Click
-
+    Private Sub ButtonItem40_Click(sender As Object, e As EventArgs) Handles ButtonItem40.Click
+        Dim oNotas As New Notas
+        oNotas.CreaNotasConv1()
+        oNotas = Nothing
     End Sub
 
+    Private Sub ButtonItem41_Click(sender As Object, e As EventArgs) Handles ButtonItem41.Click
+        Dim oNotas As New Notas
+        oNotas.CreaNotasConv2()
+        oNotas = Nothing
+    End Sub
 End Class
 

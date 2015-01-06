@@ -1,6 +1,6 @@
 
 Public Class frmEstudiantes
-    Inherits DevComponents.DotNetBar.OfficeForm
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim pcarnet As String
 
 
@@ -63,7 +63,6 @@ Public Class frmEstudiantes
         Me.ClientSize = New System.Drawing.Size(768, 459)
         Me.Controls.Add(Me.Estudiantes1)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmEstudiantes"
         Me.Text = "Estudiantes"
         Me.ResumeLayout(False)
@@ -72,9 +71,9 @@ Public Class frmEstudiantes
 
 #End Region
 
-    Private Sub Estudiantes1_SizeChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Estudiantes1.SizeChanged
-        Me.Width = Estudiantes1.Width
-    End Sub
+    'Private Sub Estudiantes1_SizeChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Estudiantes1.SizeChanged
+    '    Me.Width = Estudiantes1.Width
+    'End Sub
 
     Private Sub frmEstudiantes_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -96,4 +95,7 @@ Public Class frmEstudiantes
     End Sub
 
 
+    Private Sub frmEstudiantes_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+
+    End Sub
 End Class

@@ -78,10 +78,13 @@ Public Property organizacion() As String
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem37 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
-        Me.ButtonItem29 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem32 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ItemContainer5 = New DevComponents.DotNetBar.ItemContainer()
+        Me.ButtonItem39 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem40 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem41 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar1 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem19 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem20 = New DevComponents.DotNetBar.ButtonItem()
@@ -433,7 +436,7 @@ Public Property organizacion() As String
         Me.RibbonBar6.ContainerControlProcessDialogKey = True
         Me.RibbonBar6.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33, Me.ButtonItem34})
-        Me.RibbonBar6.Location = New System.Drawing.Point(559, 0)
+        Me.RibbonBar6.Location = New System.Drawing.Point(631, 0)
         Me.RibbonBar6.Name = "RibbonBar6"
         Me.RibbonBar6.Size = New System.Drawing.Size(147, 93)
         Me.RibbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -478,7 +481,7 @@ Public Property organizacion() As String
         Me.RibbonBar5.ContainerControlProcessDialogKey = True
         Me.RibbonBar5.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar5.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem35, Me.ButtonItem36, Me.ButtonItem37})
-        Me.RibbonBar5.Location = New System.Drawing.Point(388, 0)
+        Me.RibbonBar5.Location = New System.Drawing.Point(460, 0)
         Me.RibbonBar5.Name = "RibbonBar5"
         Me.RibbonBar5.Size = New System.Drawing.Size(171, 93)
         Me.RibbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -530,10 +533,10 @@ Public Property organizacion() As String
         Me.RibbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar4.ContainerControlProcessDialogKey = True
         Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem29, Me.ButtonItem30, Me.ButtonItem31, Me.ButtonItem32})
+        Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem31, Me.ButtonItem32, Me.ButtonItem30, Me.ItemContainer5})
         Me.RibbonBar4.Location = New System.Drawing.Point(178, 0)
         Me.RibbonBar4.Name = "RibbonBar4"
-        Me.RibbonBar4.Size = New System.Drawing.Size(210, 93)
+        Me.RibbonBar4.Size = New System.Drawing.Size(282, 93)
         Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar4.TabIndex = 0
         Me.RibbonBar4.Text = "Tareas"
@@ -545,14 +548,6 @@ Public Property organizacion() As String
         '
         '
         Me.RibbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'ButtonItem29
-        '
-        Me.ButtonItem29.Image = CType(resources.GetObject("ButtonItem29.Image"), System.Drawing.Image)
-        Me.ButtonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem29.Name = "ButtonItem29"
-        Me.ButtonItem29.SubItemsExpandWidth = 14
-        Me.ButtonItem29.Text = "Genera Notas"
         '
         'ButtonItem30
         '
@@ -577,6 +572,41 @@ Public Property organizacion() As String
         Me.ButtonItem32.Name = "ButtonItem32"
         Me.ButtonItem32.SubItemsExpandWidth = 14
         Me.ButtonItem32.Text = "Ausencias"
+        '
+        'ItemContainer5
+        '
+        '
+        '
+        '
+        Me.ItemContainer5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ItemContainer5.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
+        Me.ItemContainer5.Name = "ItemContainer5"
+        Me.ItemContainer5.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem39, Me.ButtonItem40, Me.ButtonItem41})
+        '
+        '
+        '
+        Me.ItemContainer5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ButtonItem39
+        '
+        Me.ButtonItem39.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem39.Icon = CType(resources.GetObject("ButtonItem39.Icon"), System.Drawing.Icon)
+        Me.ButtonItem39.Name = "ButtonItem39"
+        Me.ButtonItem39.Text = "Notas Anual"
+        '
+        'ButtonItem40
+        '
+        Me.ButtonItem40.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem40.Icon = CType(resources.GetObject("ButtonItem40.Icon"), System.Drawing.Icon)
+        Me.ButtonItem40.Name = "ButtonItem40"
+        Me.ButtonItem40.Text = "Convocatoria 1"
+        '
+        'ButtonItem41
+        '
+        Me.ButtonItem41.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem41.Icon = CType(resources.GetObject("ButtonItem41.Icon"), System.Drawing.Icon)
+        Me.ButtonItem41.Name = "ButtonItem41"
+        Me.ButtonItem41.Text = "Convocatoria 2"
         '
         'RibbonBar1
         '
@@ -1114,7 +1144,6 @@ Public Property organizacion() As String
     Friend WithEvents ButtonItem35 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem36 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem37 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem29 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem30 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem31 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem32 As DevComponents.DotNetBar.ButtonItem
@@ -1126,4 +1155,8 @@ Public Property organizacion() As String
     Friend WithEvents LabelItem1 As DevComponents.DotNetBar.LabelItem
     Friend WithEvents LabelItem2 As DevComponents.DotNetBar.LabelItem
     Friend WithEvents LabelItem3 As DevComponents.DotNetBar.LabelItem
+    Friend WithEvents ItemContainer5 As DevComponents.DotNetBar.ItemContainer
+    Friend WithEvents ButtonItem39 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem40 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem41 As DevComponents.DotNetBar.ButtonItem
 End Class

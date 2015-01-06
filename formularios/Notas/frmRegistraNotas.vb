@@ -188,8 +188,7 @@ Public Class frmRegistraNotas
         '
         'tree
         '
-        Me.tree.CommandText = "SELECT      ano, periodo, nivel, grupo, nombre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM          grupo_periodo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDE" & _
-    "R BY ano DESC, periodo, nivel, grupo, materia"
+        Me.tree.CommandText = "select * from dbo.lista_anos_periodos_niveles"
         Me.tree.Connection = Me.SqlConnection1
         '
         'SqlConnection1

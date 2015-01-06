@@ -26,11 +26,11 @@
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        'Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
-        'If dominio.Status = NetworkInformation.JoinStatus.Domain Then
-        '    Me.Visible = False
-        '    frmPrincipal2.Show()
-        'End If
+        Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
+        If dominio.Status = NetworkInformation.JoinStatus.Domain Then
+            Me.Visible = False
+            frmPrincipal2.ShowDialog()
+        End If
 
         Dim conn As New conexionSQL
 

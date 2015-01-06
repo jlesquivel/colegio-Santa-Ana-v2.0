@@ -2,6 +2,7 @@ Imports System.IO
 Imports System.Drawing.Imaging
 Imports System.Drawing.Drawing2D
 Imports System.ComponentModel
+Imports DevComponents.DotNetBar
 
 Public Class Estudiantes
     Inherits System.Windows.Forms.UserControl
@@ -11,6 +12,9 @@ Public Class Estudiantes
     Private pcarnet As String = ""
     Private Fnuevo As Boolean = False
     Dim anchoDC As Integer
+    Public Bvisible As Boolean = True
+
+#Region " Código generado por el Diseñador de Windows Forms "
     Friend WithEvents CNotasEstudiante1 As colegio.CNotasEstudiante
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label13 As System.Windows.Forms.Label
@@ -58,10 +62,6 @@ Public Class Estudiantes
     Friend WithEvents SuperTabItem2 As DevComponents.DotNetBar.SuperTabItem
     Friend WithEvents SuperTabControlPanel1 As DevComponents.DotNetBar.SuperTabControlPanel
     Friend WithEvents SuperTabItem1 As DevComponents.DotNetBar.SuperTabItem
-    Public Bvisible As Boolean = True
-
-#Region " Código generado por el Diseñador de Windows Forms "
-
     Public Sub New()
         MyBase.New()
 
@@ -279,7 +279,7 @@ Public Class Estudiantes
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(251, 20)
+        Me.PictureBox1.Location = New System.Drawing.Point(251, 18)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(270, 220)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -391,6 +391,7 @@ Public Class Estudiantes
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Location = New System.Drawing.Point(93, 202)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(144, 56)
@@ -455,12 +456,11 @@ Public Class Estudiantes
         'Label17
         '
         Me.Label17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.sexo", True))
-        Me.Label17.Location = New System.Drawing.Point(271, 173)
+        Me.Label17.Location = New System.Drawing.Point(120, 23)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(8, 16)
+        Me.Label17.Size = New System.Drawing.Size(16, 17)
         Me.Label17.TabIndex = 49
         Me.Label17.Text = "0"
-        Me.Label17.Visible = False
         '
         'GroupBox2
         '
@@ -1092,7 +1092,6 @@ Public Class Estudiantes
         Me.SuperTabControlPanel1.Controls.Add(Me.Label15)
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox1)
         Me.SuperTabControlPanel1.Controls.Add(Me.Label3)
-        Me.SuperTabControlPanel1.Controls.Add(Me.Label17)
         Me.SuperTabControlPanel1.Controls.Add(Me.Label2)
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox2)
         Me.SuperTabControlPanel1.Controls.Add(Me.Label16)
@@ -1297,6 +1296,7 @@ Public Class Estudiantes
             Me.BindingContext(DataSet11, Me.bd).AddNew()
             Me.ComboBox3.Text = "ACTIVO"
             Me.UserControl21.salvar.Enabled = True
+            Label17.Text = "1"
             TextBox1.Focus()
         Catch eEndEdit As System.Exception
             System.Windows.Forms.MessageBox.Show(eEndEdit.Message)
@@ -1513,11 +1513,16 @@ Public Class Estudiantes
     End Sub
 
     Private Sub Label17_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label17.TextChanged
-        If Label17.Text = "0" Then
-            RadioButton1.Checked = True
-        Else
-            RadioButton2.Checked = True
-        End If
+
+        Select Case Label17.Text
+            Case "0"
+                RadioButton1.Checked = True
+            Case "1"
+                RadioButton2.Checked = True
+            Case Else
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
+        End Select
     End Sub
 
     'Private Sub controlesAbre(ByVal abre As Boolean)

@@ -14,11 +14,17 @@ Public Class Notas
         End Try
     End Sub
 
-    Public Sub CreaNotasExt()
+    Public Sub CreaNotasConv1()
         Try
             conn.ejecuta(("EXEC crea_notas '4', '" & Year(Now) & "'"))
-            conn.ejecuta(("EXEC crea_notas '4', '" & Year(Now) & "'"))
-
+            MessageBox.Show(" Notas Presentación Generadas ", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub CreaNotasConv2()
+        Try
+            conn.ejecuta(("EXEC crea_notas '5', '" & Year(Now) & "'"))
             MessageBox.Show(" Notas Presentación Generadas ", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show(ex.Message)

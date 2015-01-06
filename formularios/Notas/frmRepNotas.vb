@@ -34,24 +34,24 @@ Public Class frmRepNotas
     'Puede modificarse utilizando el Diseñador de Windows Forms. 
     'No lo modifique con el editor de código.
     Friend WithEvents Splitter1 As System.Windows.Forms.Splitter
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents ExplorerBar1 As DevComponents.DotNetBar.ExplorerBar
     Friend WithEvents ExplorerBarGroupItem1 As DevComponents.DotNetBar.ExplorerBarGroupItem
     Friend WithEvents ButtonItem1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Splitter1 = New System.Windows.Forms.Splitter
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.ExplorerBar1 = New DevComponents.DotNetBar.ExplorerBar
-        Me.ExplorerBarGroupItem1 = New DevComponents.DotNetBar.ExplorerBarGroupItem
-        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem
-        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem
-        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem
-        Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.ExplorerBar1 = New DevComponents.DotNetBar.ExplorerBar()
+        Me.ExplorerBarGroupItem1 = New DevComponents.DotNetBar.ExplorerBarGroupItem()
+        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.ExplorerBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExplorerBar1.SuspendLayout()
         Me.SuspendLayout()
@@ -68,21 +68,9 @@ Public Class frmRepNotas
         '
         Me.Splitter1.Location = New System.Drawing.Point(0, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(3, 438)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 476)
         Me.Splitter1.TabIndex = 2
         Me.Splitter1.TabStop = False
-        '
-        'CrystalReportViewer1
-        '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(146, 0)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.SelectionFormula = ""
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(622, 438)
-        Me.CrystalReportViewer1.TabIndex = 3
-        Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
         'ExplorerBar1
         '
@@ -103,7 +91,7 @@ Public Class frmRepNotas
         Me.ExplorerBar1.Images = Nothing
         Me.ExplorerBar1.Location = New System.Drawing.Point(3, 0)
         Me.ExplorerBar1.Name = "ExplorerBar1"
-        Me.ExplorerBar1.Size = New System.Drawing.Size(143, 438)
+        Me.ExplorerBar1.Size = New System.Drawing.Size(143, 476)
         Me.ExplorerBar1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
         Me.ExplorerBar1.TabIndex = 4
         Me.ExplorerBar1.Text = "ExplorerBar1"
@@ -190,13 +178,27 @@ Public Class frmRepNotas
         Me.ControlContainerItem1.Name = "ControlContainerItem1"
         Me.ControlContainerItem1.Text = "ControlContainerItem1"
         '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(146, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(724, 476)
+        Me.CrystalReportViewer1.TabIndex = 5
+        '
         'frmRepNotas
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(768, 438)
+        Me.ClientSize = New System.Drawing.Size(870, 476)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.ExplorerBar1)
         Me.Controls.Add(Me.Splitter1)
+        Me.DoubleBuffered = True
         Me.Name = "frmRepNotas"
         Me.Text = "Reporte Notas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

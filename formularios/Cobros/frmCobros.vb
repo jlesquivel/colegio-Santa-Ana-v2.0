@@ -166,11 +166,15 @@ Public Class frmCobros
         'CrystalReportViewer1
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.ForeColor = System.Drawing.Color.Black
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(136, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
         Me.CrystalReportViewer1.TabIndex = 5
         '
@@ -185,6 +189,7 @@ Public Class frmCobros
         Me.Name = "frmCobros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Reporte Cobros"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
