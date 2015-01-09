@@ -78,9 +78,9 @@ Public Property organizacion() As String
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem37 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
-        Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem32 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
         Me.ItemContainer5 = New DevComponents.DotNetBar.ItemContainer()
         Me.ButtonItem39 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem40 = New DevComponents.DotNetBar.ButtonItem()
@@ -435,6 +435,7 @@ Public Property organizacion() As String
         Me.RibbonBar6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar6.ContainerControlProcessDialogKey = True
         Me.RibbonBar6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar6.DragDropSupport = True
         Me.RibbonBar6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33, Me.ButtonItem34})
         Me.RibbonBar6.Location = New System.Drawing.Point(631, 0)
         Me.RibbonBar6.Name = "RibbonBar6"
@@ -480,6 +481,7 @@ Public Property organizacion() As String
         Me.RibbonBar5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar5.ContainerControlProcessDialogKey = True
         Me.RibbonBar5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar5.DragDropSupport = True
         Me.RibbonBar5.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem35, Me.ButtonItem36, Me.ButtonItem37})
         Me.RibbonBar5.Location = New System.Drawing.Point(460, 0)
         Me.RibbonBar5.Name = "RibbonBar5"
@@ -533,6 +535,7 @@ Public Property organizacion() As String
         Me.RibbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar4.ContainerControlProcessDialogKey = True
         Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar4.DragDropSupport = True
         Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem31, Me.ButtonItem32, Me.ButtonItem30, Me.ItemContainer5})
         Me.RibbonBar4.Location = New System.Drawing.Point(178, 0)
         Me.RibbonBar4.Name = "RibbonBar4"
@@ -549,14 +552,6 @@ Public Property organizacion() As String
         '
         Me.RibbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
-        'ButtonItem30
-        '
-        Me.ButtonItem30.Image = CType(resources.GetObject("ButtonItem30.Image"), System.Drawing.Image)
-        Me.ButtonItem30.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem30.Name = "ButtonItem30"
-        Me.ButtonItem30.SubItemsExpandWidth = 14
-        Me.ButtonItem30.Text = "Notas Excel"
-        '
         'ButtonItem31
         '
         Me.ButtonItem31.Image = CType(resources.GetObject("ButtonItem31.Image"), System.Drawing.Image)
@@ -572,6 +567,14 @@ Public Property organizacion() As String
         Me.ButtonItem32.Name = "ButtonItem32"
         Me.ButtonItem32.SubItemsExpandWidth = 14
         Me.ButtonItem32.Text = "Ausencias"
+        '
+        'ButtonItem30
+        '
+        Me.ButtonItem30.Image = CType(resources.GetObject("ButtonItem30.Image"), System.Drawing.Image)
+        Me.ButtonItem30.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem30.Name = "ButtonItem30"
+        Me.ButtonItem30.SubItemsExpandWidth = 14
+        Me.ButtonItem30.Text = "Notas Excel"
         '
         'ItemContainer5
         '
@@ -621,6 +624,7 @@ Public Property organizacion() As String
         Me.RibbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar1.ContainerControlProcessDialogKey = True
         Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar1.DragDropSupport = True
         Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem21})
         Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar1.Name = "RibbonBar1"
@@ -701,6 +705,7 @@ Public Property organizacion() As String
         Me.RibbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar7.ContainerControlProcessDialogKey = True
         Me.RibbonBar7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar7.DragDropSupport = True
         Me.RibbonBar7.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MicroChartItem1, Me.ButtonItem38})
         Me.RibbonBar7.Location = New System.Drawing.Point(515, 0)
         Me.RibbonBar7.Name = "RibbonBar7"
@@ -746,6 +751,7 @@ Public Property organizacion() As String
         Me.RibbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar3.ContainerControlProcessDialogKey = True
         Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar3.DragDropSupport = True
         Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem25, Me.ButtonItem26})
         Me.RibbonBar3.Location = New System.Drawing.Point(328, 0)
         Me.RibbonBar3.Name = "RibbonBar3"
@@ -791,6 +797,7 @@ Public Property organizacion() As String
         Me.RibbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonBar2.ContainerControlProcessDialogKey = True
         Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar2.DragDropSupport = True
         Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem22, Me.ButtonItem23, Me.ButtonItem24, Me.ButtonItem27, Me.ButtonItem28})
         Me.RibbonBar2.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar2.Name = "RibbonBar2"
