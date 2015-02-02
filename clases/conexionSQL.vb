@@ -263,6 +263,13 @@ Public Class conexionSQL
                 Next
                 'Escribimos la línea en el achivo de texto 
                 linea = linea.Replace("Ñ", "N")
+                linea = linea.Replace("Á", "A")
+                linea = linea.Replace("É", "E")
+                linea = linea.Replace("Í", "I")
+                linea = linea.Replace("Ó", "O")
+                linea = linea.Replace("Ú", "U")
+                linea = linea.Replace("Ü", "U")
+
                 strStreamWriter.WriteLine(linea)
                 linea = ""
             Next

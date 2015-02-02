@@ -17,20 +17,15 @@
     End Sub
 
     Public Sub New()
-
+     
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
 
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
-        If dominio.Status = NetworkInformation.JoinStatus.Domain Then
-            Me.Visible = False
-            frmPrincipal2.ShowDialog()
-        End If
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Dim conn As New conexionSQL
 
