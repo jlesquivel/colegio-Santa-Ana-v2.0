@@ -556,7 +556,7 @@ Public Class frmListaClase
         'reporte  listado INS Polizas
         Try
             Dim oImprimir As New Reportes
-            Dim rep As New rptPolizasINS
+            Dim rep As New rptPolizasINS_2
             oImprimir.inserta_parametro(rep, "@ano", partes(1))
             rep.SummaryInfo.ReportComments = " Reporte Polizas INS " & partes(1)
             oImprimir.imprimir(rep, False, Me.ParentForm)

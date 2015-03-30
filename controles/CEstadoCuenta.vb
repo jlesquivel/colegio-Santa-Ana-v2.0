@@ -335,13 +335,17 @@ Public Class CEstadoCuenta
             ' Imprime recibos seleccionados
             impresora = oReporte.BuscarImpresora("TM-U")
 
-            For Each item As ListViewItem In ListView1.Items
-                If item.Checked Then
-                    Dim repRecibo As New CrystalReport1
-                    oReporte.inserta_parametro(repRecibo, "@factura", CInt(item.SubItems(3).Text))
-                    oReporte.imprimir(repRecibo, impresora, Me.Parent)
-                End If
-            Next
+            If impresora <> "" Then
+                For Each item As ListViewItem In ListView1.Items
+                    If item.Checked Then
+                        Dim repRecibo As New CrystalReport1
+                        oReporte.inserta_parametro(repRecibo, "@factura", CInt(item.SubItems(3).Text))
+                        oReporte.imprimir(repRecibo, impresora)
+                    End If
+                Next
+            Else
+                MsgBox("impresora TM-U no detectada")
+            End If
         End If
     End Sub
 

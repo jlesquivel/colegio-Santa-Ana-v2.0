@@ -1,6 +1,7 @@
 ﻿Public Class frmLogin
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
     End Sub
@@ -17,20 +18,15 @@
     End Sub
 
     Public Sub New()
-
+     
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
 
-    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
-        If dominio.Status = NetworkInformation.JoinStatus.Domain Then
-            Me.Visible = False
-            frmPrincipal2.ShowDialog()
-        End If
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Dim conn As New conexionSQL
 
@@ -48,7 +44,10 @@
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
-        Dim sqlcon As New conexionSQL
+        ''  192.168.137.1               
+        Dim sqlcon As New conexionSQL("SERVIDOR-BD", "colegio", Me.TextBoxX1.Text, TextBoxX2.Text)
+        My.Settings.conexionSQL = sqlcon.strConn
+
         If sqlcon.conexionOK Then
             Me.Visible = False
             frmPrincipal2.ShowDialog()

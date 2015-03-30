@@ -51,22 +51,22 @@ Public Class frmGenCobroMatricula
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGenCobroMatricula))
-        Me.GenCobro1 = New colegio.genCobro
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
+        Me.GenCobro1 = New colegio.genCobro()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,7 +80,7 @@ Public Class frmGenCobroMatricula
         'SqlConnection1
         '
         Me.SqlConnection1.ConnectionString = "workstation id=ESCRITORIO;packet size=4096;integrated security=SSPI;data source=e" & _
-            "scritorio;persist security info=False;initial catalog=colegio"
+    "scritorio;persist security info=False;initial catalog=colegio"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter2
@@ -98,7 +98,7 @@ Public Class frmGenCobroMatricula
         'SqlSelectCommand1
         '
         Me.SqlSelectCommand1.CommandText = "SELECT id, carnet, concepto, mes, recibo, fecha_recibo, monto, generado, id_mat F" & _
-            "ROM cobros"
+    "ROM cobros"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
         '
         'Label1
@@ -136,8 +136,8 @@ Public Class frmGenCobroMatricula
         'SqlSelectCommand2
         '
         Me.SqlSelectCommand2.CommandText = "SELECT banco, empresa, convenio, borra, tipo_id, carnet, nombre, moneda, llave, p" & _
-            "eriodo, vencimiento, exp_recauda, monto, comision, FACTURA, SELF, RUBROS FROM bn" & _
-            "cr"
+    "eriodo, vencimiento, exp_recauda, monto, comision, FACTURA, SELF, RUBROS FROM bn" & _
+    "cr"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection1
         '
         'SqlInsertCommand2
@@ -163,7 +163,7 @@ Public Class frmGenCobroMatricula
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(126, 39)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {2100, 0, 0, 0})
-        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1900, 0, 0, 0})
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {2000, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(98, 20)
         Me.NumericUpDown1.TabIndex = 0
@@ -207,6 +207,8 @@ Public Class frmGenCobroMatricula
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
+        Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmGenCobroMatricula"
         Me.Text = "Generar Cobros de Matricula"
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -224,6 +226,15 @@ Public Class frmGenCobroMatricula
 
         Me.SqlConnection1.ConnectionString = conn.strConn
         Me.NumericUpDown1.Value = Now.Year
+        Me.NumericUpDown1.Maximum = Now.Year
+
+
+        Select Case Now.Month
+            Case 1, 2, 3, 4
+                Me.NumericUpDown1.Value = Now.Year - 1
+            Case Else
+                Me.NumericUpDown1.Value = Now.Year
+        End Select
 
         Dim anno As Integer = NumericUpDown1.Value         ' consulta los meses generados del combobox
         Dim commando As String = _
@@ -242,12 +253,14 @@ Public Class frmGenCobroMatricula
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim val1, val2 As Decimal
+        Dim anno As String
 
         val1 = CDec(TextBox1.Text)
         val2 = CDec(TextBox2.Text)
+        anno = CStr(NumericUpDown1.Value)
 
-        cobros_Matricula(Now.Year, val1, ("Matricula " & (Now.Year + 1).ToString), 2)
-        cobros_Matricula(Now.Year, val2, ("Prematricula " & (Now.Year + 1).ToString), 3)
+        cobros_Matricula(anno, val1, ("Matricula " & (Now.Year + 1).ToString), 2)
+        cobros_Matricula(anno, val2, ("Prematricula " & (Now.Year + 1).ToString), 3)
     End Sub
 
     Sub cobros_Matricula(ByVal anno As String, ByVal monto As Decimal, ByVal concepto As String, ByVal convenio As Decimal)

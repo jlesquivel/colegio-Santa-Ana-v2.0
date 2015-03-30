@@ -30,9 +30,15 @@ Namespace My
             Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
         
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.colegio.frmLogin
+
+            Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
+            If dominio.Status = NetworkInformation.JoinStatus.Domain Then
+                Me.MainForm = Global.colegio.frmPrincipal2
+            Else
+                Me.MainForm = Global.colegio.frmLogin
+            End If
         End Sub
     End Class
 End Namespace

@@ -43,36 +43,33 @@ Public Class frmGenCobro
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents SqlSelectCommand2 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlInsertCommand2 As System.Data.SqlClient.SqlCommand
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents sinMora As DevComponents.DotNetBar.Controls.CheckBoxX
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGenCobro))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.GenCobro1 = New colegio.genCobro
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.Label2 = New System.Windows.Forms.Label
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.GenCobro1 = New colegio.genCobro()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.sinMora = New DevComponents.DotNetBar.Controls.CheckBoxX()
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.ComboBox1.Location = New System.Drawing.Point(120, 53)
+        Me.ComboBox1.Location = New System.Drawing.Point(120, 23)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(136, 24)
         Me.ComboBox1.TabIndex = 0
         '
         'GenCobro1
@@ -84,7 +81,7 @@ Public Class frmGenCobro
         'SqlConnection1
         '
         Me.SqlConnection1.ConnectionString = "workstation id=ESCRITORIO;packet size=4096;integrated security=SSPI;data source=e" & _
-            "scritorio;persist security info=False;initial catalog=colegio"
+    "scritorio;persist security info=False;initial catalog=colegio"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter2
@@ -102,26 +99,30 @@ Public Class frmGenCobro
         'SqlSelectCommand1
         '
         Me.SqlSelectCommand1.CommandText = "SELECT id, carnet, concepto, mes, recibo, fecha_recibo, monto, generado, id_mat F" & _
-            "ROM cobros"
+    "ROM cobros"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(32, 51)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(23, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 23)
+        Me.Label1.Size = New System.Drawing.Size(91, 23)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Mes a cobrar"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Location = New System.Drawing.Point(120, 111)
+        Me.Button1.BackColor = System.Drawing.Color.Lime
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(120, 89)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 23)
+        Me.Button1.Size = New System.Drawing.Size(136, 32)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Generar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -131,9 +132,10 @@ Public Class frmGenCobro
         Me.Button2.BackColor = System.Drawing.Color.Transparent
         Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button2.Location = New System.Drawing.Point(24, 111)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(24, 89)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 23)
+        Me.Button2.Size = New System.Drawing.Size(80, 32)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = False
@@ -141,8 +143,8 @@ Public Class frmGenCobro
         'SqlSelectCommand2
         '
         Me.SqlSelectCommand2.CommandText = "SELECT banco, empresa, convenio, borra, tipo_id, carnet, nombre, moneda, llave, p" & _
-            "eriodo, vencimiento, exp_recauda, monto, comision, FACTURA, SELF, RUBROS FROM bn" & _
-            "cr"
+    "eriodo, vencimiento, exp_recauda, monto, comision, FACTURA, SELF, RUBROS FROM bn" & _
+    "cr"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection1
         '
         'SqlInsertCommand2
@@ -157,51 +159,37 @@ Public Class frmGenCobro
         Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand2
         Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "bncr", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("banco", "banco"), New System.Data.Common.DataColumnMapping("empresa", "empresa"), New System.Data.Common.DataColumnMapping("convenio", "convenio"), New System.Data.Common.DataColumnMapping("borra", "borra"), New System.Data.Common.DataColumnMapping("tipo_id", "tipo_id"), New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("moneda", "moneda"), New System.Data.Common.DataColumnMapping("llave", "llave"), New System.Data.Common.DataColumnMapping("periodo", "periodo"), New System.Data.Common.DataColumnMapping("vencimiento", "vencimiento"), New System.Data.Common.DataColumnMapping("exp_recauda", "exp_recauda"), New System.Data.Common.DataColumnMapping("monto", "monto"), New System.Data.Common.DataColumnMapping("comision", "comision"), New System.Data.Common.DataColumnMapping("FACTURA", "FACTURA"), New System.Data.Common.DataColumnMapping("SELF", "SELF"), New System.Data.Common.DataColumnMapping("RUBROS", "RUBROS")})})
         '
-        'CheckBox1
+        'sinMora
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(120, 80)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(53, 17)
-        Me.CheckBox1.TabIndex = 7
-        Me.CheckBox1.Text = "Anual"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'ComboBox2
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(120, 29)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 8
         '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(32, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 23)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Convenio"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.sinMora.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.sinMora.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sinMora.Location = New System.Drawing.Point(120, 50)
+        Me.sinMora.Name = "sinMora"
+        Me.sinMora.Size = New System.Drawing.Size(76, 23)
+        Me.sinMora.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.sinMora.TabIndex = 10
+        Me.sinMora.Text = "Sin Mora"
         '
         'frmGenCobro
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
         Me.CancelButton = Me.Button2
         Me.ClientSize = New System.Drawing.Size(280, 163)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.sinMora)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox1)
+        Me.DoubleBuffered = True
+        Me.FlattenMDIBorder = False
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmGenCobro"
         Me.Text = "Generar Cobro"
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -224,7 +212,7 @@ Public Class frmGenCobro
         Me.ComboBox1.Items.Remove("Diciembre")
 
         Select Case Now.Day
-            Case 15, 16, 17, 18, 19, 20
+            Case 15 To 28
                 Me.Button1.Text = "Genera cobros 15"
                 Me.ComboBox1.Text = MonthName(Now.Month, False)
             Case Else
@@ -269,8 +257,11 @@ Public Class frmGenCobro
                 commando = "EXECUTE cobro '" & anno & "','" & mes & "' ,'" & concepto & "'"
                 conn.ejecuta(commando)
 
-                commando = "EXECUTE actualiza_multas"
-                conn.ejecuta(commando)
+
+                If Not sinMora.Checked Then
+                    commando = "EXECUTE actualiza_multas"
+                    conn.ejecuta(commando)
+                End If
 
                 commando = "EXECUTE cancela_becados_totales"
                 conn.ejecuta(commando)
@@ -304,8 +295,11 @@ Public Class frmGenCobro
         commando = "EXECUTE cobro '" & anno & "','" & mes & "' ,'" & concepto & "'"
         conn.ejecuta(commando)
 
-        'commando = "EXECUTE actualiza_multas"
-        'conn.ejecuta(commando)
+        If Not sinMora.Checked Then
+            commando = "EXECUTE actualiza_multas"
+            conn.ejecuta(commando)
+        End If
+
 
         arch = "c:\COLEGIO SANTA ANA_" & anno & rell(mes) & "- 15.txt"
 
@@ -327,7 +321,7 @@ Public Class frmGenCobro
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Select Case Now.Day
-            Case 15, 16, 17, 18, 19
+            Case 15 To 28
                 cobros_15()
             Case Else
                 cobros_30()

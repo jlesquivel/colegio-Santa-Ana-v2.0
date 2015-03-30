@@ -151,41 +151,39 @@ Public Class BuscaEstud
     Sub cargar()
         'Parámetros para la consulta
         Dim conn As New conexionSQL
+        Dim ds As New DataSet             'Definimos el dataset y el dataadapter
 
-        If conn.conexionOK Then
-            Dim ds As New DataSet             'Definimos el dataset y el dataadapter
-
-            Dim someCommand As New SqlCommand()
-            If orden.Length > 0 Then
-                someCommand.CommandText = "SELECT carnet, apellido1 +' '+ apellido2 +' '+ nombre  as nombres FROM estudiantes order by nombres"
-            Else
-                someCommand.CommandText = "SELECT carnet, apellido1 +' '+ apellido2 +' '+ nombre  as nombres FROM estudiantes"
-            End If
-            'Dim da As New SqlDataAdapter("select " & campos & " from " & tabla & _
-            '    IIf(orden.Length > 0, " order by " & orden, ""), conexion)
-
-            Dim da As New SqlDataAdapter(someCommand.CommandText, conn.conexion)
-
-            'Llenamos al dataset con el resultado de la consulta
-            da.Fill(ds)
-            'Asignamos la tabla que utiliza el dataview
-            dv = ds.Tables(0).DefaultView
-
-            Me.ListBox1.DisplayMember = "nombres"
-            Me.ListBox1.ValueMember = "carnet"
-            Me.ListBox1.DataSource = dv
-
-            'Llenamos el combo con el listado de campos
-            Me.ComboBox1.Items.Clear()
-            Dim c As DataColumn
-            For Each c In ds.Tables(0).Columns
-                Me.ComboBox1.Items.Add(c.ColumnName)
-            Next
-
-            Me.ComboBox1.SelectedIndex = comboIndex 'Asignar el primer elemento como seleccionado
-
-            'dv.RowFilter = Me.ComboBox1.Text & " like '" & Me.TextBox1.Text & "%'"
+        Dim someCommand As New SqlCommand()
+        If orden.Length > 0 Then
+            someCommand.CommandText = "SELECT carnet, apellido1 +' '+ apellido2 +' '+ nombre  as nombres FROM estudiantes order by nombres"
+        Else
+            someCommand.CommandText = "SELECT carnet, apellido1 +' '+ apellido2 +' '+ nombre  as nombres FROM estudiantes"
         End If
+        'Dim da As New SqlDataAdapter("select " & campos & " from " & tabla & _
+        '    IIf(orden.Length > 0, " order by " & orden, ""), conexion)
+
+        Dim da As New SqlDataAdapter(someCommand.CommandText, conn.conexion)
+
+        'Llenamos al dataset con el resultado de la consulta
+        da.Fill(ds)
+        'Asignamos la tabla que utiliza el dataview
+        dv = ds.Tables(0).DefaultView
+
+        Me.ListBox1.DisplayMember = "nombres"
+        Me.ListBox1.ValueMember = "carnet"
+        Me.ListBox1.DataSource = dv
+
+        'Llenamos el combo con el listado de campos
+        Me.ComboBox1.Items.Clear()
+        Dim c As DataColumn
+        For Each c In ds.Tables(0).Columns
+            Me.ComboBox1.Items.Add(c.ColumnName)
+        Next
+
+        Me.ComboBox1.SelectedIndex = comboIndex 'Asignar el primer elemento como seleccionado
+
+        'dv.RowFilter = Me.ComboBox1.Text & " like '" & Me.TextBox1.Text & "%'"
+
 
     End Sub
 

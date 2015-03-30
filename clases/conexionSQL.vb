@@ -5,15 +5,16 @@ Imports System.Runtime.Serialization
 Imports System.Configuration
 Imports System.Collections
 Imports System.Threading
+Imports System.Text.RegularExpressions
 
 Public Class conexionSQL
 
     Private seguridadIntegrada As Boolean = True
     Public vEspera As String = "15"
-    Private vServidor As String = "SERVIDOR-BD"
+    Private vServidor As String = "servidor-bd"
     Private vbd As String = "colegio"
-    Public vusuario As String = "sa"
-    Public vpassword As String = "123"
+    Public vusuario As String = ""
+    Public vpassword As String = ""
     Private vtabla As String = ""
     Private vcampos As String = ""
     Private vorden As String = ""
@@ -71,8 +72,15 @@ Public Class conexionSQL
     Sub New()
         ' carga el archivo de password general
         Try
-            Construye_String()
-            colegioConnection = New SqlConnection(vstrConn)
+
+            Dim musuario As Match = Regex.Match(My.Settings.conexionSQL, "User id=([A-Za-z0-9_.]+)", RegexOptions.IgnoreCase)
+            Dim mpass As Match = Regex.Match(My.Settings.conexionSQL, "Password=([A-Za-z0-9_.]+)", RegexOptions.IgnoreCase)
+            vusuario = musuario.Groups(1).Value
+            vpassword = mpass.Groups(1).Value
+            strConn = My.Settings.conexionSQL
+
+            colegioConnection = New SqlConnection(My.Settings.conexionSQL)
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -263,6 +271,13 @@ Public Class conexionSQL
                 Next
                 'Escribimos la línea en el achivo de texto 
                 linea = linea.Replace("Ñ", "N")
+                linea = linea.Replace("Á", "A")
+                linea = linea.Replace("É", "E")
+                linea = linea.Replace("Í", "I")
+                linea = linea.Replace("Ó", "O")
+                linea = linea.Replace("Ú", "U")
+                linea = linea.Replace("Ü", "U")
+
                 strStreamWriter.WriteLine(linea)
                 linea = ""
             Next

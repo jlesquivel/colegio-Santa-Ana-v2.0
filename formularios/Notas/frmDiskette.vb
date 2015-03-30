@@ -75,41 +75,41 @@ Public Class frmDiskette
     Friend WithEvents SqlSelectCommand3 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDiskette))
-        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
-        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog
-        Me.StatusBar1 = New System.Windows.Forms.StatusBar
-        Me.StatusBarPanel1 = New System.Windows.Forms.StatusBarPanel
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection5 = New System.Data.SqlClient.SqlConnection
-        Me.SqlConnection6 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.ActualizaNota = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand
-        Me.SqlConnection4 = New System.Data.SqlClient.SqlConnection
-        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand = New System.Data.SqlClient.SqlCommand
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker
-        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker
-        Me.DsDisco1 = New colegio.dsDisco
-        Me.DataView1 = New System.Data.DataView
-        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.StatusBar1 = New System.Windows.Forms.StatusBar()
+        Me.StatusBarPanel1 = New System.Windows.Forms.StatusBarPanel()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection5 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlConnection6 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.ActualizaNota = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection4 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand = New System.Data.SqlClient.SqlCommand()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.DsDisco1 = New colegio.dsDisco()
+        Me.DataView1 = New System.Data.DataView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsDisco1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,7 +192,7 @@ Public Class frmDiskette
         'SqlConnection1
         '
         Me.SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" & _
-            "_BD;persist security info=False;initial catalog=colegio"
+    "_BD;persist security info=False;initial catalog=colegio"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
@@ -209,13 +209,13 @@ Public Class frmDiskette
         'SqlConnection5
         '
         Me.SqlConnection5.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
-            "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
+    "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
         Me.SqlConnection5.FireInfoMessageEventOnUserErrors = False
         '
         'SqlConnection6
         '
         Me.SqlConnection6.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
-            "e=""EG-ZE5547WM"";persist security info=False;initial catalog=colegio"
+    "e=""EG-ZE5547WM"";persist security info=False;initial catalog=colegio"
         Me.SqlConnection6.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter2
@@ -226,22 +226,22 @@ Public Class frmDiskette
         'SqlSelectCommand2
         '
         Me.SqlSelectCommand2.CommandText = "SELECT materias_nivel.nivel, materia.nombre, materia.materia AS Expr1 FROM materi" & _
-            "as_nivel INNER JOIN materia ON materias_nivel.materia = materia.materia WHERE (m" & _
-            "aterias_nivel.nivel = @nivel)"
+    "as_nivel INNER JOIN materia ON materias_nivel.materia = materia.materia WHERE (m" & _
+    "aterias_nivel.nivel = @nivel)"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection1
         Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel")})
         '
         'ActualizaNota
         '
         Me.ActualizaNota.CommandText = "UPDATE notas SET nota = @nota, profesora = @prof WHERE (id_mat = @id_mat) AND (pe" & _
-            "riodo = @periodo) AND (materia = @materia)"
+    "riodo = @periodo) AND (materia = @materia)"
         Me.ActualizaNota.Connection = Me.SqlConnection1
         Me.ActualizaNota.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota"), New System.Data.SqlClient.SqlParameter("@prof", System.Data.SqlDbType.VarChar, 15, "profesora"), New System.Data.SqlClient.SqlParameter("@id_mat", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_mat", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@periodo", System.Data.SqlDbType.VarChar, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "periodo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@materia", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "materia", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlConnection2
         '
         Me.SqlConnection2.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=servidor_b" & _
-            "d;persist security info=False;initial catalog=colegio"
+    "d;persist security info=False;initial catalog=colegio"
         Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter3
@@ -258,13 +258,13 @@ Public Class frmDiskette
         'SqlConnection4
         '
         Me.SqlConnection4.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
-            "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
+    "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
         Me.SqlConnection4.FireInfoMessageEventOnUserErrors = False
         '
         'SqlConnection3
         '
         Me.SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=SERVIDOR_B" & _
-            "D;persist security info=False;initial catalog=planilla"
+    "D;persist security info=False;initial catalog=planilla"
         Me.SqlConnection3.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter4
@@ -304,7 +304,7 @@ Public Class frmDiskette
         Me.CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CheckedListBox1.Location = New System.Drawing.Point(170, 0)
         Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(433, 334)
+        Me.CheckedListBox1.Size = New System.Drawing.Size(433, 336)
         Me.CheckedListBox1.TabIndex = 1
         '
         'Button1
@@ -360,6 +360,7 @@ Public Class frmDiskette
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusBar1)
+        Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDiskette"
         Me.Text = "Crea y Carga Archivo Excel"
