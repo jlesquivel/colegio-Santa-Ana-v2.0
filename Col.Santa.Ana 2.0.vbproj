@@ -259,6 +259,7 @@
     <None Include="Resources\4221.png" />
     <None Include="Resources\mail.ico" />
     <None Include="Resources\login.png" />
+    <None Include="Resources\paragraph-justify-2.png" />
     <Content Include="_Historico Cambios.txt" />
     <Content Include="_ POR HACER.txt" />
     <None Include="Resources\240.png" />
@@ -411,6 +412,12 @@
     <Compile Include="clases\Reportes.vb" />
     <Compile Include="clases\Ventanas.vb">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmRecibos.Designer.vb">
+      <DependentUpon>frmRecibos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmRecibos.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\colegioDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -720,6 +727,9 @@
     <EmbeddedResource Include="formularios\Cobros\frmGenCobroMatricula.resx">
       <DependentUpon>frmGenCobroMatricula.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmRecibos.resx">
+      <DependentUpon>frmRecibos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\frmConfiguracion.resx">
       <SubType>Designer</SubType>

@@ -50,7 +50,7 @@ Public Class frmPrincipal2
 
         Me.RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
         'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
-
+        Me.Refresh()
     End Sub
     Private Sub ButtonItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem18.Click
         Application.Exit()
@@ -95,7 +95,7 @@ Public Class frmPrincipal2
     Private Sub ButtonItem24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem24.Click
         oVentana.cargarVentana(New frmCancelaCobros, Me)
     End Sub
-    Private Sub ButtonItem28_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem28.Click
+    Private Sub ButtonItem28_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         oVentana.cargarVentana(New frmCobros, Me)
     End Sub
     Private Sub ButtonItem27_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem27.Click
@@ -148,12 +148,15 @@ Public Class frmPrincipal2
         Dim conn As New conexionSQL
 
         resultado = conn.llena("select * from cobros_cancelado_pendientes")
-        Dim points As New List(Of Double)()
-        points.Add(resultado(0)(0))
-        points.Add(resultado(0)(1))
-        MicroChartItem1.DataPoints = points
+        If resultado.Count > 0 Then
+            Dim points As New List(Of Double)()
+            points.Add(resultado(0)(0))
+            points.Add(resultado(0)(1))
+            MicroChartItem1.DataPoints = points
 
-        MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
+            MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
+        End If
+
     End Sub
 
     Private Sub ButtonItem39_Click(sender As Object, e As EventArgs) Handles ButtonItem39.Click
@@ -172,6 +175,23 @@ Public Class frmPrincipal2
         Dim oNotas As New Notas
         oNotas.CreaNotasConv2()
         oNotas = Nothing
+    End Sub
+
+    Private Sub ButtonItem42_Click(sender As Object, e As EventArgs) Handles ButtonItem42.Click
+        oVentana.cargarVentana(New frmCobros, Me)
+    End Sub
+
+    Private Sub ButtonItem29_Click(sender As Object, e As EventArgs) Handles ButtonItem29.Click
+        oVentana.cargarVentana(New frmRecibos, Me)
+    End Sub
+
+    Public Sub New()
+
+        ' Llamada necesaria para el diseñador.
+        InitializeComponent()
+        Me.RibbonCobros.Visible = False
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
     End Sub
 End Class
 

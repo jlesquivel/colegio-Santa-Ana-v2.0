@@ -9,9 +9,15 @@ Imports System.Text.RegularExpressions
 
 Public Class conexionSQL
 
+
+#If DEBUG Then
+    Private vServidor As String = "(LocalDB)\v11.0"
+    'Private vServidor As String = "servidor-bd"
+#Else
+    Private vServidor As String = "servidor-bd"
+#End If
     Private seguridadIntegrada As Boolean = True
     Public vEspera As String = "15"
-    Private vServidor As String = "servidor-bd"
     Private vbd As String = "colegio"
     Public vusuario As String = ""
     Public vpassword As String = ""
@@ -77,9 +83,12 @@ Public Class conexionSQL
             Dim mpass As Match = Regex.Match(My.Settings.conexionSQL, "Password=([A-Za-z0-9_.]+)", RegexOptions.IgnoreCase)
             vusuario = musuario.Groups(1).Value
             vpassword = mpass.Groups(1).Value
-            strConn = My.Settings.conexionSQL
 
-            colegioConnection = New SqlConnection(My.Settings.conexionSQL)
+            vstrConn = My.Settings.conexionSQL
+#If DEBUG Then
+            Me.Construye_String()
+#End If
+            colegioConnection = New SqlConnection(vstrConn)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -112,7 +121,7 @@ Public Class conexionSQL
     ''' <returns>Valor booleano true indicando que conecto con el servidor</returns>
     ''' <remarks></remarks>
     Function conexionOK() As Boolean
-        Return QuickOpen(colegioConnection, 5)
+        Return QuickOpen(colegioConnection, 15)
     End Function
 
 
@@ -291,16 +300,23 @@ Public Class conexionSQL
     End Function
 
     Private Sub Construye_String()
-        vstrConn = "data source=" & vServidor & _
-                   ";initial catalog=" & vbd
         Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
-
-        If dominio.Status = NetworkInformation.JoinStatus.Domain Then  ' seguridad integrada
-            vstrConn = vstrConn & _
-                          ";integrated security=SSPI" & _
-                          ";persist security info=TRUE"
-        Else                                        ' seguridad de SQL server
-            vstrConn = vstrConn & " ;user id=" & vusuario & ";password=" & vpassword
+        If dominio.Status = NetworkInformation.JoinStatus.Domain Then
+            vstrConn = "data source=" & vServidor & _
+                     ";initial catalog=" & vbd & _
+                     ";integrated security=SSPI" & _
+                     ";persist security info=TRUE" & _
+                     ";packet size=4096"
+        Else
+            If vServidor = "(localdb)\v11.0" Then
+                vstrConn = "Data Source=(localdb)\v11.0;" & _
+                    "AttachDbFilename=C:\SQLServer\colegio_Data.MDF;Integrated Security=True"
+            Else
+                vstrConn = "data source=" & vServidor & _
+                            ";initial catalog=" & vbd & ";persist security info=TRUE" & _
+                            " ;user id=" & vusuario & ";password=" & vpassword & _
+                            ";packet size=4096"
+            End If
         End If
 
         vstrConn = vstrConn & " ;Connection Timeout=" & vEspera
