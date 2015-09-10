@@ -10,16 +10,32 @@ Public Class frmPrincipal2
     Dim sqlcon As New conexionSQL
     Dim oVentana As New Ventanas
 
-    Private Sub frmPrincipal2_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+    Public Sub New()
+
+        ' Llamada necesaria para el diseñador.
+        InitializeComponent()
+        RibbonCobros.Visible = False
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
     End Sub
 
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
-        Me.LabelItem2.Text = Format(Now.Date, "D")
-        Me.LabelItem1.Text = sqlcon.servidor
 
-        Me.ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
-        Me.ButtonItem41.Enabled = (DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
+        LabelItem3.Text = WindowsIdentity.GetCurrent.Name
+        LabelItem2.Text = Format(Now.Date, "D")
+        'Me.LabelItem1.Text = sqlcon.servidor
+        LabelItem1.Text = sqlcon.servidor
+
+        ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
+        ButtonItem41.Enabled = (DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
+
+        RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
+        'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
+        Refresh()
+        With MicroChartItem1.PieChartStyle.SliceColors
+            .Item(0) = .Item(4)
+        End With
+
     End Sub
 
     Private Sub frmPrincipal2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -35,11 +51,12 @@ Public Class frmPrincipal2
         'Me.LabelItem2.Text = Format(Now.Date, "D")
         'Me.LabelItem1.Text = sqlcon.servidor
 
-
         institucion = My.Settings.institucion
         organizacion = My.Settings.institucion
-        Me.Text = My.Settings.institucion
-        Me.AppImp = New Printing.PrinterSettings
+        Text = My.Settings.institucion
+        AppImp = New Printing.PrinterSettings
+        RibbonMatricula.Select()
+
 
         'prueba
         'If Not sqlcon.conexionOK Then
@@ -47,10 +64,6 @@ Public Class frmPrincipal2
         '     MessageBoxButtons.OK, MessageBoxIcon.Error)
         '    Me.Close()
         'End If
-
-        Me.RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
-        'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
-        Me.Refresh()
     End Sub
     Private Sub ButtonItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem18.Click
         Application.Exit()
@@ -135,11 +148,8 @@ Public Class frmPrincipal2
 
     Private Sub ButtonItem38_Click(sender As Object, e As EventArgs) Handles ButtonItem38.Click
 
-        Dim oCorreo As New cCorreo
-        oCorreo.Enviar_Cobros_correo()
-
+        oVentana.cargarVentana(New frmCobrosMsjCorreo, Me)
     End Sub
-
 
 
     Private Sub RibbonCobros_Click(sender As Object, e As EventArgs) Handles RibbonCobros.Click
@@ -153,10 +163,8 @@ Public Class frmPrincipal2
             points.Add(resultado(0)(0))
             points.Add(resultado(0)(1))
             MicroChartItem1.DataPoints = points
-
             MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
         End If
-
     End Sub
 
     Private Sub ButtonItem39_Click(sender As Object, e As EventArgs) Handles ButtonItem39.Click
@@ -185,13 +193,10 @@ Public Class frmPrincipal2
         oVentana.cargarVentana(New frmRecibos, Me)
     End Sub
 
-    Public Sub New()
+    Private Sub ButtonItem37_Click(sender As Object, e As EventArgs) Handles ButtonItem37.Click
 
-        ' Llamada necesaria para el diseñador.
-        InitializeComponent()
-        Me.RibbonCobros.Visible = False
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
+        oVentana.cargarVentana(New frmConstEstud, Me)
     End Sub
+
 End Class
 

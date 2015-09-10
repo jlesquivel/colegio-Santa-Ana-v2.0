@@ -22,7 +22,7 @@ Public Class frmEstudiantes
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
-        Me.Estudiantes1.BuscarVisible = False
+        Estudiantes1.BuscarVisible = False
         pcarnet = carnet
     End Sub
 
@@ -45,27 +45,27 @@ Public Class frmEstudiantes
     'No lo modifique con el editor de código.
     Friend WithEvents Estudiantes1 As colegio.Estudiantes
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.Estudiantes1 = New colegio.Estudiantes()
-        Me.SuspendLayout()
+        Estudiantes1 = New colegio.Estudiantes()
+        SuspendLayout()
         '
         'Estudiantes1
         '
-        Me.Estudiantes1.BuscarVisible = True
-        Me.Estudiantes1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Estudiantes1.Location = New System.Drawing.Point(0, 0)
-        Me.Estudiantes1.Name = "Estudiantes1"
-        Me.Estudiantes1.Size = New System.Drawing.Size(768, 459)
-        Me.Estudiantes1.TabIndex = 0
+        Estudiantes1.BuscarVisible = True
+        Estudiantes1.Dock = System.Windows.Forms.DockStyle.Fill
+        Estudiantes1.Location = New System.Drawing.Point(0, 0)
+        Estudiantes1.Name = "Estudiantes1"
+        Estudiantes1.Size = New System.Drawing.Size(768, 459)
+        Estudiantes1.TabIndex = 0
         '
         'frmEstudiantes
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(768, 459)
-        Me.Controls.Add(Me.Estudiantes1)
-        Me.DoubleBuffered = True
-        Me.Name = "frmEstudiantes"
-        Me.Text = "Estudiantes"
-        Me.ResumeLayout(False)
+        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        ClientSize = New System.Drawing.Size(768, 459)
+        Controls.Add(Estudiantes1)
+        DoubleBuffered = True
+        Name = "frmEstudiantes"
+        Text = "Estudiantes"
+        ResumeLayout(False)
 
     End Sub
 
@@ -77,12 +77,12 @@ Public Class frmEstudiantes
 
     Private Sub frmEstudiantes_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        If Me.DesignMode Then
+        If DesignMode Then
             ' The component is in design mode
 
         Else
             If Not pcarnet = "" Then
-                Me.Estudiantes1.buscar(pcarnet)
+                Estudiantes1.buscar(pcarnet)
             End If
         End If
 
@@ -90,7 +90,7 @@ Public Class frmEstudiantes
 
     Public Sub buscar(ByVal pcarnet As String)
         If Not pcarnet = "" Then
-            Me.Estudiantes1.buscar(pcarnet)
+            Estudiantes1.buscar(pcarnet)
         End If
     End Sub
 

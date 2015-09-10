@@ -41,89 +41,89 @@ Public Class frmCarneCobros
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents SqlSelectCommand1 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox
-        Me.DsCarnet1 = New colegio.dsCarnet
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        CheckedListBox1 = New System.Windows.Forms.CheckedListBox
+        DsCarnet1 = New colegio.dsCarnet
+        SqlConnection1 = New System.Data.SqlClient.SqlConnection
+        SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
+        SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
+        Button1 = New System.Windows.Forms.Button
+        Button2 = New System.Windows.Forms.Button
+        Button3 = New System.Windows.Forms.Button
+        CType(DsCarnet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
         '
         'CheckedListBox1
         '
-        Me.CheckedListBox1.CheckOnClick = True
-        Me.CheckedListBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", Me.DsCarnet1, "estudiantes.familia"))
-        Me.CheckedListBox1.Location = New System.Drawing.Point(136, 24)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(224, 259)
-        Me.CheckedListBox1.TabIndex = 0
-        Me.CheckedListBox1.ThreeDCheckBoxes = True
+        CheckedListBox1.CheckOnClick = True
+        CheckedListBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedItem", DsCarnet1, "estudiantes.familia"))
+        CheckedListBox1.Location = New System.Drawing.Point(136, 24)
+        CheckedListBox1.Name = "CheckedListBox1"
+        CheckedListBox1.Size = New System.Drawing.Size(224, 259)
+        CheckedListBox1.TabIndex = 0
+        CheckedListBox1.ThreeDCheckBoxes = True
         '
         'DsCarnet1
         '
-        Me.DsCarnet1.DataSetName = "dsCarnet"
-        Me.DsCarnet1.Locale = New System.Globalization.CultureInfo("es-CR")
+        DsCarnet1.DataSetName = "dsCarnet"
+        DsCarnet1.Locale = New System.Globalization.CultureInfo("es-CR")
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" & _
+        SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" & _
         "_BD;persist security info=True;initial catalog=colegio;password=123"
         '
         'SqlDataAdapter1
         '
-        Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand1
-        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "estudiantes", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("familia", "familia")})})
+        SqlDataAdapter1.SelectCommand = SqlSelectCommand1
+        SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "estudiantes", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("familia", "familia")})})
         '
         'SqlSelectCommand1
         '
-        Me.SqlSelectCommand1.CommandText = "SELECT DISTINCT dbo.estudiantes.familia FROM dbo.estudiantes INNER JOIN dbo.matri" & _
+        SqlSelectCommand1.CommandText = "SELECT DISTINCT dbo.estudiantes.familia FROM dbo.estudiantes INNER JOIN dbo.matri" & _
         "cula ON dbo.estudiantes.carnet = dbo.matricula.carnet WHERE (dbo.matricula.ano =" & _
         " @anno)"
-        Me.SqlSelectCommand1.Connection = Me.SqlConnection1
-        Me.SqlSelectCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@anno", System.Data.SqlDbType.VarChar, 4, "ano"))
+        SqlSelectCommand1.Connection = SqlConnection1
+        SqlSelectCommand1.Parameters.Add(New System.Data.SqlClient.SqlParameter("@anno", System.Data.SqlDbType.VarChar, 4, "ano"))
         '
         'Button1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Location = New System.Drawing.Point(40, 32)
-        Me.Button1.Name = "Button1"
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Todos"
+        Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Button1.Location = New System.Drawing.Point(40, 32)
+        Button1.Name = "Button1"
+        Button1.TabIndex = 1
+        Button1.Text = "Todos"
         '
         'Button2
         '
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button2.Location = New System.Drawing.Point(40, 64)
-        Me.Button2.Name = "Button2"
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Ninguno"
+        Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Button2.Location = New System.Drawing.Point(40, 64)
+        Button2.Name = "Button2"
+        Button2.TabIndex = 2
+        Button2.Text = "Ninguno"
         '
         'Button3
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button3.Location = New System.Drawing.Point(40, 136)
-        Me.Button3.Name = "Button3"
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Imprimir"
+        Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Button3.Location = New System.Drawing.Point(40, 136)
+        Button3.Name = "Button3"
+        Button3.TabIndex = 3
+        Button3.Text = "Imprimir"
         '
         'frmCarneCobros
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(376, 299)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CheckedListBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "frmCarneCobros"
-        Me.Text = "Confecciona Carnet"
-        CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        ClientSize = New System.Drawing.Size(376, 299)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        Controls.Add(CheckedListBox1)
+        FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "frmCarneCobros"
+        Text = "Confecciona Carnet"
+        CType(DsCarnet1, System.ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
 
     End Sub
 
@@ -131,28 +131,28 @@ Public Class frmCarneCobros
 
     Private Sub frmCarneCobros_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim conn As New conexionSQL
-        Me.SqlConnection1.ConnectionString = conn.strConn
-        Me.SqlDataAdapter1.SelectCommand.Parameters.Item("@anno").Value = anno
+        SqlConnection1.ConnectionString = conn.strConn
+        SqlDataAdapter1.SelectCommand.Parameters.Item("@anno").Value = anno
 
-        Me.SqlDataAdapter1.Fill(DsCarnet1)
+        SqlDataAdapter1.Fill(DsCarnet1)
         Dim registro As DataRow
 
         For Each registro In DsCarnet1.Tables("estudiantes").Rows
-            Me.CheckedListBox1.Items.Add(registro.ItemArray(0), False)
+            CheckedListBox1.Items.Add(registro.ItemArray(0), False)
         Next
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim Litem As Integer
-        For Litem = 0 To Me.CheckedListBox1.Items.Count - 1
-            Me.CheckedListBox1.SetItemChecked(Litem, True)
+        For Litem = 0 To CheckedListBox1.Items.Count - 1
+            CheckedListBox1.SetItemChecked(Litem, True)
         Next
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim Litem As Integer
-        For Litem = 0 To Me.CheckedListBox1.Items.Count - 1
-            Me.CheckedListBox1.SetItemChecked(Litem, False)
+        For Litem = 0 To CheckedListBox1.Items.Count - 1
+            CheckedListBox1.SetItemChecked(Litem, False)
         Next
     End Sub
 
@@ -160,9 +160,9 @@ Public Class frmCarneCobros
         Try
             Dim familias As String = ""
             Dim i As Integer
-            For i = 0 To Me.CheckedListBox1.CheckedIndices.Count - 1
+            For i = 0 To CheckedListBox1.CheckedIndices.Count - 1
                 familias &= """"
-                familias &= Me.CheckedListBox1.CheckedItems.Item(i)
+                familias &= CheckedListBox1.CheckedItems.Item(i)
                 familias &= """"
                 familias &= ","
 
@@ -174,7 +174,7 @@ Public Class frmCarneCobros
             oImprimir.inserta_parametro(rep, "@ano", anno)
             oImprimir.inserta_parametro(rep, "@familias", familias)
             rep.SummaryInfo.ReportComments = "CARNETS " & anno
-            oImprimir.imprimir(rep, False, Me.ParentForm)
+            oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Imprimir", _

@@ -99,6 +99,7 @@
     <DebugType>none</DebugType>
     <WarningsAsErrors>
     </WarningsAsErrors>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -129,11 +130,11 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="Camera_NET" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -218,7 +219,10 @@
       <LastGenOutput>dstemp.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="baseNotas.xls" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="constEstud.docx" />
     <None Include="formularios\Cobros\dsCarnet.xss">
       <DependentUpon>dsCarnet.xsd</DependentUpon>
     </None>
@@ -236,13 +240,8 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="iconos\Estudiante.ico" />
-    <None Include="iconos\Apuntes.ico" />
-    <None Include="iconos\Lista %281%29.ico" />
     <None Include="iconos\money2.ico" />
     <None Include="iconos\pagos\pagoOK.ico" />
-    <None Include="iconos\table_sql.ico" />
-    <None Include="iconos\Procedure-to-Upload-an-Excel-Sheet-on-Joomla-Websites.png" />
     <Content Include="iconos\Imagenes\BNCR-2.png" />
     <Content Include="iconos\Imagenes\BNCR.png" />
     <Content Include="iconos\Imagenes\cielo.bmp" />
@@ -404,14 +403,28 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="clases\cCorreo.vb" />
+    <Compile Include="clases\cCRM.vb" />
     <Compile Include="clases\conexionSQL.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clases\cWord.vb" />
     <Compile Include="clases\NetworkInformation.vb" />
     <Compile Include="clases\Notas.vb" />
     <Compile Include="clases\Reportes.vb" />
     <Compile Include="clases\Ventanas.vb">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMsj.designer.vb">
+      <DependentUpon>frmCobrosMsj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMsj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMsjCorreo.Designer.vb">
+      <DependentUpon>frmCobrosMsjCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMsjCorreo.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Cobros\frmRecibos.Designer.vb">
       <DependentUpon>frmRecibos.vb</DependentUpon>
@@ -633,6 +646,12 @@
     <Compile Include="formularios\Notas\frmAusenciasRep.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Notas\frmConstEstud.Designer.vb">
+      <DependentUpon>frmConstEstud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Notas\frmConstEstud.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\Notas\frmDiskette.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -712,6 +731,12 @@
       <DependentUpon>frmCobros.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmCobrosMsj.resx">
+      <DependentUpon>frmCobrosMsj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmCobrosMsjCorreo.resx">
+      <DependentUpon>frmCobrosMsjCorreo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmConvenios.resx">
       <DependentUpon>frmConvenios.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -786,6 +811,9 @@
     <EmbeddedResource Include="formularios\Notas\frmAusenciasRep.resx">
       <DependentUpon>frmAusenciasRep.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Notas\frmConstEstud.resx">
+      <DependentUpon>frmConstEstud.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Notas\frmDiskette.resx">
       <DependentUpon>frmDiskette.vb</DependentUpon>

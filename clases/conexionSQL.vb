@@ -11,13 +11,13 @@ Public Class conexionSQL
 
 
 #If DEBUG Then
-    Private vServidor As String = "(LocalDB)\v11.0"
-    'Private vServidor As String = "servidor-bd"
+    ' Private vServidor As String = "(LocalDB)\v11.0"
+    Private vServidor As String = "servidor-bd"
 #Else
     Private vServidor As String = "servidor-bd"
 #End If
     Private seguridadIntegrada As Boolean = True
-    Public vEspera As String = "15"
+    Public vEspera As String = "50"
     Private vbd As String = "colegio"
     Public vusuario As String = ""
     Public vpassword As String = ""
@@ -50,7 +50,7 @@ Public Class conexionSQL
         Set(ByVal Value As String)
             vbd = Value
             Construye_String()
-            Me.colegioConnection.ConnectionString = vstrConn
+            colegioConnection.ConnectionString = vstrConn
         End Set
     End Property
 
@@ -85,9 +85,8 @@ Public Class conexionSQL
             vpassword = mpass.Groups(1).Value
 
             vstrConn = My.Settings.conexionSQL
-#If DEBUG Then
-            Me.Construye_String()
-#End If
+
+            Construye_String()
             colegioConnection = New SqlConnection(vstrConn)
 
         Catch ex As Exception
@@ -121,7 +120,8 @@ Public Class conexionSQL
     ''' <returns>Valor booleano true indicando que conecto con el servidor</returns>
     ''' <remarks></remarks>
     Function conexionOK() As Boolean
-        Return QuickOpen(colegioConnection, 15)
+
+        Return QuickOpen(colegioConnection, CInt(vEspera))
     End Function
 
 
@@ -323,9 +323,8 @@ Public Class conexionSQL
     End Sub
     Public Function verifica_seguridad(ByVal pBasedato As String, ByVal ptabla As String) As Boolean
         Dim retorno As Boolean
-
         Try
-            Me.ejecuta_sinerror("Select TOP 1 * from " & ptabla)
+            ejecuta_sinerror("Select TOP 1 * from " & ptabla)
             retorno = True
 
         Catch ex As Exception

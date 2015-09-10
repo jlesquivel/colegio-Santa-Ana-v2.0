@@ -1,4 +1,6 @@
-Imports Camera_NET
+
+Imports camera_net
+Imports DirectShowLib
 
 Public Class frmWebCam2
 
@@ -41,7 +43,7 @@ Public Class frmWebCam2
 
         control.Image = bitmas
         Fnuevo = True
-        Me.Close()
+        Close()
     End Sub
 
 

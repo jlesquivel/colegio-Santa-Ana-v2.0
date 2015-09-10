@@ -22,6 +22,7 @@ Partial Class frmWebCam2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+
         Me.CameraControl1 = New Camera_NET.CameraControl()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.SuspendLayout()

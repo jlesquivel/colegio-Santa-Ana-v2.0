@@ -70,42 +70,42 @@ Public Class frmAusencias
     Friend WithEvents SqlDeleteCommand2 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAusencias))
-        Me.DsNotas1 = New colegio.dsNotas
-        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter
-        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand
-        Me.Panel2 = New System.Windows.Forms.Panel
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.CheckedListBox3 = New System.Windows.Forms.CheckedListBox
-        Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.CheckedListBox4 = New System.Windows.Forms.CheckedListBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.DataView1 = New System.Data.DataView
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.UserControl21 = New colegio.UserControl2
-        Me.BuscaEstud1 = New colegio.BuscaEstud
+        Me.DsNotas1 = New colegio.dsNotas()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckedListBox3 = New System.Windows.Forms.CheckedListBox()
+        Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckedListBox4 = New System.Windows.Forms.CheckedListBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataView1 = New System.Data.DataView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.UserControl21 = New colegio.UserControl2()
+        Me.BuscaEstud1 = New colegio.BuscaEstud()
         CType(Me.DsNotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -120,8 +120,8 @@ Public Class frmAusencias
         '
         'SqlConnection1
         '
-        Me.SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" & _
-            "_BD;persist security info=True;initial catalog=colegio;password=123"
+        Me.SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" &
+    "_BD;persist security info=True;initial catalog=colegio;password=123"
         Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
@@ -146,8 +146,8 @@ Public Class frmAusencias
         '
         'SqlSelectCommand1
         '
-        Me.SqlSelectCommand1.CommandText = "SELECT id, carnet, fecha, leccion, tipo, observacion, fecha_motivacion FROM Ausen" & _
-            "cias WHERE (carnet = @carnet) AND (fecha_motivacion IS NULL)"
+        Me.SqlSelectCommand1.CommandText = "SELECT id, carnet, fecha, leccion, tipo, observacion, fecha_motivacion FROM Ausen" &
+    "cias WHERE (carnet = @carnet) AND (fecha_motivacion IS NULL)"
         Me.SqlSelectCommand1.Connection = Me.SqlConnection1
         Me.SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
         '
@@ -179,9 +179,9 @@ Public Class frmAusencias
         '
         'SqlSelectCommand2
         '
-        Me.SqlSelectCommand2.CommandText = "SELECT leccion, tipo, id, fecha, carnet, observacion, fecha_motivacion FROM Ausen" & _
-            "cias WHERE (carnet = @carnet) AND (fecha = @fecha) AND (fecha_motivacion IS NULL" & _
-            ") ORDER BY leccion"
+        Me.SqlSelectCommand2.CommandText = "SELECT leccion, tipo, id, fecha, carnet, observacion, fecha_motivacion FROM Ausen" &
+    "cias WHERE (carnet = @carnet) AND (fecha = @fecha) AND (fecha_motivacion IS NULL" &
+    ") ORDER BY leccion"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection1
         Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@fecha", System.Data.SqlDbType.DateTime, 8, "fecha")})
         '
@@ -395,9 +395,9 @@ Public Class frmAusencias
         '
         Me.UserControl21.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
         Me.UserControl21.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UserControl21.Location = New System.Drawing.Point(208, 0)
+        Me.UserControl21.Location = New System.Drawing.Point(202, 0)
         Me.UserControl21.Name = "UserControl21"
-        Me.UserControl21.Size = New System.Drawing.Size(240, 32)
+        Me.UserControl21.Size = New System.Drawing.Size(371, 32)
         Me.UserControl21.TabIndex = 1
         '
         'BuscaEstud1
@@ -406,13 +406,13 @@ Public Class frmAusencias
         Me.BuscaEstud1.Dock = System.Windows.Forms.DockStyle.Left
         Me.BuscaEstud1.Location = New System.Drawing.Point(0, 0)
         Me.BuscaEstud1.Name = "BuscaEstud1"
-        Me.BuscaEstud1.Size = New System.Drawing.Size(208, 342)
+        Me.BuscaEstud1.Size = New System.Drawing.Size(202, 342)
         Me.BuscaEstud1.TabIndex = 22
         '
         'frmAusencias
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(448, 342)
+        Me.ClientSize = New System.Drawing.Size(573, 342)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
@@ -425,6 +425,7 @@ Public Class frmAusencias
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.UserControl21)
         Me.Controls.Add(Me.BuscaEstud1)
+        Me.DoubleBuffered = True
         Me.Name = "frmAusencias"
         Me.Text = "Ausencias"
         CType(Me.DsNotas1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -440,14 +441,14 @@ Public Class frmAusencias
 #End Region
     Private Sub frmAusencias_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Me.SqlConnection1.ConnectionString = conn.strConn
+            SqlConnection1.ConnectionString = conn.strConn
 
-            Me.UserControl21.Nuevo.Visible = False
-            Me.UserControl21.Borrar.Visible = False
-            Me.UserControl21.Buscar.Visible = False
+            UserControl21.Nuevo.Visible = False
+            UserControl21.Borrar.Visible = False
+            UserControl21.Buscar.Visible = False
             'Me.UserControl21.ButtonItem5.Visible = False
-            Me.UserControl21.Salir.Visible = False
-            Me.UserControl21.salvar.Enabled = False
+            UserControl21.Salir.Visible = False
+            UserControl21.salvar.Enabled = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -455,10 +456,10 @@ Public Class frmAusencias
 
     Sub guardar()
         Try
-            Me.BindingContext(Me.DsNotas1, "Ausencias").EndCurrentEdit()
-            Me.guardarAusencias(Me.TextBox1.Text, Me.DateTimePicker1.Value) 'guardar ausencias 
-            Me.SqlDataAdapter1.Update(DsNotas1, "Ausencias")
-            Me.UserControl21.salvar.Enabled = False
+            BindingContext(DsNotas1, "Ausencias").EndCurrentEdit()
+            guardarAusencias(TextBox1.Text, DateTimePicker1.Value) 'guardar ausencias 
+            SqlDataAdapter1.Update(DsNotas1, "Ausencias")
+            UserControl21.salvar.Enabled = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -467,35 +468,33 @@ Public Class frmAusencias
     Sub imprimir()
         Try
             Dim ventana As New frmAusenciasRep
-            ventana.MdiParent = Me.ParentForm
+            ventana.MdiParent = ParentForm
             ventana.Show()
-
         Catch ex As Exception
             MsgBox(ex.Message)
-
         End Try
     End Sub
 
 
     Private Sub CheckedListBox3_ItemCheck(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemCheckEventArgs)
-        Dim chk1 As Boolean = Me.CheckedListBox1.GetItemChecked(e.Index)
-        Dim chk2 As Boolean = Me.CheckedListBox2.GetItemChecked(e.Index)
+        Dim chk1 As Boolean = CheckedListBox1.GetItemChecked(e.Index)
+        Dim chk2 As Boolean = CheckedListBox2.GetItemChecked(e.Index)
         If chk1 Or chk2 Then
             e.NewValue = CheckState.Unchecked
         End If
     End Sub
 
     Private Sub CheckedListBox2_ItemCheck(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemCheckEventArgs)
-        Dim chk1 As Boolean = Me.CheckedListBox1.GetItemChecked(e.Index)
-        Dim chk2 As Boolean = Me.CheckedListBox3.GetItemChecked(e.Index)
+        Dim chk1 As Boolean = CheckedListBox1.GetItemChecked(e.Index)
+        Dim chk2 As Boolean = CheckedListBox3.GetItemChecked(e.Index)
         If chk1 Or chk2 Then
             e.NewValue = CheckState.Unchecked
         End If
     End Sub
 
     Private Sub CheckedListBox1_ItemCheck(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ItemCheckEventArgs)
-        Dim chk1 As Boolean = Me.CheckedListBox2.GetItemChecked(e.Index)
-        Dim chk2 As Boolean = Me.CheckedListBox3.GetItemChecked(e.Index)
+        Dim chk1 As Boolean = CheckedListBox2.GetItemChecked(e.Index)
+        Dim chk2 As Boolean = CheckedListBox3.GetItemChecked(e.Index)
         If chk1 Or chk2 Then
             e.NewValue = CheckState.Unchecked
         End If
@@ -509,9 +508,9 @@ Public Class frmAusencias
     End Sub
 
     Sub LimpiaTodosChecks()
-        limpiasCheck(Me.CheckedListBox1)
-        limpiasCheck(Me.CheckedListBox2)
-        limpiasCheck(Me.CheckedListBox3)
+        limpiasCheck(CheckedListBox1)
+        limpiasCheck(CheckedListBox2)
+        limpiasCheck(CheckedListBox3)
     End Sub
 
     Sub DesplegarAusencias()
@@ -519,18 +518,18 @@ Public Class frmAusencias
         For Each reg As DataRow In DsNotas1.Tables("Ausencias").Rows
             Select Case reg.Item("tipo")
                 Case "A"
-                    Me.CheckedListBox1.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
+                    CheckedListBox1.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
                 Case "T"
-                    Me.CheckedListBox2.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
+                    CheckedListBox2.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
                 Case "E"
-                    Me.CheckedListBox3.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
+                    CheckedListBox3.SetItemChecked(CInt(reg.Item("leccion")) - 1, True)
             End Select
         Next
     End Sub
 
     Function ExisteReg(ByVal pcar As String, ByVal pfecha As String, ByVal plecc As String, ByVal ptipo As String) As Boolean
         For Each regist As DataRow In DsNotas1.Tables("ausencias").Rows
-            If regist.Item("carnet") = pcar And regist.Item("fecha") = pfecha And _
+            If regist.Item("carnet") = pcar And regist.Item("fecha") = pfecha And
                 regist.Item("leccion") = plecc And regist.Item("tipo") = ptipo Then
                 Return True
             End If
@@ -540,11 +539,11 @@ Public Class frmAusencias
     Sub guardarAusencias(ByVal pcarnet As String, ByVal pfecha As Date)
         Dim comando As String = "INSERT INTO Ausencias (carnet, fecha, leccion, tipo) VALUES( @1 , @2 @3 , @4 , @5 )"
         Try
-            For Each itm As Object In Me.CheckedListBox1.CheckedItems
+            For Each itm As Object In CheckedListBox1.CheckedItems
                 If Not ExisteReg(pcarnet, pfecha, itm, "A") Then
                     comando.Replace("@1", pcarnet)
-                    Me.BindingContext(Me.DsNotas1, "Ausencias").AddNew()
-                    Dim nuevo As DataRowView = BindingContext(Me.DsNotas1, "Ausencias").Current
+                    BindingContext(DsNotas1, "Ausencias").AddNew()
+                    Dim nuevo As DataRowView = BindingContext(DsNotas1, "Ausencias").Current
                     nuevo.Item("carnet") = pcarnet
                     nuevo.Item("fecha") = pfecha
                     nuevo.Item("leccion") = itm
@@ -552,27 +551,27 @@ Public Class frmAusencias
                 End If
             Next
 
-            For Each itm As Object In Me.CheckedListBox2.CheckedItems
+            For Each itm As Object In CheckedListBox2.CheckedItems
                 If Not ExisteReg(pcarnet, pfecha, itm, "T") Then
-                    Me.BindingContext(Me.DsNotas1, "Ausencias").AddNew()
-                    Dim nuevo As DataRowView = BindingContext(Me.DsNotas1, "Ausencias").Current
+                    BindingContext(DsNotas1, "Ausencias").AddNew()
+                    Dim nuevo As DataRowView = BindingContext(DsNotas1, "Ausencias").Current
                     nuevo.Item("carnet") = pcarnet
                     nuevo.Item("fecha") = pfecha
                     nuevo.Item("leccion") = itm
                     nuevo.Item("tipo") = "T"
                 End If
             Next
-            For Each itm As Object In Me.CheckedListBox3.CheckedItems
+            For Each itm As Object In CheckedListBox3.CheckedItems
                 If Not ExisteReg(pcarnet, pfecha, itm, "E") Then
-                    Me.BindingContext(Me.DsNotas1, "Ausencias").AddNew()
-                    Dim nuevo As DataRowView = BindingContext(Me.DsNotas1, "Ausencias").Current
+                    BindingContext(DsNotas1, "Ausencias").AddNew()
+                    Dim nuevo As DataRowView = BindingContext(DsNotas1, "Ausencias").Current
                     nuevo.Item("carnet") = pcarnet
                     nuevo.Item("fecha") = pfecha
                     nuevo.Item("leccion") = itm
                     nuevo.Item("tipo") = "E"
                 End If
             Next
-            Me.BindingContext(Me.DsNotas1, "Ausencias").EndCurrentEdit()
+            BindingContext(DsNotas1, "Ausencias").EndCurrentEdit()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -583,41 +582,42 @@ Public Class frmAusencias
     End Sub
     Sub llena_check()
         Try
-            Me.BindingContext(Me.DsNotas1, "Ausencias").EndCurrentEdit()
+            BindingContext(DsNotas1, "Ausencias").EndCurrentEdit()
 
             Dim fecha As Date
             fecha = DateTimePicker1.Value.Date
+            SqlDataAdapter2.SelectCommand.Connection = conn.conexion
 
             DsNotas1.Tables("Ausencias").Clear()
-            Me.SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = BuscaEstud1.seleccionado
-            Me.SqlDataAdapter2.SelectCommand.Parameters.Item("@fecha").Value = fecha
-            afectadas = Me.SqlDataAdapter2.Fill(DsNotas1, "Ausencias")
+            SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = BuscaEstud1.seleccionado
+            SqlDataAdapter2.SelectCommand.Parameters.Item("@fecha").Value = fecha
+            afectadas = SqlDataAdapter2.Fill(DsNotas1, "Ausencias")
             LimpiaTodosChecks()
             If afectadas > 0 Then
                 DesplegarAusencias()
-                Me.UserControl21.salvar.Enabled = True
+                UserControl21.salvar.Enabled = True
             Else
-                Me.DateTimePicker1.Value = fecha
-                Me.UserControl21.salvar.Enabled = True
+                DateTimePicker1.Value = fecha
+                UserControl21.salvar.Enabled = True
             End If
-            Me.TextBox1.Text = BuscaEstud1.seleccionado
+            TextBox1.Text = BuscaEstud1.seleccionado
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("frmAusencia: llenacheck()" & ex.Message)
         End Try
     End Sub
     Private Sub DateTimePicker1_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateTimePicker1.ValueChanged
-        Me.Label4.Text = Format(Me.DateTimePicker1.Value, "D")
+        Label4.Text = Format(DateTimePicker1.Value, "D")
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim comando As String
-        For Each items As Object In Me.CheckedListBox4.CheckedItems
-            comando = "update Ausencias SET observacion='" & Me.TextBox2.Text & "', fecha_motivacion= '" & Me.DateTimePicker2.Value.Date & "' WHERE id=" & items.codigo
+        For Each items As Object In CheckedListBox4.CheckedItems
+            comando = "update Ausencias SET observacion='" & TextBox2.Text & "', fecha_motivacion= '" & DateTimePicker2.Value.Date & "' WHERE id=" & items.codigo
             conn.ejecuta(comando)
         Next
         llena_check()
-        Me.Panel1.Visible = False
+        Panel1.Visible = False
     End Sub
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -628,12 +628,12 @@ Public Class frmAusencias
         justifica("T")
     End Sub
     Sub justifica(ByVal tipo As String)
-        Me.Panel1.Visible = True
-        Me.Panel1.Dock = DockStyle.Fill
-        Me.DataView1.RowFilter = "tipo = '" & tipo & "'"
+        Panel1.Visible = True
+        Panel1.Dock = DockStyle.Fill
+        DataView1.RowFilter = "tipo = '" & tipo & "'"
 
         Dim CargarList As New CargarLista
-        CargarList.DatosListadeView(DataView1, Me.CheckedListBox4, "Id", "leccion")
+        CargarList.DatosListadeView(DataView1, CheckedListBox4, "Id", "leccion")
     End Sub
 
 End Class

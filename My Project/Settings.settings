@@ -33,5 +33,23 @@
     <Setting Name="conexionSQL" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=SERVIDOR-BD;Initial Catalog=colegio;Persist Security Info=True;User ID=sa;Password=123</Value>
     </Setting>
+    <Setting Name="Admin" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="msj1Cobro" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="msj2Cobro" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Directora" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hna. Mercedes Quirós Quirós</Value>
+    </Setting>
+    <Setting Name="cargo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Directora</Value>
+    </Setting>
+    <Setting Name="Slogan" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Educar Evangelizado des la Hospitalidad</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

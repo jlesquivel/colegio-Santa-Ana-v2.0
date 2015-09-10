@@ -9,8 +9,8 @@ Public Class CNotasEstudiante
         Dim strConn As String = conn.strConn
         Dim conne As New SqlConnection(strConn)
         conne.Open()
-        Me.MatriculaTableAdapter.Connection = conne
-        Me.MatriculaTableAdapter.FillByCarnet(Me.ColegioDataSet.matricula, carnet)
+        MatriculaTableAdapter.Connection = conne
+        MatriculaTableAdapter.FillByCarnet(ColegioDataSet.matricula, carnet)
         conne.Close()
     End Sub
 
@@ -19,8 +19,8 @@ Public Class CNotasEstudiante
         Dim strConn As String = conn.strConn
 
         Dim conne As New SqlConnection(strConn)
-        Me.NotasTableAdapter.Connection = conne
-        Me.NotasTableAdapter.FillById_mat(Me.ColegioDataSet.notas, Me.DataGridView2.Rows(e.RowIndex).Cells(3).Value)
+        NotasTableAdapter.Connection = conne
+        NotasTableAdapter.FillById_mat(ColegioDataSet.notas, DataGridView2.Rows(e.RowIndex).Cells(3).Value)
 
     End Sub
 

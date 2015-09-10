@@ -41,3 +41,13 @@ HISTORICO
 
 2013/11/24  #APPact	proyecto migrado a VS2012
 2013/11/24	#APPact	clases sin usar borradas
+
+
+2015/08/17	#APPact agrega botono a control buscarestudiantes , solo matriculado u todos
+2015/08/19	#APPact agrega reporte deconstancia de estudio
+2015/08/21	#APPact	agregar reporte certificacion de traslado
+
+2015/08/30	#APPact mejora de apariencia a office 2016 	
+2015/08/30	#APPact se migra aplicacion a VS2015 y dotnetbar 12.04, y Crystal Reporte 13.0.14
+
+2015/08/1	#APPact CRM

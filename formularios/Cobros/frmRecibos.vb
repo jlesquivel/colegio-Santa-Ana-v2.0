@@ -7,7 +7,7 @@ Public Class frmRecibos
         ButtonX1.Enabled = False
 
         Dim mesLista As Integer = (Now.Month - 2)
-        Dim objlista As DevComponents.DotNetBar.ListBoxItem = Me.ListBoxAdv1.Items(mesLista)
+        Dim objlista As DevComponents.DotNetBar.ListBoxItem = ListBoxAdv1.Items(mesLista)
         objlista.IsSelected = True
 
         ' Actualiza_niveles()
@@ -18,7 +18,7 @@ Public Class frmRecibos
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
 
-        Me.Cursor = Cursors.WaitCursor
+        Cursor = Cursors.WaitCursor
 
         Dim mes As String = ListBoxAdv1.SelectedItem.Tag
         Dim niveles As String = ""
@@ -48,7 +48,7 @@ Public Class frmRecibos
 
                 If CheckBoxX1.Checked Then
                     reporte.PrintOptions.PrinterName = impresora
-                    oReporte.imprimir(reporte, False, Me.ParentForm)  ' prueba pantalla
+                    oReporte.imprimir(reporte, False, ParentForm)  ' prueba pantalla
                 Else
                     oReporte.imprimir(reporte, impresora) ' impresora rollo
                 End If
@@ -56,7 +56,7 @@ Public Class frmRecibos
                 MsgBox("impresora TM-U no detectada")
             End If
         End If
-        Me.Cursor = Cursors.Default
+        Cursor = Cursors.Default
     End Sub
 
     Sub Actualiza_niveles()

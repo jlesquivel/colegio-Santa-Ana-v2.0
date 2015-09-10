@@ -98,7 +98,7 @@ Public Class TreeViewSQL
             Dim tagi As Object
             Dim pos As Integer
             Dim Aetiquetas As String()
-            Me.TopNode.Nodes.Clear()
+            TopNode.Nodes.Clear()
             If DataSet1.Tables("tree").Rows.Count > 0 Then
                 If Not (Petiquetas Is Nothing) Then
                     Aetiquetas = Petiquetas.Split(",")
@@ -106,7 +106,7 @@ Public Class TreeViewSQL
                 ReDim Preserve Aetiquetas(DataSet1.Tables("tree").Columns.Count)
 
                 For Each fila In DataSet1.Tables("tree").Rows
-                    nodoPadre = Me.TopNode
+                    nodoPadre = TopNode
                     For Each columna In DataSet1.Tables("tree").Columns
                         ' etiqueta a insertar
                         textoI = Trim(Aetiquetas(columna.Ordinal + 1) & fila(columna.ColumnName).ToString())
@@ -118,8 +118,8 @@ Public Class TreeViewSQL
                         End If
 
                         If (nodoPadre Is Nothing) Then
-                            If existeNodo(Me.Nodes, textoI) > -1 Then
-                                nodoPadre = Me.Nodes.Item(existeNodo(Me.Nodes, textoI))
+                            If existeNodo(Nodes, textoI) > -1 Then
+                                nodoPadre = Nodes.Item(existeNodo(Nodes, textoI))
                             Else
                                 If textoI <> "" Then
                                     If tagi Is Nothing Then
@@ -131,7 +131,7 @@ Public Class TreeViewSQL
                                     End If
                                     Dim nuevoNodo As TreeNode = inserta(textoI, columna.Ordinal + 1 + pos)
                                     nuevonodo.Tag = tagi
-                                    Me.Nodes.Add(nuevoNodo)
+                                    Nodes.Add(nuevoNodo)
                                     nodoPadre = nuevoNodo
                                 End If
                                 End If

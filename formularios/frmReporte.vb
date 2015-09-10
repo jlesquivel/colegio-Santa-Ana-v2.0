@@ -32,28 +32,28 @@ Public Class frmReporte
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        Me.SuspendLayout()
+        CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
+        SuspendLayout()
         '
         'CrystalReportViewer1
         '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Nothing
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(631, 445)
-        Me.CrystalReportViewer1.TabIndex = 0
+        CrystalReportViewer1.ActiveViewIndex = -1
+        CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        CrystalReportViewer1.Name = "CrystalReportViewer1"
+        CrystalReportViewer1.ReportSource = Nothing
+        CrystalReportViewer1.Size = New System.Drawing.Size(631, 445)
+        CrystalReportViewer1.TabIndex = 0
         '
         'frmReporte
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(631, 445)
-        Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Name = "frmReporte"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmReporte"
-        Me.ResumeLayout(False)
+        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        ClientSize = New System.Drawing.Size(631, 445)
+        Controls.Add(CrystalReportViewer1)
+        Name = "frmReporte"
+        StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Text = "frmReporte"
+        ResumeLayout(False)
 
     End Sub
 
@@ -61,11 +61,11 @@ Public Class frmReporte
 
     Private Sub frmReporte_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Me.CrystalReportViewer1.Zoom(1)
+        CrystalReportViewer1.Zoom(1)
 
     End Sub
 
     Private Sub frmReporte_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Disposed
-        Me.CrystalReportViewer1.Dispose()
+        CrystalReportViewer1.Dispose()
     End Sub
 End Class

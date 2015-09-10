@@ -10,11 +10,11 @@ Public Class cCorreo
     Dim contrasena As String = "5269349"
 
     Public Sub New(pDe As String, pPara As String, pasunto As String, pmsj As String)
-        Me.enviar_mail(pDe, pPara, pasunto, pmsj)
+        enviar_mail(pDe, pPara, pasunto, pmsj)
     End Sub
 
     Sub New()
-        ' TODO: Complete member initialization 
+
     End Sub
 
     Public Sub enviar_mail(ByVal i_de As String, ByVal i_para As String, ByVal asunto As String, ByVal mensaje As String)
@@ -31,11 +31,11 @@ Public Class cCorreo
         End With
 
         Dim smtp As New System.Net.Mail.SmtpClient
-        smtp.Host = Me.servidor
-        smtp.Port = Me.puerto
-        smtp.EnableSsl = Me.ssl
-        smtp.UseDefaultCredentials = Me.credenciales
-        smtp.Credentials = New System.Net.NetworkCredential(Me.cuenta, Me.contrasena)
+        smtp.Host = servidor
+        smtp.Port = puerto
+        smtp.EnableSsl = ssl
+        smtp.UseDefaultCredentials = credenciales
+        smtp.Credentials = New System.Net.NetworkCredential(cuenta, contrasena)
 
         Try
             smtp.Send(insMail)
@@ -70,10 +70,10 @@ Public Class cCorreo
             body = bodyOriginal
             body = body.Replace("{fecha}", DateTime.Now().ToString("dd/MM/yyyy"))
             body = body.Replace("{padre}", contacto("encargado1"))
-            body = body.Replace("{reporte}", Me.reporteMorosidad(row("carnet")))
+            body = body.Replace("{reporte}", reporteMorosidad(row("carnet")))
             body = body.Replace("{administrador}", administrador)
 
-            Me.enviar_mail("joseluis.esquivelgarnier@gmail.com", "joseluis@esquivel.com", "CSA aviso", body)
+            enviar_mail("joseluis.esquivelgarnier@gmail.com", "joseluis@esquivel.com", "CSA aviso", body)
 
             If contador = 2 Then ' control para que solo envie 2 correos ya salga
                 Exit For
@@ -109,7 +109,5 @@ Public Class cCorreo
 
         Return dataset1.Tables(0).Rows.Item(0)
     End Function
-
-
 
 End Class

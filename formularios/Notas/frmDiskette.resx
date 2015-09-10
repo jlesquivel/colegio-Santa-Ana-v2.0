@@ -142,10 +142,10 @@
     <value>SELECT estudiantes.apellido1, estudiantes.apellido2, estudiantes.nombre, estudiantes.carnet, matricula.id_mat FROM matricula INNER JOIN estudiantes ON matricula.carnet = estudiantes.carnet WHERE (matricula.ano = @anno) AND (matricula.nivel = @nivel) AND (matricula.grupo = @grupo) AND (estudiantes.estado = 'ACTIVO') ORDER BY estudiantes.apellido1, estudiantes.apellido2</value>
   </data>
   <metadata name="SqlConnection5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>689, 56</value>
+    <value>127, 95</value>
   </metadata>
   <metadata name="SqlConnection6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>826, 56</value>
+    <value>264, 95</value>
   </metadata>
   <metadata name="SqlDataAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>713, 17</value>
@@ -160,13 +160,13 @@
     <value>False</value>
   </metadata>
   <metadata name="ActualizaNota.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>857, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="SqlConnection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>984, 17</value>
+    <value>144, 56</value>
   </metadata>
   <metadata name="SqlDataAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>281, 56</value>
   </metadata>
   <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -186,13 +186,13 @@ WHERE     (profesores_cursos.cedula = @id_emp) AND (profesores_cursos.periodo = 
 ORDER BY profesores_cursos.nivel, profesores_cursos.grupo, profesores_cursos.materia</value>
   </data>
   <metadata name="SqlConnection4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 56</value>
+    <value>425, 56</value>
   </metadata>
   <metadata name="SqlConnection3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>298, 56</value>
+    <value>562, 56</value>
   </metadata>
   <metadata name="SqlDataAdapter4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>435, 56</value>
+    <value>699, 56</value>
   </metadata>
   <metadata name="SqlDeleteCommand.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -248,16 +248,16 @@ ORDER BY nombre</value>
 SELECT id_emp, cedula, apellidos, apellidos + ' ' + nombre AS nombre, categoria, nacimiento, cuenta, ingreso, banco, direccion, telefono, celular, sexo, anualidadReconocida FROM empleados WHERE (id_emp = @id_emp) ORDER BY nombre</value>
   </data>
   <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>963, 56</value>
+    <value>401, 95</value>
   </metadata>
   <metadata name="BackgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>564, 95</value>
   </metadata>
   <metadata name="DsDisco1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>611, 17</value>
   </metadata>
   <metadata name="DataView1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>579, 56</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>136</value>

@@ -29,6 +29,27 @@ Public Class CargarLista
     End Function
 
 
+    Public Function DatosLista(ByVal Array As ArrayList, ByRef Objeto As Object, _
+    ByVal Codigo As String, ByVal Descripcion As String) As Integer
+
+        ' asigno a la propiedad DisplayMember el Nombre del campo vinculado del ArrayList
+        Objeto.DisplayMember = "Descripcion"
+        ' asigno a la propiedad ValueMember el Nombre del campo vinculado del ArrayList
+        Objeto.ValueMember = "Codigo"
+
+        ' deshabilita la actualización en pantalla del control enviado cpmo parámetro (Objeto)
+        Objeto.BeginUpdate()
+        ' recorro la Table, registro por registro
+        For Each registro As Object In Array
+            ' agrego un nuevo registro dentro del ArrayList
+            Objeto.Items.Add(New carga(registro(0), Trim(registro(2))))
+        Next
+
+        ' habilita la actualización en pantalla del control enviado como parámetro (Objeto)
+        Objeto.EndUpdate()
+        Return 0
+    End Function
+
     Public Function DatosListadeView(ByVal DataTable As DataView, ByRef Objeto As Object, _
             ByVal Codigo As String, ByVal Descripcion As String) As Integer
         ' declaro la matriz de tipo ArrayList, dimensionandola a la cantidad de registros de la tabla

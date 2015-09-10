@@ -16,7 +16,7 @@ Public Class MonedaTextBox
 
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
-        Me.TextAlign = HorizontalAlignment.Right
+        TextAlign = HorizontalAlignment.Right
 
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
 
@@ -57,14 +57,14 @@ Public Class MonedaTextBox
 
 
     Private Sub MonedaTextBox_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Validated
-        MyBase.Text = convertirFormato(Me.Text)
+        MyBase.Text = convertirFormato(Text)
         teclado = False
     End Sub
 
     Private Sub MonedaTextBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.TextChanged
         If teclado Then
         Else
-            MyBase.Text = convertirFormato(Me.Text)
+            MyBase.Text = convertirFormato(Text)
             teclado = False
         End If
     End Sub
@@ -86,7 +86,7 @@ Public Class MonedaTextBox
     End Function
 
     Private Sub MonedaTextBox_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.GotFocus
-        Me.SelectAll()
+        SelectAll()
     End Sub
 
 
