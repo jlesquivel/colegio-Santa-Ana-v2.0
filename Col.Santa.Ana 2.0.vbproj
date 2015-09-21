@@ -881,12 +881,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\colegioReportes\colegioReportes.vbproj">
-      <Project>{8702106D-EAB6-4D63-8A3B-177878F77DB1}</Project>
-      <Name>colegioReportes</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PublishFile Include="log4net">
       <Visible>False</Visible>
       <Group>
