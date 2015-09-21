@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Col.Santa.Ana 2.0", "Col.Santa.Ana 2.0.vbproj", "{9F7C6D8C-C9F4-4AFA-A105-8B5F12476C9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8702106D-EAB6-4D63-8A3B-177878F77DB1} = {8702106D-EAB6-4D63-8A3B-177878F77DB1}
+	EndProjectSection
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Colegio2015", "Setup\Colegio2015\Colegio2015.vdproj", "{C1329F3C-3E6B-44FC-8F58-95CFFCB40982}"
 EndProject
