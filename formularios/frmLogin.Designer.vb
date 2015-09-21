@@ -31,6 +31,8 @@ Partial Class frmLogin
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.SymbolBox1 = New DevComponents.DotNetBar.Controls.SymbolBox()
+        Me.SymbolBox2 = New DevComponents.DotNetBar.Controls.SymbolBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,6 +44,7 @@ Partial Class frmLogin
         '
         Me.TextBoxX1.Border.Class = "TextBoxBorder"
         Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
         Me.TextBoxX1.Location = New System.Drawing.Point(184, 24)
@@ -59,6 +62,7 @@ Partial Class frmLogin
         '
         Me.TextBoxX2.Border.Class = "TextBoxBorder"
         Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX2.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX2.ForeColor = System.Drawing.Color.Black
         Me.TextBoxX2.Location = New System.Drawing.Point(184, 78)
@@ -73,6 +77,7 @@ Partial Class frmLogin
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonX1.Location = New System.Drawing.Point(184, 127)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(85, 45)
@@ -85,6 +90,7 @@ Partial Class frmLogin
         Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX2.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.ButtonX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonX2.Location = New System.Drawing.Point(282, 127)
         Me.ButtonX2.Name = "ButtonX2"
         Me.ButtonX2.Size = New System.Drawing.Size(85, 45)
@@ -102,12 +108,38 @@ Partial Class frmLogin
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.ForeColor = System.Drawing.Color.Black
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, 24)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(156, 148)
+        Me.PictureBox1.Size = New System.Drawing.Size(149, 148)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
+        '
+        'SymbolBox1
+        '
+        '
+        '
+        '
+        Me.SymbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SymbolBox1.Location = New System.Drawing.Point(154, 24)
+        Me.SymbolBox1.Name = "SymbolBox1"
+        Me.SymbolBox1.Size = New System.Drawing.Size(24, 29)
+        Me.SymbolBox1.Symbol = ""
+        Me.SymbolBox1.TabIndex = 9
+        Me.SymbolBox1.Text = "SymbolBox1"
+        '
+        'SymbolBox2
+        '
+        '
+        '
+        '
+        Me.SymbolBox2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SymbolBox2.Location = New System.Drawing.Point(154, 78)
+        Me.SymbolBox2.Name = "SymbolBox2"
+        Me.SymbolBox2.Size = New System.Drawing.Size(24, 29)
+        Me.SymbolBox2.Symbol = ""
+        Me.SymbolBox2.TabIndex = 10
+        Me.SymbolBox2.Text = "SymbolBox2"
         '
         'frmLogin
         '
@@ -116,6 +148,8 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ButtonX2
         Me.ClientSize = New System.Drawing.Size(379, 206)
+        Me.Controls.Add(Me.SymbolBox2)
+        Me.Controls.Add(Me.SymbolBox1)
         Me.Controls.Add(Me.ButtonX2)
         Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.TextBoxX2)
@@ -136,4 +170,6 @@ Partial Class frmLogin
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
+    Friend WithEvents SymbolBox1 As DevComponents.DotNetBar.Controls.SymbolBox
+    Friend WithEvents SymbolBox2 As DevComponents.DotNetBar.Controls.SymbolBox
 End Class

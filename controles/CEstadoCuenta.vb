@@ -57,195 +57,195 @@ Public Class CEstadoCuenta
     Friend WithEvents SqlSelectCommand2 As System.Data.SqlClient.SqlCommand
     Friend WithEvents Button1 As System.Windows.Forms.Button
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CEstadoCuenta))
-        SqlConnection1 = New System.Data.SqlClient.SqlConnection
-        SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter
-        SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand
-        SqlConnection2 = New System.Data.SqlClient.SqlConnection
-        SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand
-        SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand
-        SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand
-        SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand
-        GenCobro1 = New colegio.genCobro
-        ListView1 = New System.Windows.Forms.ListView
-        ColumnHeader1 = New System.Windows.Forms.ColumnHeader
-        ColumnHeader4 = New System.Windows.Forms.ColumnHeader
-        ColumnHeader2 = New System.Windows.Forms.ColumnHeader
-        ColumnHeader6 = New System.Windows.Forms.ColumnHeader
-        ColumnHeader3 = New System.Windows.Forms.ColumnHeader
-        ColumnHeader5 = New System.Windows.Forms.ColumnHeader
-        ImageList1 = New System.Windows.Forms.ImageList(components)
-        MainMenu1 = New System.Windows.Forms.MainMenu(components)
-        ComboBox1 = New System.Windows.Forms.ComboBox
-        Label1 = New System.Windows.Forms.Label
-        TextBox1 = New System.Windows.Forms.TextBox
-        Panel1 = New System.Windows.Forms.Panel
-        Button1 = New System.Windows.Forms.Button
-        CType(GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        SuspendLayout()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDeleteCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.GenCobro1 = New colegio.genCobro()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.MainMenu1 = New System.Windows.Forms.MainMenu(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'SqlConnection1
         '
-        SqlConnection1.ConnectionString = "Data Source=(local);Initial Catalog=colegio;Integrated Security=True"
-        SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection1.ConnectionString = "Data Source=(local);Initial Catalog=colegio;Integrated Security=True"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
         '
-        SqlDataAdapter1.SelectCommand = SqlSelectCommand2
-        SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "cobros", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("mes", "mes"), New System.Data.Common.DataColumnMapping("recibo", "recibo"), New System.Data.Common.DataColumnMapping("fecha_recibo", "fecha_recibo"), New System.Data.Common.DataColumnMapping("monto", "monto"), New System.Data.Common.DataColumnMapping("generado", "generado"), New System.Data.Common.DataColumnMapping("id_cobro", "id_cobro"), New System.Data.Common.DataColumnMapping("multa", "multa"), New System.Data.Common.DataColumnMapping("id_mat", "id_mat"), New System.Data.Common.DataColumnMapping("concepto", "concepto")})})
+        Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand2
+        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "cobros", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("mes", "mes"), New System.Data.Common.DataColumnMapping("recibo", "recibo"), New System.Data.Common.DataColumnMapping("fecha_recibo", "fecha_recibo"), New System.Data.Common.DataColumnMapping("monto", "monto"), New System.Data.Common.DataColumnMapping("generado", "generado"), New System.Data.Common.DataColumnMapping("id_cobro", "id_cobro"), New System.Data.Common.DataColumnMapping("multa", "multa"), New System.Data.Common.DataColumnMapping("id_mat", "id_mat"), New System.Data.Common.DataColumnMapping("concepto", "concepto")})})
         '
         'SqlSelectCommand2
         '
-        SqlSelectCommand2.CommandText = resources.GetString("SqlSelectCommand2.CommandText")
-        SqlSelectCommand2.Connection = SqlConnection1
-        SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
+        Me.SqlSelectCommand2.CommandText = resources.GetString("SqlSelectCommand2.CommandText")
+        Me.SqlSelectCommand2.Connection = Me.SqlConnection2
+        Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
         '
         'SqlConnection2
         '
-        SqlConnection2.ConnectionString = "Data Source=SERVIDOR-BD;Initial Catalog=colegio;Integrated Security=True"
-        SqlConnection2.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection2.ConnectionString = "Data Source=SERVIDOR-BD;Initial Catalog=colegio;Integrated Security=True"
+        Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDeleteCommand1
         '
-        SqlDeleteCommand1.CommandText = resources.GetString("SqlDeleteCommand1.CommandText")
-        SqlDeleteCommand1.Connection = SqlConnection1
-        SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_fecha_recibo", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "fecha_recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_generado", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "generado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_mes", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "mes", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_monto", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_multa", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "multa", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_recibo", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "recibo", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlDeleteCommand1.CommandText = resources.GetString("SqlDeleteCommand1.CommandText")
+        Me.SqlDeleteCommand1.Connection = Me.SqlConnection1
+        Me.SqlDeleteCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_fecha_recibo", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "fecha_recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_generado", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "generado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_mes", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "mes", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_monto", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_multa", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "multa", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_recibo", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "recibo", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand1
         '
-        SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
-        SqlInsertCommand1.Connection = SqlConnection1
-        SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@mes", System.Data.SqlDbType.Int, 4, "mes"), New System.Data.SqlClient.SqlParameter("@recibo", System.Data.SqlDbType.VarChar, 15, "recibo"), New System.Data.SqlClient.SqlParameter("@fecha_recibo", System.Data.SqlDbType.DateTime, 8, "fecha_recibo"), New System.Data.SqlClient.SqlParameter("@monto", System.Data.SqlDbType.Money, 8, "monto"), New System.Data.SqlClient.SqlParameter("@generado", System.Data.SqlDbType.DateTime, 8, "generado"), New System.Data.SqlClient.SqlParameter("@multa", System.Data.SqlDbType.Money, 8, "multa")})
+        Me.SqlInsertCommand1.CommandText = resources.GetString("SqlInsertCommand1.CommandText")
+        Me.SqlInsertCommand1.Connection = Me.SqlConnection1
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@mes", System.Data.SqlDbType.Int, 4, "mes"), New System.Data.SqlClient.SqlParameter("@recibo", System.Data.SqlDbType.VarChar, 15, "recibo"), New System.Data.SqlClient.SqlParameter("@fecha_recibo", System.Data.SqlDbType.DateTime, 8, "fecha_recibo"), New System.Data.SqlClient.SqlParameter("@monto", System.Data.SqlDbType.Money, 8, "monto"), New System.Data.SqlClient.SqlParameter("@generado", System.Data.SqlDbType.DateTime, 8, "generado"), New System.Data.SqlClient.SqlParameter("@multa", System.Data.SqlDbType.Money, 8, "multa")})
         '
         'SqlSelectCommand1
         '
-        SqlSelectCommand1.CommandText = "SELECT carnet, mes, recibo, fecha_recibo, monto, generado, id_cobro, multa FROM c" & _
-            "obros WHERE (carnet = @carnet) AND (recibo IS NULL) ORDER BY mes"
-        SqlSelectCommand1.Connection = SqlConnection1
-        SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
+        Me.SqlSelectCommand1.CommandText = "SELECT carnet, mes, recibo, fecha_recibo, monto, generado, id_cobro, multa FROM c" &
+    "obros WHERE (carnet = @carnet) AND (recibo IS NULL) ORDER BY mes"
+        Me.SqlSelectCommand1.Connection = Me.SqlConnection1
+        Me.SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
         '
         'SqlUpdateCommand1
         '
-        SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
-        SqlUpdateCommand1.Connection = SqlConnection1
-        SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@mes", System.Data.SqlDbType.Int, 4, "mes"), New System.Data.SqlClient.SqlParameter("@recibo", System.Data.SqlDbType.VarChar, 15, "recibo"), New System.Data.SqlClient.SqlParameter("@fecha_recibo", System.Data.SqlDbType.DateTime, 8, "fecha_recibo"), New System.Data.SqlClient.SqlParameter("@monto", System.Data.SqlDbType.Money, 8, "monto"), New System.Data.SqlClient.SqlParameter("@generado", System.Data.SqlDbType.DateTime, 8, "generado"), New System.Data.SqlClient.SqlParameter("@multa", System.Data.SqlDbType.Money, 8, "multa"), New System.Data.SqlClient.SqlParameter("@Original_id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_fecha_recibo", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "fecha_recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_generado", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "generado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_mes", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "mes", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_monto", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_multa", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "multa", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_recibo", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Current, Nothing)})
+        Me.SqlUpdateCommand1.CommandText = resources.GetString("SqlUpdateCommand1.CommandText")
+        Me.SqlUpdateCommand1.Connection = Me.SqlConnection1
+        Me.SqlUpdateCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@mes", System.Data.SqlDbType.Int, 4, "mes"), New System.Data.SqlClient.SqlParameter("@recibo", System.Data.SqlDbType.VarChar, 15, "recibo"), New System.Data.SqlClient.SqlParameter("@fecha_recibo", System.Data.SqlDbType.DateTime, 8, "fecha_recibo"), New System.Data.SqlClient.SqlParameter("@monto", System.Data.SqlDbType.Money, 8, "monto"), New System.Data.SqlClient.SqlParameter("@generado", System.Data.SqlDbType.DateTime, 8, "generado"), New System.Data.SqlClient.SqlParameter("@multa", System.Data.SqlDbType.Money, 8, "multa"), New System.Data.SqlClient.SqlParameter("@Original_id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_fecha_recibo", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "fecha_recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_generado", System.Data.SqlDbType.DateTime, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "generado", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_mes", System.Data.SqlDbType.Int, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "mes", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_monto", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "monto", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_multa", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "multa", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_recibo", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "recibo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id_cobro", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_cobro", System.Data.DataRowVersion.Current, Nothing)})
         '
         'GenCobro1
         '
-        GenCobro1.DataSetName = "genCobro"
-        GenCobro1.Locale = New System.Globalization.CultureInfo("es-CR")
-        GenCobro1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.GenCobro1.DataSetName = "genCobro"
+        Me.GenCobro1.Locale = New System.Globalization.CultureInfo("es-CR")
+        Me.GenCobro1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ListView1
         '
-        ListView1.CheckBoxes = True
-        ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {ColumnHeader1, ColumnHeader4, ColumnHeader2, ColumnHeader6, ColumnHeader3, ColumnHeader5})
-        ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        ListView1.LargeImageList = ImageList1
-        ListView1.Location = New System.Drawing.Point(0, 40)
-        ListView1.Name = "ListView1"
-        ListView1.Size = New System.Drawing.Size(448, 200)
-        ListView1.Sorting = System.Windows.Forms.SortOrder.Descending
-        ListView1.TabIndex = 2
-        ListView1.UseCompatibleStateImageBehavior = False
-        ListView1.View = System.Windows.Forms.View.Details
+        Me.ListView1.CheckBoxes = True
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader3, Me.ColumnHeader5})
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView1.LargeImageList = Me.ImageList1
+        Me.ListView1.Location = New System.Drawing.Point(0, 40)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(448, 200)
+        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Descending
+        Me.ListView1.TabIndex = 2
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        ColumnHeader1.Text = "Factura"
-        ColumnHeader1.Width = 80
+        Me.ColumnHeader1.Text = "Factura"
+        Me.ColumnHeader1.Width = 80
         '
         'ColumnHeader4
         '
-        ColumnHeader4.Text = "Monto"
-        ColumnHeader4.Width = 80
+        Me.ColumnHeader4.Text = "Monto"
+        Me.ColumnHeader4.Width = 80
         '
         'ColumnHeader2
         '
-        ColumnHeader2.Text = "Multa"
-        ColumnHeader2.Width = 65
+        Me.ColumnHeader2.Text = "Multa"
+        Me.ColumnHeader2.Width = 65
         '
         'ColumnHeader6
         '
-        ColumnHeader6.Text = "Factura"
-        ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.ColumnHeader6.Text = "Factura"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ColumnHeader3
         '
-        ColumnHeader3.Text = "Recibo Pago"
-        ColumnHeader3.Width = 75
+        Me.ColumnHeader3.Text = "Recibo Pago"
+        Me.ColumnHeader3.Width = 75
         '
         'ColumnHeader5
         '
-        ColumnHeader5.Text = "Fecha Pago"
-        ColumnHeader5.Width = 70
+        Me.ColumnHeader5.Text = "Fecha Pago"
+        Me.ColumnHeader5.Width = 70
         '
         'ImageList1
         '
-        ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        ImageList1.Images.SetKeyName(0, "")
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "")
         '
         'ComboBox1
         '
-        ComboBox1.Items.AddRange(New Object() {"Iconos", "Detalles"})
-        ComboBox1.Location = New System.Drawing.Point(184, 8)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New System.Drawing.Size(80, 21)
-        ComboBox1.TabIndex = 3
+        Me.ComboBox1.Items.AddRange(New Object() {"Iconos", "Detalles"})
+        Me.ComboBox1.Location = New System.Drawing.Point(184, 8)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(80, 21)
+        Me.ComboBox1.TabIndex = 3
         '
         'Label1
         '
-        Label1.BackColor = System.Drawing.Color.Transparent
-        Label1.Location = New System.Drawing.Point(8, 8)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(48, 23)
-        Label1.TabIndex = 0
-        Label1.Text = "Carnet"
-        Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(8, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 23)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Carnet"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TextBox1
         '
-        TextBox1.Location = New System.Drawing.Point(64, 8)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New System.Drawing.Size(114, 20)
-        TextBox1.TabIndex = 1
+        Me.TextBox1.Location = New System.Drawing.Point(64, 8)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(114, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'Panel1
         '
-        Panel1.BackColor = System.Drawing.Color.Transparent
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(ComboBox1)
-        Panel1.Controls.Add(TextBox1)
-        Panel1.Controls.Add(Label1)
-        Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Panel1.Location = New System.Drawing.Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New System.Drawing.Size(448, 40)
-        Panel1.TabIndex = 4
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(448, 40)
+        Me.Panel1.TabIndex = 4
         '
         'Button1
         '
-        Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Button1.Location = New System.Drawing.Point(280, 8)
-        Button1.Name = "Button1"
-        Button1.Size = New System.Drawing.Size(72, 24)
-        Button1.TabIndex = 4
-        Button1.Text = "Imprimir"
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Location = New System.Drawing.Point(280, 8)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(72, 24)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Imprimir"
         '
         'CEstadoCuenta
         '
-        BackColor = System.Drawing.Color.Transparent
-        Controls.Add(ListView1)
-        Controls.Add(Panel1)
-        Name = "CEstadoCuenta"
-        Size = New System.Drawing.Size(448, 240)
-        CType(GenCobro1, System.ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        ResumeLayout(False)
+        Me.BackColor = System.Drawing.Color.Transparent
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Name = "CEstadoCuenta"
+        Me.Size = New System.Drawing.Size(448, 240)
+        CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.ResumeLayout(False)
 
     End Sub
 

@@ -1,7 +1,6 @@
 ﻿Public Class frmLogin
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
-
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Close()
     End Sub
@@ -36,13 +35,19 @@
             TextBoxX2.Enabled = False
             ButtonX1.Enabled = False
             ButtonX2.Enabled = False
-
             PictureBox1.Image = colegio.My.Resources.Resources.ndb
+        Else
+            Dim info As NetworkInformation = NetworkInformation.LocalComputer
+            If info.Status = NetworkInformation.JoinStatus.Domain Then
+                Visible = False
+                frmPrincipal2.ShowDialog()
+                Close()
+            End If
         End If
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
-        ''  192.168.137.1               
+
         Dim sqlcon As New conexionSQL("SERVIDOR-BD", "colegio", TextBoxX1.Text, TextBoxX2.Text)
         My.Settings.conexionSQL = sqlcon.strConn
 
@@ -59,6 +64,4 @@
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
         Close()
     End Sub
-
-
 End Class

@@ -204,8 +204,27 @@ Public Class conexionSQL
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
     End Sub
+
+    Function llenaTabla(ByVal instruccion As String) As DataTable
+        Try
+            Dim res As Integer
+            If colegioConnection.State = ConnectionState.Closed Then
+                colegioConnection.Open()
+            End If
+            Dim cmd As New SqlCommand(instruccion)
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+
+            da.SelectCommand.Connection = conexion
+            res = da.Fill(dt)
+            llenaTabla = dt
+
+        Catch ex As Exception
+            MessageBox.Show("llena datatable " & ex.Message)
+            llenaTabla = Nothing
+        End Try
+    End Function
 
     Function llena(ByVal instruccion As String) As ArrayList
         Dim arreglo As New ArrayList

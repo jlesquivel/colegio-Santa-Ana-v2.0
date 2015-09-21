@@ -10,3 +10,5 @@ Data Source=SERVIDOR-BD;Initial Catalog=colegio;Integrated Security=True
 # + generar notas extraordinarias
 # + ventana estudiante dura mucho en cargar
 | + enviar por correo los avisos de cobro
+
+	+ generar en la table trimestres automaticamente los periodo de ausencia 

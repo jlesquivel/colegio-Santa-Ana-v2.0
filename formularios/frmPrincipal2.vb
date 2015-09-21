@@ -4,14 +4,11 @@ Imports System.Security.Principal
 Public Class frmPrincipal2
     Inherits DevComponents.DotNetBar.RibbonForm
 
-
     Public institucion As String
     Dim AppImp As Printing.PrinterSettings
-    Dim sqlcon As New conexionSQL
     Dim oVentana As New Ventanas
 
     Public Sub New()
-
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
         RibbonCobros.Visible = False
@@ -20,6 +17,7 @@ Public Class frmPrincipal2
     End Sub
 
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Dim sqlcon As New conexionSQL
 
         LabelItem3.Text = WindowsIdentity.GetCurrent.Name
         LabelItem2.Text = Format(Now.Date, "D")
@@ -147,13 +145,11 @@ Public Class frmPrincipal2
 #End Region
 
     Private Sub ButtonItem38_Click(sender As Object, e As EventArgs) Handles ButtonItem38.Click
-
         oVentana.cargarVentana(New frmCobrosMsjCorreo, Me)
     End Sub
 
 
     Private Sub RibbonCobros_Click(sender As Object, e As EventArgs) Handles RibbonCobros.Click
-
         Dim resultado As ArrayList
         Dim conn As New conexionSQL
 
@@ -194,7 +190,6 @@ Public Class frmPrincipal2
     End Sub
 
     Private Sub ButtonItem37_Click(sender As Object, e As EventArgs) Handles ButtonItem37.Click
-
         oVentana.cargarVentana(New frmConstEstud, Me)
     End Sub
 

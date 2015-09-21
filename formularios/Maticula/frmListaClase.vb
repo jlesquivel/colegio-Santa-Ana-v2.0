@@ -5,6 +5,7 @@ Public Class frmListaClase
     Dim dvLista As DataView
     Dim partes As String()
     Public conn As New conexionSQL
+    Friend WithEvents MenuItem13 As MenuItem
     Public frmReporte As New frmReporte()
 
 
@@ -73,317 +74,327 @@ Public Class frmListaClase
     Friend WithEvents MenuItem12 As System.Windows.Forms.MenuItem
     Friend WithEvents MenuItem4 As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmListaClase))
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Años", 1, 1)
-        ContextMenu1 = New System.Windows.Forms.ContextMenu()
-        MenuItem6 = New System.Windows.Forms.MenuItem()
-        Imprimir = New System.Windows.Forms.MenuItem()
-        MenuItem1 = New System.Windows.Forms.MenuItem()
-        MenuItem2 = New System.Windows.Forms.MenuItem()
-        MenuItem5 = New System.Windows.Forms.MenuItem()
-        MenuItem7 = New System.Windows.Forms.MenuItem()
-        MenuItem8 = New System.Windows.Forms.MenuItem()
-        MenuItem9 = New System.Windows.Forms.MenuItem()
-        MenuItem10 = New System.Windows.Forms.MenuItem()
-        MenuItem11 = New System.Windows.Forms.MenuItem()
-        MenuItem3 = New System.Windows.Forms.MenuItem()
-        MenuItem12 = New System.Windows.Forms.MenuItem()
-        MenuItem4 = New System.Windows.Forms.MenuItem()
-        SqlConnection1 = New System.Data.SqlClient.SqlConnection()
-        SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
-        SqlConnection2 = New System.Data.SqlClient.SqlConnection()
-        DsArbol1 = New colegio.dsArbol()
-        DataGrid1 = New System.Windows.Forms.DataGrid()
-        DsListaClase1 = New colegio.dsListaClase()
-        DataGridTableStyle1 = New System.Windows.Forms.DataGridTableStyle()
-        DataGridTextBoxColumn1 = New System.Windows.Forms.DataGridTextBoxColumn()
-        DataGridTextBoxColumn2 = New System.Windows.Forms.DataGridTextBoxColumn()
-        DataGridTextBoxColumn3 = New System.Windows.Forms.DataGridTextBoxColumn()
-        DataGridTextBoxColumn4 = New System.Windows.Forms.DataGridTextBoxColumn()
-        SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
-        SqlConnection3 = New System.Data.SqlClient.SqlConnection()
-        SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
-        SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
-        SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
-        Splitter1 = New System.Windows.Forms.Splitter()
-        ImageList1 = New System.Windows.Forms.ImageList(components)
-        SqlFamiliaApellidos = New System.Data.SqlClient.SqlCommand()
-        TreeViewSQL1 = New colegio.TreeViewSQL()
-        CType(DsArbol1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(DsListaClase1, System.ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
+        Me.ContextMenu1 = New System.Windows.Forms.ContextMenu()
+        Me.MenuItem6 = New System.Windows.Forms.MenuItem()
+        Me.Imprimir = New System.Windows.Forms.MenuItem()
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem2 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem7 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem8 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem9 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem10 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem11 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem3 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem12 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem4 = New System.Windows.Forms.MenuItem()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.DsArbol1 = New colegio.dsArbol()
+        Me.DataGrid1 = New System.Windows.Forms.DataGrid()
+        Me.DsListaClase1 = New colegio.dsListaClase()
+        Me.DataGridTableStyle1 = New System.Windows.Forms.DataGridTableStyle()
+        Me.DataGridTextBoxColumn1 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn2 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn3 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.DataGridTextBoxColumn4 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.SqlFamiliaApellidos = New System.Data.SqlClient.SqlCommand()
+        Me.TreeViewSQL1 = New colegio.TreeViewSQL()
+        Me.MenuItem13 = New System.Windows.Forms.MenuItem()
+        CType(Me.DsArbol1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsListaClase1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'ContextMenu1
         '
-        ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {MenuItem6, Imprimir, MenuItem3, MenuItem12, MenuItem4})
+        Me.ContextMenu1.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem6, Me.Imprimir, Me.MenuItem3, Me.MenuItem12, Me.MenuItem4})
         '
         'MenuItem6
         '
-        MenuItem6.Index = 0
-        MenuItem6.Text = "Editar"
+        Me.MenuItem6.Index = 0
+        Me.MenuItem6.Text = "Editar"
         '
         'Imprimir
         '
-        Imprimir.Index = 1
-        Imprimir.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {MenuItem1, MenuItem2, MenuItem5, MenuItem7, MenuItem8, MenuItem9, MenuItem10, MenuItem11})
-        Imprimir.Text = "Imprimir"
+        Me.Imprimir.Index = 1
+        Me.Imprimir.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.MenuItem2, Me.MenuItem5, Me.MenuItem7, Me.MenuItem8, Me.MenuItem9, Me.MenuItem10, Me.MenuItem11, Me.MenuItem13})
+        Me.Imprimir.Text = "Imprimir"
         '
         'MenuItem1
         '
-        MenuItem1.Index = 0
-        MenuItem1.Text = "Lista de Clase"
+        Me.MenuItem1.Index = 0
+        Me.MenuItem1.Text = "Lista de Clase"
         '
         'MenuItem2
         '
-        MenuItem2.Index = 1
-        MenuItem2.Text = "Listado General"
+        Me.MenuItem2.Index = 1
+        Me.MenuItem2.Text = "Listado General"
         '
         'MenuItem5
         '
-        MenuItem5.Index = 2
-        MenuItem5.Text = "Lista para INS"
+        Me.MenuItem5.Index = 2
+        Me.MenuItem5.Text = "Lista para INS"
         '
         'MenuItem7
         '
-        MenuItem7.Index = 3
-        MenuItem7.Text = "Ingresos X matricula"
+        Me.MenuItem7.Index = 3
+        Me.MenuItem7.Text = "Ingresos X matricula"
         '
         'MenuItem8
         '
-        MenuItem8.Index = 4
-        MenuItem8.Text = "Lista Bingo"
+        Me.MenuItem8.Index = 4
+        Me.MenuItem8.Text = "Lista Bingo"
         '
         'MenuItem9
         '
-        MenuItem9.Index = 5
-        MenuItem9.Text = "Lista de Familias"
+        Me.MenuItem9.Index = 5
+        Me.MenuItem9.Text = "Lista de Familias"
         '
         'MenuItem10
         '
-        MenuItem10.Index = 6
-        MenuItem10.Text = "Carnet de Familia"
+        Me.MenuItem10.Index = 6
+        Me.MenuItem10.Text = "Carnet de Familia"
         '
         'MenuItem11
         '
-        MenuItem11.Index = 7
-        MenuItem11.Text = "Becados"
+        Me.MenuItem11.Index = 7
+        Me.MenuItem11.Text = "Becados"
         '
         'MenuItem3
         '
-        MenuItem3.Index = 2
-        MenuItem3.Text = "-"
+        Me.MenuItem3.Index = 2
+        Me.MenuItem3.Text = "-"
         '
         'MenuItem12
         '
-        MenuItem12.Index = 3
-        MenuItem12.Text = "Trasaldo de Grupo"
+        Me.MenuItem12.Index = 3
+        Me.MenuItem12.Text = "Trasaldo de Grupo"
         '
         'MenuItem4
         '
-        MenuItem4.Index = 4
-        MenuItem4.Text = "Borrar Estudiante"
-        MenuItem4.Visible = False
+        Me.MenuItem4.Index = 4
+        Me.MenuItem4.Text = "Borrar Estudiante"
+        Me.MenuItem4.Visible = False
         '
         'SqlConnection1
         '
-        SqlConnection1.ConnectionString = "data source=PORTATIL;initial catalog=colegio;integrated security=SSPI;persist sec" & _
+        Me.SqlConnection1.ConnectionString = "data source=PORTATIL;initial catalog=colegio;integrated security=SSPI;persist sec" &
     "urity info=False;workstation id=PORTATIL;packet size=4096"
-        SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
         '
-        SqlDataAdapter1.SelectCommand = SqlSelectCommand1
-        SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "matricula", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ano", "ano"), New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("grupo", "grupo")})})
+        Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand1
+        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "matricula", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ano", "ano"), New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("grupo", "grupo")})})
         '
         'SqlSelectCommand1
         '
-        SqlSelectCommand1.CommandText = "SELECT DISTINCT ano, nivel, grupo FROM matricula ORDER BY ano DESC, nivel, grupo"
-        SqlSelectCommand1.Connection = SqlConnection2
+        Me.SqlSelectCommand1.CommandText = "SELECT DISTINCT ano, nivel, grupo FROM matricula ORDER BY ano DESC, nivel, grupo"
+        Me.SqlSelectCommand1.Connection = Me.SqlConnection2
         '
         'SqlConnection2
         '
-        SqlConnection2.ConnectionString = "workstation id=ESCRITORIO;packet size=4096;integrated security=SSPI;data source=e" & _
+        Me.SqlConnection2.ConnectionString = "workstation id=ESCRITORIO;packet size=4096;integrated security=SSPI;data source=e" &
     "scritorio;persist security info=False;initial catalog=colegio"
-        SqlConnection2.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'DsArbol1
         '
-        DsArbol1.DataSetName = "dsArbol"
-        DsArbol1.Locale = New System.Globalization.CultureInfo("es-CR")
-        DsArbol1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DsArbol1.DataSetName = "dsArbol"
+        Me.DsArbol1.Locale = New System.Globalization.CultureInfo("es-CR")
+        Me.DsArbol1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataGrid1
         '
-        DataGrid1.AlternatingBackColor = System.Drawing.Color.AliceBlue
-        DataGrid1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGrid1.CaptionText = "Alumnos :"
-        DataGrid1.ContextMenu = ContextMenu1
-        DataGrid1.DataMember = ""
-        DataGrid1.DataSource = DsListaClase1.estudiantes
-        DataGrid1.Dock = System.Windows.Forms.DockStyle.Fill
-        DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        DataGrid1.Location = New System.Drawing.Point(184, 0)
-        DataGrid1.Name = "DataGrid1"
-        DataGrid1.PreferredColumnWidth = 100
-        DataGrid1.ReadOnly = True
-        DataGrid1.RowHeaderWidth = 21
-        DataGrid1.SelectionBackColor = System.Drawing.SystemColors.Info
-        DataGrid1.Size = New System.Drawing.Size(463, 468)
-        DataGrid1.TabIndex = 1
-        DataGrid1.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {DataGridTableStyle1})
+        Me.DataGrid1.AlternatingBackColor = System.Drawing.Color.AliceBlue
+        Me.DataGrid1.BackgroundColor = System.Drawing.Color.Transparent
+        Me.DataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGrid1.CaptionText = "Alumnos :"
+        Me.DataGrid1.ContextMenu = Me.ContextMenu1
+        Me.DataGrid1.DataMember = ""
+        Me.DataGrid1.DataSource = Me.DsListaClase1.estudiantes
+        Me.DataGrid1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGrid1.GridLineStyle = System.Windows.Forms.DataGridLineStyle.None
+        Me.DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGrid1.Location = New System.Drawing.Point(184, 0)
+        Me.DataGrid1.Name = "DataGrid1"
+        Me.DataGrid1.PreferredColumnWidth = 100
+        Me.DataGrid1.ReadOnly = True
+        Me.DataGrid1.RowHeaderWidth = 21
+        Me.DataGrid1.SelectionBackColor = System.Drawing.SystemColors.Info
+        Me.DataGrid1.Size = New System.Drawing.Size(463, 468)
+        Me.DataGrid1.TabIndex = 1
+        Me.DataGrid1.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle1})
         '
         'DsListaClase1
         '
-        DsListaClase1.DataSetName = "dsListaClase"
-        DsListaClase1.Locale = New System.Globalization.CultureInfo("es-CR")
-        DsListaClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DsListaClase1.DataSetName = "dsListaClase"
+        Me.DsListaClase1.Locale = New System.Globalization.CultureInfo("es-CR")
+        Me.DsListaClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataGridTableStyle1
         '
-        DataGridTableStyle1.AlternatingBackColor = System.Drawing.Color.AliceBlue
-        DataGridTableStyle1.DataGrid = DataGrid1
-        DataGridTableStyle1.GridColumnStyles.AddRange(New System.Windows.Forms.DataGridColumnStyle() {DataGridTextBoxColumn1, DataGridTextBoxColumn2, DataGridTextBoxColumn3, DataGridTextBoxColumn4})
-        DataGridTableStyle1.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        DataGridTableStyle1.MappingName = "estudiantes"
-        DataGridTableStyle1.PreferredColumnWidth = 100
-        DataGridTableStyle1.RowHeaderWidth = 21
-        DataGridTableStyle1.SelectionBackColor = System.Drawing.Color.CornflowerBlue
+        Me.DataGridTableStyle1.AlternatingBackColor = System.Drawing.Color.AliceBlue
+        Me.DataGridTableStyle1.DataGrid = Me.DataGrid1
+        Me.DataGridTableStyle1.GridColumnStyles.AddRange(New System.Windows.Forms.DataGridColumnStyle() {Me.DataGridTextBoxColumn1, Me.DataGridTextBoxColumn2, Me.DataGridTextBoxColumn3, Me.DataGridTextBoxColumn4})
+        Me.DataGridTableStyle1.GridLineColor = System.Drawing.Color.Transparent
+        Me.DataGridTableStyle1.HeaderForeColor = System.Drawing.SystemColors.ControlText
+        Me.DataGridTableStyle1.MappingName = "estudiantes"
+        Me.DataGridTableStyle1.PreferredColumnWidth = 100
+        Me.DataGridTableStyle1.RowHeaderWidth = 21
+        Me.DataGridTableStyle1.SelectionBackColor = System.Drawing.Color.CornflowerBlue
         '
         'DataGridTextBoxColumn1
         '
-        DataGridTextBoxColumn1.Format = ""
-        DataGridTextBoxColumn1.FormatInfo = Nothing
-        DataGridTextBoxColumn1.HeaderText = "Carnet"
-        DataGridTextBoxColumn1.MappingName = "carnet"
-        DataGridTextBoxColumn1.Width = 80
+        Me.DataGridTextBoxColumn1.Format = ""
+        Me.DataGridTextBoxColumn1.FormatInfo = Nothing
+        Me.DataGridTextBoxColumn1.HeaderText = "Carnet"
+        Me.DataGridTextBoxColumn1.MappingName = "carnet"
+        Me.DataGridTextBoxColumn1.Width = 80
         '
         'DataGridTextBoxColumn2
         '
-        DataGridTextBoxColumn2.Format = ""
-        DataGridTextBoxColumn2.FormatInfo = Nothing
-        DataGridTextBoxColumn2.HeaderText = "Apellido1"
-        DataGridTextBoxColumn2.MappingName = "apellido1"
-        DataGridTextBoxColumn2.Width = 75
+        Me.DataGridTextBoxColumn2.Format = ""
+        Me.DataGridTextBoxColumn2.FormatInfo = Nothing
+        Me.DataGridTextBoxColumn2.HeaderText = "Apellido1"
+        Me.DataGridTextBoxColumn2.MappingName = "apellido1"
+        Me.DataGridTextBoxColumn2.Width = 75
         '
         'DataGridTextBoxColumn3
         '
-        DataGridTextBoxColumn3.Format = ""
-        DataGridTextBoxColumn3.FormatInfo = Nothing
-        DataGridTextBoxColumn3.HeaderText = "Apellido2"
-        DataGridTextBoxColumn3.MappingName = "apellido2"
-        DataGridTextBoxColumn3.Width = 75
+        Me.DataGridTextBoxColumn3.Format = ""
+        Me.DataGridTextBoxColumn3.FormatInfo = Nothing
+        Me.DataGridTextBoxColumn3.HeaderText = "Apellido2"
+        Me.DataGridTextBoxColumn3.MappingName = "apellido2"
+        Me.DataGridTextBoxColumn3.Width = 75
         '
         'DataGridTextBoxColumn4
         '
-        DataGridTextBoxColumn4.Format = ""
-        DataGridTextBoxColumn4.FormatInfo = Nothing
-        DataGridTextBoxColumn4.HeaderText = "Nombre"
-        DataGridTextBoxColumn4.MappingName = "nombre"
-        DataGridTextBoxColumn4.Width = 130
+        Me.DataGridTextBoxColumn4.Format = ""
+        Me.DataGridTextBoxColumn4.FormatInfo = Nothing
+        Me.DataGridTextBoxColumn4.HeaderText = "Nombre"
+        Me.DataGridTextBoxColumn4.MappingName = "nombre"
+        Me.DataGridTextBoxColumn4.Width = 130
         '
         'SqlDataAdapter2
         '
-        SqlDataAdapter2.InsertCommand = SqlInsertCommand2
-        SqlDataAdapter2.SelectCommand = SqlSelectCommand3
-        SqlDataAdapter2.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "estudiantes", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("apellido1", "apellido1"), New System.Data.Common.DataColumnMapping("apellido2", "apellido2"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("Nuevo", "Nuevo")})})
+        Me.SqlDataAdapter2.InsertCommand = Me.SqlInsertCommand2
+        Me.SqlDataAdapter2.SelectCommand = Me.SqlSelectCommand3
+        Me.SqlDataAdapter2.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "estudiantes", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("apellido1", "apellido1"), New System.Data.Common.DataColumnMapping("apellido2", "apellido2"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("Nuevo", "Nuevo")})})
         '
         'SqlInsertCommand2
         '
-        SqlInsertCommand2.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" & _
+        Me.SqlInsertCommand2.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" &
     "pellido1, @apellido2, @nombre)"
-        SqlInsertCommand2.Connection = SqlConnection3
-        SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@apellido1", System.Data.SqlDbType.VarChar, 30, "apellido1"), New System.Data.SqlClient.SqlParameter("@apellido2", System.Data.SqlDbType.VarChar, 30, "apellido2"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
+        Me.SqlInsertCommand2.Connection = Me.SqlConnection3
+        Me.SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@apellido1", System.Data.SqlDbType.VarChar, 30, "apellido1"), New System.Data.SqlClient.SqlParameter("@apellido2", System.Data.SqlDbType.VarChar, 30, "apellido2"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
         '
         'SqlConnection3
         '
-        SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;integrated security=SSPI;data sourc" & _
+        Me.SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;integrated security=SSPI;data sourc" &
     "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
-        SqlConnection3.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection3.FireInfoMessageEventOnUserErrors = False
         '
         'SqlSelectCommand3
         '
-        SqlSelectCommand3.CommandText = resources.GetString("SqlSelectCommand3.CommandText")
-        SqlSelectCommand3.Connection = SqlConnection3
-        SqlSelectCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
+        Me.SqlSelectCommand3.CommandText = resources.GetString("SqlSelectCommand3.CommandText")
+        Me.SqlSelectCommand3.Connection = Me.SqlConnection3
+        Me.SqlSelectCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
         '
         'SqlInsertCommand1
         '
-        SqlInsertCommand1.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" & _
+        Me.SqlInsertCommand1.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" &
     "pellido1, @apellido2, @nombre)"
-        SqlInsertCommand1.Connection = SqlConnection2
-        SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@apellido1", System.Data.SqlDbType.VarChar, 30, "apellido1"), New System.Data.SqlClient.SqlParameter("@apellido2", System.Data.SqlDbType.VarChar, 30, "apellido2"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
+        Me.SqlInsertCommand1.Connection = Me.SqlConnection2
+        Me.SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@apellido1", System.Data.SqlDbType.VarChar, 30, "apellido1"), New System.Data.SqlClient.SqlParameter("@apellido2", System.Data.SqlDbType.VarChar, 30, "apellido2"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
         '
         'SqlSelectCommand2
         '
-        SqlSelectCommand2.CommandText = resources.GetString("SqlSelectCommand2.CommandText")
-        SqlSelectCommand2.Connection = SqlConnection2
-        SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
+        Me.SqlSelectCommand2.CommandText = resources.GetString("SqlSelectCommand2.CommandText")
+        Me.SqlSelectCommand2.Connection = Me.SqlConnection2
+        Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
         '
         'Splitter1
         '
-        Splitter1.Location = New System.Drawing.Point(184, 0)
-        Splitter1.Name = "Splitter1"
-        Splitter1.Size = New System.Drawing.Size(3, 468)
-        Splitter1.TabIndex = 2
-        Splitter1.TabStop = False
+        Me.Splitter1.Location = New System.Drawing.Point(184, 0)
+        Me.Splitter1.Name = "Splitter1"
+        Me.Splitter1.Size = New System.Drawing.Size(3, 468)
+        Me.Splitter1.TabIndex = 2
+        Me.Splitter1.TabStop = False
         '
         'ImageList1
         '
-        ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        ImageList1.Images.SetKeyName(0, "")
-        ImageList1.Images.SetKeyName(1, "2-calendar.png")
-        ImageList1.Images.SetKeyName(2, "3-list.png")
-        ImageList1.Images.SetKeyName(3, "4-list.png")
-        ImageList1.Images.SetKeyName(4, "5-notes.png")
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "")
+        Me.ImageList1.Images.SetKeyName(1, "2-calendar.png")
+        Me.ImageList1.Images.SetKeyName(2, "3-list.png")
+        Me.ImageList1.Images.SetKeyName(3, "4-list.png")
+        Me.ImageList1.Images.SetKeyName(4, "5-notes.png")
         '
         'SqlFamiliaApellidos
         '
-        SqlFamiliaApellidos.CommandText = "SELECT DISTINCT estudiantes.familia FROM matricula LEFT OUTER JOIN estudiantes ON" & _
-    " matricula.carnet = estudiantes.carnet WHERE (matricula.ano = @ano) ORDER BY est" & _
+        Me.SqlFamiliaApellidos.CommandText = "SELECT DISTINCT estudiantes.familia FROM matricula LEFT OUTER JOIN estudiantes ON" &
+    " matricula.carnet = estudiantes.carnet WHERE (matricula.ano = @ano) ORDER BY est" &
     "udiantes.familia"
-        SqlFamiliaApellidos.Connection = SqlConnection2
-        SqlFamiliaApellidos.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano")})
+        Me.SqlFamiliaApellidos.Connection = Me.SqlConnection2
+        Me.SqlFamiliaApellidos.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano")})
         '
         'TreeViewSQL1
         '
-        TreeViewSQL1.ContextMenu = ContextMenu1
-        TreeViewSQL1.Dock = System.Windows.Forms.DockStyle.Left
-        TreeViewSQL1.Etiquetas = "Años,,Nivel ,Grupo "
-        TreeViewSQL1.HotTracking = True
-        TreeViewSQL1.ImageIndex = 0
-        TreeViewSQL1.ImageList = ImageList1
-        TreeViewSQL1.InstruccionSQL = SqlSelectCommand1
-        TreeViewSQL1.Location = New System.Drawing.Point(0, 0)
-        TreeViewSQL1.Name = "TreeViewSQL1"
+        Me.TreeViewSQL1.ContextMenu = Me.ContextMenu1
+        Me.TreeViewSQL1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.TreeViewSQL1.Etiquetas = "Años,,Nivel ,Grupo "
+        Me.TreeViewSQL1.HotTracking = True
+        Me.TreeViewSQL1.ImageIndex = 0
+        Me.TreeViewSQL1.ImageList = Me.ImageList1
+        Me.TreeViewSQL1.InstruccionSQL = Me.SqlSelectCommand1
+        Me.TreeViewSQL1.Location = New System.Drawing.Point(0, 0)
+        Me.TreeViewSQL1.Name = "TreeViewSQL1"
         TreeNode1.ImageIndex = 1
         TreeNode1.Name = ""
         TreeNode1.SelectedImageIndex = 1
         TreeNode1.Text = "Años"
-        TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
-        TreeViewSQL1.SelectedImageIndex = 0
-        TreeViewSQL1.Size = New System.Drawing.Size(184, 468)
-        TreeViewSQL1.TabIndex = 3
+        Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
+        Me.TreeViewSQL1.SelectedImageIndex = 0
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(184, 468)
+        Me.TreeViewSQL1.TabIndex = 3
+        '
+        'MenuItem13
+        '
+        Me.MenuItem13.Index = 8
+        Me.MenuItem13.Text = "Profesores Guía"
         '
         'frmListaClase
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(647, 468)
-        Controls.Add(Splitter1)
-        Controls.Add(DataGrid1)
-        Controls.Add(TreeViewSQL1)
-        DoubleBuffered = True
-        MaximizeBox = False
-        Name = "frmListaClase"
-        Text = "Lista Clase"
-        CType(DsArbol1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(DsListaClase1, System.ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(647, 468)
+        Me.Controls.Add(Me.Splitter1)
+        Me.Controls.Add(Me.DataGrid1)
+        Me.Controls.Add(Me.TreeViewSQL1)
+        Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.MaximizeBox = False
+        Me.Name = "frmListaClase"
+        Me.Text = "Lista Clase"
+        CType(Me.DsArbol1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsListaClase1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
 
     End Sub
 
@@ -456,7 +467,7 @@ Public Class frmListaClase
     Private Sub Imp_lista(ByVal partes() As String)
         ' Imprime lista de clase
         Try
-            
+
             Dim oImprimir As New Reportes
             Dim rep As New rptListaClase2
 
@@ -468,7 +479,7 @@ Public Class frmListaClase
             oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -547,7 +558,7 @@ Public Class frmListaClase
             oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -562,7 +573,7 @@ Public Class frmListaClase
             oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -575,7 +586,7 @@ Public Class frmListaClase
             rep.SummaryInfo.ReportComments = " Reporte Ingreso Matricula " & partes(1)
             oImprimir.imprimir(rep, False, ParentForm)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -590,7 +601,7 @@ Public Class frmListaClase
             oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -605,7 +616,7 @@ Public Class frmListaClase
             oImprimir.imprimir(rep, False, ParentForm)
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -628,7 +639,7 @@ Public Class frmListaClase
             rep.SummaryInfo.ReportComments = " BECADOS " & partes(1)
             oImprimir.imprimir(rep, False, ParentForm)
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -668,5 +679,21 @@ Public Class frmListaClase
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub MenuItem13_Click(sender As Object, e As EventArgs) Handles MenuItem13.Click
+        ' reporte profesore guia
+        Try
+            Dim oImprimir As New Reportes
+            Dim rep As New rptProfGuia
+            oImprimir.inserta_parametro(rep, "@anno", partes(1))
+            oImprimir.inserta_parametro(rep, "@periodo", 1)
+            rep.SummaryInfo.ReportComments = "LISTA DE PROFESORES GUÍA"
+            oImprimir.imprimir(rep, False, ParentForm)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Imprimir",
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 End Class

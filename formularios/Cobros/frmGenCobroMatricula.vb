@@ -233,7 +233,7 @@ Public Class frmGenCobroMatricula
             Case 1, 2, 3, 4
                 NumericUpDown1.Value = Now.Year - 1
             Case Else
-                NumericUpDown1.Value = Now.Year
+                NumericUpDown1.Value = Now.Year + 1
         End Select
 
         Dim anno As Integer = NumericUpDown1.Value         ' consulta los meses generados del combobox
