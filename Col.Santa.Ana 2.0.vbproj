@@ -892,6 +892,12 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="colegioReportes\colegioReportes.vbproj">
+      <Project>{8702106d-eab6-4d63-8a3b-177878f77db1}</Project>
+      <Name>colegioReportes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <PreBuildEvent>
