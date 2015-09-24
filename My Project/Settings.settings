@@ -49,7 +49,7 @@
       <Value Profile="(Default)">Directora</Value>
     </Setting>
     <Setting Name="Slogan" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Educar Evangelizado des la Hospitalidad</Value>
+      <Value Profile="(Default)">Educar Evangelizado desde la Hospitalidad</Value>
     </Setting>
   </Settings>
 </SettingsFile>
