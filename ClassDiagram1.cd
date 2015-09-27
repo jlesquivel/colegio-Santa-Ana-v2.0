@@ -24,7 +24,7 @@
   <Class Name="colegio.conexionSQL">
     <Position X="8.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAABAASACCgEZEEAMAEACAiAAQAABAAAAAAAAQEQAAE=</HashCode>
+      <HashCode>AAABAASACCgEZEEAMAEACAiAAQAABAAAAAAAAQEQAAM=</HashCode>
       <FileName>clases\conexionSQL.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -75,6 +75,20 @@
     <TypeIdentifier>
       <HashCode>AAAABACAESAgAAAABACAAAACACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>controles\TreeViewSQL.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="colegio.cEstudiantes">
+    <Position X="3" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAQIAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>clases\cEstudiantes.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="colegio.cCRM">
+    <Position X="5.5" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAACQEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>clases\cCRM.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
