@@ -486,7 +486,9 @@ Public Class frmCobroAdelantado
 
     Private Sub BuscaEstud1_selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs) Handles BuscaEstud1.selecionado
         Try
-            buscar(BuscaEstud1.seleccionado)
+            If BuscaEstud1.seleccionado <> "" Then
+                buscar(BuscaEstud1.seleccionado)
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

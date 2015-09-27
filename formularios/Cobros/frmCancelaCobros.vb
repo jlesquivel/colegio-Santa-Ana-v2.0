@@ -1,7 +1,7 @@
 
 Public Class frmCancelaCobros
     Inherits DevComponents.DotNetBar.Metro.MetroForm
-    Dim conn As New conexionSQL
+
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -429,7 +429,7 @@ Public Class frmCancelaCobros
 
     Private Sub frmCancelaCobros_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-
+            Dim conn As New conexionSQL
             SqlConnection1.ConnectionString = conn.strConn
             SqlConnection2.ConnectionString = conn.strConn
             ComboBox1.SelectedIndex = 0
@@ -484,6 +484,10 @@ Public Class frmCancelaCobros
         TextBox1.Text = pcarnet
         GenCobro1.Tables("pendientes").Rows.Clear()
         SqlDataAdapter1.SelectCommand.Parameters("@carnet").Value = TextBox1.Text
+
+        Dim conn As New conexionSQL
+        SqlDataAdapter1.SelectCommand.Connection = conn.conexion
+
         SqlDataAdapter1.Fill(GenCobro1, "pendientes")
 
         Dim conex As New conexionSQL  ' busca el nombre en estudiantes

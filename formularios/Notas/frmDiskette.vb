@@ -2,6 +2,7 @@ Imports System.Data.SqlClient
 Imports Microsoft.Office.Interop
 Imports System.Runtime.InteropServices
 Imports System.Drawing
+Imports System.ComponentModel
 
 Public Class frmDiskette
     Inherits DevComponents.DotNetBar.Metro.MetroForm
@@ -80,391 +81,407 @@ Public Class frmDiskette
     Friend WithEvents SqlSelectCommand3 As System.Data.SqlClient.SqlCommand
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDiskette))
-        Label1 = New System.Windows.Forms.Label()
-        LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        StatusBar1 = New System.Windows.Forms.StatusBar()
-        StatusBarPanel1 = New System.Windows.Forms.StatusBarPanel()
-        SqlConnection1 = New System.Data.SqlClient.SqlConnection()
-        SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
-        SqlConnection5 = New System.Data.SqlClient.SqlConnection()
-        SqlConnection6 = New System.Data.SqlClient.SqlConnection()
-        SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
-        ActualizaNota = New System.Data.SqlClient.SqlCommand()
-        SqlConnection2 = New System.Data.SqlClient.SqlConnection()
-        SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
-        SqlConnection4 = New System.Data.SqlClient.SqlConnection()
-        SqlConnection3 = New System.Data.SqlClient.SqlConnection()
-        SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter()
-        SqlDeleteCommand = New System.Data.SqlClient.SqlCommand()
-        SqlInsertCommand = New System.Data.SqlClient.SqlCommand()
-        SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
-        SqlUpdateCommand = New System.Data.SqlClient.SqlCommand()
-        CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
-        Button1 = New System.Windows.Forms.Button()
-        BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
-        Panel1 = New System.Windows.Forms.Panel()
-        ProgressBarX2 = New DevComponents.DotNetBar.Controls.ProgressBarX()
-        ProgressBarX1 = New DevComponents.DotNetBar.Controls.ProgressBarX()
-        CheckBoxX5 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        CheckBoxX4 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        CheckBoxX3 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        CheckBoxX1 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        DsDisco1 = New colegio.dsDisco()
-        DataView1 = New System.Data.DataView()
-        CType(StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
-        CType(DsDisco1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.StatusBar1 = New System.Windows.Forms.StatusBar()
+        Me.StatusBarPanel1 = New System.Windows.Forms.StatusBarPanel()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection5 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlConnection6 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter2 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
+        Me.ActualizaNota = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection2 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter3 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlSelectCommand3 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlConnection4 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlConnection3 = New System.Data.SqlClient.SqlConnection()
+        Me.SqlDataAdapter4 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlDeleteCommand = New System.Data.SqlClient.SqlCommand()
+        Me.SqlInsertCommand = New System.Data.SqlClient.SqlCommand()
+        Me.SqlSelectCommand4 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlUpdateCommand = New System.Data.SqlClient.SqlCommand()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ProgressBarX2 = New DevComponents.DotNetBar.Controls.ProgressBarX()
+        Me.ProgressBarX1 = New DevComponents.DotNetBar.Controls.ProgressBarX()
+        Me.CheckBoxX5 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckBoxX4 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckBoxX3 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckBoxX1 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.DsDisco1 = New colegio.dsDisco()
+        Me.DataView1 = New System.Data.DataView()
+        CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DsDisco1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'Label1
         '
-        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.Location = New System.Drawing.Point(26, 59)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(103, 27)
-        Label1.TabIndex = 5
-        Label1.Text = "Periodo"
-        Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(26, 59)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 27)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Periodo"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'LinkLabel3
         '
-        LinkLabel3.Dock = System.Windows.Forms.DockStyle.Top
-        LinkLabel3.Location = New System.Drawing.Point(0, 0)
-        LinkLabel3.Name = "LinkLabel3"
-        LinkLabel3.Size = New System.Drawing.Size(170, 22)
-        LinkLabel3.TabIndex = 0
-        LinkLabel3.TabStop = True
-        LinkLabel3.Text = "Cambiar Ruta archivos"
-        LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LinkLabel3.ForeColor = System.Drawing.Color.Black
+        Me.LinkLabel3.Location = New System.Drawing.Point(0, 0)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(170, 22)
+        Me.LinkLabel3.TabIndex = 0
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Cambiar Ruta archivos"
+        Me.LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel2
         '
-        LinkLabel2.Dock = System.Windows.Forms.DockStyle.Top
-        LinkLabel2.Location = New System.Drawing.Point(0, 22)
-        LinkLabel2.Name = "LinkLabel2"
-        LinkLabel2.Size = New System.Drawing.Size(170, 23)
-        LinkLabel2.TabIndex = 1
-        LinkLabel2.TabStop = True
-        LinkLabel2.Text = "Cargar Archivo Notas"
-        LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LinkLabel2.ForeColor = System.Drawing.Color.Black
+        Me.LinkLabel2.Location = New System.Drawing.Point(0, 22)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(170, 23)
+        Me.LinkLabel2.TabIndex = 1
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Cargar Archivo Notas"
+        Me.LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'OpenFileDialog1
         '
-        OpenFileDialog1.Filter = "Archivo Excel ( *.xls) |*.xls"
+        Me.OpenFileDialog1.Filter = "Archivo Excel ( *.xls) |*.xls"
         '
         'StatusBar1
         '
-        StatusBar1.Location = New System.Drawing.Point(0, 396)
-        StatusBar1.Name = "StatusBar1"
-        StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {StatusBarPanel1})
-        StatusBar1.ShowPanels = True
-        StatusBar1.Size = New System.Drawing.Size(603, 22)
-        StatusBar1.TabIndex = 3
-        StatusBar1.TabStop = True
+        Me.StatusBar1.ForeColor = System.Drawing.Color.Black
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 396)
+        Me.StatusBar1.Name = "StatusBar1"
+        Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1})
+        Me.StatusBar1.ShowPanels = True
+        Me.StatusBar1.Size = New System.Drawing.Size(603, 22)
+        Me.StatusBar1.TabIndex = 3
+        Me.StatusBar1.TabStop = True
         '
         'StatusBarPanel1
         '
-        StatusBarPanel1.Name = "StatusBarPanel1"
-        StatusBarPanel1.Text = "StatusBarPanel1"
-        StatusBarPanel1.Width = 500
+        Me.StatusBarPanel1.Name = "StatusBarPanel1"
+        Me.StatusBarPanel1.Text = "StatusBarPanel1"
+        Me.StatusBarPanel1.Width = 500
         '
         'SqlConnection1
         '
-        SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" & _
+        Me.SqlConnection1.ConnectionString = "workstation id=HP_PAVILION5500;packet size=4096;user id=jose;data source=SERVIDOR" &
     "_BD;persist security info=False;initial catalog=colegio"
-        SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter1
         '
-        SqlDataAdapter1.SelectCommand = SqlSelectCommand1
-        SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "matricula", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("apellido1", "apellido1"), New System.Data.Common.DataColumnMapping("apellido2", "apellido2"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("id_mat", "id_mat")})})
+        Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand1
+        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "matricula", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("apellido1", "apellido1"), New System.Data.Common.DataColumnMapping("apellido2", "apellido2"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("carnet", "carnet"), New System.Data.Common.DataColumnMapping("id_mat", "id_mat")})})
         '
         'SqlSelectCommand1
         '
-        SqlSelectCommand1.CommandText = resources.GetString("SqlSelectCommand1.CommandText")
-        SqlSelectCommand1.Connection = SqlConnection5
-        SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@anno", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
+        Me.SqlSelectCommand1.CommandText = resources.GetString("SqlSelectCommand1.CommandText")
+        Me.SqlSelectCommand1.Connection = Me.SqlConnection5
+        Me.SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@anno", System.Data.SqlDbType.VarChar, 4, "ano"), New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel"), New System.Data.SqlClient.SqlParameter("@grupo", System.Data.SqlDbType.VarChar, 2, "grupo")})
         '
         'SqlConnection5
         '
-        SqlConnection5.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
+        Me.SqlConnection5.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" &
     "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
-        SqlConnection5.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection5.FireInfoMessageEventOnUserErrors = False
         '
         'SqlConnection6
         '
-        SqlConnection6.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
+        Me.SqlConnection6.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" &
     "e=""EG-ZE5547WM"";persist security info=False;initial catalog=colegio"
-        SqlConnection6.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection6.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter2
         '
-        SqlDataAdapter2.SelectCommand = SqlSelectCommand2
-        SqlDataAdapter2.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "materias_nivel", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("Expr1", "Expr1")})})
+        Me.SqlDataAdapter2.SelectCommand = Me.SqlSelectCommand2
+        Me.SqlDataAdapter2.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "materias_nivel", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("Expr1", "Expr1")})})
         '
         'SqlSelectCommand2
         '
-        SqlSelectCommand2.CommandText = "SELECT materias_nivel.nivel, materia.nombre, materia.materia AS Expr1 FROM materi" & _
-    "as_nivel INNER JOIN materia ON materias_nivel.materia = materia.materia WHERE (m" & _
+        Me.SqlSelectCommand2.CommandText = "SELECT materias_nivel.nivel, materia.nombre, materia.materia AS Expr1 FROM materi" &
+    "as_nivel INNER JOIN materia ON materias_nivel.materia = materia.materia WHERE (m" &
     "aterias_nivel.nivel = @nivel)"
-        SqlSelectCommand2.Connection = SqlConnection1
-        SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel")})
+        Me.SqlSelectCommand2.Connection = Me.SqlConnection1
+        Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nivel", System.Data.SqlDbType.VarChar, 15, "nivel")})
         '
         'ActualizaNota
         '
-        ActualizaNota.CommandText = "UPDATE notas SET nota = @nota, profesora = @prof WHERE (id_mat = @id_mat) AND (pe" & _
+        Me.ActualizaNota.CommandText = "UPDATE notas SET nota = @nota, profesora = @prof WHERE (id_mat = @id_mat) AND (pe" &
     "riodo = @periodo) AND (materia = @materia)"
-        ActualizaNota.Connection = SqlConnection1
-        ActualizaNota.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota"), New System.Data.SqlClient.SqlParameter("@prof", System.Data.SqlDbType.VarChar, 15, "profesora"), New System.Data.SqlClient.SqlParameter("@id_mat", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_mat", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@periodo", System.Data.SqlDbType.VarChar, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "periodo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@materia", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "materia", System.Data.DataRowVersion.Original, Nothing)})
+        Me.ActualizaNota.Connection = Me.SqlConnection1
+        Me.ActualizaNota.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota"), New System.Data.SqlClient.SqlParameter("@prof", System.Data.SqlDbType.VarChar, 15, "profesora"), New System.Data.SqlClient.SqlParameter("@id_mat", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_mat", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@periodo", System.Data.SqlDbType.VarChar, 1, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "periodo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@materia", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "materia", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlConnection2
         '
-        SqlConnection2.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=servidor_b" & _
+        Me.SqlConnection2.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=servidor_b" &
     "d;persist security info=False;initial catalog=colegio"
-        SqlConnection2.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter3
         '
-        SqlDataAdapter3.SelectCommand = SqlSelectCommand3
-        SqlDataAdapter3.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "materia", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ano", "ano"), New System.Data.Common.DataColumnMapping("periodo", "periodo"), New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("grupo", "grupo"), New System.Data.Common.DataColumnMapping("cedula", "cedula"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("materia", "materia")})})
+        Me.SqlDataAdapter3.SelectCommand = Me.SqlSelectCommand3
+        Me.SqlDataAdapter3.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "materia", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("ano", "ano"), New System.Data.Common.DataColumnMapping("periodo", "periodo"), New System.Data.Common.DataColumnMapping("nivel", "nivel"), New System.Data.Common.DataColumnMapping("grupo", "grupo"), New System.Data.Common.DataColumnMapping("cedula", "cedula"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("materia", "materia")})})
         '
         'SqlSelectCommand3
         '
-        SqlSelectCommand3.CommandText = resources.GetString("SqlSelectCommand3.CommandText")
-        SqlSelectCommand3.Connection = SqlConnection5
-        SqlSelectCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@id_emp", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@periodo", System.Data.SqlDbType.VarChar, 1, "periodo"), New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano")})
+        Me.SqlSelectCommand3.CommandText = resources.GetString("SqlSelectCommand3.CommandText")
+        Me.SqlSelectCommand3.Connection = Me.SqlConnection5
+        Me.SqlSelectCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@id_emp", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@periodo", System.Data.SqlDbType.VarChar, 1, "periodo"), New System.Data.SqlClient.SqlParameter("@ano", System.Data.SqlDbType.VarChar, 4, "ano")})
         '
         'SqlConnection4
         '
-        SqlConnection4.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" & _
+        Me.SqlConnection4.ConnectionString = "workstation id=""EG-ZE5547WM"";packet size=4096;integrated security=SSPI;data sourc" &
     "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
-        SqlConnection4.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection4.FireInfoMessageEventOnUserErrors = False
         '
         'SqlConnection3
         '
-        SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=SERVIDOR_B" & _
+        Me.SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;user id=jose;data source=SERVIDOR_B" &
     "D;persist security info=False;initial catalog=planilla"
-        SqlConnection3.FireInfoMessageEventOnUserErrors = False
+        Me.SqlConnection3.FireInfoMessageEventOnUserErrors = False
         '
         'SqlDataAdapter4
         '
-        SqlDataAdapter4.DeleteCommand = SqlDeleteCommand
-        SqlDataAdapter4.InsertCommand = SqlInsertCommand
-        SqlDataAdapter4.SelectCommand = SqlSelectCommand4
-        SqlDataAdapter4.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "empleados", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("id_emp", "id_emp"), New System.Data.Common.DataColumnMapping("cedula", "cedula"), New System.Data.Common.DataColumnMapping("apellidos", "apellidos"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("categoria", "categoria"), New System.Data.Common.DataColumnMapping("nacimiento", "nacimiento"), New System.Data.Common.DataColumnMapping("cuenta", "cuenta"), New System.Data.Common.DataColumnMapping("ingreso", "ingreso"), New System.Data.Common.DataColumnMapping("banco", "banco"), New System.Data.Common.DataColumnMapping("direccion", "direccion"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("sexo", "sexo"), New System.Data.Common.DataColumnMapping("anualidadReconocida", "anualidadReconocida")})})
-        SqlDataAdapter4.UpdateCommand = SqlUpdateCommand
+        Me.SqlDataAdapter4.DeleteCommand = Me.SqlDeleteCommand
+        Me.SqlDataAdapter4.InsertCommand = Me.SqlInsertCommand
+        Me.SqlDataAdapter4.SelectCommand = Me.SqlSelectCommand4
+        Me.SqlDataAdapter4.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "empleados", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("id_emp", "id_emp"), New System.Data.Common.DataColumnMapping("cedula", "cedula"), New System.Data.Common.DataColumnMapping("apellidos", "apellidos"), New System.Data.Common.DataColumnMapping("nombre", "nombre"), New System.Data.Common.DataColumnMapping("categoria", "categoria"), New System.Data.Common.DataColumnMapping("nacimiento", "nacimiento"), New System.Data.Common.DataColumnMapping("cuenta", "cuenta"), New System.Data.Common.DataColumnMapping("ingreso", "ingreso"), New System.Data.Common.DataColumnMapping("banco", "banco"), New System.Data.Common.DataColumnMapping("direccion", "direccion"), New System.Data.Common.DataColumnMapping("telefono", "telefono"), New System.Data.Common.DataColumnMapping("celular", "celular"), New System.Data.Common.DataColumnMapping("sexo", "sexo"), New System.Data.Common.DataColumnMapping("anualidadReconocida", "anualidadReconocida")})})
+        Me.SqlDataAdapter4.UpdateCommand = Me.SqlUpdateCommand
         '
         'SqlDeleteCommand
         '
-        SqlDeleteCommand.CommandText = resources.GetString("SqlDeleteCommand.CommandText")
-        SqlDeleteCommand.Connection = SqlConnection3
-        SqlDeleteCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id_emp", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cedula", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_apellidos", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "apellidos", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_categoria", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nacimiento", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nacimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cuenta", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cuenta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ingreso", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ingreso", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_banco", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "banco", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_direccion", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_direccion", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_sexo", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "sexo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_anualidadReconocida", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, Nothing)})
+        Me.SqlDeleteCommand.CommandText = resources.GetString("SqlDeleteCommand.CommandText")
+        Me.SqlDeleteCommand.Connection = Me.SqlConnection3
+        Me.SqlDeleteCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id_emp", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cedula", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_apellidos", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "apellidos", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_categoria", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nacimiento", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nacimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cuenta", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cuenta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ingreso", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ingreso", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_banco", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "banco", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_direccion", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_direccion", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_sexo", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "sexo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_anualidadReconocida", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand
         '
-        SqlInsertCommand.CommandText = resources.GetString("SqlInsertCommand.CommandText")
-        SqlInsertCommand.Connection = SqlConnection3
-        SqlInsertCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@cedula", System.Data.SqlDbType.VarChar, 0, "cedula"), New System.Data.SqlClient.SqlParameter("@apellidos", System.Data.SqlDbType.VarChar, 0, "apellidos"), New System.Data.SqlClient.SqlParameter("@categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@nacimiento", System.Data.SqlDbType.DateTime, 0, "nacimiento"), New System.Data.SqlClient.SqlParameter("@cuenta", System.Data.SqlDbType.VarChar, 0, "cuenta"), New System.Data.SqlClient.SqlParameter("@ingreso", System.Data.SqlDbType.DateTime, 0, "ingreso"), New System.Data.SqlClient.SqlParameter("@banco", System.Data.SqlDbType.VarChar, 0, "banco"), New System.Data.SqlClient.SqlParameter("@direccion", System.Data.SqlDbType.VarChar, 0, "direccion"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.VarChar, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.VarChar, 0, "celular"), New System.Data.SqlClient.SqlParameter("@sexo", System.Data.SqlDbType.TinyInt, 0, "sexo"), New System.Data.SqlClient.SqlParameter("@anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, "anualidadReconocida")})
+        Me.SqlInsertCommand.CommandText = resources.GetString("SqlInsertCommand.CommandText")
+        Me.SqlInsertCommand.Connection = Me.SqlConnection3
+        Me.SqlInsertCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@cedula", System.Data.SqlDbType.VarChar, 0, "cedula"), New System.Data.SqlClient.SqlParameter("@apellidos", System.Data.SqlDbType.VarChar, 0, "apellidos"), New System.Data.SqlClient.SqlParameter("@categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@nacimiento", System.Data.SqlDbType.DateTime, 0, "nacimiento"), New System.Data.SqlClient.SqlParameter("@cuenta", System.Data.SqlDbType.VarChar, 0, "cuenta"), New System.Data.SqlClient.SqlParameter("@ingreso", System.Data.SqlDbType.DateTime, 0, "ingreso"), New System.Data.SqlClient.SqlParameter("@banco", System.Data.SqlDbType.VarChar, 0, "banco"), New System.Data.SqlClient.SqlParameter("@direccion", System.Data.SqlDbType.VarChar, 0, "direccion"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.VarChar, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.VarChar, 0, "celular"), New System.Data.SqlClient.SqlParameter("@sexo", System.Data.SqlDbType.TinyInt, 0, "sexo"), New System.Data.SqlClient.SqlParameter("@anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, "anualidadReconocida")})
         '
         'SqlSelectCommand4
         '
-        SqlSelectCommand4.CommandText = resources.GetString("SqlSelectCommand4.CommandText")
-        SqlSelectCommand4.Connection = SqlConnection3
+        Me.SqlSelectCommand4.CommandText = resources.GetString("SqlSelectCommand4.CommandText")
+        Me.SqlSelectCommand4.Connection = Me.SqlConnection3
         '
         'SqlUpdateCommand
         '
-        SqlUpdateCommand.CommandText = resources.GetString("SqlUpdateCommand.CommandText")
-        SqlUpdateCommand.Connection = SqlConnection3
-        SqlUpdateCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@cedula", System.Data.SqlDbType.VarChar, 0, "cedula"), New System.Data.SqlClient.SqlParameter("@apellidos", System.Data.SqlDbType.VarChar, 0, "apellidos"), New System.Data.SqlClient.SqlParameter("@categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@nacimiento", System.Data.SqlDbType.DateTime, 0, "nacimiento"), New System.Data.SqlClient.SqlParameter("@cuenta", System.Data.SqlDbType.VarChar, 0, "cuenta"), New System.Data.SqlClient.SqlParameter("@ingreso", System.Data.SqlDbType.DateTime, 0, "ingreso"), New System.Data.SqlClient.SqlParameter("@banco", System.Data.SqlDbType.VarChar, 0, "banco"), New System.Data.SqlClient.SqlParameter("@direccion", System.Data.SqlDbType.VarChar, 0, "direccion"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.VarChar, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.VarChar, 0, "celular"), New System.Data.SqlClient.SqlParameter("@sexo", System.Data.SqlDbType.TinyInt, 0, "sexo"), New System.Data.SqlClient.SqlParameter("@anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, "anualidadReconocida"), New System.Data.SqlClient.SqlParameter("@Original_id_emp", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cedula", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_apellidos", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "apellidos", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_categoria", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nacimiento", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nacimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cuenta", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cuenta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ingreso", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ingreso", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_banco", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "banco", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_direccion", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_direccion", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_sexo", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "sexo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_anualidadReconocida", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id_emp", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Current, Nothing)})
+        Me.SqlUpdateCommand.CommandText = resources.GetString("SqlUpdateCommand.CommandText")
+        Me.SqlUpdateCommand.Connection = Me.SqlConnection3
+        Me.SqlUpdateCommand.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@cedula", System.Data.SqlDbType.VarChar, 0, "cedula"), New System.Data.SqlClient.SqlParameter("@apellidos", System.Data.SqlDbType.VarChar, 0, "apellidos"), New System.Data.SqlClient.SqlParameter("@categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@nacimiento", System.Data.SqlDbType.DateTime, 0, "nacimiento"), New System.Data.SqlClient.SqlParameter("@cuenta", System.Data.SqlDbType.VarChar, 0, "cuenta"), New System.Data.SqlClient.SqlParameter("@ingreso", System.Data.SqlDbType.DateTime, 0, "ingreso"), New System.Data.SqlClient.SqlParameter("@banco", System.Data.SqlDbType.VarChar, 0, "banco"), New System.Data.SqlClient.SqlParameter("@direccion", System.Data.SqlDbType.VarChar, 0, "direccion"), New System.Data.SqlClient.SqlParameter("@telefono", System.Data.SqlDbType.VarChar, 0, "telefono"), New System.Data.SqlClient.SqlParameter("@celular", System.Data.SqlDbType.VarChar, 0, "celular"), New System.Data.SqlClient.SqlParameter("@sexo", System.Data.SqlDbType.TinyInt, 0, "sexo"), New System.Data.SqlClient.SqlParameter("@anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, "anualidadReconocida"), New System.Data.SqlClient.SqlParameter("@Original_id_emp", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cedula", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cedula", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_apellidos", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "apellidos", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_categoria", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_categoria", System.Data.SqlDbType.[Decimal], 0, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "categoria", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nacimiento", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nacimiento", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_cuenta", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cuenta", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_ingreso", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_ingreso", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "ingreso", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_banco", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "banco", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_direccion", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_direccion", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "direccion", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_telefono", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_telefono", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "telefono", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_celular", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_celular", System.Data.SqlDbType.VarChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "celular", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_sexo", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "sexo", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@IsNull_anualidadReconocida", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, True, Nothing, "", "", ""), New System.Data.SqlClient.SqlParameter("@Original_anualidadReconocida", System.Data.SqlDbType.TinyInt, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "anualidadReconocida", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id_emp", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id_emp", System.Data.DataRowVersion.Current, Nothing)})
         '
         'CheckedListBox1
         '
-        CheckedListBox1.CheckOnClick = True
-        CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Top
-        CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CheckedListBox1.Location = New System.Drawing.Point(170, 0)
-        CheckedListBox1.Name = "CheckedListBox1"
-        CheckedListBox1.Size = New System.Drawing.Size(433, 344)
-        CheckedListBox1.TabIndex = 1
+        Me.CheckedListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CheckedListBox1.CheckOnClick = True
+        Me.CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckedListBox1.ForeColor = System.Drawing.Color.Black
+        Me.CheckedListBox1.Location = New System.Drawing.Point(170, 0)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(433, 344)
+        Me.CheckedListBox1.TabIndex = 1
         '
         'Button1
         '
-        Button1.BackColor = System.Drawing.SystemColors.ControlLight
-        Button1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Button1.Location = New System.Drawing.Point(170, 350)
-        Button1.Name = "Button1"
-        Button1.Size = New System.Drawing.Size(433, 46)
-        Button1.TabIndex = 2
-        Button1.Text = "Generar Archivo"
-        Button1.UseVisualStyleBackColor = False
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(170, 350)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(433, 46)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Generar Archivo"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'BackgroundWorker1
         '
-        BackgroundWorker1.WorkerReportsProgress = True
+        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
         'BackgroundWorker2
         '
-        BackgroundWorker2.WorkerReportsProgress = True
+        Me.BackgroundWorker2.WorkerReportsProgress = True
         '
         'Panel1
         '
-        Panel1.BackColor = System.Drawing.Color.Transparent
-        Panel1.Controls.Add(ProgressBarX2)
-        Panel1.Controls.Add(ProgressBarX1)
-        Panel1.Controls.Add(CheckBoxX5)
-        Panel1.Controls.Add(CheckBoxX4)
-        Panel1.Controls.Add(CheckBoxX3)
-        Panel1.Controls.Add(CheckBoxX2)
-        Panel1.Controls.Add(CheckBoxX1)
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(LinkLabel2)
-        Panel1.Controls.Add(LinkLabel3)
-        Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Panel1.Location = New System.Drawing.Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New System.Drawing.Size(170, 396)
-        Panel1.TabIndex = 0
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.ProgressBarX2)
+        Me.Panel1.Controls.Add(Me.ProgressBarX1)
+        Me.Panel1.Controls.Add(Me.CheckBoxX5)
+        Me.Panel1.Controls.Add(Me.CheckBoxX4)
+        Me.Panel1.Controls.Add(Me.CheckBoxX3)
+        Me.Panel1.Controls.Add(Me.CheckBoxX2)
+        Me.Panel1.Controls.Add(Me.CheckBoxX1)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.LinkLabel2)
+        Me.Panel1.Controls.Add(Me.LinkLabel3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel1.ForeColor = System.Drawing.Color.Black
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(170, 396)
+        Me.Panel1.TabIndex = 0
         '
         'ProgressBarX2
         '
         '
         '
         '
-        ProgressBarX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ProgressBarX2.Location = New System.Drawing.Point(12, 341)
-        ProgressBarX2.Name = "ProgressBarX2"
-        ProgressBarX2.Size = New System.Drawing.Size(143, 23)
-        ProgressBarX2.TabIndex = 12
-        ProgressBarX2.TextVisible = True
+        Me.ProgressBarX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ProgressBarX2.ForeColor = System.Drawing.Color.Black
+        Me.ProgressBarX2.Location = New System.Drawing.Point(12, 341)
+        Me.ProgressBarX2.Name = "ProgressBarX2"
+        Me.ProgressBarX2.Size = New System.Drawing.Size(143, 23)
+        Me.ProgressBarX2.TabIndex = 12
+        Me.ProgressBarX2.TextVisible = True
         '
         'ProgressBarX1
         '
         '
         '
         '
-        ProgressBarX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ProgressBarX1.Location = New System.Drawing.Point(12, 366)
-        ProgressBarX1.Name = "ProgressBarX1"
-        ProgressBarX1.Size = New System.Drawing.Size(143, 23)
-        ProgressBarX1.TabIndex = 11
-        ProgressBarX1.Text = "ProgressBarX1"
+        Me.ProgressBarX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ProgressBarX1.ForeColor = System.Drawing.Color.Black
+        Me.ProgressBarX1.Location = New System.Drawing.Point(12, 366)
+        Me.ProgressBarX1.Name = "ProgressBarX1"
+        Me.ProgressBarX1.Size = New System.Drawing.Size(143, 23)
+        Me.ProgressBarX1.TabIndex = 11
+        Me.ProgressBarX1.Text = "ProgressBarX1"
         '
         'CheckBoxX5
         '
         '
         '
         '
-        CheckBoxX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        CheckBoxX5.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
-        CheckBoxX5.CheckSignSize = New System.Drawing.Size(15, 15)
-        CheckBoxX5.Location = New System.Drawing.Point(29, 233)
-        CheckBoxX5.Name = "CheckBoxX5"
-        CheckBoxX5.Size = New System.Drawing.Size(100, 30)
-        CheckBoxX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        CheckBoxX5.TabIndex = 10
-        CheckBoxX5.Text = "Convocatoria 2"
+        Me.CheckBoxX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX5.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX5.CheckSignSize = New System.Drawing.Size(15, 15)
+        Me.CheckBoxX5.ForeColor = System.Drawing.Color.Black
+        Me.CheckBoxX5.Location = New System.Drawing.Point(29, 233)
+        Me.CheckBoxX5.Name = "CheckBoxX5"
+        Me.CheckBoxX5.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX5.TabIndex = 10
+        Me.CheckBoxX5.Text = "Convocatoria 2"
         '
         'CheckBoxX4
         '
         '
         '
         '
-        CheckBoxX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        CheckBoxX4.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
-        CheckBoxX4.CheckSignSize = New System.Drawing.Size(15, 15)
-        CheckBoxX4.Location = New System.Drawing.Point(29, 197)
-        CheckBoxX4.Name = "CheckBoxX4"
-        CheckBoxX4.Size = New System.Drawing.Size(100, 30)
-        CheckBoxX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        CheckBoxX4.TabIndex = 9
-        CheckBoxX4.Text = "Convocatoria 1"
+        Me.CheckBoxX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX4.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX4.CheckSignSize = New System.Drawing.Size(15, 15)
+        Me.CheckBoxX4.ForeColor = System.Drawing.Color.Black
+        Me.CheckBoxX4.Location = New System.Drawing.Point(29, 197)
+        Me.CheckBoxX4.Name = "CheckBoxX4"
+        Me.CheckBoxX4.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX4.TabIndex = 9
+        Me.CheckBoxX4.Text = "Convocatoria 1"
         '
         'CheckBoxX3
         '
         '
         '
         '
-        CheckBoxX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        CheckBoxX3.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
-        CheckBoxX3.CheckSignSize = New System.Drawing.Size(15, 15)
-        CheckBoxX3.Location = New System.Drawing.Point(29, 161)
-        CheckBoxX3.Name = "CheckBoxX3"
-        CheckBoxX3.Size = New System.Drawing.Size(100, 30)
-        CheckBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        CheckBoxX3.TabIndex = 8
-        CheckBoxX3.Text = "3er Trimestres"
+        Me.CheckBoxX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX3.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX3.CheckSignSize = New System.Drawing.Size(15, 15)
+        Me.CheckBoxX3.ForeColor = System.Drawing.Color.Black
+        Me.CheckBoxX3.Location = New System.Drawing.Point(29, 161)
+        Me.CheckBoxX3.Name = "CheckBoxX3"
+        Me.CheckBoxX3.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX3.TabIndex = 8
+        Me.CheckBoxX3.Text = "3er Trimestres"
         '
         'CheckBoxX2
         '
         '
         '
         '
-        CheckBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        CheckBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
-        CheckBoxX2.CheckSignSize = New System.Drawing.Size(15, 15)
-        CheckBoxX2.Location = New System.Drawing.Point(29, 125)
-        CheckBoxX2.Name = "CheckBoxX2"
-        CheckBoxX2.Size = New System.Drawing.Size(100, 30)
-        CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        CheckBoxX2.TabIndex = 7
-        CheckBoxX2.Text = "2do Trimestres"
+        Me.CheckBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX2.CheckSignSize = New System.Drawing.Size(15, 15)
+        Me.CheckBoxX2.ForeColor = System.Drawing.Color.Black
+        Me.CheckBoxX2.Location = New System.Drawing.Point(29, 125)
+        Me.CheckBoxX2.Name = "CheckBoxX2"
+        Me.CheckBoxX2.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX2.TabIndex = 7
+        Me.CheckBoxX2.Text = "2do Trimestres"
         '
         'CheckBoxX1
         '
         '
         '
         '
-        CheckBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        CheckBoxX1.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
-        CheckBoxX1.Checked = True
-        CheckBoxX1.CheckSignSize = New System.Drawing.Size(15, 15)
-        CheckBoxX1.CheckState = System.Windows.Forms.CheckState.Checked
-        CheckBoxX1.CheckValue = "Y"
-        CheckBoxX1.Location = New System.Drawing.Point(29, 89)
-        CheckBoxX1.Name = "CheckBoxX1"
-        CheckBoxX1.Size = New System.Drawing.Size(100, 30)
-        CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        CheckBoxX1.TabIndex = 6
-        CheckBoxX1.Text = "1er Trimestres"
+        Me.CheckBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX1.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX1.Checked = True
+        Me.CheckBoxX1.CheckSignSize = New System.Drawing.Size(15, 15)
+        Me.CheckBoxX1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBoxX1.CheckValue = "Y"
+        Me.CheckBoxX1.ForeColor = System.Drawing.Color.Black
+        Me.CheckBoxX1.Location = New System.Drawing.Point(29, 89)
+        Me.CheckBoxX1.Name = "CheckBoxX1"
+        Me.CheckBoxX1.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX1.TabIndex = 6
+        Me.CheckBoxX1.Text = "1er Trimestres"
         '
         'DsDisco1
         '
-        DsDisco1.DataSetName = "dsDisco"
-        DsDisco1.Locale = New System.Globalization.CultureInfo("es-CR")
-        DsDisco1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DsDisco1.DataSetName = "dsDisco"
+        Me.DsDisco1.Locale = New System.Globalization.CultureInfo("es-CR")
+        Me.DsDisco1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataView1
         '
-        DataView1.Table = DsDisco1.empleados
+        Me.DataView1.Table = Me.DsDisco1.empleados
         '
         'frmDiskette
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(603, 418)
-        Controls.Add(Button1)
-        Controls.Add(CheckedListBox1)
-        Controls.Add(Panel1)
-        Controls.Add(StatusBar1)
-        DoubleBuffered = True
-        Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Name = "frmDiskette"
-        Text = "Crea y Carga Archivo Excel"
-        CType(StatusBarPanel1, System.ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        CType(DsDisco1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(DataView1, System.ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(603, 418)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.CheckedListBox1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.StatusBar1)
+        Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "frmDiskette"
+        Me.Text = "Crea y Carga Archivo Excel"
+        CType(Me.StatusBarPanel1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.DsDisco1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
 
     End Sub
 
@@ -505,13 +522,20 @@ Public Class frmDiskette
     End Sub
     Private Sub frmDiskette_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
 
-        m_excel.Quit()
-        m_excel = Nothing
 
-        releaseObject(objHojaExcel)
-        releaseObject(objLibroExcel)
-        releaseObject(hojas)
-        releaseObject(m_excel)
+        If Me.Cursor = Cursors.Default Then
+            m_excel.Quit()
+            m_excel = Nothing
+
+            releaseObject(objHojaExcel)
+            releaseObject(objLibroExcel)
+            releaseObject(hojas)
+            releaseObject(m_excel)
+        Else
+            e.Cancel = True
+        End If
+
+
 
     End Sub
     Public Sub crear_grupo(ByVal paPartes As String())
@@ -598,7 +622,7 @@ Public Class frmDiskette
             contador += paso
             BackgroundWorker1.ReportProgress(contador)
         Next
-
+        BackgroundWorker1.ReportProgress(100)
         hojas = objLibroExcel.Worksheets
         If hojas.Count > 1 Then
 
@@ -623,7 +647,6 @@ Public Class frmDiskette
         End If
 
         objLibroExcel.Close()
-
 
     End Sub
 
@@ -681,9 +704,7 @@ Public Class frmDiskette
                     End If
 
                     hoja.Range("P" & conta).Value = "=L" & conta
-
             End Select
-
             conta += 1
         Next
 
@@ -790,6 +811,7 @@ Public Class frmDiskette
 
         If CheckedListBox1.CheckedItems.Count > 0 Then
             'Me.BackgroundWorker1.RunWorkerAsync(ComboBox1.Text)
+            Me.Cursor = Cursors.WaitCursor
             BackgroundWorker1.RunWorkerAsync(vPeriodo)
         Else
             MessageBox.Show(" Seleccione un profesor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -968,7 +990,7 @@ Public Class frmDiskette
         vPeriodo = "5"
         CheckedListBox1.Items.Clear()
     End Sub
-   
+
     Private Sub releaseObject(ByVal obj As Object)
         Try
             System.Runtime.InteropServices.Marshal.ReleaseComObject(obj)
@@ -979,6 +1001,11 @@ Public Class frmDiskette
             GC.Collect()
         End Try
     End Sub
- 
+
+    Private Sub ProgressBarX2_Paint(sender As Object, e As PaintEventArgs) Handles ProgressBarX2.Paint
+        If ProgressBarX2.Value = 100 Then
+            Me.Cursor = Cursors.Default
+        End If
+    End Sub
 End Class
 

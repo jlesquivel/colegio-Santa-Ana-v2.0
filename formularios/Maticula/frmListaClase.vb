@@ -88,6 +88,7 @@ Public Class frmListaClase
         Me.MenuItem9 = New System.Windows.Forms.MenuItem()
         Me.MenuItem10 = New System.Windows.Forms.MenuItem()
         Me.MenuItem11 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem13 = New System.Windows.Forms.MenuItem()
         Me.MenuItem3 = New System.Windows.Forms.MenuItem()
         Me.MenuItem12 = New System.Windows.Forms.MenuItem()
         Me.MenuItem4 = New System.Windows.Forms.MenuItem()
@@ -113,7 +114,6 @@ Public Class frmListaClase
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.SqlFamiliaApellidos = New System.Data.SqlClient.SqlCommand()
         Me.TreeViewSQL1 = New colegio.TreeViewSQL()
-        Me.MenuItem13 = New System.Windows.Forms.MenuItem()
         CType(Me.DsArbol1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsListaClase1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,6 +174,11 @@ Public Class frmListaClase
         Me.MenuItem11.Index = 7
         Me.MenuItem11.Text = "Becados"
         '
+        'MenuItem13
+        '
+        Me.MenuItem13.Index = 8
+        Me.MenuItem13.Text = "Profesores Guía"
+        '
         'MenuItem3
         '
         Me.MenuItem3.Index = 2
@@ -221,7 +226,7 @@ Public Class frmListaClase
         'DataGrid1
         '
         Me.DataGrid1.AlternatingBackColor = System.Drawing.Color.AliceBlue
-        Me.DataGrid1.BackgroundColor = System.Drawing.Color.Transparent
+        Me.DataGrid1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.DataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGrid1.CaptionText = "Alumnos :"
         Me.DataGrid1.ContextMenu = Me.ContextMenu1
@@ -272,7 +277,7 @@ Public Class frmListaClase
         Me.DataGridTextBoxColumn2.FormatInfo = Nothing
         Me.DataGridTextBoxColumn2.HeaderText = "Apellido1"
         Me.DataGridTextBoxColumn2.MappingName = "apellido1"
-        Me.DataGridTextBoxColumn2.Width = 75
+        Me.DataGridTextBoxColumn2.Width = 90
         '
         'DataGridTextBoxColumn3
         '
@@ -280,7 +285,7 @@ Public Class frmListaClase
         Me.DataGridTextBoxColumn3.FormatInfo = Nothing
         Me.DataGridTextBoxColumn3.HeaderText = "Apellido2"
         Me.DataGridTextBoxColumn3.MappingName = "apellido2"
-        Me.DataGridTextBoxColumn3.Width = 75
+        Me.DataGridTextBoxColumn3.Width = 90
         '
         'DataGridTextBoxColumn4
         '
@@ -374,11 +379,6 @@ Public Class frmListaClase
         Me.TreeViewSQL1.Size = New System.Drawing.Size(184, 468)
         Me.TreeViewSQL1.TabIndex = 3
         '
-        'MenuItem13
-        '
-        Me.MenuItem13.Index = 8
-        Me.MenuItem13.Text = "Profesores Guía"
-        '
         'frmListaClase
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
@@ -387,7 +387,6 @@ Public Class frmListaClase
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.TreeViewSQL1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.Name = "frmListaClase"
         Me.Text = "Lista Clase"
