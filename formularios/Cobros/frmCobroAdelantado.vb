@@ -455,29 +455,36 @@ Public Class frmCobroAdelantado
     End Sub
 
     Private Sub actualiza_meses()
+        Try
+            Dim mesesI As New ArrayList(10)
+            Dim mes As String = ""
 
-        Dim mesesI As New ArrayList(10)
-        Dim mes As String = ""
-
-        Dim i As Integer
-        For i = 0 To 9
-            mesesI.Add(lmeses(i))
-        Next
-        CheckedListBox1.DataSource = Nothing
-        Dim dsAdelanto As New DataSet
-        meses_cobro.Parameters("@carnet").Value = TextBox1.Text
-        meses_cobro.Parameters("@anno").Value = ComboBox1.SelectedItem
-        conn.llena(dsAdelanto, "Table2", meses_cobro)
-        If dsAdelanto.Tables("Table2").Rows.Count > 0 Then   'elimina los meses pagados al dia
-            Dim fila As DataRow
-            Dim pos As Integer
-            For Each fila In dsAdelanto.Tables("Table2").Rows
-                mes = StrConv(MonthName(fila("mes")), VbStrConv.ProperCase)
-                pos = mesesI.IndexOf(mes)
-                mesesI.RemoveAt(pos)
+            Dim i As Integer
+            For i = 0 To 9
+                mesesI.Add(lmeses(i))
             Next
-        End If
-        CheckedListBox1.DataSource = mesesI
+            CheckedListBox1.DataSource = Nothing
+            Dim dsAdelanto As New DataSet
+            meses_cobro.Parameters("@carnet").Value = TextBox1.Text
+            meses_cobro.Parameters("@anno").Value = ComboBox1.SelectedItem
+            conn.llena(dsAdelanto, "Table2", meses_cobro)
+            If dsAdelanto.Tables("Table2").Rows.Count > 0 Then   'elimina los meses pagados al dia
+                Dim fila As DataRow
+                Dim pos As Integer
+                For Each fila In dsAdelanto.Tables("Table2").Rows
+                    If fila("mes") > 0 Then
+                        mes = StrConv(MonthName(fila("mes")), VbStrConv.ProperCase)
+                        pos = mesesI.IndexOf(mes)
+                        mesesI.RemoveAt(pos)
+                    End If
+                Next
+            End If
+            CheckedListBox1.DataSource = mesesI
+
+        Catch ex As Exception
+            MessageBox.Show("actualizaMeses:" & ex.Message)
+
+        End Try
     End Sub
     Private Sub CheckedListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckedListBox1.SelectedIndexChanged
         Button1.Enabled = CheckedListBox1.CheckedItems.Count > 0
@@ -490,7 +497,7 @@ Public Class frmCobroAdelantado
                 buscar(BuscaEstud1.seleccionado)
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("seleccionado:" & ex.Message)
         End Try
     End Sub
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged

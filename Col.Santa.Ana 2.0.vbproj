@@ -219,6 +219,7 @@
       <LastGenOutput>dstemp.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Plantillas\autDepositoBNCR.docx" />
     <None Include="Plantillas\baseNotas.xls" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Plantillas\certNotas.docx" />
@@ -249,6 +250,7 @@
     <Content Include="iconos\Imagenes\elementary_school.png" />
     <Content Include="iconos\Imagenes\estudiante_logo.png" />
     <Content Include="iconos\Imagenes\flechaRoja.png" />
+    <None Include="Plantillas\constPagoEstud.docx" />
     <None Include="Resources\158.png" />
     <None Include="Resources\nDB.bmp" />
     <None Include="Resources\Misc-Delete-Database-icon.png" />
@@ -879,12 +881,12 @@
   <ItemGroup>
     <PublishFile Include="log4net">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

@@ -193,5 +193,13 @@ Public Class frmPrincipal2
         oVentana.cargarVentana(New frmConstEstud, Me)
     End Sub
 
+    Private Sub ButtonItem28_Click_1(sender As Object, e As EventArgs) Handles ButtonItem28.Click
+        '' boton Cons Pago estudiantes
+    End Sub
+
+    Private Sub ButtonItem36_Click(sender As Object, e As EventArgs) Handles ButtonItem36.Click
+        '' Auto BNCR
+
+    End Sub
 End Class
 
