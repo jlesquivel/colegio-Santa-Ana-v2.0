@@ -248,12 +248,12 @@ Public Class Estudiantes
         Me.UserControl21 = New colegio.UserControl2()
         Me.BuscaEstudiante1 = New colegio.BuscaEstud()
         Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl()
+        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
@@ -268,9 +268,9 @@ Public Class Estudiantes
         CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
+        Me.SuperTabControlPanel5.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
         Me.SuperTabControlPanel6.SuspendLayout()
-        Me.SuperTabControlPanel5.SuspendLayout()
         Me.SuperTabControlPanel4.SuspendLayout()
         Me.SuperTabControlPanel3.SuspendLayout()
         Me.SuperTabControlPanel2.SuspendLayout()
@@ -933,9 +933,9 @@ Public Class Estudiantes
         'CEstadoCuenta1
         '
         Me.CEstadoCuenta1.BackColor = System.Drawing.Color.Transparent
-        Me.CEstadoCuenta1.Location = New System.Drawing.Point(3, 23)
+        Me.CEstadoCuenta1.Location = New System.Drawing.Point(3, 16)
         Me.CEstadoCuenta1.Name = "CEstadoCuenta1"
-        Me.CEstadoCuenta1.Size = New System.Drawing.Size(526, 369)
+        Me.CEstadoCuenta1.Size = New System.Drawing.Size(526, 394)
         Me.CEstadoCuenta1.TabIndex = 100
         '
         'CNotasEstudiante1
@@ -1081,6 +1081,23 @@ Public Class Estudiantes
         Me.SuperTabControl1.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1, Me.SuperTabItem2, Me.SuperTabItem3, Me.SuperTabItem4, Me.SuperTabItem5, Me.SuperTabItem6})
         Me.SuperTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue
         '
+        'SuperTabControlPanel5
+        '
+        Me.SuperTabControlPanel5.Controls.Add(Me.CEstadoCuenta1)
+        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
+        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel5.TabIndex = 0
+        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
+        '
+        'SuperTabItem5
+        '
+        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
+        Me.SuperTabItem5.GlobalItem = False
+        Me.SuperTabItem5.Name = "SuperTabItem5"
+        Me.SuperTabItem5.Text = "Pagos"
+        '
         'SuperTabControlPanel1
         '
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox14)
@@ -1129,23 +1146,6 @@ Public Class Estudiantes
         Me.SuperTabItem6.GlobalItem = False
         Me.SuperTabItem6.Name = "SuperTabItem6"
         Me.SuperTabItem6.Text = "Notas"
-        '
-        'SuperTabControlPanel5
-        '
-        Me.SuperTabControlPanel5.Controls.Add(Me.CEstadoCuenta1)
-        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 23)
-        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
-        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(535, 413)
-        Me.SuperTabControlPanel5.TabIndex = 0
-        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
-        '
-        'SuperTabItem5
-        '
-        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
-        Me.SuperTabItem5.GlobalItem = False
-        Me.SuperTabItem5.Name = "SuperTabItem5"
-        Me.SuperTabItem5.Text = "Pagos"
         '
         'SuperTabControlPanel4
         '
@@ -1250,10 +1250,10 @@ Public Class Estudiantes
         CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControl1.ResumeLayout(False)
+        Me.SuperTabControlPanel5.ResumeLayout(False)
         Me.SuperTabControlPanel1.ResumeLayout(False)
         Me.SuperTabControlPanel1.PerformLayout()
         Me.SuperTabControlPanel6.ResumeLayout(False)
-        Me.SuperTabControlPanel5.ResumeLayout(False)
         Me.SuperTabControlPanel4.ResumeLayout(False)
         Me.SuperTabControlPanel4.PerformLayout()
         Me.SuperTabControlPanel3.ResumeLayout(False)

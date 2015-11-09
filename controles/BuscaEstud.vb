@@ -15,13 +15,10 @@ Public Class BuscaEstud
     Public seleccionado As String
     Public nombre As String
     Dim primero As Boolean = True
-    Dim conn As conexionSQL
 
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents SwitchButton1 As DevComponents.DotNetBar.Controls.SwitchButton
-
-
 
 #Region "Eventos"
     Public Event selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs)
@@ -179,23 +176,20 @@ Public Class BuscaEstud
     Sub cargar()
         If Not (DesignMode) Then
 
+            Dim conn As New conexionSQL
             tabla = IIf(SwitchButton1.Value, tabla_todos, tabla_activos)
 
-            Dim conexion As New SqlConnection
-            conexion = conn.conexion
+            If Not (conn.conexion Is Nothing) Then
 
-            If Not (conexion Is Nothing) Then
 
-                conexion = conn.conexion
+                Dim da As New SqlDataAdapter("select " & campos & " from " & tabla &
+                    IIf(orden.Length > 0, " order by " & orden, ""), conn.conexion)
 
                 Dim ds As New DataSet             'Definimos el dataset y el dataadapter
-                Dim da As New SqlDataAdapter("select " & campos & " from " & tabla & _
-                    IIf(orden.Length > 0, " order by " & orden, ""), conexion)
+                Dim dsPubs As New DataSet("Estud")
+                da.FillSchema(ds, SchemaType.Source, "Estud")
+                da.Fill(ds, "Estud")
 
-                da.SelectCommand.Connection.ConnectionString = conn.strConn
-
-                'Llenamos al dataset con el resultado de la consulta
-                da.Fill(ds)
                 'Asignamos la tabla que utiliza el dataview
                 dv = ds.Tables(0).DefaultView
 
@@ -244,7 +238,6 @@ Public Class BuscaEstud
     Private Sub BuscaEstudiante_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         If Not (DesignMode) Then ' The component is in run mode
-            conn = New conexionSQL
             cargar()
         End If
     End Sub

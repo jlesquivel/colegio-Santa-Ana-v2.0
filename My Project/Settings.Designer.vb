@@ -105,7 +105,7 @@ Namespace My
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=SERVIDOR-BD;Initial Catalog=colegio;Persist Security Info=True;User I"& _ 
-            "D=sa")>  _
+            "D=sa;Password=123")>  _
         Public ReadOnly Property colegioConnectionString1() As String
             Get
                 Return CType(Me("colegioConnectionString1"),String)

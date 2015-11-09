@@ -1,19 +1,19 @@
-Imports colegioReportes
+ï»¿Imports colegioReportes
 
 Public Class CEstadoCuenta
     Inherits System.Windows.Forms.UserControl
 
-#Region " Código generado por el Diseñador de Windows Forms "
+#Region " CÃ³digo generado por el DiseÃ±ador de Windows Forms "
 
     Public Sub New()
         MyBase.New()
 
-        'El Diseñador de Windows Forms requiere esta llamada.
+        'El DiseÃ±ador de Windows Forms requiere esta llamada.
         InitializeComponent()
         Dim conn As New conexionSQL
         SqlConnection1.ConnectionString = conn.strConn
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent()
+        'Agregar cualquier inicializaciÃ³n despuÃ©s de la llamada a InitializeComponent()
 
     End Sub
 
@@ -27,12 +27,12 @@ Public Class CEstadoCuenta
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Requerido por el DiseÃ±ador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
+    'NOTA: el DiseÃ±ador de Windows Forms requiere el siguiente procedimiento
+    'Puede modificarse utilizando el DiseÃ±ador de Windows Forms. 
+    'No lo modifique con el editor de cÃ³digo.
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents GenCobro1 As colegio.genCobro
@@ -55,7 +55,7 @@ Public Class CEstadoCuenta
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents SqlSelectCommand2 As System.Data.SqlClient.SqlCommand
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CEstadoCuenta))
@@ -81,7 +81,7 @@ Public Class CEstadoCuenta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -218,7 +218,7 @@ Public Class CEstadoCuenta
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.ButtonX1)
         Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -228,14 +228,17 @@ Public Class CEstadoCuenta
         Me.Panel1.Size = New System.Drawing.Size(516, 40)
         Me.Panel1.TabIndex = 4
         '
-        'Button1
+        'ButtonX1
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Location = New System.Drawing.Point(280, 8)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(72, 24)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Imprimir"
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Location = New System.Drawing.Point(332, 1)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(150, 36)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.Symbol = "ï€¯"
+        Me.ButtonX1.TabIndex = 5
+        Me.ButtonX1.Text = "Estado Cuenta <br/> Recibos Selec.."
         '
         'CEstadoCuenta
         '
@@ -324,7 +327,16 @@ Public Class CEstadoCuenta
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Function HayMarcados() As Boolean
+        For Each item As ListViewItem In ListView1.Items
+            If item.Checked Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
+
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         Dim oReporte As New Reportes
         Dim reporte As New rptEstadoCuenta
         Dim impresora As String
@@ -350,14 +362,4 @@ Public Class CEstadoCuenta
             End If
         End If
     End Sub
-
-    Private Function HayMarcados() As Boolean
-        For Each item As ListViewItem In ListView1.Items
-            If item.Checked Then
-                Return True
-            End If
-        Next
-        Return False
-    End Function
-
 End Class

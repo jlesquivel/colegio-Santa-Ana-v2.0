@@ -127,34 +127,35 @@
     <value>0, 0</value>
   </metadata>
   <data name="SqlInsertCommand1.CommandText" xml:space="preserve">
-    <value>INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula) VALUES (@carnet, @apellido1, @apellido2, @nombre, @encargado1, @relacion, @direccion, @trabajo, @telefono, @email, @encargado2, @relacion2, @direccion2, @trabajo2, @telefono2, @email2, @foto, @estado, @familia, @nacimiento, @cedula); SELECT carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula FROM estudiantes WHERE (carnet = @carnet)</value>
+    <value>INSERT INTO [estudiantes] ([carnet], [apellido1], [apellido2], [nombre], [encargado1], [relacion], [direccion], [trabajo], [telefono], [email], [encargado2], [relacion2], [direccion2], [trabajo2], [telefono2], [email2], [foto], [estado], [familia], [nacimiento], [cedula]) VALUES (@carnet, @apellido1, @apellido2, @nombre, @encargado1, @relacion, @direccion, @trabajo, @telefono, @email, @encargado2, @relacion2, @direccion2, @trabajo2, @telefono2, @email2, @foto, @estado, @familia, @nacimiento, @cedula);
+SELECT carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula FROM estudiantes WHERE (carnet = @carnet)</value>
   </data>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>145, 17</value>
+    <value>140, 13</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="SqlDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
+  <metadata name="SqlDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="SqlDeleteCommand1.CommandText" xml:space="preserve">
-    <value>DELETE FROM estudiantes WHERE (carnet = @Original_carnet) AND (apellido1 = @Original_apellido1 OR @Original_apellido1 IS NULL AND apellido1 IS NULL) AND (apellido2 = @Original_apellido2 OR @Original_apellido2 IS NULL AND apellido2 IS NULL) AND (cedula = @Original_cedula OR @Original_cedula IS NULL AND cedula IS NULL) AND (direccion = @Original_direccion OR @Original_direccion IS NULL AND direccion IS NULL) AND (direccion2 = @Original_direccion2 OR @Original_direccion2 IS NULL AND direccion2 IS NULL) AND (email = @Original_email OR @Original_email IS NULL AND email IS NULL) AND (email2 = @Original_email2 OR @Original_email2 IS NULL AND email2 IS NULL) AND (encargado1 = @Original_encargado1 OR @Original_encargado1 IS NULL AND encargado1 IS NULL) AND (encargado2 = @Original_encargado2 OR @Original_encargado2 IS NULL AND encargado2 IS NULL) AND (estado = @Original_estado OR @Original_estado IS NULL AND estado IS NULL) AND (familia = @Original_familia OR @Original_familia IS NULL AND familia IS NULL) AND (nacimiento = @Original_nacimiento OR @Original_nacimiento IS NULL AND nacimiento IS NULL) AND (nombre = @Original_nombre OR @Original_nombre IS NULL AND nombre IS NULL) AND (relacion = @Original_relacion OR @Original_relacion IS NULL AND relacion IS NULL) AND (relacion2 = @Original_relacion2 OR @Original_relacion2 IS NULL AND relacion2 IS NULL) AND (telefono = @Original_telefono OR @Original_telefono IS NULL AND telefono IS NULL) AND (telefono2 = @Original_telefono2 OR @Original_telefono2 IS NULL AND telefono2 IS NULL) AND (trabajo = @Original_trabajo OR @Original_trabajo IS NULL AND trabajo IS NULL) AND (trabajo2 = @Original_trabajo2 OR @Original_trabajo2 IS NULL AND trabajo2 IS NULL)</value>
+    <value>DELETE FROM [estudiantes] WHERE (([carnet] = @Original_carnet) AND ([apellido1] = @Original_apellido1) AND ([apellido2] = @Original_apellido2) AND ([nombre] = @Original_nombre) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)))</value>
   </data>
   <metadata name="SqlSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="SqlSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="SqlSelectCommand1.CommandText" xml:space="preserve">
     <value>SELECT carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula FROM estudiantes</value>
@@ -162,14 +163,15 @@
   <metadata name="SqlUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
+  <metadata name="SqlUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="SqlUpdateCommand1.CommandText" xml:space="preserve">
-    <value>UPDATE estudiantes SET carnet = @carnet, apellido1 = @apellido1, apellido2 = @apellido2, nombre = @nombre, encargado1 = @encargado1, relacion = @relacion, direccion = @direccion, trabajo = @trabajo, telefono = @telefono, email = @email, encargado2 = @encargado2, relacion2 = @relacion2, direccion2 = @direccion2, trabajo2 = @trabajo2, telefono2 = @telefono2, email2 = @email2, foto = @foto, estado = @estado, familia = @familia, nacimiento = @nacimiento, cedula = @cedula WHERE (carnet = @Original_carnet) AND (apellido1 = @Original_apellido1 OR @Original_apellido1 IS NULL AND apellido1 IS NULL) AND (apellido2 = @Original_apellido2 OR @Original_apellido2 IS NULL AND apellido2 IS NULL) AND (cedula = @Original_cedula OR @Original_cedula IS NULL AND cedula IS NULL) AND (direccion = @Original_direccion OR @Original_direccion IS NULL AND direccion IS NULL) AND (direccion2 = @Original_direccion2 OR @Original_direccion2 IS NULL AND direccion2 IS NULL) AND (email = @Original_email OR @Original_email IS NULL AND email IS NULL) AND (email2 = @Original_email2 OR @Original_email2 IS NULL AND email2 IS NULL) AND (encargado1 = @Original_encargado1 OR @Original_encargado1 IS NULL AND encargado1 IS NULL) AND (encargado2 = @Original_encargado2 OR @Original_encargado2 IS NULL AND encargado2 IS NULL) AND (estado = @Original_estado OR @Original_estado IS NULL AND estado IS NULL) AND (familia = @Original_familia OR @Original_familia IS NULL AND familia IS NULL) AND (nacimiento = @Original_nacimiento OR @Original_nacimiento IS NULL AND nacimiento IS NULL) AND (nombre = @Original_nombre OR @Original_nombre IS NULL AND nombre IS NULL) AND (relacion = @Original_relacion OR @Original_relacion IS NULL AND relacion IS NULL) AND (relacion2 = @Original_relacion2 OR @Original_relacion2 IS NULL AND relacion2 IS NULL) AND (telefono = @Original_telefono OR @Original_telefono IS NULL AND telefono IS NULL) AND (telefono2 = @Original_telefono2 OR @Original_telefono2 IS NULL AND telefono2 IS NULL) AND (trabajo = @Original_trabajo OR @Original_trabajo IS NULL AND trabajo IS NULL) AND (trabajo2 = @Original_trabajo2 OR @Original_trabajo2 IS NULL AND trabajo2 IS NULL); SELECT carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula FROM estudiantes WHERE (carnet = @carnet)</value>
+    <value>UPDATE [estudiantes] SET [carnet] = @carnet, [apellido1] = @apellido1, [apellido2] = @apellido2, [nombre] = @nombre, [encargado1] = @encargado1, [relacion] = @relacion, [direccion] = @direccion, [trabajo] = @trabajo, [telefono] = @telefono, [email] = @email, [encargado2] = @encargado2, [relacion2] = @relacion2, [direccion2] = @direccion2, [trabajo2] = @trabajo2, [telefono2] = @telefono2, [email2] = @email2, [foto] = @foto, [estado] = @estado, [familia] = @familia, [nacimiento] = @nacimiento, [cedula] = @cedula WHERE (([carnet] = @Original_carnet) AND ([apellido1] = @Original_apellido1) AND ([apellido2] = @Original_apellido2) AND ([nombre] = @Original_nombre) AND ((@IsNull_encargado1 = 1 AND [encargado1] IS NULL) OR ([encargado1] = @Original_encargado1)) AND ((@IsNull_relacion = 1 AND [relacion] IS NULL) OR ([relacion] = @Original_relacion)) AND ((@IsNull_trabajo = 1 AND [trabajo] IS NULL) OR ([trabajo] = @Original_trabajo)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_encargado2 = 1 AND [encargado2] IS NULL) OR ([encargado2] = @Original_encargado2)) AND ((@IsNull_relacion2 = 1 AND [relacion2] IS NULL) OR ([relacion2] = @Original_relacion2)) AND ((@IsNull_direccion2 = 1 AND [direccion2] IS NULL) OR ([direccion2] = @Original_direccion2)) AND ((@IsNull_trabajo2 = 1 AND [trabajo2] IS NULL) OR ([trabajo2] = @Original_trabajo2)) AND ((@IsNull_telefono2 = 1 AND [telefono2] IS NULL) OR ([telefono2] = @Original_telefono2)) AND ((@IsNull_email2 = 1 AND [email2] IS NULL) OR ([email2] = @Original_email2)) AND ([estado] = @Original_estado) AND ([familia] = @Original_familia) AND ((@IsNull_nacimiento = 1 AND [nacimiento] IS NULL) OR ([nacimiento] = @Original_nacimiento)) AND ((@IsNull_cedula = 1 AND [cedula] IS NULL) OR ([cedula] = @Original_cedula)));
+SELECT carnet, apellido1, apellido2, nombre, encargado1, relacion, direccion, trabajo, telefono, email, encargado2, relacion2, direccion2, trabajo2, telefono2, email2, foto, estado, familia, nacimiento, cedula FROM estudiantes WHERE (carnet = @carnet)</value>
   </data>
   <metadata name="DataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>280, 17</value>
@@ -180,14 +182,41 @@
   <metadata name="SqlSelectCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
+  <metadata name="SqlSelectCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="busca.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>518, 17</value>
+  </metadata>
+  <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlSelectCommand3.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlInsertCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlUpdateCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDeleteCommand2.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="SqlDataAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>601, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>53</value>
