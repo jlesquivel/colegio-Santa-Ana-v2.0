@@ -433,6 +433,7 @@ Public Class frmCancelaCobros
             SqlConnection1.ConnectionString = conn.strConn
             SqlConnection2.ConnectionString = conn.strConn
             ComboBox1.SelectedIndex = 0
+            buscar(BuscaEstud1.seleccionado)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
