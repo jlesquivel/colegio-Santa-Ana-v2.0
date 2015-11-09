@@ -93,7 +93,7 @@ Public Class MonedaTextBox
     Public Overrides Property Text() As String
         Get
             Dim valor As String = MyBase.Text
-            If valor.Length > 1 Then
+            If valor.Length > 1 And Not IsNumeric(valor) Then
                 valor = valor.Substring(1, valor.Length - 1)
             End If
             Return valor

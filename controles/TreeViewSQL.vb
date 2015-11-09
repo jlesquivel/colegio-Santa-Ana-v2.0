@@ -8,12 +8,9 @@ Public Class TreeViewSQL
 
     Public Sub New()
         MyBase.New()
-
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
-
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
-
     End Sub
 
     'UserControl reemplaza a Dispose para limpiar la lista de componentes.

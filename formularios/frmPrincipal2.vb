@@ -123,11 +123,11 @@ Public Class frmPrincipal2
 
 #Region "NOTAS"
 
-    Private Sub ButtonItem34_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem34.Click
-        oVentana.cargarVentana(New frmNiveles, Me)
+    Private Sub ButtonItem34_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
-    Private Sub ButtonItem33_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem33.Click
-        oVentana.cargarVentana(New frmMaterias, Me)
+    Private Sub ButtonItem33_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
     Private Sub ButtonItem32_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem32.Click
         oVentana.cargarVentana(New frmAusencias, Me)
@@ -200,6 +200,14 @@ Public Class frmPrincipal2
     Private Sub ButtonItem36_Click(sender As Object, e As EventArgs) Handles ButtonItem36.Click
         '' Auto BNCR
 
+    End Sub
+
+    Private Sub ButtonItem43_Click(sender As Object, e As EventArgs) Handles ButtonItem43.Click
+        oVentana.cargarVentana(New frmMaterias, Me)
+    End Sub
+
+    Private Sub ButtonItem44_Click(sender As Object, e As EventArgs) Handles ButtonItem44.Click
+        oVentana.cargarVentana(New frmNiveles, Me)
     End Sub
 End Class
 

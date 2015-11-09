@@ -486,7 +486,7 @@ Public Class frmDiskette
     End Sub
 
 #End Region
-    Dim m_excel As New Excel.Application
+    Dim m_excel As Excel.Application
     Dim fechaInicioProceso As Date = DateTime.Now()
 
     Dim datos As System.Object
@@ -498,6 +498,9 @@ Public Class frmDiskette
     Dim hojas As Excel.Sheets
 
     Private Sub frmDiskette_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        m_excel = New Excel.Application
+        m_excel.Visible = False
+
         SqlConnection1.ConnectionString = conn.strConn
         SqlConnection2.ConnectionString = conn.strConn
         SqlConnection5.ConnectionString = conn.strConn

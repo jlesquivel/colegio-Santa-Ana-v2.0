@@ -146,7 +146,7 @@ Public Class CEstadoCuenta
         Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(0, 40)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(448, 200)
+        Me.ListView1.Size = New System.Drawing.Size(516, 200)
         Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -155,16 +155,18 @@ Public Class CEstadoCuenta
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Factura"
-        Me.ColumnHeader1.Width = 80
+        Me.ColumnHeader1.Width = 150
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Monto"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.ColumnHeader4.Width = 80
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Multa"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.ColumnHeader2.Width = 65
         '
         'ColumnHeader6
@@ -223,7 +225,7 @@ Public Class CEstadoCuenta
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(448, 40)
+        Me.Panel1.Size = New System.Drawing.Size(516, 40)
         Me.Panel1.TabIndex = 4
         '
         'Button1
@@ -241,7 +243,7 @@ Public Class CEstadoCuenta
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "CEstadoCuenta"
-        Me.Size = New System.Drawing.Size(448, 240)
+        Me.Size = New System.Drawing.Size(516, 240)
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -284,8 +286,8 @@ Public Class CEstadoCuenta
 
             Dim nuevo As New ListViewItem(etiqueta, 0)
             nuevo.Checked = False
-            nuevo.SubItems.Add(Format(fila("monto"), "C"))
-            nuevo.SubItems.Add(Format(fila("multa"), "C"))
+            nuevo.SubItems.Add(Format(fila("monto"), "N"))
+            nuevo.SubItems.Add(Format(fila("multa"), "N"))
             nuevo.SubItems.Add(fila("id_cobro"))
             If fila("recibo") Is DBNull.Value Then
                 nuevo.SubItems.Add("")

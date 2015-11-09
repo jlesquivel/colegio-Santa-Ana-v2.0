@@ -6,8 +6,6 @@ Imports System.Drawing.Printing
 Public Class Reportes
 
     Dim conn As New conexionSQL
-
-
     Public Sub inserta_parametro(ByRef reporte As Object, ByVal param As String, ByVal valor As String)
         Try
             Dim pvCollection As New CrystalDecisions.Shared.ParameterValues
@@ -104,7 +102,7 @@ Public Class Reportes
             End If
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub

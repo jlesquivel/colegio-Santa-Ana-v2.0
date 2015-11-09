@@ -5,8 +5,11 @@ Public Class cWord
     Dim wdDoc As Object
     Dim wdArch As String = ""
 
-
     Sub New(pArch As String)
+        Dim pdest As String = pArch.Replace(".docx", "1.docx")
+        FileCopy(pArch, pdest)
+        pArch = pdest
+
         wdArch = pArch
         wdApp = CreateObject("Word.Application")
         wdDoc = wdApp.Documents.Open(FileName:=wdArch)

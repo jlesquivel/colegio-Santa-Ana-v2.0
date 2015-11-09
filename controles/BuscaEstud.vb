@@ -230,7 +230,9 @@ Public Class BuscaEstud
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
-        If Not primero Or ListBox1.SelectedItem IsNot Nothing Then
+        '' If Not primero Or ListBox1.SelectedItem IsNot Nothing Then
+
+        If ListBox1.SelectedItem IsNot Nothing Then
             seleccionado = ListBox1.SelectedValue
             nombre = ListBox1.SelectedItem.Row.itemarray(1)
             OnSeleccion(New SeleccionadoEventArgs(seleccionado))
