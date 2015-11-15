@@ -43,155 +43,169 @@ Public Class frmCobros
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents LinkLabel8 As LinkLabel
     Friend WithEvents LinkLabel7 As System.Windows.Forms.LinkLabel
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        ComboBox1 = New System.Windows.Forms.ComboBox()
-        LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        LinkLabel5 = New System.Windows.Forms.LinkLabel()
-        LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        LinkLabel4 = New System.Windows.Forms.LinkLabel()
-        LinkLabel6 = New System.Windows.Forms.LinkLabel()
-        LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Splitter1 = New System.Windows.Forms.Splitter()
-        Panel1 = New System.Windows.Forms.Panel()
-        CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Panel1.SuspendLayout()
-        SuspendLayout()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'ComboBox1
         '
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New System.Drawing.Point(6, 282)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New System.Drawing.Size(109, 21)
-        ComboBox1.TabIndex = 1
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 282)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(109, 21)
+        Me.ComboBox1.TabIndex = 1
         '
         'LinkLabel7
         '
-        LinkLabel7.Location = New System.Drawing.Point(3, 150)
-        LinkLabel7.Name = "LinkLabel7"
-        LinkLabel7.Size = New System.Drawing.Size(120, 24)
-        LinkLabel7.TabIndex = 6
-        LinkLabel7.TabStop = True
-        LinkLabel7.Text = "Arch. BNCR"
-        LinkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel7.Location = New System.Drawing.Point(3, 150)
+        Me.LinkLabel7.Name = "LinkLabel7"
+        Me.LinkLabel7.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel7.TabIndex = 6
+        Me.LinkLabel7.TabStop = True
+        Me.LinkLabel7.Text = "Arch. BNCR"
+        Me.LinkLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel5
         '
-        LinkLabel5.Location = New System.Drawing.Point(3, 126)
-        LinkLabel5.Name = "LinkLabel5"
-        LinkLabel5.Size = New System.Drawing.Size(120, 24)
-        LinkLabel5.TabIndex = 4
-        LinkLabel5.TabStop = True
-        LinkLabel5.Text = "Pagos x mes"
-        LinkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel5.Location = New System.Drawing.Point(3, 126)
+        Me.LinkLabel5.Name = "LinkLabel5"
+        Me.LinkLabel5.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel5.TabIndex = 4
+        Me.LinkLabel5.TabStop = True
+        Me.LinkLabel5.Text = "Pagos x mes"
+        Me.LinkLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel3
         '
-        LinkLabel3.Location = New System.Drawing.Point(3, 102)
-        LinkLabel3.Name = "LinkLabel3"
-        LinkLabel3.Size = New System.Drawing.Size(120, 24)
-        LinkLabel3.TabIndex = 3
-        LinkLabel3.TabStop = True
-        LinkLabel3.Text = "Pagos por dia"
-        LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel3.Location = New System.Drawing.Point(3, 102)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel3.TabIndex = 3
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Pagos por dia"
+        Me.LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel4
         '
-        LinkLabel4.Location = New System.Drawing.Point(3, 78)
-        LinkLabel4.Name = "LinkLabel4"
-        LinkLabel4.Size = New System.Drawing.Size(120, 24)
-        LinkLabel4.TabIndex = 2
-        LinkLabel4.TabStop = True
-        LinkLabel4.Text = "Morosos con Monto"
-        LinkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel4.Location = New System.Drawing.Point(3, 78)
+        Me.LinkLabel4.Name = "LinkLabel4"
+        Me.LinkLabel4.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel4.TabIndex = 2
+        Me.LinkLabel4.TabStop = True
+        Me.LinkLabel4.Text = "Morosos con Monto"
+        Me.LinkLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel6
         '
-        LinkLabel6.Location = New System.Drawing.Point(3, 54)
-        LinkLabel6.Name = "LinkLabel6"
-        LinkLabel6.Size = New System.Drawing.Size(120, 24)
-        LinkLabel6.TabIndex = 5
-        LinkLabel6.TabStop = True
-        LinkLabel6.Text = "Morosos x Clase"
-        LinkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel6.Location = New System.Drawing.Point(3, 54)
+        Me.LinkLabel6.Name = "LinkLabel6"
+        Me.LinkLabel6.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel6.TabIndex = 5
+        Me.LinkLabel6.TabStop = True
+        Me.LinkLabel6.Text = "Morosos x Clase"
+        Me.LinkLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel1
         '
-        LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LinkLabel1.Location = New System.Drawing.Point(3, 30)
-        LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New System.Drawing.Size(120, 24)
-        LinkLabel1.TabIndex = 0
-        LinkLabel1.TabStop = True
-        LinkLabel1.Text = "Notas de Cobro"
-        LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Location = New System.Drawing.Point(3, 30)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel1.TabIndex = 0
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Notas de Cobro"
+        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel2
         '
-        LinkLabel2.Location = New System.Drawing.Point(3, 6)
-        LinkLabel2.Name = "LinkLabel2"
-        LinkLabel2.Size = New System.Drawing.Size(133, 24)
-        LinkLabel2.TabIndex = 1
-        LinkLabel2.TabStop = True
-        LinkLabel2.Text = "Clase con Monto"
-        LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LinkLabel2.Location = New System.Drawing.Point(3, 6)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(133, 24)
+        Me.LinkLabel2.TabIndex = 1
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Clase con Monto"
+        Me.LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Splitter1
         '
-        Splitter1.Location = New System.Drawing.Point(0, 0)
-        Splitter1.Name = "Splitter1"
-        Splitter1.Size = New System.Drawing.Size(3, 511)
-        Splitter1.TabIndex = 2
-        Splitter1.TabStop = False
+        Me.Splitter1.Location = New System.Drawing.Point(0, 0)
+        Me.Splitter1.Name = "Splitter1"
+        Me.Splitter1.Size = New System.Drawing.Size(3, 511)
+        Me.Splitter1.TabIndex = 2
+        Me.Splitter1.TabStop = False
         '
         'Panel1
         '
-        Panel1.BackColor = System.Drawing.Color.Transparent
-        Panel1.Controls.Add(ComboBox1)
-        Panel1.Controls.Add(LinkLabel2)
-        Panel1.Controls.Add(LinkLabel7)
-        Panel1.Controls.Add(LinkLabel1)
-        Panel1.Controls.Add(LinkLabel5)
-        Panel1.Controls.Add(LinkLabel6)
-        Panel1.Controls.Add(LinkLabel3)
-        Panel1.Controls.Add(LinkLabel4)
-        Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Panel1.Location = New System.Drawing.Point(3, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New System.Drawing.Size(133, 511)
-        Panel1.TabIndex = 4
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.LinkLabel8)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.LinkLabel2)
+        Me.Panel1.Controls.Add(Me.LinkLabel7)
+        Me.Panel1.Controls.Add(Me.LinkLabel1)
+        Me.Panel1.Controls.Add(Me.LinkLabel5)
+        Me.Panel1.Controls.Add(Me.LinkLabel6)
+        Me.Panel1.Controls.Add(Me.LinkLabel3)
+        Me.Panel1.Controls.Add(Me.LinkLabel4)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel1.Location = New System.Drawing.Point(3, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(133, 511)
+        Me.Panel1.TabIndex = 4
         '
         'CrystalReportViewer1
         '
-        CrystalReportViewer1.ActiveViewIndex = -1
-        CrystalReportViewer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(242, Byte), Integer))
-        CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        CrystalReportViewer1.ForeColor = System.Drawing.Color.Black
-        CrystalReportViewer1.Location = New System.Drawing.Point(136, 0)
-        CrystalReportViewer1.Name = "CrystalReportViewer1"
-        CrystalReportViewer1.ShowLogo = False
-        CrystalReportViewer1.ShowParameterPanelButton = False
-        CrystalReportViewer1.ShowRefreshButton = False
-        CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
-        CrystalReportViewer1.TabIndex = 5
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.ForeColor = System.Drawing.Color.Black
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(136, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.ShowRefreshButton = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
+        Me.CrystalReportViewer1.TabIndex = 5
+        '
+        'LinkLabel8
+        '
+        Me.LinkLabel8.Location = New System.Drawing.Point(7, 174)
+        Me.LinkLabel8.Name = "LinkLabel8"
+        Me.LinkLabel8.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel8.TabIndex = 8
+        Me.LinkLabel8.TabStop = True
+        Me.LinkLabel8.Text = "Estad.Cuenta Morosos"
+        Me.LinkLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmCobros
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(884, 511)
-        Controls.Add(CrystalReportViewer1)
-        Controls.Add(Panel1)
-        Controls.Add(Splitter1)
-        DoubleBuffered = True
-        Name = "frmCobros"
-        StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Text = "Reporte Cobros"
-        WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Panel1.ResumeLayout(False)
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(884, 511)
+        Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Splitter1)
+        Me.DoubleBuffered = True
+        Me.Name = "frmCobros"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "Reporte Cobros"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Panel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
 
     End Sub
 
@@ -240,7 +254,7 @@ Public Class frmCobros
                 CrystalReportViewer1.ReportSource = oreporte
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -305,8 +319,10 @@ Public Class frmCobros
         Dim cob As New rptListaPagos
         imprimir(cob, False)
     End Sub
-
-  
+    Private Sub LinkLabel8_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel8.LinkClicked
+        Dim cob As New rptEstadoCuentaPendientes
+        imprimir(cob, False)
+    End Sub
 End Class
 
 

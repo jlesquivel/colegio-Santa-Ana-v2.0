@@ -197,11 +197,6 @@ Public Class frmPrincipal2
         '' boton Cons Pago estudiantes
     End Sub
 
-    Private Sub ButtonItem36_Click(sender As Object, e As EventArgs) Handles ButtonItem36.Click
-        '' Auto BNCR
-
-    End Sub
-
     Private Sub ButtonItem43_Click(sender As Object, e As EventArgs) Handles ButtonItem43.Click
         oVentana.cargarVentana(New frmMaterias, Me)
     End Sub

@@ -231,14 +231,14 @@ Public Class CEstadoCuenta
         'ButtonX1
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb
         Me.ButtonX1.Location = New System.Drawing.Point(332, 1)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(150, 36)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.Symbol = ""
         Me.ButtonX1.TabIndex = 5
-        Me.ButtonX1.Text = "Estado Cuenta <br/> Recibos Selec.."
+        Me.ButtonX1.Text = "Estado Cuenta ó<br/> Recibos Selec.."
         '
         'CEstadoCuenta
         '
@@ -338,10 +338,10 @@ Public Class CEstadoCuenta
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         Dim oReporte As New Reportes
-        Dim reporte As New rptEstadoCuenta
         Dim impresora As String
 
         If Not HayMarcados() Then  'imprime Estado Cuenta
+            Dim reporte As New rptEstadoCuenta
             oReporte.inserta_parametro(reporte, "@carnet", carnet)
             reporte.SummaryInfo.ReportComments = "Estado de Cuenta"
             oReporte.imprimir(reporte, False, ParentForm.ParentForm)

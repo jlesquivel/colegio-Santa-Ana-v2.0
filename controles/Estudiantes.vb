@@ -61,6 +61,11 @@ Public Class Estudiantes
     Friend WithEvents SuperTabControlPanel2 As DevComponents.DotNetBar.SuperTabControlPanel
     Friend WithEvents SuperTabItem2 As DevComponents.DotNetBar.SuperTabItem
     Friend WithEvents SuperTabControlPanel1 As DevComponents.DotNetBar.SuperTabControlPanel
+    Friend WithEvents SuperValidator1 As Validator.SuperValidator
+    Friend WithEvents ErrorProvider2 As ErrorProvider
+    Friend WithEvents Highlighter1 As Validator.Highlighter
+    Friend WithEvents RequiredFieldValidator1 As Validator.RequiredFieldValidator
+    Friend WithEvents RequiredFieldValidator2 As Validator.RequiredFieldValidator
     Friend WithEvents SuperTabItem1 As DevComponents.DotNetBar.SuperTabItem
     Public Sub New()
         MyBase.New()
@@ -147,7 +152,6 @@ Public Class Estudiantes
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents CEstadoCuenta1 As colegio.CEstadoCuenta
     Friend WithEvents SqlSelectCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlInsertCommand1 As System.Data.SqlClient.SqlCommand
@@ -243,37 +247,41 @@ Public Class Estudiantes
         Me.SqlInsertCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.SqlSelectCommand2 = New System.Data.SqlClient.SqlCommand()
         Me.SqlUpdateCommand2 = New System.Data.SqlClient.SqlCommand()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.DsCarnet1 = New colegio.dsCarnet()
         Me.UserControl21 = New colegio.UserControl2()
         Me.BuscaEstudiante1 = New colegio.BuscaEstud()
         Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl()
-        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperValidator1 = New DevComponents.DotNetBar.Validator.SuperValidator()
+        Me.RequiredFieldValidator2 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
+        Me.RequiredFieldValidator1 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
+        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
-        Me.SuperTabControlPanel5.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
-        Me.SuperTabControlPanel6.SuspendLayout()
-        Me.SuperTabControlPanel4.SuspendLayout()
         Me.SuperTabControlPanel3.SuspendLayout()
+        Me.SuperTabControlPanel4.SuspendLayout()
+        Me.SuperTabControlPanel5.SuspendLayout()
+        Me.SuperTabControlPanel6.SuspendLayout()
         Me.SuperTabControlPanel2.SuspendLayout()
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -344,10 +352,12 @@ Public Class Estudiantes
         '
         Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido2", True))
+        Me.Highlighter1.SetHighlightColor(Me.TextBox4, DevComponents.DotNetBar.Validator.eHighlightColor.Red)
         Me.TextBox4.Location = New System.Drawing.Point(93, 96)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(144, 20)
         Me.TextBox4.TabIndex = 3
+        Me.SuperValidator1.SetValidator1(Me.TextBox4, Me.RequiredFieldValidator2)
         '
         'Label3
         '
@@ -456,7 +466,7 @@ Public Class Estudiantes
         'ComboBox3
         '
         Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.estado", True))
-        Me.ComboBox3.Items.AddRange(New Object() {"ACTIVO", "REPROBADO", "TRASLADADO", "EGRESADO", "EXPULSADO"})
+        Me.ComboBox3.Items.AddRange(New Object() {"ACTIVO", "REPROBADO", "TRASLADADO", "EGRESADO", "EXPULSADO", "INACTIVO"})
         Me.ComboBox3.Location = New System.Drawing.Point(93, 146)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(144, 21)
@@ -720,6 +730,7 @@ Public Class Estudiantes
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(272, 20)
         Me.TextBox13.TabIndex = 10
+        Me.SuperValidator1.SetValidator1(Me.TextBox13, Me.RequiredFieldValidator1)
         '
         'Label14
         '
@@ -1018,10 +1029,6 @@ Public Class Estudiantes
         Me.SqlUpdateCommand2.Connection = Me.SqlConnection1
         Me.SqlUpdateCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@foto", System.Data.SqlDbType.VarBinary, 2147483647, "foto"), New System.Data.SqlClient.SqlParameter("@Original_carnet", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "carnet", System.Data.DataRowVersion.Original, Nothing)})
         '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
         'DsCarnet1
         '
         Me.DsCarnet1.DataSetName = "dsCarnet"
@@ -1062,11 +1069,11 @@ Public Class Estudiantes
         Me.SuperTabControl1.ControlBox.MenuBox.Name = ""
         Me.SuperTabControl1.ControlBox.Name = ""
         Me.SuperTabControl1.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl1.ControlBox.MenuBox, Me.SuperTabControl1.ControlBox.CloseBox})
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel6)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel5)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel6)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl1.ForeColor = System.Drawing.Color.Black
@@ -1080,23 +1087,6 @@ Public Class Estudiantes
         Me.SuperTabControl1.TabIndex = 41
         Me.SuperTabControl1.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1, Me.SuperTabItem2, Me.SuperTabItem3, Me.SuperTabItem4, Me.SuperTabItem5, Me.SuperTabItem6})
         Me.SuperTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue
-        '
-        'SuperTabControlPanel5
-        '
-        Me.SuperTabControlPanel5.Controls.Add(Me.CEstadoCuenta1)
-        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 23)
-        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
-        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(535, 413)
-        Me.SuperTabControlPanel5.TabIndex = 0
-        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
-        '
-        'SuperTabItem5
-        '
-        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
-        Me.SuperTabItem5.GlobalItem = False
-        Me.SuperTabItem5.Name = "SuperTabItem5"
-        Me.SuperTabItem5.Text = "Pagos"
         '
         'SuperTabControlPanel1
         '
@@ -1130,45 +1120,6 @@ Public Class Estudiantes
         Me.SuperTabItem1.Name = "SuperTabItem1"
         Me.SuperTabItem1.Text = "Estudiante"
         '
-        'SuperTabControlPanel6
-        '
-        Me.SuperTabControlPanel6.Controls.Add(Me.CNotasEstudiante1)
-        Me.SuperTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel6.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanel6.Name = "SuperTabControlPanel6"
-        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(535, 436)
-        Me.SuperTabControlPanel6.TabIndex = 0
-        Me.SuperTabControlPanel6.TabItem = Me.SuperTabItem6
-        '
-        'SuperTabItem6
-        '
-        Me.SuperTabItem6.AttachedControl = Me.SuperTabControlPanel6
-        Me.SuperTabItem6.GlobalItem = False
-        Me.SuperTabItem6.Name = "SuperTabItem6"
-        Me.SuperTabItem6.Text = "Notas"
-        '
-        'SuperTabControlPanel4
-        '
-        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox23)
-        Me.SuperTabControlPanel4.Controls.Add(Me.ComboBox10)
-        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox22)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label32)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label34)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label33)
-        Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
-        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(535, 436)
-        Me.SuperTabControlPanel4.TabIndex = 0
-        Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
-        '
-        'SuperTabItem4
-        '
-        Me.SuperTabItem4.AttachedControl = Me.SuperTabControlPanel4
-        Me.SuperTabItem4.GlobalItem = False
-        Me.SuperTabItem4.Name = "SuperTabItem4"
-        Me.SuperTabItem4.Text = "Pago"
-        '
         'SuperTabControlPanel3
         '
         Me.SuperTabControlPanel3.Controls.Add(Me.TextBox21)
@@ -1198,9 +1149,9 @@ Public Class Estudiantes
         Me.SuperTabControlPanel3.Controls.Add(Me.Label11)
         Me.SuperTabControlPanel3.Controls.Add(Me.Label8)
         Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 0)
+        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 23)
         Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
-        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(535, 436)
+        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(535, 413)
         Me.SuperTabControlPanel3.TabIndex = 0
         Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
         '
@@ -1210,6 +1161,63 @@ Public Class Estudiantes
         Me.SuperTabItem3.GlobalItem = False
         Me.SuperTabItem3.Name = "SuperTabItem3"
         Me.SuperTabItem3.Text = "Encargados"
+        '
+        'SuperTabControlPanel4
+        '
+        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox23)
+        Me.SuperTabControlPanel4.Controls.Add(Me.ComboBox10)
+        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox22)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label32)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label34)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label33)
+        Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
+        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel4.TabIndex = 0
+        Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
+        '
+        'SuperTabItem4
+        '
+        Me.SuperTabItem4.AttachedControl = Me.SuperTabControlPanel4
+        Me.SuperTabItem4.GlobalItem = False
+        Me.SuperTabItem4.Name = "SuperTabItem4"
+        Me.SuperTabItem4.Text = "Pago"
+        Me.SuperTabItem4.Visible = False
+        '
+        'SuperTabControlPanel5
+        '
+        Me.SuperTabControlPanel5.Controls.Add(Me.CEstadoCuenta1)
+        Me.SuperTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel5.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel5.Name = "SuperTabControlPanel5"
+        Me.SuperTabControlPanel5.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel5.TabIndex = 0
+        Me.SuperTabControlPanel5.TabItem = Me.SuperTabItem5
+        '
+        'SuperTabItem5
+        '
+        Me.SuperTabItem5.AttachedControl = Me.SuperTabControlPanel5
+        Me.SuperTabItem5.GlobalItem = False
+        Me.SuperTabItem5.Name = "SuperTabItem5"
+        Me.SuperTabItem5.Text = "Pagos"
+        '
+        'SuperTabControlPanel6
+        '
+        Me.SuperTabControlPanel6.Controls.Add(Me.CNotasEstudiante1)
+        Me.SuperTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel6.Location = New System.Drawing.Point(0, 0)
+        Me.SuperTabControlPanel6.Name = "SuperTabControlPanel6"
+        Me.SuperTabControlPanel6.Size = New System.Drawing.Size(535, 436)
+        Me.SuperTabControlPanel6.TabIndex = 0
+        Me.SuperTabControlPanel6.TabItem = Me.SuperTabItem6
+        '
+        'SuperTabItem6
+        '
+        Me.SuperTabItem6.AttachedControl = Me.SuperTabControlPanel6
+        Me.SuperTabItem6.GlobalItem = False
+        Me.SuperTabItem6.Name = "SuperTabItem6"
+        Me.SuperTabItem6.Text = "Notas"
         '
         'SuperTabControlPanel2
         '
@@ -1234,6 +1242,30 @@ Public Class Estudiantes
         Me.SuperTabItem2.Name = "SuperTabItem2"
         Me.SuperTabItem2.Text = "Domicilio"
         '
+        'SuperValidator1
+        '
+        Me.SuperValidator1.ContainerControl = Me
+        Me.SuperValidator1.Highlighter = Me.Highlighter1
+        '
+        'RequiredFieldValidator2
+        '
+        Me.RequiredFieldValidator2.ErrorMessage = "Your error message here."
+        Me.RequiredFieldValidator2.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red
+        '
+        'RequiredFieldValidator1
+        '
+        Me.RequiredFieldValidator1.ErrorMessage = "Your error message here."
+        Me.RequiredFieldValidator1.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red
+        '
+        'ErrorProvider2
+        '
+        Me.ErrorProvider2.ContainerControl = Me
+        Me.ErrorProvider2.Icon = CType(resources.GetObject("ErrorProvider2.Icon"), System.Drawing.Icon)
+        '
+        'Highlighter1
+        '
+        Me.Highlighter1.ContainerControl = Me
+        '
         'Estudiantes
         '
         Me.Controls.Add(Me.SuperTabControl1)
@@ -1246,19 +1278,19 @@ Public Class Estudiantes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsCarnet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControl1.ResumeLayout(False)
-        Me.SuperTabControlPanel5.ResumeLayout(False)
         Me.SuperTabControlPanel1.ResumeLayout(False)
         Me.SuperTabControlPanel1.PerformLayout()
-        Me.SuperTabControlPanel6.ResumeLayout(False)
-        Me.SuperTabControlPanel4.ResumeLayout(False)
-        Me.SuperTabControlPanel4.PerformLayout()
         Me.SuperTabControlPanel3.ResumeLayout(False)
         Me.SuperTabControlPanel3.PerformLayout()
+        Me.SuperTabControlPanel4.ResumeLayout(False)
+        Me.SuperTabControlPanel4.PerformLayout()
+        Me.SuperTabControlPanel5.ResumeLayout(False)
+        Me.SuperTabControlPanel6.ResumeLayout(False)
         Me.SuperTabControlPanel2.ResumeLayout(False)
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1305,27 +1337,31 @@ Public Class Estudiantes
     End Sub
     Public Sub guardar()
         Try
-            If pcarnet <> "" Then
-                If Not (PictureBox1.Image Is Nothing) Then
-                    SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = pcarnet
-                    SqlDataAdapter2.Fill(DataSet11, "fotos")
-                    If DataSet11.Tables("fotos").Rows.Count > 0 Then
-                        CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
-                        CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
-                    Else
-                        BindingContext(DataSet11, "fotos").AddNew()
-                        CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
-                        CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
-                        Fnuevo = False
+            If SuperValidator1.Validate() Then
+
+                If pcarnet <> "" Then
+                    If Not (PictureBox1.Image Is Nothing) Then
+                        SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = pcarnet
+                        SqlDataAdapter2.Fill(DataSet11, "fotos")
+                        If DataSet11.Tables("fotos").Rows.Count > 0 Then
+                            CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
+                            CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
+                        Else
+                            BindingContext(DataSet11, "fotos").AddNew()
+                            CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("foto") = LeerImagen(PictureBox1)
+                            CType(BindingContext(DataSet11, "fotos").Current, DataRowView).Row("carnet") = TextBox1.Text
+                            Fnuevo = False
+                        End If
                     End If
+                    BindingContext(DataSet11, bd).EndCurrentEdit()
+                    SqlDataAdapter1.Update(DataSet11, bd)
+
+                    BindingContext(DataSet11, "fotos").EndCurrentEdit()
+                    SqlDataAdapter2.Update(DataSet11, "fotos")
+
+                    UserControl21.salvar.Enabled = False
                 End If
-                BindingContext(DataSet11, bd).EndCurrentEdit()
-                SqlDataAdapter1.Update(DataSet11, bd)
 
-                BindingContext(DataSet11, "fotos").EndCurrentEdit()
-                SqlDataAdapter2.Update(DataSet11, "fotos")
-
-                UserControl21.salvar.Enabled = False
             End If
         Catch ex As SqlClient.SqlException
             Select Case ex.Number
@@ -1383,8 +1419,12 @@ Public Class Estudiantes
             'CNotasEstudiante
             CNotasEstudiante1.buscar(pcarnet)
 
+            Dim est As New cEstudiantes(pcarnet)
+            SuperTabItem5.Text = "Pagos (" & est.TRPendientesCant & ")"
+
             UserControl21.salvar.Enabled = True
             'Me.controlesAbre(True)
+            SuperValidator1.Validate()
         End If
     End Sub
     Public Sub buscar()
@@ -1397,6 +1437,7 @@ Public Class Estudiantes
             '    Me.Width = Me.DocumentContainer1.Width
             'End If
             Refresh()
+            SuperValidator1.Validate()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", _
             MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1425,7 +1466,6 @@ Public Class Estudiantes
 
         If DesignMode Then
             ' The component is in design mode
-
         Else
             Dim conn As New conexionSQL
 
@@ -1437,9 +1477,10 @@ Public Class Estudiantes
                 buscar(pcarnet)
             End If
             ' Me.controlesAbre(False)
+            If BuscaEstudiante1.seleccionado <> "" Then
+                buscar(BuscaEstudiante1.seleccionado)
+            End If
         End If
-
-
     End Sub
 
     Public Function LeerImagen(ByVal Picture As PictureBox) As Byte()
