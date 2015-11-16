@@ -1,13 +1,15 @@
 ﻿Public Class frmLogin
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
+    Dim conn As conexionSQL
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Close()
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim sqlcon As New conexionSQL
-        If sqlcon.conexionOK Then
+
+        If conn.conexionOK Then
             Visible = False
             frmPrincipal2.Show()
         Else
@@ -27,7 +29,7 @@
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        Dim conn As New conexionSQL("servidor-bd", "colegio", "sa", "123")
+        conn = New conexionSQL("servidor-bd", "colegio", "sa", "123")
 
         If Not conn.conexionOK Then
             Text = "Sin conexion al servidor"
@@ -56,7 +58,7 @@
             frmPrincipal2.ShowDialog()
             Close()
         Else
-            MessageBox.Show("No se pudo conectar al servido SQL", "SQL Error!", _
+            MessageBox.Show("Usuario o clave incorrecta", "SQL Error!",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
@@ -64,4 +66,6 @@
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
         Close()
     End Sub
+
+
 End Class

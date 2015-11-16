@@ -321,20 +321,20 @@ Public Class conexionSQL
     Private Sub Construye_String()
         Dim dominio As NetworkInformation = NetworkInformation.LocalComputer
         If dominio.Status = NetworkInformation.JoinStatus.Domain Then
-            vstrConn = "data source=" & vServidor & _
-                     ";initial catalog=" & vbd & _
-                     ";integrated security=SSPI" & _
-                     ";persist security info=TRUE" & _
-                     ";packet size=4096"
+            vstrConn = "data source=" & vServidor &
+                     ";initial catalog=" & vbd &
+                     ";integrated security=SSPI" &
+                     ";persist security info=TRUE" &
+                     ";packet size=8000"
         Else
             If vServidor = "(localdb)\v11.0" Then
                 vstrConn = "Data Source=(localdb)\v11.0;" & _
                     "AttachDbFilename=C:\SQLServer\colegio_Data.MDF;Integrated Security=True"
             Else
-                vstrConn = "data source=" & vServidor & _
-                            ";initial catalog=" & vbd & ";persist security info=TRUE" & _
-                            " ;user id=" & vusuario & ";password=" & vpassword & _
-                            ";packet size=4096"
+                vstrConn = "data source=" & vServidor &
+                            ";initial catalog=" & vbd & ";persist security info=TRUE" &
+                            " ;user id=" & vusuario & ";password=" & vpassword &
+                            ";packet size=8000"
             End If
         End If
 

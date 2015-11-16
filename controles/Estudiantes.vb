@@ -1,6 +1,5 @@
 Imports System.IO
 Imports System.Drawing.Imaging
-Imports System.Drawing.Drawing2D
 Imports System.ComponentModel
 Imports DevComponents.DotNetBar
 
@@ -8,7 +7,6 @@ Public Class Estudiantes
     Inherits System.Windows.Forms.UserControl
 
     Public bd As String = "estudiantes"
-    Dim WithEvents CM As CurrencyManager
     Private pcarnet As String = ""
     Private Fnuevo As Boolean = False
     Dim anchoDC As Integer
@@ -66,6 +64,9 @@ Public Class Estudiantes
     Friend WithEvents Highlighter1 As Validator.Highlighter
     Friend WithEvents RequiredFieldValidator1 As Validator.RequiredFieldValidator
     Friend WithEvents RequiredFieldValidator2 As Validator.RequiredFieldValidator
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents LabelX1 As LabelX
     Friend WithEvents SuperTabItem1 As DevComponents.DotNetBar.SuperTabItem
     Public Sub New()
         MyBase.New()
@@ -136,8 +137,6 @@ Public Class Estudiantes
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents DataSet11 As colegio.DataSet1
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
     Friend WithEvents BuscaEstudiante1 As colegio.BuscaEstud
     Friend WithEvents SqlDataAdapter2 As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents SqlSelectCommand2 As System.Data.SqlClient.SqlCommand
@@ -178,6 +177,7 @@ Public Class Estudiantes
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -210,8 +210,6 @@ Public Class Estudiantes
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -252,22 +250,24 @@ Public Class Estudiantes
         Me.BuscaEstudiante1 = New colegio.BuscaEstud()
         Me.SuperTabControl1 = New DevComponents.DotNetBar.SuperTabControl()
         Me.SuperTabControlPanel1 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperValidator1 = New DevComponents.DotNetBar.Validator.SuperValidator()
         Me.RequiredFieldValidator2 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
         Me.RequiredFieldValidator1 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
-        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
+        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -276,18 +276,18 @@ Public Class Estudiantes
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
-        Me.SuperTabControlPanel3.SuspendLayout()
         Me.SuperTabControlPanel4.SuspendLayout()
+        Me.SuperTabControlPanel3.SuspendLayout()
+        Me.SuperTabControlPanel2.SuspendLayout()
         Me.SuperTabControlPanel5.SuspendLayout()
         Me.SuperTabControlPanel6.SuspendLayout()
-        Me.SuperTabControlPanel2.SuspendLayout()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(251, 18)
+        Me.PictureBox1.Location = New System.Drawing.Point(251, 13)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(270, 220)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -298,7 +298,7 @@ Public Class Estudiantes
         '
         Me.TextBox1.AllowDrop = True
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.carnet", True))
-        Me.TextBox1.Location = New System.Drawing.Point(93, 21)
+        Me.TextBox1.Location = New System.Drawing.Point(93, 16)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(144, 20)
         Me.TextBox1.TabIndex = 0
@@ -312,18 +312,18 @@ Public Class Estudiantes
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(13, 46)
+        Me.Label1.Location = New System.Drawing.Point(6, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 16)
+        Me.Label1.Size = New System.Drawing.Size(79, 16)
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Nombre"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBox2
         '
         Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.nombre", True))
-        Me.TextBox2.Location = New System.Drawing.Point(93, 46)
+        Me.TextBox2.Location = New System.Drawing.Point(93, 41)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(144, 20)
         Me.TextBox2.TabIndex = 1
@@ -331,29 +331,29 @@ Public Class Estudiantes
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(13, 98)
+        Me.Label4.Location = New System.Drawing.Point(6, 93)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 16)
+        Me.Label4.Size = New System.Drawing.Size(79, 16)
         Me.Label4.TabIndex = 37
         Me.Label4.Text = "Apellido2"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(15, 22)
+        Me.Label2.Location = New System.Drawing.Point(8, 17)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 16)
+        Me.Label2.Size = New System.Drawing.Size(79, 16)
         Me.Label2.TabIndex = 35
         Me.Label2.Text = "Carnet"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBox4
         '
         Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido2", True))
         Me.Highlighter1.SetHighlightColor(Me.TextBox4, DevComponents.DotNetBar.Validator.eHighlightColor.Red)
-        Me.TextBox4.Location = New System.Drawing.Point(93, 96)
+        Me.TextBox4.Location = New System.Drawing.Point(93, 91)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(144, 20)
         Me.TextBox4.TabIndex = 3
@@ -362,18 +362,18 @@ Public Class Estudiantes
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(13, 72)
+        Me.Label3.Location = New System.Drawing.Point(6, 67)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(79, 16)
         Me.Label3.TabIndex = 36
         Me.Label3.Text = "Apellido1"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBox3
         '
         Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido1", True))
-        Me.TextBox3.Location = New System.Drawing.Point(93, 71)
+        Me.TextBox3.Location = New System.Drawing.Point(93, 66)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(144, 20)
         Me.TextBox3.TabIndex = 2
@@ -381,7 +381,7 @@ Public Class Estudiantes
         'TextBox14
         '
         Me.TextBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular", True))
-        Me.TextBox14.Location = New System.Drawing.Point(93, 173)
+        Me.TextBox14.Location = New System.Drawing.Point(93, 194)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(144, 20)
         Me.TextBox14.TabIndex = 51
@@ -389,39 +389,51 @@ Public Class Estudiantes
         'Label18
         '
         Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Location = New System.Drawing.Point(13, 174)
+        Me.Label18.Location = New System.Drawing.Point(6, 195)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(72, 16)
+        Me.Label18.Size = New System.Drawing.Size(79, 16)
         Me.Label18.TabIndex = 50
         Me.Label18.Text = "Teléfono"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.LabelX1)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Location = New System.Drawing.Point(93, 202)
+        Me.GroupBox1.Location = New System.Drawing.Point(93, 215)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(144, 56)
+        Me.GroupBox1.Size = New System.Drawing.Size(144, 59)
         Me.GroupBox1.TabIndex = 47
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Sexo"
+        '
+        'LabelX1
+        '
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(14, 19)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(34, 23)
+        Me.LabelX1.TabIndex = 50
+        Me.LabelX1.Text = "Sexo"
         '
         'RadioButton1
         '
-        Me.RadioButton1.Location = New System.Drawing.Point(32, 16)
+        Me.RadioButton1.Location = New System.Drawing.Point(54, 19)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(104, 16)
+        Me.RadioButton1.Size = New System.Drawing.Size(82, 16)
         Me.RadioButton1.TabIndex = 44
         Me.RadioButton1.Text = "Masculino"
         '
         'RadioButton2
         '
-        Me.RadioButton2.Location = New System.Drawing.Point(32, 32)
+        Me.RadioButton2.Location = New System.Drawing.Point(54, 35)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(104, 16)
+        Me.RadioButton2.Size = New System.Drawing.Size(82, 16)
         Me.RadioButton2.TabIndex = 45
         Me.RadioButton2.Text = "Femenino"
         '
@@ -437,18 +449,18 @@ Public Class Estudiantes
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Location = New System.Drawing.Point(13, 126)
+        Me.Label16.Location = New System.Drawing.Point(6, 147)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(72, 16)
+        Me.Label16.Size = New System.Drawing.Size(79, 16)
         Me.Label16.TabIndex = 43
         Me.Label16.Text = "Ingreso"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DateTimePicker2
         '
         Me.DateTimePicker2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.ingreso", True))
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(93, 122)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(93, 143)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(144, 20)
         Me.DateTimePicker2.TabIndex = 42
@@ -456,18 +468,18 @@ Public Class Estudiantes
         'Label15
         '
         Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Location = New System.Drawing.Point(13, 152)
+        Me.Label15.Location = New System.Drawing.Point(6, 173)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(72, 16)
+        Me.Label15.Size = New System.Drawing.Size(79, 16)
         Me.Label15.TabIndex = 41
         Me.Label15.Text = "Estado"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ComboBox3
         '
         Me.ComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.estado", True))
         Me.ComboBox3.Items.AddRange(New Object() {"ACTIVO", "REPROBADO", "TRASLADADO", "EGRESADO", "EXPULSADO", "INACTIVO"})
-        Me.ComboBox3.Location = New System.Drawing.Point(93, 146)
+        Me.ComboBox3.Location = New System.Drawing.Point(93, 167)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(144, 21)
         Me.ComboBox3.TabIndex = 40
@@ -721,26 +733,6 @@ Public Class Estudiantes
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(88, 20)
         Me.TextBox16.TabIndex = 34
-        '
-        'TextBox13
-        '
-        Me.TextBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.familia", True))
-        Me.TextBox13.Location = New System.Drawing.Point(78, 225)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(272, 20)
-        Me.TextBox13.TabIndex = 10
-        Me.SuperValidator1.SetValidator1(Me.TextBox13, Me.RequiredFieldValidator1)
-        '
-        'Label14
-        '
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Location = New System.Drawing.Point(16, 223)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(59, 23)
-        Me.Label14.TabIndex = 33
-        Me.Label14.Text = "Familia"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label9
         '
@@ -1070,11 +1062,11 @@ Public Class Estudiantes
         Me.SuperTabControl1.ControlBox.Name = ""
         Me.SuperTabControl1.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl1.ControlBox.MenuBox, Me.SuperTabControl1.ControlBox.CloseBox})
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel6)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
         Me.SuperTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl1.ForeColor = System.Drawing.Color.Black
         Me.SuperTabControl1.Location = New System.Drawing.Point(240, 32)
@@ -1090,6 +1082,8 @@ Public Class Estudiantes
         '
         'SuperTabControlPanel1
         '
+        Me.SuperTabControlPanel1.Controls.Add(Me.TextBox13)
+        Me.SuperTabControlPanel1.Controls.Add(Me.Label14)
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox14)
         Me.SuperTabControlPanel1.Controls.Add(Me.PictureBox1)
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox4)
@@ -1113,54 +1107,32 @@ Public Class Estudiantes
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
+        'TextBox13
+        '
+        Me.TextBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.familia", True))
+        Me.TextBox13.Location = New System.Drawing.Point(93, 117)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox13.TabIndex = 52
+        Me.SuperValidator1.SetValidator1(Me.TextBox13, Me.RequiredFieldValidator1)
+        '
+        'Label14
+        '
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Location = New System.Drawing.Point(3, 115)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(76, 23)
+        Me.Label14.TabIndex = 53
+        Me.Label14.Text = "Familia"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'SuperTabItem1
         '
         Me.SuperTabItem1.AttachedControl = Me.SuperTabControlPanel1
         Me.SuperTabItem1.GlobalItem = False
         Me.SuperTabItem1.Name = "SuperTabItem1"
         Me.SuperTabItem1.Text = "Estudiante"
-        '
-        'SuperTabControlPanel3
-        '
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox21)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox9)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox18)
-        Me.SuperTabControlPanel3.Controls.Add(Me.ComboBox2)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label29)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox5)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox17)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox10)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label28)
-        Me.SuperTabControlPanel3.Controls.Add(Me.ComboBox1)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label27)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label5)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label26)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label7)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox16)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox6)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox13)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox11)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label14)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox12)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label9)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox8)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label10)
-        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox7)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label11)
-        Me.SuperTabControlPanel3.Controls.Add(Me.Label8)
-        Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 23)
-        Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
-        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(535, 413)
-        Me.SuperTabControlPanel3.TabIndex = 0
-        Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
-        '
-        'SuperTabItem3
-        '
-        Me.SuperTabItem3.AttachedControl = Me.SuperTabControlPanel3
-        Me.SuperTabItem3.GlobalItem = False
-        Me.SuperTabItem3.Name = "SuperTabItem3"
-        Me.SuperTabItem3.Text = "Encargados"
         '
         'SuperTabControlPanel4
         '
@@ -1184,6 +1156,69 @@ Public Class Estudiantes
         Me.SuperTabItem4.Name = "SuperTabItem4"
         Me.SuperTabItem4.Text = "Pago"
         Me.SuperTabItem4.Visible = False
+        '
+        'SuperTabControlPanel3
+        '
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox21)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox9)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox18)
+        Me.SuperTabControlPanel3.Controls.Add(Me.ComboBox2)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label29)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox5)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox17)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox10)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label28)
+        Me.SuperTabControlPanel3.Controls.Add(Me.ComboBox1)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label27)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label5)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label26)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label7)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox16)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox6)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox11)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox12)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label9)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox8)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label10)
+        Me.SuperTabControlPanel3.Controls.Add(Me.TextBox7)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label11)
+        Me.SuperTabControlPanel3.Controls.Add(Me.Label8)
+        Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel3.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
+        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel3.TabIndex = 0
+        Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
+        '
+        'SuperTabItem3
+        '
+        Me.SuperTabItem3.AttachedControl = Me.SuperTabControlPanel3
+        Me.SuperTabItem3.GlobalItem = False
+        Me.SuperTabItem3.Name = "SuperTabItem3"
+        Me.SuperTabItem3.Text = "Encargados"
+        '
+        'SuperTabControlPanel2
+        '
+        Me.SuperTabControlPanel2.Controls.Add(Me.GroupBox2)
+        Me.SuperTabControlPanel2.Controls.Add(Me.Label20)
+        Me.SuperTabControlPanel2.Controls.Add(Me.Label13)
+        Me.SuperTabControlPanel2.Controls.Add(Me.ComboBox5)
+        Me.SuperTabControlPanel2.Controls.Add(Me.DateTimePicker1)
+        Me.SuperTabControlPanel2.Controls.Add(Me.Label19)
+        Me.SuperTabControlPanel2.Controls.Add(Me.ComboBox4)
+        Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
+        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel2.TabIndex = 0
+        Me.SuperTabControlPanel2.TabItem = Me.SuperTabItem2
+        '
+        'SuperTabItem2
+        '
+        Me.SuperTabItem2.AttachedControl = Me.SuperTabControlPanel2
+        Me.SuperTabItem2.GlobalItem = False
+        Me.SuperTabItem2.Name = "SuperTabItem2"
+        Me.SuperTabItem2.Text = "Domicilio"
         '
         'SuperTabControlPanel5
         '
@@ -1219,29 +1254,6 @@ Public Class Estudiantes
         Me.SuperTabItem6.Name = "SuperTabItem6"
         Me.SuperTabItem6.Text = "Notas"
         '
-        'SuperTabControlPanel2
-        '
-        Me.SuperTabControlPanel2.Controls.Add(Me.GroupBox2)
-        Me.SuperTabControlPanel2.Controls.Add(Me.Label20)
-        Me.SuperTabControlPanel2.Controls.Add(Me.Label13)
-        Me.SuperTabControlPanel2.Controls.Add(Me.ComboBox5)
-        Me.SuperTabControlPanel2.Controls.Add(Me.DateTimePicker1)
-        Me.SuperTabControlPanel2.Controls.Add(Me.Label19)
-        Me.SuperTabControlPanel2.Controls.Add(Me.ComboBox4)
-        Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
-        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(535, 436)
-        Me.SuperTabControlPanel2.TabIndex = 0
-        Me.SuperTabControlPanel2.TabItem = Me.SuperTabItem2
-        '
-        'SuperTabItem2
-        '
-        Me.SuperTabItem2.AttachedControl = Me.SuperTabControlPanel2
-        Me.SuperTabItem2.GlobalItem = False
-        Me.SuperTabItem2.Name = "SuperTabItem2"
-        Me.SuperTabItem2.Text = "Domicilio"
-        '
         'SuperValidator1
         '
         Me.SuperValidator1.ContainerControl = Me
@@ -1257,14 +1269,14 @@ Public Class Estudiantes
         Me.RequiredFieldValidator1.ErrorMessage = "Your error message here."
         Me.RequiredFieldValidator1.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red
         '
+        'Highlighter1
+        '
+        Me.Highlighter1.ContainerControl = Me
+        '
         'ErrorProvider2
         '
         Me.ErrorProvider2.ContainerControl = Me
         Me.ErrorProvider2.Icon = CType(resources.GetObject("ErrorProvider2.Icon"), System.Drawing.Icon)
-        '
-        'Highlighter1
-        '
-        Me.Highlighter1.ContainerControl = Me
         '
         'Estudiantes
         '
@@ -1283,13 +1295,13 @@ Public Class Estudiantes
         Me.SuperTabControl1.ResumeLayout(False)
         Me.SuperTabControlPanel1.ResumeLayout(False)
         Me.SuperTabControlPanel1.PerformLayout()
-        Me.SuperTabControlPanel3.ResumeLayout(False)
-        Me.SuperTabControlPanel3.PerformLayout()
         Me.SuperTabControlPanel4.ResumeLayout(False)
         Me.SuperTabControlPanel4.PerformLayout()
+        Me.SuperTabControlPanel3.ResumeLayout(False)
+        Me.SuperTabControlPanel3.PerformLayout()
+        Me.SuperTabControlPanel2.ResumeLayout(False)
         Me.SuperTabControlPanel5.ResumeLayout(False)
         Me.SuperTabControlPanel6.ResumeLayout(False)
-        Me.SuperTabControlPanel2.ResumeLayout(False)
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1298,7 +1310,7 @@ Public Class Estudiantes
 #End Region
 
     'COMENT : Coloca el mensaje para lenguaje
-    <Description("Seleccione el formato del control"), Category("Format")> _
+    <Description("Seleccione el formato del control"), Category("Format")>
     Public Property BuscarVisible() As Boolean
         Get
             Return Bvisible
@@ -1373,7 +1385,7 @@ Public Class Estudiantes
             Exit Sub
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", _
+            MessageBox.Show(ex.Message, "Error",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
 
@@ -1395,10 +1407,13 @@ Public Class Estudiantes
     End Sub
 
     Public Sub buscar(ByVal pcarnet As String)
+        'Dim inicio As DateTime = DateTime.Now
+        ''---Proceso que se va a realizar
 
         If Not (pcarnet Is Nothing) Then
 
             guardar()
+
             DataSet11.Tables(bd).Clear()
             DataSet11.Tables("fotos").Clear()
 
@@ -1407,25 +1422,34 @@ Public Class Estudiantes
 
             SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = pcarnet
             SqlDataAdapter2.Fill(DataSet11, "fotos")
+
             mostrar_imagen()
 
             'CestadoCuenta
             CEstadoCuenta1.buscar(pcarnet)
-            SuperTabItem5.PredefinedColor = eTabItemColor.Default
 
-            If CEstadoCuenta1.pendiente Then
-                SuperTabItem5.PredefinedColor = eTabItemColor.Red
-            End If
             'CNotasEstudiante
             CNotasEstudiante1.buscar(pcarnet)
 
             Dim est As New cEstudiantes(pcarnet)
-            SuperTabItem5.Text = "Pagos (" & est.TRPendientesCant & ")"
+            Dim rpend As Integer = est.TRPendientesCant
+            SuperTabItem5.Text = "Pagos (" & rpend.ToString & ")"
+
+            SuperTabItem5.PredefinedColor = eTabItemColor.Default
+            If rpend > 0 Then
+                SuperTabItem5.PredefinedColor = eTabItemColor.Red
+            End If
 
             UserControl21.salvar.Enabled = True
             'Me.controlesAbre(True)
             SuperValidator1.Validate()
         End If
+
+        'Dim fin As DateTime = DateTime.Now
+        'Dim totalMin As String
+        'Dim total As TimeSpan = New TimeSpan(fin.Ticks - inicio.Ticks)
+        'totalMin = total.Hours.ToString("00") & ":" & total.Minutes.ToString("00") & ":" & total.Seconds.ToString("00") & ":" & total.Milliseconds.ToString("0000")
+        'Label6.Text = totalMin
     End Sub
     Public Sub buscar()
         Try
@@ -1439,7 +1463,7 @@ Public Class Estudiantes
             Refresh()
             SuperValidator1.Validate()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", _
+            MessageBox.Show(ex.Message, "Error",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End Try
@@ -1456,7 +1480,7 @@ Public Class Estudiantes
             miForma.MdiParent = ParentForm
             miForma.Show()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
@@ -1568,34 +1592,6 @@ Public Class Estudiantes
                 RadioButton2.Checked = False
         End Select
     End Sub
-
-    'Private Sub controlesAbre(ByVal abre As Boolean)
-
-    '    Dim i As Integer
-    '    For i = 0 To Me.DockControl1.Controls.Count - 1
-    '        If abre Then
-    '            Me.DockControl1.Controls(i).Enabled = True
-    '        Else
-    '            Me.DockControl1.Controls(i).Enabled = False
-    '        End If
-    '    Next i
-
-    '    For i = 0 To Me.DockControl2.Controls.Count - 1
-    '        If abre Then
-    '            Me.DockControl2.Controls(i).Enabled = True
-    '        Else
-    '            Me.DockControl2.Controls(i).Enabled = False
-    '        End If
-    '    Next i
-
-    '    For i = 0 To Me.DockControl3.Controls.Count - 1
-    '        If abre Then
-    '            Me.DockControl3.Controls(i).Enabled = True
-    '        Else
-    '            Me.DockControl3.Controls(i).Enabled = False
-    '        End If
-    '    Next i
-    'End Sub
 
     Private Sub TextBox3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
         TextBox13.Text = TextBox3.Text & TextBox4.Text

@@ -36,6 +36,9 @@ Partial Class frmLogin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'BackgroundWorker1
+        '
+        '
         'TextBoxX1
         '
         Me.TextBoxX1.BackColor = System.Drawing.Color.White
@@ -156,6 +159,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.TextBoxX1)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"
