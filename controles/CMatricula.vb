@@ -1,4 +1,4 @@
-Imports System.IO
+ï»¿Imports System.IO
 Imports System.Data.SqlClient
 
 Public Class CMatricula
@@ -9,16 +9,18 @@ Public Class CMatricula
     Dim conn As New conexionSQL
 
     Dim datosCobros As New ArrayList
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ListBoxAdv1 As DevComponents.DotNetBar.ListBoxAdv
+    Dim datosCobrosTotal As New ArrayList
 
-#Region " Código generado por el Diseñador de Windows Forms "
+#Region " CÃ³digo generado por el DiseÃ±ador de Windows Forms "
 
     Public Sub New()
         MyBase.New()
-
-        'El Diseñador de Windows Forms requiere esta llamada.
+        'El DiseÃ±ador de Windows Forms requiere esta llamada.
         InitializeComponent()
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent()
+        'Agregar cualquier inicializaciÃ³n despuÃ©s de la llamada a InitializeComponent()
 
     End Sub
 
@@ -32,12 +34,12 @@ Public Class CMatricula
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Requerido por el DiseÃ±ador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
+    'NOTA: el DiseÃ±ador de Windows Forms requiere el siguiente procedimiento
+    'Puede modificarse utilizando el DiseÃ±ador de Windows Forms. 
+    'No lo modifique con el editor de cÃ³digo.
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents SqlDataAdapter3 As System.Data.SqlClient.SqlDataAdapter
@@ -45,22 +47,17 @@ Public Class CMatricula
     Friend WithEvents DsCuotas1 As colegio.dsCuotas
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents MonedaTextBox2 As colegio.MonedaTextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents poliza As colegio.MonedaTextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
@@ -71,8 +68,6 @@ Public Class CMatricula
     Friend WithEvents matricula As colegio.MonedaTextBox
     Friend WithEvents bingo As colegio.MonedaTextBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
-    Friend WithEvents TextBox8 As colegio.MonedaTextBox
     Friend WithEvents SqlConnection2 As System.Data.SqlClient.SqlConnection
     Friend WithEvents SqlSelectCommand5 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlInsertCommand3 As System.Data.SqlClient.SqlCommand
@@ -104,22 +99,17 @@ Public Class CMatricula
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.poliza = New colegio.MonedaTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MonedaTextBox2 = New colegio.MonedaTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -129,10 +119,10 @@ Public Class CMatricula
         Me.matricula = New colegio.MonedaTextBox()
         Me.bingo = New colegio.MonedaTextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.TextBox8 = New colegio.MonedaTextBox()
         Me.cuaderno = New colegio.MonedaTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
+        Me.ListBoxAdv1 = New DevComponents.DotNetBar.ListBoxAdv()
         CType(Me.DataSet21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsCuotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,7 +220,7 @@ Public Class CMatricula
         '
         Me.TextBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.carnet", True))
         Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(24, 144)
+        Me.TextBox10.Location = New System.Drawing.Point(377, 68)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(56, 20)
@@ -242,33 +232,24 @@ Public Class CMatricula
         Me.poliza.BackColor = System.Drawing.SystemColors.Info
         Me.poliza.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.poliza", True))
         Me.poliza.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.poliza.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.poliza.Location = New System.Drawing.Point(208, 100)
+        Me.poliza.FormatoText = colegio.MonedaTextBox.formatos.Numero
+        Me.poliza.Location = New System.Drawing.Point(72, 97)
         Me.poliza.Name = "poliza"
         Me.poliza.ReadOnly = True
-        Me.poliza.Size = New System.Drawing.Size(80, 20)
+        Me.poliza.Size = New System.Drawing.Size(64, 20)
         Me.poliza.TabIndex = 8
-        Me.poliza.Text = "¢0,00"
+        Me.poliza.Text = "0,00"
         Me.poliza.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Location = New System.Drawing.Point(152, 103)
+        Me.Label11.Location = New System.Drawing.Point(16, 100)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(56, 11)
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "Poliza"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Location = New System.Drawing.Point(207, 8)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(56, 16)
-        Me.Label10.TabIndex = 51
-        Me.Label10.Text = "Beca"
         '
         'ComboBox2
         '
@@ -307,7 +288,7 @@ Public Class CMatricula
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 16)
         Me.Label6.TabIndex = 48
-        Me.Label6.Text = "Año"
+        Me.Label6.Text = "AÃ±o"
         '
         'TextBox5
         '
@@ -334,15 +315,6 @@ Public Class CMatricula
         Me.ComboBox1.TabIndex = 0
         Me.ComboBox1.ValueMember = "nivel"
         '
-        'Button2
-        '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(296, 80)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 80)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Visible = False
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(72, 24)
@@ -367,28 +339,10 @@ Public Class CMatricula
         Me.TextBox3.Size = New System.Drawing.Size(56, 20)
         Me.TextBox3.TabIndex = 58
         '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(304, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 16)
-        Me.Label1.TabIndex = 59
-        Me.Label1.Text = "<- Actual"
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(304, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
-        Me.Label2.TabIndex = 60
-        Me.Label2.Text = "<- Nueva"
-        '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(152, 123)
+        Me.Label3.Location = New System.Drawing.Point(16, 120)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 62
@@ -399,26 +353,16 @@ Public Class CMatricula
         '
         Me.MonedaTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MonedaTextBox2.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.MonedaTextBox2.Location = New System.Drawing.Point(62, 122)
+        Me.MonedaTextBox2.Location = New System.Drawing.Point(142, 136)
         Me.MonedaTextBox2.Name = "MonedaTextBox2"
         Me.MonedaTextBox2.Size = New System.Drawing.Size(82, 20)
         Me.MonedaTextBox2.TabIndex = 5
         Me.MonedaTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(21, 124)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 11)
-        Me.Label4.TabIndex = 64
-        Me.Label4.Text = "Monto"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Location = New System.Drawing.Point(152, 83)
+        Me.Label8.Location = New System.Drawing.Point(16, 80)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 11)
         Me.Label8.TabIndex = 66
@@ -428,44 +372,48 @@ Public Class CMatricula
         'TextBox4
         '
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.recibo", True))
-        Me.TextBox4.Location = New System.Drawing.Point(62, 101)
+        Me.TextBox4.Location = New System.Drawing.Point(415, 25)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(82, 20)
         Me.TextBox4.TabIndex = 4
+        Me.TextBox4.Visible = False
         '
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Location = New System.Drawing.Point(3, 106)
+        Me.Label12.Location = New System.Drawing.Point(356, 30)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(58, 14)
         Me.Label12.TabIndex = 68
         Me.Label12.Text = "Recibo"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label12.Visible = False
         '
         'Label13
         '
         Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Location = New System.Drawing.Point(21, 88)
+        Me.Label13.Location = New System.Drawing.Point(374, 12)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(40, 11)
         Me.Label13.TabIndex = 70
         Me.Label13.Text = "Fecha"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label13.Visible = False
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.fecha", True))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(62, 80)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(415, 4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
         Me.DateTimePicker1.TabIndex = 3
+        Me.DateTimePicker1.Visible = False
         '
         'TextBox7
         '
         Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.id_mat", True))
-        Me.TextBox7.Location = New System.Drawing.Point(80, 144)
+        Me.TextBox7.Location = New System.Drawing.Point(433, 68)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(64, 20)
         Me.TextBox7.TabIndex = 71
@@ -475,78 +423,94 @@ Public Class CMatricula
         '
         Me.matricula.BackColor = System.Drawing.SystemColors.Info
         Me.matricula.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.monto", True))
-        Me.matricula.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.matricula.Location = New System.Drawing.Point(208, 80)
+        Me.matricula.FormatoText = colegio.MonedaTextBox.formatos.Numero
+        Me.matricula.Location = New System.Drawing.Point(72, 77)
         Me.matricula.Name = "matricula"
         Me.matricula.ReadOnly = True
-        Me.matricula.Size = New System.Drawing.Size(80, 20)
+        Me.matricula.Size = New System.Drawing.Size(64, 20)
         Me.matricula.TabIndex = 7
-        Me.matricula.Text = "¢0,00"
+        Me.matricula.Text = "0,00"
         Me.matricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'bingo
         '
         Me.bingo.BackColor = System.Drawing.SystemColors.Info
         Me.bingo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.bingo", True))
-        Me.bingo.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.bingo.Location = New System.Drawing.Point(208, 120)
+        Me.bingo.FormatoText = colegio.MonedaTextBox.formatos.Numero
+        Me.bingo.Location = New System.Drawing.Point(72, 117)
         Me.bingo.Name = "bingo"
         Me.bingo.ReadOnly = True
-        Me.bingo.Size = New System.Drawing.Size(80, 20)
+        Me.bingo.Size = New System.Drawing.Size(64, 20)
         Me.bingo.TabIndex = 9
-        Me.bingo.Text = "¢0,00"
+        Me.bingo.Text = "0,00"
         Me.bingo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'ImageList1
-        '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(48, 48)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        '
-        'TextBox8
-        '
-        Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.beca", True))
-        Me.TextBox8.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.TextBox8.Location = New System.Drawing.Point(208, 48)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(80, 20)
-        Me.TextBox8.TabIndex = 72
-        Me.TextBox8.Text = "¢0,00"
-        Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'cuaderno
         '
         Me.cuaderno.BackColor = System.Drawing.SystemColors.Info
         Me.cuaderno.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.cuaderno", True))
-        Me.cuaderno.FormatoText = colegio.MonedaTextBox.formatos.Moneda
-        Me.cuaderno.Location = New System.Drawing.Point(208, 140)
+        Me.cuaderno.FormatoText = colegio.MonedaTextBox.formatos.Numero
+        Me.cuaderno.Location = New System.Drawing.Point(72, 137)
         Me.cuaderno.Name = "cuaderno"
         Me.cuaderno.ReadOnly = True
-        Me.cuaderno.Size = New System.Drawing.Size(80, 20)
+        Me.cuaderno.Size = New System.Drawing.Size(64, 20)
         Me.cuaderno.TabIndex = 73
-        Me.cuaderno.Text = "¢0,00"
+        Me.cuaderno.Text = "0,00"
         Me.cuaderno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(152, 143)
+        Me.Label5.Location = New System.Drawing.Point(16, 140)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 11)
         Me.Label5.TabIndex = 74
         Me.Label5.Text = "Cuaderno"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Location = New System.Drawing.Point(420, 93)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(75, 68)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.Symbol = "ïƒ‡"
+        Me.ButtonX1.SymbolSize = 48.0!
+        Me.ButtonX1.TabIndex = 75
+        Me.ButtonX1.Visible = False
+        '
+        'ListBoxAdv1
+        '
+        Me.ListBoxAdv1.AutoScroll = True
+        Me.ListBoxAdv1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
+        Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ListBoxAdv1.CheckStateMember = Nothing
+        Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
+        Me.ListBoxAdv1.DragDropSupport = True
+        Me.ListBoxAdv1.Location = New System.Drawing.Point(249, 24)
+        Me.ListBoxAdv1.Name = "ListBoxAdv1"
+        Me.ListBoxAdv1.Size = New System.Drawing.Size(160, 136)
+        Me.ListBoxAdv1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
+        Me.ListBoxAdv1.TabIndex = 76
+        Me.ListBoxAdv1.Text = "ListBoxAdv1"
+        '
         'CMatricula
         '
-        Me.BackColor = System.Drawing.Color.Transparent
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.ListBoxAdv1)
+        Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.cuaderno)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.bingo)
         Me.Controls.Add(Me.matricula)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -554,18 +518,13 @@ Public Class CMatricula
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.MonedaTextBox2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.poliza)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
@@ -575,7 +534,7 @@ Public Class CMatricula
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.TextBox7)
         Me.Name = "CMatricula"
-        Me.Size = New System.Drawing.Size(400, 176)
+        Me.Size = New System.Drawing.Size(500, 175)
         CType(Me.DataSet21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DsCuotas1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -593,7 +552,7 @@ Public Class CMatricula
         Next i
     End Sub
 
-   
+
     Sub limpia_controles()
         ComboBox1.Text = ""
         ComboBox2.Text = ""
@@ -603,7 +562,6 @@ Public Class CMatricula
         TextBox3.Text = ""
         TextBox4.Text = ""
         TextBox5.Text = ""
-        TextBox8.Text = ""
 
         poliza.Text = ""
         matricula.Text = ""
@@ -650,7 +608,7 @@ Public Class CMatricula
             miForma.MdiParent = ParentForm
             miForma.Show()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -666,7 +624,7 @@ Public Class CMatricula
             val = SqlDataAdapter1.Fill(DataSet21, "matricula")
             If val = 0 Then   ' en el caso de que NO se haya matriculado este ano
                 Dim anterior As Integer = 1
-                While (val = 0) And (anterior <= 7) ' busca si se ha matriculado en años anteriores
+                While (val = 0) And (anterior <= 7) ' busca si se ha matriculado en aÃ±os anteriores
                     DataSet21.Tables("matricula").Clear()
                     SqlDataAdapter1.SelectCommand.Parameters.Item("@carnet").Value = carnet
                     SqlDataAdapter1.SelectCommand.Parameters.Item("@ano").Value = pano - anterior
@@ -691,7 +649,8 @@ Public Class CMatricula
 
                     BindingContext(DataSet21.Tables("matricula")).AddNew()
                     Dim nuevo As DataRowView = Obind.Current
-                    nuevo.Row.ItemArray = Vdatos
+
+                    nuevo.Row.ItemArray = Vdatos           'ojoo caraga datos aÃ±o anterior
 
                     nuevo.Item("ano") = pano
                     nuevo.Item("fecha") = Now.Date
@@ -722,7 +681,7 @@ Public Class CMatricula
                     If Not (datosCobros(0)(5) Is DBNull.Value) Then
                         TextBox4.Text = datosCobros(0)(5)
                         DateTimePicker1.Value = datosCobros(0)(6)
-                        MonedaTextBox2.Text = datosCobros(0)(7)
+                        MonedaTextBox2.Text = datosCobrosTotal(0)(0)
                     Else
                         TextBox4.Text = ""
                         DateTimePicker1.Value = Date.Now
@@ -745,6 +704,23 @@ Public Class CMatricula
             MsgBox(ecepcion.Message, MsgBoxStyle.Critical, "Error en Cmatricula, buscar")
         End Try
     End Sub
+    Sub CargarPagoMatricula(ByVal pcarnet As String, ByVal pano As String)
+        Dim connCobros As New conexionSQL
+        datosCobrosTotal = connCobros.llena("EXEC cobroMatriculaTotal '" & pcarnet & "' ," & pano)
+        datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
+        Dim pendiente = datosCobrosTotal(0)(0) - datosCobrosTotal(0)(1)
+        If datosCobros.Count > 0 Then   '' cobros generados
+            If (pendiente = 0) Then
+                MonedaTextBox2.Text = datosCobrosTotal(0)(0)
+            Else
+                MessageBox.Show("Estudiante sin cancelar recibo(s)")
+                datosCobros = Nothing
+            End If
+        Else
+            MessageBox.Show("Estudiante sin cobro Matricula, posible aplazado")
+            datosCobros = Nothing
+        End If
+    End Sub
 
     Function noNull(ByVal valor As Object) As Object
         If IsDBNull(valor) Then
@@ -763,81 +739,107 @@ Public Class CMatricula
         End If
     End Function
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        If (error_blanco(ComboBox1) And error_blanco(ComboBox2) And _
-            error_blanco(MonedaTextBox2) And error_blanco(TextBox4)) Then
-            guardar()
-            Enabled = False
-        End If
-    End Sub
 
-    Private Sub MonedaTextBox2_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MonedaTextBox2.Validating
+    'Private Sub MonedaTextBox2_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MonedaTextBox2.Validating
 
+    '    Dim Rmatri As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("MATRICULA")
+    '    Dim Rcuad As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("CUADERNO")
+    '    Dim Rbingo As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("BINGO")
+    '    Dim mat, bin, pol, cua, monto As Decimal
+    '    If IsNumeric(MonedaTextBox2.Text) Then
+
+    '        monto = MonedaTextBox2.Text
+
+    '        If monto >= Rmatri.Item("monto") Then
+    '            mat = Rmatri.Item("monto")
+    '            cua = Rcuad.Item("monto")
+    '            monto -= (mat + cua)
+    '            If MessageBox.Show("Paga Bingo ?", "Bingo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+    '                If monto >= Rbingo.Item("monto") Then
+    '                    cua = Rcuad.Item("monto")
+    '                    bin = Rbingo.Item("monto")
+    '                    pol = monto - bin
+    '                End If
+    '            Else
+    '                bin = 0
+    '                pol = monto
+    '            End If
+    '        End If
+
+    '        If pol >= 0 And bin >= 0 And mat >= 0 Then
+    '            poliza.Text = pol
+    '            bingo.Text = bin
+    '            matricula.Text = mat
+    '            cuaderno.Text = cua
+
+    '            Dim Obind As BindingManagerBase = BindingContext(DataSet21.Tables("matricula"))
+    '            Dim nuevo As DataRowView = Obind.Current
+    '            nuevo.Item("monto") = mat
+    '            nuevo.Item("poliza") = pol
+    '            nuevo.Item("bingo") = bin
+    '            nuevo.Item("cuaderno") = cua
+    '            ErrorProvider1.SetError(MonedaTextBox2, "")
+    '        Else
+    '            e.Cancel = True
+    '            MonedaTextBox2.Select(0, MonedaTextBox2.Text.Length)
+    '            ' Set the ErrorProvider error with the text to display. 
+    '            ErrorProvider1.SetError(MonedaTextBox2, "monto inferior al mÃ­nimo")
+    '        End If
+    '    Else
+    '        e.Cancel = True
+    '        MonedaTextBox2.Text = 0
+    '        ErrorProvider1.SetError(MonedaTextBox2, "No es un valor")
+    '    End If
+    '    Button2.Visible = True
+    'End Sub
+
+    Private Sub MonedaTextBox2_TextChanged(sender As Object, e As EventArgs) Handles MonedaTextBox2.TextChanged
         Dim Rmatri As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("MATRICULA")
         Dim Rcuad As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("CUADERNO")
         Dim Rbingo As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("BINGO")
         Dim mat, bin, pol, cua, monto As Decimal
-        If IsNumeric(MonedaTextBox2.Text) Then
-
-            monto = MonedaTextBox2.Text
-
-            If monto >= Rmatri.Item("monto") Then
-                mat = Rmatri.Item("monto")
-                cua = Rcuad.Item("monto")
-                monto -= (mat + cua)
-                If MessageBox.Show("Paga Bingo ?", "Bingo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    If monto >= Rbingo.Item("monto") Then
-                        cua = Rcuad.Item("monto")
-                        bin = Rbingo.Item("monto")
-                        pol = monto - bin
-                    End If
-                Else
-                    bin = 0
-                    pol = monto
-                End If
-            End If
-
-            If pol >= 0 And bin >= 0 And mat >= 0 Then
-                poliza.Text = pol
-                bingo.Text = bin
-                matricula.Text = mat
-                cuaderno.Text = cua
-
-                Dim Obind As BindingManagerBase = BindingContext(DataSet21.Tables("matricula"))
-                Dim nuevo As DataRowView = Obind.Current
-                nuevo.Item("monto") = mat
-                nuevo.Item("poliza") = pol
-                nuevo.Item("bingo") = bin
-                nuevo.Item("cuaderno") = cua
-                ErrorProvider1.SetError(MonedaTextBox2, "")
-            Else
-                e.Cancel = True
-                MonedaTextBox2.Select(0, MonedaTextBox2.Text.Length)
-                ' Set the ErrorProvider error with the text to display. 
-                ErrorProvider1.SetError(MonedaTextBox2, "monto inferior al mínimo")
-            End If
-        Else
-            e.Cancel = True
-            MonedaTextBox2.Text = 0
-            ErrorProvider1.SetError(MonedaTextBox2, "No es un valor")
-        End If
-        Button2.Visible = True
-    End Sub
 
 
-    Sub CargarPagoMatricula(ByVal pcarnet As String, ByVal pano As String)
-        Dim connCobros As New conexionSQL
-        datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
+        monto = MonedaTextBox2.Text
 
-        If datosCobros.Count > 0 Then
-            If (datosCobros(0)(5) Is DBNull.Value) Then
-                MessageBox.Show("Estudiante sin cancelar Matricula")
-            End If
-        Else
-            MessageBox.Show("Estudiante sin cobro Matricula, posible aplazado")
-            datosCobros = Nothing
+        If monto >= Rmatri.Item("monto") Then
+            mat = Rmatri.Item("monto")
+            cua = Rcuad.Item("monto")
+            monto -= (mat + cua)
+
+            cua = Rcuad.Item("monto")
+            bin = Rbingo.Item("monto")
+            pol = monto - bin
         End If
 
+        If pol >= 0 And bin >= 0 And mat >= 0 Then
+            poliza.Text = pol
+            bingo.Text = bin
+            matricula.Text = mat
+            cuaderno.Text = cua
+
+            Dim Obind As BindingManagerBase = BindingContext(DataSet21.Tables("matricula"))
+            Dim nuevo As DataRowView = Obind.Current
+            nuevo.Item("monto") = mat
+            nuevo.Item("poliza") = pol
+            nuevo.Item("bingo") = bin
+            nuevo.Item("cuaderno") = cua
+            ErrorProvider1.SetError(MonedaTextBox2, "")
+        Else
+
+            MonedaTextBox2.Select(0, MonedaTextBox2.Text.Length)
+            ' Set the ErrorProvider error with the text to display. 
+            ErrorProvider1.SetError(MonedaTextBox2, "monto inferior al mÃ­nimo")
+        End If
+
+        ButtonX1.Visible = True
     End Sub
 
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
+        If (error_blanco(ComboBox1) And error_blanco(ComboBox2) And
+           error_blanco(MonedaTextBox2) And error_blanco(TextBox4)) Then
+            guardar()
+            Enabled = False
+        End If
+    End Sub
 End Class

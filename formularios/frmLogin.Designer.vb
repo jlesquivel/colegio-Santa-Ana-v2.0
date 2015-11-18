@@ -24,7 +24,6 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
@@ -35,9 +34,6 @@ Partial Class frmLogin
         Me.SymbolBox2 = New DevComponents.DotNetBar.Controls.SymbolBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'BackgroundWorker1
-        '
         '
         'TextBoxX1
         '
@@ -103,8 +99,8 @@ Partial Class frmLogin
         '
         'StyleManager1
         '
-        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2012Light
-        Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(154, Byte), Integer)))
+        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016
+        Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(199, Byte), Integer)))
         '
         'PictureBox1
         '
@@ -120,10 +116,12 @@ Partial Class frmLogin
         '
         'SymbolBox1
         '
+        Me.SymbolBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         '
         '
         Me.SymbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SymbolBox1.ForeColor = System.Drawing.Color.Black
         Me.SymbolBox1.Location = New System.Drawing.Point(154, 24)
         Me.SymbolBox1.Name = "SymbolBox1"
         Me.SymbolBox1.Size = New System.Drawing.Size(24, 29)
@@ -133,10 +131,12 @@ Partial Class frmLogin
         '
         'SymbolBox2
         '
+        Me.SymbolBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         '
         '
         Me.SymbolBox2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SymbolBox2.ForeColor = System.Drawing.Color.Black
         Me.SymbolBox2.Location = New System.Drawing.Point(154, 78)
         Me.SymbolBox2.Name = "SymbolBox2"
         Me.SymbolBox2.Size = New System.Drawing.Size(24, 29)
@@ -159,7 +159,6 @@ Partial Class frmLogin
         Me.Controls.Add(Me.TextBoxX1)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"
@@ -167,7 +166,6 @@ Partial Class frmLogin
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBoxX1 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents TextBoxX2 As DevComponents.DotNetBar.Controls.TextBoxX

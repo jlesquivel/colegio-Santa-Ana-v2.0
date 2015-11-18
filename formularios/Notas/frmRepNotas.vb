@@ -43,168 +43,166 @@ Public Class frmRepNotas
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        ComboBox1 = New System.Windows.Forms.ComboBox()
-        Splitter1 = New System.Windows.Forms.Splitter()
-        ExplorerBar1 = New DevComponents.DotNetBar.ExplorerBar()
-        ExplorerBarGroupItem1 = New DevComponents.DotNetBar.ExplorerBarGroupItem()
-        ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
-        ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
-        ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
-        ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
-        CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        CType(ExplorerBar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        ExplorerBar1.SuspendLayout()
-        SuspendLayout()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.ExplorerBar1 = New DevComponents.DotNetBar.ExplorerBar()
+        Me.ExplorerBarGroupItem1 = New DevComponents.DotNetBar.ExplorerBarGroupItem()
+        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        CType(Me.ExplorerBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ExplorerBar1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'ComboBox1
         '
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New System.Drawing.Point(10, 95)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New System.Drawing.Size(123, 21)
-        ComboBox1.TabIndex = 3
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(10, 101)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(123, 21)
+        Me.ComboBox1.TabIndex = 3
         '
         'Splitter1
         '
-        Splitter1.Location = New System.Drawing.Point(0, 0)
-        Splitter1.Name = "Splitter1"
-        Splitter1.Size = New System.Drawing.Size(3, 476)
-        Splitter1.TabIndex = 2
-        Splitter1.TabStop = False
+        Me.Splitter1.Location = New System.Drawing.Point(0, 0)
+        Me.Splitter1.Name = "Splitter1"
+        Me.Splitter1.Size = New System.Drawing.Size(3, 476)
+        Me.Splitter1.TabIndex = 2
+        Me.Splitter1.TabStop = False
         '
         'ExplorerBar1
         '
-        ExplorerBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
-        ExplorerBar1.BackColor = System.Drawing.SystemColors.Control
+        Me.ExplorerBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
+        Me.ExplorerBar1.BackColor = System.Drawing.SystemColors.Control
         '
         '
         '
-        ExplorerBar1.BackStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ExplorerBarBackground2
-        ExplorerBar1.BackStyle.BackColorGradientAngle = 90
-        ExplorerBar1.BackStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ExplorerBarBackground
-        ExplorerBar1.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ExplorerBar1.Controls.Add(ComboBox1)
-        ExplorerBar1.Cursor = System.Windows.Forms.Cursors.Default
-        ExplorerBar1.Dock = System.Windows.Forms.DockStyle.Left
-        ExplorerBar1.GroupImages = Nothing
-        ExplorerBar1.Groups.AddRange(New DevComponents.DotNetBar.BaseItem() {ExplorerBarGroupItem1})
-        ExplorerBar1.Images = Nothing
-        ExplorerBar1.Location = New System.Drawing.Point(3, 0)
-        ExplorerBar1.Name = "ExplorerBar1"
-        ExplorerBar1.Size = New System.Drawing.Size(143, 476)
-        ExplorerBar1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
-        ExplorerBar1.TabIndex = 4
-        ExplorerBar1.Text = "ExplorerBar1"
+        Me.ExplorerBar1.BackStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ExplorerBarBackground2
+        Me.ExplorerBar1.BackStyle.BackColorGradientAngle = 90
+        Me.ExplorerBar1.BackStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ExplorerBarBackground
+        Me.ExplorerBar1.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ExplorerBar1.Controls.Add(Me.ComboBox1)
+        Me.ExplorerBar1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ExplorerBar1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ExplorerBar1.GroupImages = Nothing
+        Me.ExplorerBar1.Groups.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ExplorerBarGroupItem1})
+        Me.ExplorerBar1.Images = Nothing
+        Me.ExplorerBar1.Location = New System.Drawing.Point(3, 0)
+        Me.ExplorerBar1.Name = "ExplorerBar1"
+        Me.ExplorerBar1.Size = New System.Drawing.Size(143, 476)
+        Me.ExplorerBar1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
+        Me.ExplorerBar1.TabIndex = 4
+        Me.ExplorerBar1.Text = "ExplorerBar1"
         '
         'ExplorerBarGroupItem1
         '
         '
         '
         '
-        ExplorerBarGroupItem1.BackStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(247, Byte), Integer))
-        ExplorerBarGroupItem1.BackStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        ExplorerBarGroupItem1.BackStyle.BorderBottomWidth = 1
-        ExplorerBarGroupItem1.BackStyle.BorderColor = System.Drawing.Color.White
-        ExplorerBarGroupItem1.BackStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        ExplorerBarGroupItem1.BackStyle.BorderLeftWidth = 1
-        ExplorerBarGroupItem1.BackStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        ExplorerBarGroupItem1.BackStyle.BorderRightWidth = 1
-        ExplorerBarGroupItem1.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ExplorerBarGroupItem1.Cursor = System.Windows.Forms.Cursors.Default
-        ExplorerBarGroupItem1.Expanded = True
-        ExplorerBarGroupItem1.Name = "ExplorerBarGroupItem1"
-        ExplorerBarGroupItem1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
-        ExplorerBarGroupItem1.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {ButtonItem1, ButtonItem2, ButtonItem3, ControlContainerItem1})
-        ExplorerBarGroupItem1.Text = "Listados"
+        Me.ExplorerBarGroupItem1.BackStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(214, Byte), Integer), CType(CType(223, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.ExplorerBarGroupItem1.BackStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.ExplorerBarGroupItem1.BackStyle.BorderBottomWidth = 1
+        Me.ExplorerBarGroupItem1.BackStyle.BorderColor = System.Drawing.Color.White
+        Me.ExplorerBarGroupItem1.BackStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.ExplorerBarGroupItem1.BackStyle.BorderLeftWidth = 1
+        Me.ExplorerBarGroupItem1.BackStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.ExplorerBarGroupItem1.BackStyle.BorderRightWidth = 1
+        Me.ExplorerBarGroupItem1.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ExplorerBarGroupItem1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ExplorerBarGroupItem1.Expanded = True
+        Me.ExplorerBarGroupItem1.Name = "ExplorerBarGroupItem1"
+        Me.ExplorerBarGroupItem1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
+        Me.ExplorerBarGroupItem1.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem2, Me.ButtonItem3, Me.ControlContainerItem1})
+        Me.ExplorerBarGroupItem1.Text = "Listados"
         '
         '
         '
-        ExplorerBarGroupItem1.TitleHotStyle.BackColor = System.Drawing.Color.White
-        ExplorerBarGroupItem1.TitleHotStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(247, Byte), Integer))
-        ExplorerBarGroupItem1.TitleHotStyle.CornerDiameter = 3
-        ExplorerBarGroupItem1.TitleHotStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ExplorerBarGroupItem1.TitleHotStyle.CornerTypeTopLeft = DevComponents.DotNetBar.eCornerType.Rounded
-        ExplorerBarGroupItem1.TitleHotStyle.CornerTypeTopRight = DevComponents.DotNetBar.eCornerType.Rounded
-        ExplorerBarGroupItem1.TitleHotStyle.TextColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ExplorerBarGroupItem1.TitleHotStyle.BackColor = System.Drawing.Color.White
+        Me.ExplorerBarGroupItem1.TitleHotStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.ExplorerBarGroupItem1.TitleHotStyle.CornerDiameter = 3
+        Me.ExplorerBarGroupItem1.TitleHotStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ExplorerBarGroupItem1.TitleHotStyle.CornerTypeTopLeft = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.ExplorerBarGroupItem1.TitleHotStyle.CornerTypeTopRight = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.ExplorerBarGroupItem1.TitleHotStyle.TextColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
         '
         '
         '
-        ExplorerBarGroupItem1.TitleStyle.BackColor = System.Drawing.Color.White
-        ExplorerBarGroupItem1.TitleStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(247, Byte), Integer))
-        ExplorerBarGroupItem1.TitleStyle.CornerDiameter = 3
-        ExplorerBarGroupItem1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        ExplorerBarGroupItem1.TitleStyle.CornerTypeTopLeft = DevComponents.DotNetBar.eCornerType.Rounded
-        ExplorerBarGroupItem1.TitleStyle.CornerTypeTopRight = DevComponents.DotNetBar.eCornerType.Rounded
-        ExplorerBarGroupItem1.TitleStyle.TextColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.ExplorerBarGroupItem1.TitleStyle.BackColor = System.Drawing.Color.White
+        Me.ExplorerBarGroupItem1.TitleStyle.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(199, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.ExplorerBarGroupItem1.TitleStyle.CornerDiameter = 3
+        Me.ExplorerBarGroupItem1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ExplorerBarGroupItem1.TitleStyle.CornerTypeTopLeft = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.ExplorerBarGroupItem1.TitleStyle.CornerTypeTopRight = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.ExplorerBarGroupItem1.TitleStyle.TextColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
         '
         'ButtonItem1
         '
-        ButtonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        ButtonItem1.Cursor = System.Windows.Forms.Cursors.Hand
-        ButtonItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
-        ButtonItem1.HotFontUnderline = True
-        ButtonItem1.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
-        ButtonItem1.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
-        ButtonItem1.Name = "ButtonItem1"
-        ButtonItem1.Text = "Notas Estudiantes"
+        Me.ButtonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.ButtonItem1.HotFontUnderline = True
+        Me.ButtonItem1.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ButtonItem1.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
+        Me.ButtonItem1.Name = "ButtonItem1"
+        Me.ButtonItem1.Text = "Notas Estudiantes"
         '
         'ButtonItem2
         '
-        ButtonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        ButtonItem2.Cursor = System.Windows.Forms.Cursors.Hand
-        ButtonItem2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
-        ButtonItem2.HotFontUnderline = True
-        ButtonItem2.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
-        ButtonItem2.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
-        ButtonItem2.Name = "ButtonItem2"
-        ButtonItem2.Text = "Notas Grupo x periodo"
+        Me.ButtonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonItem2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.ButtonItem2.HotFontUnderline = True
+        Me.ButtonItem2.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ButtonItem2.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
+        Me.ButtonItem2.Name = "ButtonItem2"
+        Me.ButtonItem2.Text = "Notas Grupo x periodo"
         '
         'ButtonItem3
         '
-        ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        ButtonItem3.Cursor = System.Windows.Forms.Cursors.Hand
-        ButtonItem3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
-        ButtonItem3.HotFontUnderline = True
-        ButtonItem3.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
-        ButtonItem3.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
-        ButtonItem3.Name = "ButtonItem3"
-        ButtonItem3.Text = "Notas Grupo Anual"
+        Me.ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonItem3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.ButtonItem3.HotFontUnderline = True
+        Me.ButtonItem3.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ButtonItem3.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
+        Me.ButtonItem3.Name = "ButtonItem3"
+        Me.ButtonItem3.Text = "Notas Grupo Anual"
         '
         'ControlContainerItem1
         '
-        ControlContainerItem1.AllowItemResize = True
-        ControlContainerItem1.Control = ComboBox1
-        ControlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
-        ControlContainerItem1.Name = "ControlContainerItem1"
-        ControlContainerItem1.Text = "ControlContainerItem1"
+        Me.ControlContainerItem1.AllowItemResize = True
+        Me.ControlContainerItem1.Control = Me.ComboBox1
+        Me.ControlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem1.Name = "ControlContainerItem1"
+        Me.ControlContainerItem1.Text = "ControlContainerItem1"
         '
         'CrystalReportViewer1
         '
-        CrystalReportViewer1.ActiveViewIndex = -1
-        CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        CrystalReportViewer1.Location = New System.Drawing.Point(146, 0)
-        CrystalReportViewer1.Name = "CrystalReportViewer1"
-        CrystalReportViewer1.ShowLogo = False
-        CrystalReportViewer1.ShowParameterPanelButton = False
-        CrystalReportViewer1.Size = New System.Drawing.Size(724, 476)
-        CrystalReportViewer1.TabIndex = 5
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(146, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(724, 476)
+        Me.CrystalReportViewer1.TabIndex = 5
         '
         'frmRepNotas
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(870, 476)
-        Controls.Add(CrystalReportViewer1)
-        Controls.Add(ExplorerBar1)
-        Controls.Add(Splitter1)
-        DoubleBuffered = True
-        Name = "frmRepNotas"
-        Text = "Reporte Notas"
-        WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(ExplorerBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        ExplorerBar1.ResumeLayout(False)
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(870, 476)
+        Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.Controls.Add(Me.ExplorerBar1)
+        Me.Controls.Add(Me.Splitter1)
+        Me.DoubleBuffered = True
+        Me.Name = "frmRepNotas"
+        Me.Text = "Reporte Notas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.ExplorerBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ExplorerBar1.ResumeLayout(False)
+        Me.ResumeLayout(False)
 
     End Sub
 

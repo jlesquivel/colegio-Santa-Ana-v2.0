@@ -1,3 +1,4 @@
+Imports System.Resources
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -7,16 +8,16 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("Sistema Colegio")> 
-<Assembly: AssemblyDescription("Sistema de Administración Academica")> 
-<Assembly: AssemblyCompany("Software Esquivel")> 
-<Assembly: AssemblyProduct("Sistema Colegio")> 
-<Assembly: AssemblyCopyright("Software Esquivel 2014")> 
-<Assembly: AssemblyTrademark("Sistema Colegio")> 
-<Assembly: CLSCompliant(True)> 
+<Assembly: AssemblyTitle("Sistema Colegio")>
+<Assembly: AssemblyDescription("Sistema de Administración Academica")>
+<Assembly: AssemblyCompany("Software Esquivel")>
+<Assembly: AssemblyProduct("Sistema Colegio")>
+<Assembly: AssemblyCopyright("Software Esquivel 2014")>
+<Assembly: AssemblyTrademark("Sistema Colegio")>
+<Assembly: CLSCompliant(True)>
 
 'El siguiente GUID sirve como identificador de la biblioteca de tipos si este proyecto se expone a COM
-<Assembly: Guid("5FEF6012-DB5B-4688-B493-77737C7EE3D0")> 
+<Assembly: Guid("5FEF6012-DB5B-4688-B493-77737C7EE3D0")>
 
 ' La información de versión de un ensamblado consta de los siguientes cuatro valores:
 '
@@ -28,6 +29,7 @@ Imports System.Runtime.InteropServices
 ' Puede especificar todos los valores o usar los valores predeterminados (número de versión de compilación y de revisión) 
 ' usando el símbolo '*' como se muestra a continuación:
 
-<Assembly: AssemblyVersion("2.0.*")> 
+<Assembly: AssemblyVersion("2.0")>
 
-<Assembly: AssemblyFileVersionAttribute("2.0")> 
+<Assembly: AssemblyFileVersionAttribute("2.0")>
+<Assembly: NeutralResourcesLanguage("es-CR")>

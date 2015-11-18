@@ -2,31 +2,12 @@
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim conn As conexionSQL
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Close()
-    End Sub
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        If conn.conexionOK Then
-            Visible = False
-            frmPrincipal2.Show()
-        Else
-            MessageBox.Show("No se pudo conectar al servido SQL", "SQL Error!", _
-            MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-    End Sub
-
     Public Sub New()
-     
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
 
     End Sub
-
-
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         conn = New conexionSQL("servidor-bd", "colegio", "sa", "123")
@@ -47,7 +28,6 @@
             End If
         End If
     End Sub
-
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
 
         Dim sqlcon As New conexionSQL("SERVIDOR-BD", "colegio", TextBoxX1.Text, TextBoxX2.Text)
@@ -62,10 +42,8 @@
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
-
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
         Close()
     End Sub
-
 
 End Class
