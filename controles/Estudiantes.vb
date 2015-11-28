@@ -63,7 +63,6 @@ Public Class Estudiantes
     Friend WithEvents ErrorProvider2 As ErrorProvider
     Friend WithEvents Highlighter1 As Validator.Highlighter
     Friend WithEvents RequiredFieldValidator1 As Validator.RequiredFieldValidator
-    Friend WithEvents RequiredFieldValidator2 As Validator.RequiredFieldValidator
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents LabelX1 As LabelX
@@ -264,7 +263,6 @@ Public Class Estudiantes
         Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem6 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperValidator1 = New DevComponents.DotNetBar.Validator.SuperValidator()
-        Me.RequiredFieldValidator2 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
         Me.RequiredFieldValidator1 = New DevComponents.DotNetBar.Validator.RequiredFieldValidator("Your error message here.")
         Me.Highlighter1 = New DevComponents.DotNetBar.Validator.Highlighter()
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -352,12 +350,10 @@ Public Class Estudiantes
         '
         Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido2", True))
-        Me.Highlighter1.SetHighlightColor(Me.TextBox4, DevComponents.DotNetBar.Validator.eHighlightColor.Red)
         Me.TextBox4.Location = New System.Drawing.Point(93, 91)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(144, 20)
         Me.TextBox4.TabIndex = 3
-        Me.SuperValidator1.SetValidator1(Me.TextBox4, Me.RequiredFieldValidator2)
         '
         'Label3
         '
@@ -1259,11 +1255,6 @@ Public Class Estudiantes
         Me.SuperValidator1.ContainerControl = Me
         Me.SuperValidator1.Highlighter = Me.Highlighter1
         '
-        'RequiredFieldValidator2
-        '
-        Me.RequiredFieldValidator2.ErrorMessage = "Your error message here."
-        Me.RequiredFieldValidator2.HighlightColor = DevComponents.DotNetBar.Validator.eHighlightColor.Red
-        '
         'RequiredFieldValidator1
         '
         Me.RequiredFieldValidator1.ErrorMessage = "Your error message here."
@@ -1349,9 +1340,8 @@ Public Class Estudiantes
     End Sub
     Public Sub guardar()
         Try
-            If SuperValidator1.Validate() Then
-
-                If pcarnet <> "" Then
+            If pcarnet <> "" Then
+                If SuperValidator1.Validate() Then
                     If Not (PictureBox1.Image Is Nothing) Then
                         SqlDataAdapter2.SelectCommand.Parameters.Item("@carnet").Value = pcarnet
                         SqlDataAdapter2.Fill(DataSet11, "fotos")
@@ -1406,14 +1396,15 @@ Public Class Estudiantes
         End Try
     End Sub
 
-    Public Sub buscar(ByVal pcarnet As String)
+    Public Sub buscar(ByVal pacarnet As String)
         'Dim inicio As DateTime = DateTime.Now
         ''---Proceso que se va a realizar
 
-        If Not (pcarnet Is Nothing) Then
+        If Not (pacarnet Is Nothing) Then
 
             guardar()
 
+            pcarnet = pacarnet
             DataSet11.Tables(bd).Clear()
             DataSet11.Tables("fotos").Clear()
 
@@ -1604,5 +1595,6 @@ Public Class Estudiantes
     Private Sub BuscaEstudiante1_selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs) Handles BuscaEstudiante1.selecionado
         buscar(BuscaEstudiante1.seleccionado)
     End Sub
+
 
 End Class

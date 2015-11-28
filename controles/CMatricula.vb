@@ -476,7 +476,7 @@ Public Class CMatricula
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(420, 93)
+        Me.ButtonX1.Location = New System.Drawing.Point(419, 93)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(75, 68)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -494,7 +494,6 @@ Public Class CMatricula
         '
         Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
         Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ListBoxAdv1.CheckStateMember = Nothing
         Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
         Me.ListBoxAdv1.DragDropSupport = True
         Me.ListBoxAdv1.Location = New System.Drawing.Point(249, 24)
@@ -567,6 +566,7 @@ Public Class CMatricula
         matricula.Text = ""
         bingo.Text = ""
         MonedaTextBox2.Text = ""
+        cuaderno.Text = ""
 
         ErrorProvider1.SetError(ComboBox1, "")
         ErrorProvider1.SetError(ComboBox2, "")
@@ -705,21 +705,29 @@ Public Class CMatricula
         End Try
     End Sub
     Sub CargarPagoMatricula(ByVal pcarnet As String, ByVal pano As String)
-        Dim connCobros As New conexionSQL
+        Try
+
+            Dim connCobros As New conexionSQL
         datosCobrosTotal = connCobros.llena("EXEC cobroMatriculaTotal '" & pcarnet & "' ," & pano)
-        datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
-        Dim pendiente = datosCobrosTotal(0)(0) - datosCobrosTotal(0)(1)
-        If datosCobros.Count > 0 Then   '' cobros generados
-            If (pendiente = 0) Then
-                MonedaTextBox2.Text = datosCobrosTotal(0)(0)
+            datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
+            If datosCobros.Count > 0 Then   '' cobros generados
+                Dim pendiente = datosCobrosTotal(0)(0) - datosCobrosTotal(0)(1)
+                If (pendiente = 0) Then
+                    MonedaTextBox2.Text = datosCobrosTotal(0)(0)
+                Else
+                    'MessageBox.Show("Estudiante sin cancelar recibo(s)")
+                    limpia_controles()
+                    datosCobros = Nothing
+                End If
             Else
-                MessageBox.Show("Estudiante sin cancelar recibo(s)")
+                MessageBox.Show("Estudiante sin cobro Matricula, posible aplazado")
+
                 datosCobros = Nothing
             End If
-        Else
-            MessageBox.Show("Estudiante sin cobro Matricula, posible aplazado")
-            datosCobros = Nothing
-        End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error en Cmatricula|CargarPagoMatricula")
+        End Try
     End Sub
 
     Function noNull(ByVal valor As Object) As Object

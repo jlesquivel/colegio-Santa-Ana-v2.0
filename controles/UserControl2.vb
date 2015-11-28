@@ -46,70 +46,70 @@ Public Class UserControl2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserControl2))
-        Bar1 = New DevComponents.DotNetBar.Bar()
-        Nuevo = New DevComponents.DotNetBar.ButtonItem()
-        salvar = New DevComponents.DotNetBar.ButtonItem()
-        Borrar = New DevComponents.DotNetBar.ButtonItem()
-        Buscar = New DevComponents.DotNetBar.ButtonItem()
-        Imprimir = New DevComponents.DotNetBar.ButtonItem()
-        Salir = New DevComponents.DotNetBar.ButtonItem()
-        CType(Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
+        Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.Nuevo = New DevComponents.DotNetBar.ButtonItem()
+        Me.salvar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Borrar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Buscar = New DevComponents.DotNetBar.ButtonItem()
+        Me.Imprimir = New DevComponents.DotNetBar.ButtonItem()
+        Me.Salir = New DevComponents.DotNetBar.ButtonItem()
+        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'Bar1
         '
-        Bar1.AntiAlias = True
-        resources.ApplyResources(Bar1, "Bar1")
-        Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Nuevo, salvar, Borrar, Buscar, Imprimir, Salir})
-        Bar1.Name = "Bar1"
-        Bar1.Stretch = True
-        Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Bar1.TabStop = False
+        Me.Bar1.AntiAlias = True
+        resources.ApplyResources(Me.Bar1, "Bar1")
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Nuevo, Me.salvar, Me.Borrar, Me.Buscar, Me.Imprimir, Me.Salir})
+        Me.Bar1.Name = "Bar1"
+        Me.Bar1.Stretch = True
+        Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.Bar1.TabStop = False
         '
         'Nuevo
         '
-        Nuevo.Image = CType(resources.GetObject("Nuevo.Image"), System.Drawing.Image)
-        Nuevo.Name = "Nuevo"
-        resources.ApplyResources(Nuevo, "Nuevo")
+        Me.Nuevo.Image = CType(resources.GetObject("Nuevo.Image"), System.Drawing.Image)
+        Me.Nuevo.Name = "Nuevo"
+        resources.ApplyResources(Me.Nuevo, "Nuevo")
         '
         'salvar
         '
-        salvar.Image = CType(resources.GetObject("salvar.Image"), System.Drawing.Image)
-        salvar.Name = "salvar"
-        resources.ApplyResources(salvar, "salvar")
+        Me.salvar.Image = CType(resources.GetObject("salvar.Image"), System.Drawing.Image)
+        Me.salvar.Name = "salvar"
+        resources.ApplyResources(Me.salvar, "salvar")
         '
         'Borrar
         '
-        Borrar.Image = CType(resources.GetObject("Borrar.Image"), System.Drawing.Image)
-        Borrar.Name = "Borrar"
-        resources.ApplyResources(Borrar, "Borrar")
+        Me.Borrar.Image = CType(resources.GetObject("Borrar.Image"), System.Drawing.Image)
+        Me.Borrar.Name = "Borrar"
+        resources.ApplyResources(Me.Borrar, "Borrar")
         '
         'Buscar
         '
-        Buscar.Image = CType(resources.GetObject("Buscar.Image"), System.Drawing.Image)
-        Buscar.Name = "Buscar"
-        resources.ApplyResources(Buscar, "Buscar")
+        Me.Buscar.Image = CType(resources.GetObject("Buscar.Image"), System.Drawing.Image)
+        Me.Buscar.Name = "Buscar"
+        resources.ApplyResources(Me.Buscar, "Buscar")
         '
         'Imprimir
         '
-        Imprimir.Image = CType(resources.GetObject("Imprimir.Image"), System.Drawing.Image)
-        Imprimir.Name = "Imprimir"
-        resources.ApplyResources(Imprimir, "Imprimir")
+        Me.Imprimir.Image = CType(resources.GetObject("Imprimir.Image"), System.Drawing.Image)
+        Me.Imprimir.Name = "Imprimir"
+        resources.ApplyResources(Me.Imprimir, "Imprimir")
         '
         'Salir
         '
-        Salir.Image = CType(resources.GetObject("Salir.Image"), System.Drawing.Image)
-        Salir.Name = "Salir"
-        resources.ApplyResources(Salir, "Salir")
+        Me.Salir.Image = CType(resources.GetObject("Salir.Image"), System.Drawing.Image)
+        Me.Salir.Name = "Salir"
+        resources.ApplyResources(Me.Salir, "Salir")
         '
         'UserControl2
         '
-        AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
-        Controls.Add(Bar1)
-        Name = "UserControl2"
+        Me.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar
+        Me.Controls.Add(Me.Bar1)
+        Me.Name = "UserControl2"
         resources.ApplyResources(Me, "$this")
-        CType(Bar1, System.ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
+        CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
 
     End Sub
 #End Region
@@ -162,7 +162,8 @@ Public Class UserControl2
 
     Public Function checkField(ByVal objectt As Object, ByVal metodo As String) As Boolean
         Dim type As Type = objectt.GetType
-        Return type.GetMethod(metodo) IsNot Nothing
+        Dim info As Object = type.GetMethod(metodo)
+        Return (info IsNot Nothing)
     End Function
  
 End Class

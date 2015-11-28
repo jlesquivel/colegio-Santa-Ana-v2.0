@@ -165,7 +165,7 @@ Public Property organizacion() As String
         Me.SuperTabControl1.ReorderTabsEnabled = False
         Me.SuperTabControl1.SelectedTabFont = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.SuperTabControl1.SelectedTabIndex = 6
-        Me.SuperTabControl1.Size = New System.Drawing.Size(1198, 768)
+        Me.SuperTabControl1.Size = New System.Drawing.Size(1198, 765)
         Me.SuperTabControl1.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left
         Me.SuperTabControl1.TabFont = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabControl1.TabHorizontalSpacing = 16
@@ -181,7 +181,7 @@ Public Property organizacion() As String
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(962, 768)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(962, 765)
         Me.SuperTabControlPanel1.TabIndex = 1
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -200,7 +200,7 @@ Public Property organizacion() As String
         Me.SuperTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel2.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel2.Name = "SuperTabControlPanel2"
-        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(962, 768)
+        Me.SuperTabControlPanel2.Size = New System.Drawing.Size(962, 765)
         Me.SuperTabControlPanel2.TabIndex = 2
         Me.SuperTabControlPanel2.TabItem = Me.SuperTabItem2
         '
@@ -219,7 +219,7 @@ Public Property organizacion() As String
         Me.SuperTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel3.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel3.Name = "SuperTabControlPanel3"
-        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(962, 768)
+        Me.SuperTabControlPanel3.Size = New System.Drawing.Size(962, 765)
         Me.SuperTabControlPanel3.TabIndex = 3
         Me.SuperTabControlPanel3.TabItem = Me.SuperTabItem3
         '
@@ -238,7 +238,7 @@ Public Property organizacion() As String
         Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel4.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
-        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(962, 768)
+        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(962, 765)
         Me.SuperTabControlPanel4.TabIndex = 4
         Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
         '
@@ -331,7 +331,7 @@ Public Property organizacion() As String
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1, Me.LabelItem2, Me.LabelItem3})
-        Me.Bar1.Location = New System.Drawing.Point(5, 711)
+        Me.Bar1.Location = New System.Drawing.Point(5, 705)
         Me.Bar1.Name = "Bar1"
         Me.Bar1.Size = New System.Drawing.Size(1190, 22)
         Me.Bar1.Stretch = True
@@ -1110,7 +1110,7 @@ Public Property organizacion() As String
         'frmPrincipal2
         '
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1200, 735)
+        Me.ClientSize = New System.Drawing.Size(1200, 729)
         Me.Controls.Add(Me.SuperTabControl1)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.RibbonControl1)

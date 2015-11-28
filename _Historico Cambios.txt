@@ -51,3 +51,7 @@ HISTORICO
 2015/08/30	#APPact se migra aplicacion a VS2015 y dotnetbar 12.04, y Crystal Reporte 13.0.14
 
 2015/08/1	#APPact CRM
+
+2015/11/18  #APPact Mejora rendimiento de carga de datos de cEstudiante y elimina parpader en frmEstudiante 
+
+2015/11/18	#APPact Mejora en el cMatricula incluye lista de control para efectos 

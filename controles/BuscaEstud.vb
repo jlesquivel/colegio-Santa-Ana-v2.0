@@ -107,6 +107,7 @@ Public Class BuscaEstud
         '
         'ListBox1
         '
+        Me.ListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListBox1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.ItemHeight = 15

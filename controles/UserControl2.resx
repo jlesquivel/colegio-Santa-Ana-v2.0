@@ -225,7 +225,7 @@
     <value>Bar1</value>
   </data>
   <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -243,37 +243,37 @@
     <value>Nuevo</value>
   </data>
   <data name="&gt;&gt;Nuevo.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;salvar.Name" xml:space="preserve">
     <value>salvar</value>
   </data>
   <data name="&gt;&gt;salvar.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;Borrar.Name" xml:space="preserve">
     <value>Borrar</value>
   </data>
   <data name="&gt;&gt;Borrar.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;Buscar.Name" xml:space="preserve">
     <value>Buscar</value>
   </data>
   <data name="&gt;&gt;Buscar.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;Imprimir.Name" xml:space="preserve">
     <value>Imprimir</value>
   </data>
   <data name="&gt;&gt;Imprimir.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;Salir.Name" xml:space="preserve">
     <value>Salir</value>
   </data>
   <data name="&gt;&gt;Salir.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=11.5.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=12.4.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserControl2</value>
