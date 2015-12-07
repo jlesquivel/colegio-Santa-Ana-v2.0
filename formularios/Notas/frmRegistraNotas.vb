@@ -1,9 +1,10 @@
 Imports System.Data.SqlClient
+Imports System.Drawing
 Imports System.Threading
 Imports colegioReportes
 
 Public Class frmRegistraNotas
-     Inherits DevComponents.DotNetBar.Metro.MetroForm
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -188,7 +189,7 @@ Public Class frmRegistraNotas
         '
         'tree
         '
-        tree.CommandText = "SELECT        ano, periodo, nivel, grupo, nombre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            lista_anos_peri" & _
+        tree.CommandText = "SELECT        ano, periodo, nivel, grupo, nombre" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            lista_anos_peri" &
     "odos_niveles" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER BY ano DESC, periodo, nivel, grupo, nombre"
         tree.Connection = SqlConnection1
         '
@@ -207,14 +208,14 @@ Public Class frmRegistraNotas
         '
         'SqlDeleteCommand3
         '
-        SqlDeleteCommand3.CommandText = "DELETE FROM notas WHERE (id = @Original_id) AND (nota = @Original_nota OR @Origin" & _
+        SqlDeleteCommand3.CommandText = "DELETE FROM notas WHERE (id = @Original_id) AND (nota = @Original_nota OR @Origin" &
     "al_nota IS NULL AND nota IS NULL)"
         SqlDeleteCommand3.Connection = SqlConnection1
         SqlDeleteCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nota", System.Data.SqlDbType.Money, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nota", System.Data.DataRowVersion.Original, Nothing)})
         '
         'SqlInsertCommand3
         '
-        SqlInsertCommand3.CommandText = "INSERT INTO notas(nota) VALUES (@nota); SELECT nota, id FROM notas WHERE (id = @@" & _
+        SqlInsertCommand3.CommandText = "INSERT INTO notas(nota) VALUES (@nota); SELECT nota, id FROM notas WHERE (id = @@" &
     "IDENTITY)"
         SqlInsertCommand3.Connection = SqlConnection1
         SqlInsertCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota")})
@@ -226,8 +227,8 @@ Public Class frmRegistraNotas
         '
         'SqlUpdateCommand3
         '
-        SqlUpdateCommand3.CommandText = "UPDATE notas SET nota = @nota WHERE (id = @Original_id) AND (nota = @Original_not" & _
-    "a OR @Original_nota IS NULL AND nota IS NULL); SELECT nota, id FROM notas WHERE " & _
+        SqlUpdateCommand3.CommandText = "UPDATE notas SET nota = @nota WHERE (id = @Original_id) AND (nota = @Original_not" &
+    "a OR @Original_nota IS NULL AND nota IS NULL); SELECT nota, id FROM notas WHERE " &
     "(id = @id)"
         SqlUpdateCommand3.Connection = SqlConnection1
         SqlUpdateCommand3.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Money, 4, "nota"), New System.Data.SqlClient.SqlParameter("@Original_id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nota", System.Data.SqlDbType.Money, 4, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nota", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.[Decimal], 9, System.Data.ParameterDirection.Input, False, CType(18, Byte), CType(0, Byte), "id", System.Data.DataRowVersion.Current, Nothing)})
@@ -240,8 +241,8 @@ Public Class frmRegistraNotas
         '
         'SqlInsertCommand1
         '
-        SqlInsertCommand1.CommandText = "INSERT INTO notas(nota, id, profesora, fecha_nota) VALUES (@nota, @id, @profesora" & _
-    ", @fecha_nota); SELECT nota, id, profesora, fecha_nota FROM notas WHERE (id = @i" & _
+        SqlInsertCommand1.CommandText = "INSERT INTO notas(nota, id, profesora, fecha_nota) VALUES (@nota, @id, @profesora" &
+    ", @fecha_nota); SELECT nota, id, profesora, fecha_nota FROM notas WHERE (id = @i" &
     "d)"
         SqlInsertCommand1.Connection = SqlConnection1
         SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@nota", System.Data.SqlDbType.Int, 4, "nota"), New System.Data.SqlClient.SqlParameter("@id", System.Data.SqlDbType.VarBinary, 8, "id"), New System.Data.SqlClient.SqlParameter("@profesora", System.Data.SqlDbType.VarChar, 15, "profesora"), New System.Data.SqlClient.SqlParameter("@fecha_nota", System.Data.SqlDbType.DateTime, 8, "fecha_nota")})
@@ -264,7 +265,7 @@ Public Class frmRegistraNotas
         '
         'SqlInsertCommand2
         '
-        SqlInsertCommand2.CommandText = "INSERT INTO materia(materia, nombre) VALUES (@materia, @nombre); SELECT materia, " & _
+        SqlInsertCommand2.CommandText = "INSERT INTO materia(materia, nombre) VALUES (@materia, @nombre); SELECT materia, " &
     "nombre FROM materia WHERE (materia = @materia)"
         SqlInsertCommand2.Connection = SqlConnection1
         SqlInsertCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@materia", System.Data.SqlDbType.VarChar, 15, "materia"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
@@ -277,7 +278,7 @@ Public Class frmRegistraNotas
         '
         'SqlDeleteCommand2
         '
-        SqlDeleteCommand2.CommandText = "DELETE FROM materia WHERE (materia = @Original_materia) AND (nombre = @Original_n" & _
+        SqlDeleteCommand2.CommandText = "DELETE FROM materia WHERE (materia = @Original_materia) AND (nombre = @Original_n" &
     "ombre OR @Original_nombre IS NULL AND nombre IS NULL)"
         SqlDeleteCommand2.Connection = SqlConnection1
         SqlDeleteCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@Original_materia", System.Data.SqlDbType.VarChar, 15, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "materia", System.Data.DataRowVersion.Original, Nothing), New System.Data.SqlClient.SqlParameter("@Original_nombre", System.Data.SqlDbType.VarChar, 30, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "nombre", System.Data.DataRowVersion.Original, Nothing)})
@@ -298,7 +299,7 @@ Public Class frmRegistraNotas
         '
         'SqlSelectCommand4
         '
-        SqlSelectCommand4.CommandText = "SELECT      ano, periodo, nivel, grupo, materia, cedula" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM          profesores" & _
+        SqlSelectCommand4.CommandText = "SELECT      ano, periodo, nivel, grupo, materia, cedula" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM          profesores" &
     "_cursos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER BY ano DESC"
         SqlSelectCommand4.Connection = SqlConnection2
         '
@@ -321,8 +322,8 @@ Public Class frmRegistraNotas
         '
         'SqlSelectCommand5
         '
-        SqlSelectCommand5.CommandText = "SELECT id_emp, cedula, apellidos, nombre, categoria, nacimiento, cuenta, ingreso," & _
-    " banco, direccion, telefono, celular, sexo, anualidadReconocida FROM dbo.emplead" & _
+        SqlSelectCommand5.CommandText = "SELECT id_emp, cedula, apellidos, nombre, categoria, nacimiento, cuenta, ingreso," &
+    " banco, direccion, telefono, celular, sexo, anualidadReconocida FROM dbo.emplead" &
     "os"
         SqlSelectCommand5.Connection = SqlConnection3
         '
@@ -582,8 +583,8 @@ Public Class frmRegistraNotas
 
         If partes.Length = 6 Then
 
-            Dim filtro As String = "ano = '" & partes(1) & "' and periodo = '" & partes(2) & _
-                                "' and nivel = '" & partes(3) & "' and grupo = '" & partes(4) & _
+            Dim filtro As String = "ano = '" & partes(1) & "' and periodo = '" & partes(2) &
+                                "' and nivel = '" & partes(3) & "' and grupo = '" & partes(4) &
                                 "' and materia = '" & partes(5) & "'"
 
             DataView2.RowFilter() = filtro                  ' Muestra Nombre de Profesor
@@ -688,5 +689,5 @@ Public Class frmRegistraNotas
         SqlDataAdapter1.Update(DsNotas1.Tables("notas"))
     End Sub
 
-  
+
 End Class

@@ -357,6 +357,7 @@ Public Class CMatricula
         Me.MonedaTextBox2.Name = "MonedaTextBox2"
         Me.MonedaTextBox2.Size = New System.Drawing.Size(82, 20)
         Me.MonedaTextBox2.TabIndex = 5
+        Me.MonedaTextBox2.Text = "₡0,00"
         Me.MonedaTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label8
@@ -494,6 +495,7 @@ Public Class CMatricula
         '
         Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
         Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ListBoxAdv1.CheckStateMember = Nothing
         Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
         Me.ListBoxAdv1.DragDropSupport = True
         Me.ListBoxAdv1.Location = New System.Drawing.Point(249, 24)
@@ -565,7 +567,7 @@ Public Class CMatricula
         poliza.Text = ""
         matricula.Text = ""
         bingo.Text = ""
-        MonedaTextBox2.Text = ""
+        MonedaTextBox2.Text = "0,00"
         cuaderno.Text = ""
 
         ErrorProvider1.SetError(ComboBox1, "")
@@ -711,13 +713,17 @@ Public Class CMatricula
         datosCobrosTotal = connCobros.llena("EXEC cobroMatriculaTotal '" & pcarnet & "' ," & pano)
             datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
             If datosCobros.Count > 0 Then   '' cobros generados
-                Dim pendiente = datosCobrosTotal(0)(0) - datosCobrosTotal(0)(1)
+                Dim pendiente As Decimal = datosCobrosTotal(0)(0) - datosCobrosTotal(0)(1)
                 If (pendiente = 0) Then
                     MonedaTextBox2.Text = datosCobrosTotal(0)(0)
+
+                    ButtonX1.Visible = True
                 Else
                     'MessageBox.Show("Estudiante sin cancelar recibo(s)")
                     limpia_controles()
                     datosCobros = Nothing
+
+                    ButtonX1.Visible = False
                 End If
             Else
                 MessageBox.Show("Estudiante sin cobro Matricula, posible aplazado")
@@ -802,50 +808,57 @@ Public Class CMatricula
     'End Sub
 
     Private Sub MonedaTextBox2_TextChanged(sender As Object, e As EventArgs) Handles MonedaTextBox2.TextChanged
-        Dim Rmatri As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("MATRICULA")
-        Dim Rcuad As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("CUADERNO")
-        Dim Rbingo As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("BINGO")
-        Dim mat, bin, pol, cua, monto As Decimal
+        Try
+            If carnet IsNot Nothing Then
 
 
-        monto = MonedaTextBox2.Text
+                Dim Rmatri As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("MATRICULA")
+                Dim Rcuad As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("CUADERNO")
+                Dim Rbingo As DataRow = DsCuotas1.Tables("cuotas").Rows.Find("BINGO")
+                Dim mat, bin, pol, cua, monto As Decimal
 
-        If monto >= Rmatri.Item("monto") Then
-            mat = Rmatri.Item("monto")
-            cua = Rcuad.Item("monto")
-            monto -= (mat + cua)
 
-            cua = Rcuad.Item("monto")
-            bin = Rbingo.Item("monto")
-            pol = monto - bin
-        End If
+                monto = MonedaTextBox2.Text
 
-        If pol >= 0 And bin >= 0 And mat >= 0 Then
-            poliza.Text = pol
-            bingo.Text = bin
-            matricula.Text = mat
-            cuaderno.Text = cua
+                If monto >= Rmatri.Item("monto") Then
+                    mat = Rmatri.Item("monto")
+                    cua = Rcuad.Item("monto")
+                    monto -= (mat + cua)
 
-            Dim Obind As BindingManagerBase = BindingContext(DataSet21.Tables("matricula"))
-            Dim nuevo As DataRowView = Obind.Current
-            nuevo.Item("monto") = mat
-            nuevo.Item("poliza") = pol
-            nuevo.Item("bingo") = bin
-            nuevo.Item("cuaderno") = cua
-            ErrorProvider1.SetError(MonedaTextBox2, "")
-        Else
+                    cua = Rcuad.Item("monto")
+                    bin = Rbingo.Item("monto")
+                    pol = monto - bin
+                End If
 
-            MonedaTextBox2.Select(0, MonedaTextBox2.Text.Length)
-            ' Set the ErrorProvider error with the text to display. 
-            ErrorProvider1.SetError(MonedaTextBox2, "monto inferior al mínimo")
-        End If
+                If pol >= 0 And bin >= 0 And mat >= 0 Then
+                    poliza.Text = pol
+                    bingo.Text = bin
+                    matricula.Text = mat
+                    cuaderno.Text = cua
 
-        ButtonX1.Visible = True
+                    Dim Obind As BindingManagerBase = BindingContext(DataSet21.Tables("matricula"))
+                    Dim nuevo As DataRowView = Obind.Current
+                    nuevo.Item("monto") = mat
+                    nuevo.Item("poliza") = pol
+                    nuevo.Item("bingo") = bin
+                    nuevo.Item("cuaderno") = cua
+                    ErrorProvider1.SetError(MonedaTextBox2, "")
+                Else
+
+                    MonedaTextBox2.Select(0, MonedaTextBox2.Text.Length)
+                    ' Set the ErrorProvider error with the text to display. 
+                    ErrorProvider1.SetError(MonedaTextBox2, "monto inferior al mínimo")
+                End If
+
+            End If
+        Catch ex As Exception
+            MsgBox("Errror  " & Me.Name)
+        End Try
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         If (error_blanco(ComboBox1) And error_blanco(ComboBox2) And
-           error_blanco(MonedaTextBox2) And error_blanco(TextBox4)) Then
+           error_blanco(MonedaTextBox2)) Then
             guardar()
             Enabled = False
         End If

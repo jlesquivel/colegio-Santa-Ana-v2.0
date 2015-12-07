@@ -1,5 +1,6 @@
 Imports System.ComponentModel
 Imports System.Data.SqlClient
+Imports System.Drawing
 
 Public Class buscar
     Inherits System.Windows.Forms.UserControl
@@ -163,7 +164,7 @@ Public Class buscar
         '
         'SqlInsertCommand1
         '
-        SqlInsertCommand1.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" & _
+        SqlInsertCommand1.CommandText = "INSERT INTO estudiantes(carnet, apellido1, apellido2, nombre) VALUES (@carnet, @a" &
             "pellido1, @apellido2, @nombre)"
         SqlInsertCommand1.Connection = SqlConnection1
         SqlInsertCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet"), New System.Data.SqlClient.SqlParameter("@apellido1", System.Data.SqlDbType.VarChar, 30, "apellido1"), New System.Data.SqlClient.SqlParameter("@apellido2", System.Data.SqlDbType.VarChar, 30, "apellido2"), New System.Data.SqlClient.SqlParameter("@nombre", System.Data.SqlDbType.VarChar, 30, "nombre")})
@@ -323,9 +324,9 @@ Public Class buscar
         PrintDocument1.Print()
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, _
+    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object,
        ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        Dim myPaintArgs As New PaintEventArgs(e.Graphics, New Rectangle(New  _
+        Dim myPaintArgs As New PaintEventArgs(e.Graphics, New Rectangle(New _
            Point(0, 0), Size))
         InvokePaint(DataGrid1, myPaintArgs)
     End Sub

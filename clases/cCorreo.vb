@@ -1,4 +1,5 @@
-﻿Imports System.Net.Mail 'referencia
+﻿Imports System
+Imports System.Net.Mail 'referencia
 
 Public Class cCorreo
     Dim servidor As String = "smtp.gmail.com"

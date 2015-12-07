@@ -23,37 +23,36 @@ Public Class frmReporte
         MyBase.Dispose(disposing)
     End Sub
 
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+
     'Requerido por el Diseñador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        SuspendLayout()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.SuspendLayout()
         '
         'CrystalReportViewer1
         '
-        CrystalReportViewer1.ActiveViewIndex = -1
-        CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
-        CrystalReportViewer1.Name = "CrystalReportViewer1"
-        CrystalReportViewer1.ReportSource = Nothing
-        CrystalReportViewer1.Size = New System.Drawing.Size(631, 445)
-        CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(631, 445)
+        Me.CrystalReportViewer1.TabIndex = 0
         '
         'frmReporte
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(631, 445)
-        Controls.Add(CrystalReportViewer1)
-        Name = "frmReporte"
-        StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Text = "frmReporte"
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(631, 445)
+        Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.DoubleBuffered = True
+        Me.Name = "frmReporte"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.Text = "frmReporte"
+        Me.ResumeLayout(False)
 
     End Sub
 

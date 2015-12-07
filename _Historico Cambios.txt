@@ -28,7 +28,8 @@ HISTORICO
 2012/11/1	
 
 2013/11/15	#APPact	===== Nueva Version 2.0 ==========				
-2013/11/17	#BDact PROC cobrosMatricula  Incluye estudiantes nuevo ingreso sin matricular( se corrigio relacion con matricula para que no exija restriccion )
+2013/11/17	#BDact PROC cobrosMatricula  Incluye estudiantes nuevo ingreso sin matricular
+					( se corrigio relacion con matricula para que no exija restriccion )
 
 2013/11/18  #APPact Cambio dll DotNetBar 8.5 a 11.5 
 2013/11/18  #APPact frmPrincipal2 nuevo Diseño y programacion 

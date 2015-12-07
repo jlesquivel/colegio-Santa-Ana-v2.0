@@ -1,5 +1,6 @@
 
-Imports camera_net
+Imports System.Drawing
+Imports Camera_NET
 Imports DirectShowLib
 
 Public Class frmWebCam2

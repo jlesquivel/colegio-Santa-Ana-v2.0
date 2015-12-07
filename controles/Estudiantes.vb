@@ -2,6 +2,7 @@ Imports System.IO
 Imports System.Drawing.Imaging
 Imports System.ComponentModel
 Imports DevComponents.DotNetBar
+Imports System.Drawing
 
 Public Class Estudiantes
     Inherits System.Windows.Forms.UserControl
@@ -1333,6 +1334,7 @@ Public Class Estudiantes
             UserControl21.salvar.Enabled = True
             Label17.Text = "1"
             TextBox1.Focus()
+            PictureBox1.Image = Nothing
         Catch eEndEdit As System.Exception
             System.Windows.Forms.MessageBox.Show(eEndEdit.Message)
         End Try

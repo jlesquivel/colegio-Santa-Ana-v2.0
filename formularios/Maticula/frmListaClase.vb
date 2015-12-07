@@ -241,7 +241,7 @@ Public Class frmListaClase
         Me.DataGrid1.ReadOnly = True
         Me.DataGrid1.RowHeaderWidth = 21
         Me.DataGrid1.SelectionBackColor = System.Drawing.SystemColors.Info
-        Me.DataGrid1.Size = New System.Drawing.Size(463, 468)
+        Me.DataGrid1.Size = New System.Drawing.Size(463, 384)
         Me.DataGrid1.TabIndex = 1
         Me.DataGrid1.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle1})
         '
@@ -337,7 +337,7 @@ Public Class frmListaClase
         '
         Me.Splitter1.Location = New System.Drawing.Point(184, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(3, 468)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 384)
         Me.Splitter1.TabIndex = 2
         Me.Splitter1.TabStop = False
         '
@@ -376,17 +376,18 @@ Public Class frmListaClase
         TreeNode1.Text = "Años"
         Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeViewSQL1.SelectedImageIndex = 0
-        Me.TreeViewSQL1.Size = New System.Drawing.Size(184, 468)
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(184, 384)
         Me.TreeViewSQL1.TabIndex = 3
         '
         'frmListaClase
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(647, 468)
+        Me.ClientSize = New System.Drawing.Size(647, 384)
         Me.Controls.Add(Me.Splitter1)
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.TreeViewSQL1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.Name = "frmListaClase"
         Me.Text = "Lista Clase"

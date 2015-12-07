@@ -1,4 +1,5 @@
 Imports System.Collections.Generic
+Imports System.Drawing
 Imports System.Security.Principal
 
 Public Class frmPrincipal2
