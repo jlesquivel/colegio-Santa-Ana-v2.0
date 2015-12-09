@@ -1,5 +1,4 @@
 Imports System.Data.SqlClient
-Imports System.Globalization.DateTimeFormatInfo
 
 Public Class frmGenCobro
      Inherits DevComponents.DotNetBar.Metro.MetroForm
@@ -221,113 +220,18 @@ Public Class frmGenCobro
 
     End Sub
 
-    Private Function MesVal(ByVal mes As String) As Integer
-        Dim meses As String() = {"", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
-        Dim pos As Integer = 1
-        While mes <> meses(pos) And pos < 13
-            pos = pos + 1
-        End While
-        MesVal = pos
-    End Function
-
-    Sub cobros_30()
-        Try
-            ' Genera los cobros  llamando al  procedimiento almacenado "cobro"
-            ' y los actualiza en la tabla cobros a traves del SQLAdapter2
-
-            If ComboBox1.SelectedIndex > -1 Then
-
-                Dim anno, mes, concepto As String
-
-                anno = Now.Year
-                mes = MesVal(ComboBox1.Text)
-                concepto = "Mensualidad"
-
-                'consulta los registro en la bd para verificar si se generaron los cobros
-                Dim commando As String = _
-                          "select * from cobros where mes=" & mes & " and year(generado)=" & anno.ToString
-                Dim da As New SqlDataAdapter(commando, SqlConnection1)
-                GenCobro1.Tables("registros").Clear()
-                da.Fill(GenCobro1, "registros")
-
-                Dim registros As Integer = GenCobro1.Tables("registros").Rows.Count
-
-                'If registros = 0 Then
-
-                commando = "EXECUTE cobro '" & anno & "','" & mes & "' ,'" & concepto & "'"
-                conn.ejecuta(commando)
-
-
-                If Not sinMora.Checked Then
-                    commando = "EXECUTE actualiza_multas"
-                    conn.ejecuta(commando)
-                End If
-
-                commando = "EXECUTE cancela_becados_totales"
-                conn.ejecuta(commando)
-
-                Dim escritorio As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-                arch = escritorio & "\COLEGIO SANTA ANA_" & anno & rell(mes) & ".txt"
-
-                conn.llena(GenCobro1, "bncr", "select * from bncr")
-                conn.GeneraArchivo(arch, GenCobro1.Tables("bncr"))
-
-                'Else
-                '    MessageBox.Show(" Los cobros ya fueron generados ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                'End If
-                Close()
-            Else
-            MessageBox.Show("Seleccione un mes", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
-    Sub cobros_15()
-        Dim commando As String = ""
-        Dim da As New SqlDataAdapter(commando, SqlConnection1)
-        GenCobro1.Tables("registros").Clear()
-
-        Dim anno As Integer = Now.Year
-        Dim mes As String = MesVal(ComboBox1.Text)
-        Dim concepto As String = "Mensualidad"
-
-
-        commando = "EXECUTE cobro '" & anno & "','" & mes & "' ,'" & concepto & "'"
-        conn.ejecuta(commando)
-
-        If Not sinMora.Checked Then
-            commando = "EXECUTE actualiza_multas"
-            conn.ejecuta(commando)
-        End If
-
-        Dim escritorio As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-        arch = escritorio & "\COLEGIO SANTA ANA_" & anno & rell(mes) & "- 15.txt"
-
-        conn.llena(GenCobro1, "bncr", "select * from bncr")
-        conn.GeneraArchivo(arch, GenCobro1.Tables("bncr"))
-    End Sub
-
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Close()
     End Sub
 
-    Function rell(ByVal parame As String) As String
-        If parame.Length = 1 Then
-            Return "0" & parame
-        Else
-            Return parame
-        End If
-    End Function
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim oCobro As cCobros = New cCobros
         Select Case Now.Day
             Case 15 To 28
-                cobros_15()
+                oCobro.cobros_15(ComboBox1.Text, sinMora.Checked)
             Case Else
-                cobros_30()
+                oCobro.cobros_30(ComboBox1.Text, sinMora.Checked)
         End Select
-
     End Sub
 End Class

@@ -56,3 +56,8 @@ HISTORICO
 2015/11/18  #APPact Mejora rendimiento de carga de datos de cEstudiante y elimina parpader en frmEstudiante 
 
 2015/11/18	#APPact Mejora en el cMatricula incluye lista de control para efectos 
+
+2015/12/2   *APP  Matricula Busca recibo de Prematricula y Matricula si estan 
+				cancelados permite matricular
+
+2015/12/7   *APP  Reporte INS 2 se le agrego numero de telefono

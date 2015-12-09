@@ -102,7 +102,7 @@ Public Class frmPrincipal2
     End Sub
 
     Private Sub ButtonItem22_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem22.Click
-        oVentana.cargarVentana(New frmGenCobro, Me)
+        oVentana.cargarVentana(New frmCobrosAnual, Me)
     End Sub
     Private Sub ButtonItem24_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem24.Click
         oVentana.cargarVentana(New frmCancelaCobros, Me)
@@ -204,6 +204,11 @@ Public Class frmPrincipal2
 
     Private Sub ButtonItem44_Click(sender As Object, e As EventArgs) Handles ButtonItem44.Click
         oVentana.cargarVentana(New frmNiveles, Me)
+    End Sub
+
+
+    Private Sub ButtonItem34_Click_2(sender As Object, e As EventArgs) Handles ButtonItem34.Click
+        oVentana.cargarVentana(New CISA, Me)
     End Sub
 End Class
 

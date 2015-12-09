@@ -1,17 +1,17 @@
-
+ï»¿
 Public Class frmCancelaCobros
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
 
-#Region " Código generado por el Diseñador de Windows Forms "
+#Region " CÃ³digo generado por el DiseÃ±ador de Windows Forms "
 
     Public Sub New()
         MyBase.New()
 
-        'El Diseñador de Windows Forms requiere esta llamada.
+        'El DiseÃ±ador de Windows Forms requiere esta llamada.
         InitializeComponent()
 
-        'Agregar cualquier inicialización después de la llamada a InitializeComponent()
+        'Agregar cualquier inicializaciÃ³n despuÃ©s de la llamada a InitializeComponent()
 
     End Sub
 
@@ -25,12 +25,12 @@ Public Class frmCancelaCobros
         MyBase.Dispose(disposing)
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Requerido por el DiseÃ±ador de Windows Forms
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms requiere el siguiente procedimiento
-    'Puede modificarse utilizando el Diseñador de Windows Forms. 
-    'No lo modifique con el editor de código.
+    'NOTA: el DiseÃ±ador de Windows Forms requiere el siguiente procedimiento
+    'Puede modificarse utilizando el DiseÃ±ador de Windows Forms. 
+    'No lo modifique con el editor de cÃ³digo.
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
     Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
@@ -54,12 +54,13 @@ Public Class frmCancelaCobros
     Friend WithEvents SqlInsertCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlUpdateCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlDeleteCommand1 As System.Data.SqlClient.SqlCommand
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents BuscaEstud1 As colegio.BuscaEstud
     Friend WithEvents SqlSelectCommand2 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlInsertCommand2 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlUpdateCommand2 As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlDeleteCommand2 As System.Data.SqlClient.SqlCommand
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents SqlConnection2 As System.Data.SqlClient.SqlConnection
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -92,7 +93,8 @@ Public Class frmCancelaCobros
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.BuscaEstud1 = New colegio.BuscaEstud()
         CType(Me.GenCobro1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -140,9 +142,9 @@ Public Class frmCancelaCobros
         '
         'SqlSelectCommand2
         '
-        Me.SqlSelectCommand2.CommandText = "SELECT        carnet, mes, recibo, fecha_recibo, monto, generado, id_cobro" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM " &
-    "           cobros" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (recibo IS NULL) AND (carnet = @carnet)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER B" &
-    "Y mes"
+        Me.SqlSelectCommand2.CommandText = "SELECT        carnet, mes, recibo, fecha_recibo, monto, generado, id_cobro, conce" &
+    "pto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            cobros" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (recibo IS NULL) AND (carnet = @carnet" &
+    ")" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ORDER BY mes"
         Me.SqlSelectCommand2.Connection = Me.SqlConnection2
         Me.SqlSelectCommand2.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@carnet", System.Data.SqlDbType.VarChar, 10, "carnet")})
         '
@@ -186,11 +188,11 @@ Public Class frmCancelaCobros
         'ListView1
         '
         Me.ListView1.CheckBoxes = True
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader4})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2, Me.ColumnHeader1, Me.ColumnHeader4})
         Me.ListView1.LargeImageList = Me.ImageList1
-        Me.ListView1.Location = New System.Drawing.Point(216, 64)
+        Me.ListView1.Location = New System.Drawing.Point(224, 65)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(248, 174)
+        Me.ListView1.Size = New System.Drawing.Size(377, 271)
         Me.ListView1.SmallImageList = Me.ImageList2
         Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
@@ -199,7 +201,7 @@ Public Class frmCancelaCobros
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Recibo"
-        Me.ColumnHeader1.Width = 108
+        Me.ColumnHeader1.Width = 90
         '
         'ColumnHeader4
         '
@@ -221,7 +223,7 @@ Public Class frmCancelaCobros
         'ComboBox1
         '
         Me.ComboBox1.Items.AddRange(New Object() {"Iconos", "Detalles"})
-        Me.ComboBox1.Location = New System.Drawing.Point(352, 16)
+        Me.ComboBox1.Location = New System.Drawing.Point(418, 16)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(104, 21)
         Me.ComboBox1.TabIndex = 3
@@ -231,7 +233,7 @@ Public Class frmCancelaCobros
         Me.TextBox2.Location = New System.Drawing.Point(224, 40)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(232, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(298, 20)
         Me.TextBox2.TabIndex = 4
         '
         'Panel1
@@ -243,10 +245,10 @@ Public Class frmCancelaCobros
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.DateTimePicker1)
         Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Location = New System.Drawing.Point(376, 104)
+        Me.Panel1.Location = New System.Drawing.Point(235, 157)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(480, 279)
-        Me.Panel1.TabIndex = 5
+        Me.Panel1.Size = New System.Drawing.Size(329, 214)
+        Me.Panel1.TabIndex = 6
         Me.Panel1.Visible = False
         '
         'Button2
@@ -260,19 +262,23 @@ Public Class frmCancelaCobros
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(32, 112)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Location = New System.Drawing.Point(25, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 23)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Fecha"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(8, 72)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(25, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 23)
+        Me.Label2.Size = New System.Drawing.Size(64, 23)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Recibo Banco"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Button1
         '
@@ -298,14 +304,22 @@ Public Class frmCancelaCobros
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 0
         '
-        'Button3
+        'ColumnHeader2
         '
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button3.Location = New System.Drawing.Point(224, 248)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 24)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Cancela recibo"
+        Me.ColumnHeader2.Text = "Concepto"
+        Me.ColumnHeader2.Width = 150
+        '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonX1.Location = New System.Drawing.Point(489, 342)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(109, 32)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.Symbol = "ïƒ–"
+        Me.ButtonX1.TabIndex = 0
+        Me.ButtonX1.Text = "Cancela"
         '
         'BuscaEstud1
         '
@@ -313,22 +327,25 @@ Public Class frmCancelaCobros
         Me.BuscaEstud1.Dock = System.Windows.Forms.DockStyle.Left
         Me.BuscaEstud1.Location = New System.Drawing.Point(0, 0)
         Me.BuscaEstud1.Name = "BuscaEstud1"
-        Me.BuscaEstud1.Size = New System.Drawing.Size(184, 279)
+        Me.BuscaEstud1.Size = New System.Drawing.Size(210, 374)
         Me.BuscaEstud1.TabIndex = 0
         '
         'frmCancelaCobros
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.ClientSize = New System.Drawing.Size(536, 279)
+        Me.ClientSize = New System.Drawing.Size(610, 374)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.BuscaEstud1)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Menu = Me.MainMenu1
+        Me.MinimizeBox = False
         Me.Name = "frmCancelaCobros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cancela Cobros"
@@ -396,7 +413,7 @@ Public Class frmCancelaCobros
             TextBox1.Focus()
             buscar(TextBox1.Text)
         Else
-            MessageBox.Show("LLene el número de recibo")
+            MessageBox.Show("LLene el nÃºmero de recibo")
             TextBox3.Focus()
         End If
     End Sub
@@ -434,16 +451,12 @@ Public Class frmCancelaCobros
         Dim fila As DataRow
         For Each fila In GenCobro1.Tables("pendientes").Rows
 
-            If fila("mes") = 0 Then
-                etiqueta = "MATRICULA"
-            Else
-                etiqueta = MonthName(fila("mes"))
-            End If
+            etiqueta = fila("concepto")
 
             Dim nuevo As New ListViewItem(etiqueta, 0)
             nuevo.Checked = True
-            nuevo.SubItems.Add(Format(fila("monto"), "C"))
             nuevo.SubItems.Add(fila("id_cobro"))
+            nuevo.SubItems.Add(Format(fila("monto"), "C"))
 
             ListView1.Items.Add(nuevo)
         Next
@@ -451,7 +464,7 @@ Public Class frmCancelaCobros
     End Sub
 
 
-    Private Sub Button3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub Button3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Panel1.Dock = DockStyle.Fill
         AcceptButton = Button2
         Panel1.Visible = True
@@ -462,4 +475,9 @@ Public Class frmCancelaCobros
         buscar(BuscaEstud1.seleccionado)
     End Sub
 
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
+        Panel1.Dock = DockStyle.Fill
+        AcceptButton = Button2
+        Panel1.Visible = True
+    End Sub
 End Class

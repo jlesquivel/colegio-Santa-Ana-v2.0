@@ -30,18 +30,18 @@
     <MyType>WindowsForms</MyType>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <ManifestCertificateThumbprint>A5F5DBFC504D3FF951DF1AC3F7DA90395ADC4F92</ManifestCertificateThumbprint>
-    <ManifestKeyFile>colegio_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>C3E544C6EAE9F6EBDBBFB71CABA47C4D00BEB0CF</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Col.Santa.Ana 2.0_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <OldToolsVersion>3.5</OldToolsVersion>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Documents and Settings\Administrador\Escritorio\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Unc</InstallFrom>
+    <PublishUrl>ftp://ftp.csalib.org/colegio/</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -49,9 +49,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\servidor-bd\Colegio Instalador\</InstallUrl>
+    <InstallUrl>http://csalib.org/colegio/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -79,7 +80,7 @@
     <WarningsAsErrors>
     </WarningsAsErrors>
     <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -211,6 +212,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_Manual\correo cobros csa.txt" />
+    <None Include="Col.Santa.Ana 2.0_TemporaryKey.pfx" />
     <None Include="formularios\Cobros\dsCuotas.xss">
       <DependentUpon>dsCuotas.xsd</DependentUpon>
     </None>
@@ -400,6 +402,7 @@
     <Compile Include="clases\CargarLista.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clases\cCobros.vb" />
     <Compile Include="clases\cCorreo.vb" />
     <Compile Include="clases\cCRM.vb" />
     <Compile Include="clases\cEstudiantes.vb" />
@@ -418,6 +421,18 @@
     </Compile>
     <Compile Include="controles\CMatricula2.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="formularios\CISA.Designer.vb">
+      <DependentUpon>CISA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\CISA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosAnual.Designer.vb">
+      <DependentUpon>frmCobrosAnual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosAnual.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Cobros\frmCobrosMsj.designer.vb">
       <DependentUpon>frmCobrosMsj.vb</DependentUpon>
@@ -723,6 +738,9 @@
       <DependentUpon>UserControl2.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\CISA.resx">
+      <DependentUpon>CISA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmCancelaCobros.resx">
       <DependentUpon>frmCancelaCobros.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -738,6 +756,9 @@
     <EmbeddedResource Include="formularios\Cobros\frmCobros.resx">
       <DependentUpon>frmCobros.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmCobrosAnual.resx">
+      <DependentUpon>frmCobrosAnual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmCobrosMsj.resx">
       <DependentUpon>frmCobrosMsj.vb</DependentUpon>
@@ -884,15 +905,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="log4net">
+    <PublishFile Include="iconos\Imagenes\cielo.bmp">
       <Visible>False</Visible>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
       <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
   <ItemGroup>

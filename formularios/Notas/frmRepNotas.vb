@@ -1,9 +1,12 @@
+Imports System.ComponentModel
 Imports System.Data.SqlClient
 Imports colegioReportes
 
 Public Class frmRepNotas
-     Inherits DevComponents.DotNetBar.Metro.MetroForm
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim conn As New conexionSQL
+
+
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -23,6 +26,8 @@ Public Class frmRepNotas
             If Not (components Is Nothing) Then
                 components.Dispose()
             End If
+
+
         End If
         MyBase.Dispose(disposing)
     End Sub
@@ -59,7 +64,7 @@ Public Class frmRepNotas
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(10, 101)
+        Me.ComboBox1.Location = New System.Drawing.Point(10, 95)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(123, 21)
         Me.ComboBox1.TabIndex = 3
@@ -197,6 +202,7 @@ Public Class frmRepNotas
         Me.Controls.Add(Me.ExplorerBar1)
         Me.Controls.Add(Me.Splitter1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmRepNotas"
         Me.Text = "Reporte Notas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -256,7 +262,7 @@ Public Class frmRepNotas
                 CrystalReportViewer1.ReportSource = oreporte
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
@@ -268,6 +274,7 @@ Public Class frmRepNotas
             ComboBox1.Items.Add(i.ToString)
         Next
         ComboBox1.SelectedIndex = 0
+
     End Sub
 
     Private Sub ButtonItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem1.Click
@@ -278,6 +285,7 @@ Public Class frmRepNotas
         Dim cob As New colegioReportes.rptNotas()
         inserta_parametro(cob, "@ano", CInt(ComboBox1.SelectedItem))
         imprimir(cob, False, ParentForm)
+
     End Sub
 
     Private Sub ButtonItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem2.Click
@@ -287,6 +295,7 @@ Public Class frmRepNotas
         cob.PrintOptions.PaperSize = CrystalDecisions.[Shared].PaperSize.PaperLetter
         cob.SummaryInfo.ReportComments = "Reporte Acádemico"
         imprimir(cob, False, ParentForm)
+
     End Sub
 
     Private Sub ButtonItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem3.Click
@@ -296,6 +305,10 @@ Public Class frmRepNotas
         cob.PrintOptions.PaperSize = CrystalDecisions.[Shared].PaperSize.PaperLetter
         cob.SummaryInfo.ReportComments = "Reporte Acádemico Anual"
         imprimir(cob, False, ParentForm)
+    End Sub
+
+    Private Sub frmRepNotas_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        GC.Collect(0)
     End Sub
 End Class
 

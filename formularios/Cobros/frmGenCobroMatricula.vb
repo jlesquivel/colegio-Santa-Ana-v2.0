@@ -1,8 +1,6 @@
 Imports System.Data.SqlClient
-'Imports System
-
 Public Class frmGenCobroMatricula
-     Inherits DevComponents.DotNetBar.Metro.MetroForm
+    Inherits DevComponents.DotNetBar.Metro.MetroForm
     '  Public WithEvents listener As New ThemeListener(Me)
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -227,7 +225,6 @@ Public Class frmGenCobroMatricula
         NumericUpDown1.Value = Now.Year
         NumericUpDown1.Maximum = Now.Year
 
-
         Select Case Now.Month
             Case 1, 2, 3, 4
                 NumericUpDown1.Value = Now.Year - 1
@@ -236,15 +233,13 @@ Public Class frmGenCobroMatricula
         End Select
 
         Dim anno As Integer = NumericUpDown1.Value         ' consulta los meses generados del combobox
-        Dim commando As String = _
+        Dim commando As String =
                  "select DISTINCT mes from cobros where year(generado)=" & anno.ToString
         Dim da As New SqlDataAdapter(commando, SqlConnection1)
         GenCobro1.Tables("registros").Clear()
         da.Fill(GenCobro1, "registros")
 
     End Sub
-
-
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Close()
@@ -257,42 +252,10 @@ Public Class frmGenCobroMatricula
         val1 = CDec(TextBox1.Text)
         val2 = CDec(TextBox2.Text)
         anno = CStr(NumericUpDown1.Value)
+        Dim cob As New cCobros
 
-        cobros_Matricula(anno, val1, ("Matricula " & (Now.Year + 1).ToString), 2)
-        cobros_Matricula(anno, val2, ("Prematricula " & (Now.Year + 1).ToString), 3)
-    End Sub
-
-    Sub cobros_Matricula(ByVal anno As String, ByVal monto As Decimal, ByVal concepto As String, ByVal convenio As Decimal)
-        Try
-            ' Genera los cobros  llamando al  procedimiento almacenado "cobro"
-            ' y los actualiza en la tabla cobros a traves del SQLAdapter2
-
-            If monto > 0 Then
-                Dim mes As String = 0
-
-                'consulta los registro en la bd para verificar si se generaron los cobros
-                Dim commando As String = _
-                          "select * from cobros where mes=" & mes & " and year(generado)=" & anno.ToString
-                Dim da As New SqlDataAdapter(commando, SqlConnection1)
-                GenCobro1.Tables("registros").Clear()
-                da.Fill(GenCobro1, "registros")
-
-                commando = "EXECUTE cobroMatricula '" & anno & "','" & mes & "' ,'" & concepto & "' ," & monto & " ," & convenio
-                conn.ejecuta(commando)
-
-                Dim escritorio As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-                arch = escritorio & "\COLEGIO_SANTAANA_00" & convenio.ToString & "_" & anno.ToString & ".txt"
-                conn.llena(GenCobro1, "bncr", "select * from bncrMatricula where convenio=00" & convenio.ToString)
-
-                Dim res As String = conn.GeneraArchivo(arch, GenCobro1.Tables("bncr"))
-
-                Close()
-            Else
-                MessageBox.Show("Seleccione un mes", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        cob.cobros_Matricula(anno, val1, ("Matricula " & (Now.Year + 1).ToString), 2)
+        cob.cobros_Matricula(anno, val2, ("Prematricula " & (Now.Year + 1).ToString), 3)
     End Sub
 
 End Class
