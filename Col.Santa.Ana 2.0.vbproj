@@ -37,7 +37,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <OldToolsVersion>3.5</OldToolsVersion>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <PublishUrl>ftp://ftp.csalib.org/colegio/</PublishUrl>
     <Install>false</Install>
@@ -81,6 +81,7 @@
     </WarningsAsErrors>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
@@ -103,6 +104,7 @@
     <WarningsAsErrors>
     </WarningsAsErrors>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -131,6 +133,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
   </ItemGroup>
@@ -212,7 +215,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="_Manual\correo cobros csa.txt" />
-    <None Include="Col.Santa.Ana 2.0_TemporaryKey.pfx" />
+    <Content Include="_Notas\_ POR HACER.txt" />
+    <Content Include="_Notas\_Historico Cambios.txt" />
     <None Include="formularios\Cobros\dsCuotas.xss">
       <DependentUpon>dsCuotas.xsd</DependentUpon>
     </None>
@@ -248,27 +252,14 @@
     <Content Include="iconos\Imagenes\estudiante_logo.png" />
     <Content Include="iconos\Imagenes\flechaRoja.png" />
     <None Include="Plantillas\constPagoEstud.docx" />
-    <None Include="Resources\158.png" />
     <None Include="Resources\nDB.bmp" />
     <None Include="Resources\Misc-Delete-Database-icon.png" />
     <None Include="Resources\Gal02_091.png" />
-    <None Include="Resources\093.png" />
-    <None Include="Resources\0931.png" />
-    <None Include="Resources\422.png" />
-    <None Include="Resources\4221.png" />
     <None Include="Resources\mail.ico" />
     <None Include="Resources\login.png" />
     <None Include="Resources\paragraph-justify-2.png" />
-    <Content Include="_Historico Cambios.txt" />
-    <Content Include="_ POR HACER.txt" />
     <None Include="Resources\240.png" />
     <None Include="Resources\171.png" />
-    <None Include="Resources\092.png" />
-    <None Include="Resources\413.png" />
-    <None Include="Resources\341.png" />
-    <None Include="Resources\353.png" />
-    <None Include="Resources\017.png" />
-    <None Include="Resources\EXCEL 026.ico" />
     <None Include="app.config" />
     <None Include="formularios\colegioDataSet.xsc">
       <DependentUpon>colegioDataSet.xsd</DependentUpon>
@@ -409,6 +400,7 @@
     <Compile Include="clases\conexionSQL.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clases\cProcesosRemotos.vb" />
     <Compile Include="clases\cWord.vb" />
     <Compile Include="clases\NetworkInformation.vb" />
     <Compile Include="clases\Notas.vb" />

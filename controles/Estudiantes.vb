@@ -390,7 +390,7 @@ Public Class Estudiantes
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(79, 16)
         Me.Label18.TabIndex = 50
-        Me.Label18.Text = "Teléfono"
+        Me.Label18.Text = "Celular Estud."
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'GroupBox1
@@ -687,7 +687,7 @@ Public Class Estudiantes
         '
         'TextBox17
         '
-        Me.TextBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.telefono", True))
+        Me.TextBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular2", True))
         Me.TextBox17.Location = New System.Drawing.Point(262, 176)
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.Size = New System.Drawing.Size(88, 20)
@@ -725,7 +725,7 @@ Public Class Estudiantes
         '
         'TextBox16
         '
-        Me.TextBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.telefono", True))
+        Me.TextBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular1", True))
         Me.TextBox16.Location = New System.Drawing.Point(262, 65)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(88, 20)
@@ -1059,9 +1059,9 @@ Public Class Estudiantes
         Me.SuperTabControl1.ControlBox.Name = ""
         Me.SuperTabControl1.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl1.ControlBox.MenuBox, Me.SuperTabControl1.ControlBox.CloseBox})
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel1)
-        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel3)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel2)
+        Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel4)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel5)
         Me.SuperTabControl1.Controls.Add(Me.SuperTabControlPanel6)
         Me.SuperTabControl1.Dock = System.Windows.Forms.DockStyle.Fill

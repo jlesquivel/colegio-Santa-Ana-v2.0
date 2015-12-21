@@ -698,6 +698,8 @@ Public Class CMatricula
                                              + noNull(regis.Item("poliza")) _
                                              + noNull(regis.Item("cuaderno")) _
                                              + noNull(regis.Item("monto"))
+
+                    ButtonX1.Visible = True
                 Else
                     limpia_controles()
                 End If

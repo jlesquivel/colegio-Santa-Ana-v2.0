@@ -1,6 +1,12 @@
 Imports System.Collections.Generic
+Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Security.Principal
+
+
+Imports System
+Imports System.Management
 
 Public Class frmPrincipal2
     Inherits DevComponents.DotNetBar.RibbonForm
@@ -8,6 +14,8 @@ Public Class frmPrincipal2
     Public institucion As String
     Dim AppImp As Printing.PrinterSettings
     Dim oVentana As New Ventanas
+    Dim proceso As Boolean = False  ' indicar si el servidor de carga esta corriendo
+
 
     Public Sub New()
         ' Llamada necesaria para el diseñador.
@@ -162,6 +170,10 @@ Public Class frmPrincipal2
             MicroChartItem1.DataPoints = points
             MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
         End If
+        ServCobros.SymbolColor = Color.Gray
+
+        BackgroundWorker1.RunWorkerAsync() ' ejecuta actualizacion de indicador de carga cobros del servidor
+
     End Sub
 
     Private Sub ButtonItem39_Click(sender As Object, e As EventArgs) Handles ButtonItem39.Click
@@ -210,5 +222,26 @@ Public Class frmPrincipal2
     Private Sub ButtonItem34_Click_2(sender As Object, e As EventArgs) Handles ButtonItem34.Click
         oVentana.cargarVentana(New CISA, Me)
     End Sub
+
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        Dim serv As New cProcesosRemotos
+        Dim conn2 As New conexionSQL
+
+        proceso = serv.isProceso(conn2.servidor, "ApPagos.exe", "AdmBD", "Liber1a")
+
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        ServCobros.SymbolColor = If(proceso, Color.Green, Color.Red)
+        ' ServCobros.Text = "Servidor <br/> Cobros"
+        'If Not proceso Then
+        '    Dim serv As New cProcesosRemotos
+        '    Dim conn2 As New conexionSQL
+        '    serv.CreateProcess(conn2.servidor, "C:\Program Files (x86)\ApPagos\ApPagos.exe", "AdmBD", "Liber1a")
+        'End If
+
+
+    End Sub
+
 End Class
 

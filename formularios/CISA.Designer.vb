@@ -44,7 +44,6 @@ Partial Class CISA
         Me.Controls.Add(Me.WebBrowser1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "CISA"
         Me.Text = "Sistema Cobro CISA"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

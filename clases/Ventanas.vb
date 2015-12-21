@@ -16,7 +16,7 @@ Public Class Ventanas
         If Not existe Then          'carga la ventana
             Dim frm As New Form
             frm = pfrm
-            frm.BackColor = base.BackColor
+            '' frm.BackColor = base.BackColor
 
             frm.MdiParent = base
             frm.StartPosition = FormStartPosition.CenterScreen

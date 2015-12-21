@@ -56,8 +56,8 @@ Public Class frmCobros
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,7 +96,7 @@ Public Class frmCobros
         Me.LinkLabel3.Size = New System.Drawing.Size(120, 24)
         Me.LinkLabel3.TabIndex = 3
         Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "Pagos por dia"
+        Me.LinkLabel3.Text = "Morosos Matricula"
         Me.LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel4
@@ -166,6 +166,16 @@ Public Class frmCobros
         Me.Panel1.Size = New System.Drawing.Size(133, 511)
         Me.Panel1.TabIndex = 4
         '
+        'LinkLabel8
+        '
+        Me.LinkLabel8.Location = New System.Drawing.Point(7, 174)
+        Me.LinkLabel8.Name = "LinkLabel8"
+        Me.LinkLabel8.Size = New System.Drawing.Size(120, 24)
+        Me.LinkLabel8.TabIndex = 8
+        Me.LinkLabel8.TabStop = True
+        Me.LinkLabel8.Text = "Estad.Cuenta Morosos"
+        Me.LinkLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'CrystalReportViewer1
         '
         Me.CrystalReportViewer1.ActiveViewIndex = -1
@@ -181,16 +191,6 @@ Public Class frmCobros
         Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(748, 511)
         Me.CrystalReportViewer1.TabIndex = 5
-        '
-        'LinkLabel8
-        '
-        Me.LinkLabel8.Location = New System.Drawing.Point(7, 174)
-        Me.LinkLabel8.Name = "LinkLabel8"
-        Me.LinkLabel8.Size = New System.Drawing.Size(120, 24)
-        Me.LinkLabel8.TabIndex = 8
-        Me.LinkLabel8.TabStop = True
-        Me.LinkLabel8.Text = "Estad.Cuenta Morosos"
-        Me.LinkLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmCobros
         '
@@ -298,8 +298,8 @@ Public Class frmCobros
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-        Dim cob As New rptGrafPagos
-        cob.PrintOptions.PaperOrientation = CrystalDecisions.[Shared].PaperOrientation.Landscape
+        Dim cob As New rptCobrosMorososClaseMatricula
+        inserta_parametro(cob, "@ano", ComboBox1.SelectedItem)
         imprimir(cob, False)
     End Sub
 

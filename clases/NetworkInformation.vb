@@ -1,9 +1,9 @@
-﻿Option Explicit On
-Option Strict On
-'' #######################  VER EJEMPLO DE COMO USAR AL FINAL
+﻿'' #######################  VER EJEMPLO DE COMO USAR AL FINAL
 Imports System
 Imports System.ComponentModel
 Imports System.Runtime.InteropServices
+
+Imports System.Management
 
 Public NotInheritable Class NetworkInformation
 
@@ -98,6 +98,9 @@ Public NotInheritable Class NetworkInformation
                 Return "Imposibe determinar el estatus de " & ComputerName
         End Select
     End Function
+
+
+
 End Class
 
 ''  EJEMPLO DE  COMO USAR LA CLASE

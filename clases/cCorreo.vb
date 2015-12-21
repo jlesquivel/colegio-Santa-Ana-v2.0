@@ -21,13 +21,14 @@ Public Class cCorreo
     Public Sub enviar_mail(ByVal i_de As String, ByVal i_para As String, ByVal asunto As String, ByVal mensaje As String)
 
         Dim insMail As New MailMessage(i_de, i_para)
+
         With insMail
             .Subject = asunto
             .IsBodyHtml = True 'envia el mensaje como html
             .Body = mensaje
             .IsBodyHtml = True
             .From = New MailAddress(i_de, "COLEGIO SANTA ANA")
-            .ReplyTo = New MailAddress(i_de)
+            .ReplyToList.Add(i_de)
 
         End With
 

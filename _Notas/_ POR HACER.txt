@@ -1,0 +1,12 @@
+
+github   usuario: jlesquivel@hotmail.com clave: Jo$e1971
+
+Data Source=SERVIDOR-BD;Initial Catalog=colegio;Integrated Security=True
+
+
+
+# manual de usuario nuevo
+
+| + enviar por correo los avisos de cobro
+
+	
