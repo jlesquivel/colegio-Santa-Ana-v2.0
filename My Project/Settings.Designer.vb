@@ -208,6 +208,42 @@ Namespace My
                 Me("Slogan") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("http://servidor-bd/app/colegio/colegio.xml")>  _
+        Public Property ServActilizacion() As String
+            Get
+                Return CType(Me("ServActilizacion"),String)
+            End Get
+            Set
+                Me("ServActilizacion") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("95000")>  _
+        Public Property matricula() As Decimal
+            Get
+                Return CType(Me("matricula"),Decimal)
+            End Get
+            Set
+                Me("matricula") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("95000")>  _
+        Public Property prematricula() As Decimal
+            Get
+                Return CType(Me("prematricula"),Decimal)
+            End Get
+            Set
+                Me("prematricula") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

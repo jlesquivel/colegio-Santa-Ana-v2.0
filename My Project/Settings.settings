@@ -51,5 +51,14 @@
     <Setting Name="Slogan" Type="System.String" Scope="User">
       <Value Profile="(Default)">Educar Evangelizado desde la Hospitalidad</Value>
     </Setting>
+    <Setting Name="ServActilizacion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://servidor-bd/app/colegio/colegio.xml</Value>
+    </Setting>
+    <Setting Name="matricula" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">95000</Value>
+    </Setting>
+    <Setting Name="prematricula" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">95000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1,12 +1,15 @@
 Imports System.Collections.Generic
 Imports System.ComponentModel
-Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Security.Principal
+Imports AutoUpdaterDotNET
 
-
-Imports System
-Imports System.Management
+'TODO Al efecuar un traslado eliminar todos los cobros de ese mes en adelantes (si es < 15 el dia mantener el mes actual)
+'OK AutoActualizar
+'TODO Enviar cobros por correo electronico solo los pendientes a la fecha
+'TODO a la ventana de cancelar recibos asignar el periodo de cobro enero-2015
+'TODO Agregar formula 14
+'TODO Convertir modulo de recoleccion de notas via web
 
 Public Class frmPrincipal2
     Inherits DevComponents.DotNetBar.RibbonForm
@@ -25,6 +28,24 @@ Public Class frmPrincipal2
 
     End Sub
 
+    Private Sub frmPrincipal2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+
+        Dim myUri As New Uri(My.Settings.ServActilizacion)
+        Dim host As String = myUri.Host
+
+        If My.Computer.Network.Ping(host, 400) Then
+            AddHandler AutoUpdater.CheckForUpdateEvent, AddressOf AutoUpdaterRevisarEvent
+            AutoUpdater.Start(My.Settings.ServActilizacion)
+        End If
+
+        institucion = My.Settings.institucion
+        organizacion = My.Settings.institucion
+        Text = My.Settings.institucion
+        AppImp = New Printing.PrinterSettings
+        RibbonMatricula.Select()
+    End Sub
+
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim sqlcon As New conexionSQL
 
@@ -34,7 +55,7 @@ Public Class frmPrincipal2
         LabelItem1.Text = sqlcon.servidor
 
         ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
-        ButtonItem41.Enabled = (DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
+        ButtonItem41.Enabled = (DateTime.Now.Month = 1 Or DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
 
         RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
         'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
@@ -43,35 +64,15 @@ Public Class frmPrincipal2
             .Item(0) = .Item(4)
         End With
 
+        LabelX1.Text = My.Application.Info.Version.ToString()
+
     End Sub
 
     Private Sub frmPrincipal2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
     End Sub
 
-    Private Sub frmPrincipal2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        '' Dim oVentana As Ventanas = New Ventanas
-        '' oVentana.cambia_fondoMDI(Me)
-
-        'Me.LabelItem3.Text = WindowsIdentity.GetCurrent.Name
-        'Me.LabelItem2.Text = Format(Now.Date, "D")
-        'Me.LabelItem1.Text = sqlcon.servidor
-
-        institucion = My.Settings.institucion
-        organizacion = My.Settings.institucion
-        Text = My.Settings.institucion
-        AppImp = New Printing.PrinterSettings
-        RibbonMatricula.Select()
-
-
-        'prueba
-        'If Not sqlcon.conexionOK Then
-        '    MessageBoxEx.Show("No se pudo conectar al servido SQL, Intente luego", "SQL Error!", _
-        '     MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Me.Close()
-        'End If
-    End Sub
     Private Sub ButtonItem18_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem18.Click
         Application.Exit()
     End Sub
@@ -168,7 +169,7 @@ Public Class frmPrincipal2
             points.Add(resultado(0)(0))
             points.Add(resultado(0)(1))
             MicroChartItem1.DataPoints = points
-            MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado: {0}", "Pendientes: {0}"})
+            MicroChartItem1.DataPointTooltips = New List(Of String)(New String() {"Cancelado:   {0}", "Pendientes: {0}"})
         End If
         ServCobros.SymbolColor = Color.Gray
 
@@ -223,24 +224,48 @@ Public Class frmPrincipal2
         oVentana.cargarVentana(New CISA, Me)
     End Sub
 
+
+    ''' <summary>
+    ''' Consulta el servidor para verificar si esta cargado el servidor
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Dim serv As New cProcesosRemotos
         Dim conn2 As New conexionSQL
 
         proceso = serv.isProceso(conn2.servidor, "ApPagos.exe", "AdmBD", "Liber1a")
-
     End Sub
-
+    ''' <summary>
+    ''' aactualiza color de boton
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
         ServCobros.SymbolColor = If(proceso, Color.Green, Color.Red)
-        ' ServCobros.Text = "Servidor <br/> Cobros"
-        'If Not proceso Then
-        '    Dim serv As New cProcesosRemotos
-        '    Dim conn2 As New conexionSQL
-        '    serv.CreateProcess(conn2.servidor, "C:\Program Files (x86)\ApPagos\ApPagos.exe", "AdmBD", "Liber1a")
-        'End If
+    End Sub
 
+    Private Sub AutoUpdaterRevisarEvent(args As UpdateInfoEventArgs)
+        If args IsNot Nothing Then
+            If (args.IsUpdateAvailable) Then
+                Dim dialogResult = MessageBox.Show(String.Format(
+               "Existe una nueva versión {0} desea actualizarla ?",
+               args.CurrentVersion), "Actualización Disponible",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Information)
 
+                If (dialogResult.Equals(dialogResult.Yes)) Then
+                    Try
+                        AutoUpdater.DownloadUpdate()
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, ex.GetType().ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                End If
+            End If
+        Else
+            MessageBox.Show(
+                   "Problemas con la conexión internet. intente más tarde.",
+                   "Error servidor ", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
 End Class

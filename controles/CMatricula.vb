@@ -11,6 +11,8 @@ Public Class CMatricula
     Dim datosCobros As New ArrayList
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ListBoxAdv1 As DevComponents.DotNetBar.ListBoxAdv
+    Friend WithEvents Label1 As Label
+    Friend WithEvents beca As MonedaTextBox
     Dim datosCobrosTotal As New ArrayList
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -123,6 +125,8 @@ Public Class CMatricula
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.ListBoxAdv1 = New DevComponents.DotNetBar.ListBoxAdv()
+        Me.beca = New colegio.MonedaTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataSet21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsCuotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -357,7 +361,7 @@ Public Class CMatricula
         Me.MonedaTextBox2.Name = "MonedaTextBox2"
         Me.MonedaTextBox2.Size = New System.Drawing.Size(82, 20)
         Me.MonedaTextBox2.TabIndex = 5
-        Me.MonedaTextBox2.Text = "₡0,00"
+        Me.MonedaTextBox2.Text = "₡0"
         Me.MonedaTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label8
@@ -495,19 +499,42 @@ Public Class CMatricula
         '
         Me.ListBoxAdv1.BackgroundStyle.Class = "ListBoxAdv"
         Me.ListBoxAdv1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ListBoxAdv1.CheckStateMember = Nothing
         Me.ListBoxAdv1.ContainerControlProcessDialogKey = True
         Me.ListBoxAdv1.DragDropSupport = True
-        Me.ListBoxAdv1.Location = New System.Drawing.Point(249, 24)
+        Me.ListBoxAdv1.Location = New System.Drawing.Point(249, 20)
         Me.ListBoxAdv1.Name = "ListBoxAdv1"
         Me.ListBoxAdv1.Size = New System.Drawing.Size(160, 136)
         Me.ListBoxAdv1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeMobile2014
         Me.ListBoxAdv1.TabIndex = 76
         Me.ListBoxAdv1.Text = "ListBoxAdv1"
         '
+        'beca
+        '
+        Me.beca.BackColor = System.Drawing.SystemColors.Info
+        Me.beca.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet21, "matricula.beca", True))
+        Me.beca.FormatoText = colegio.MonedaTextBox.formatos.Numero
+        Me.beca.Location = New System.Drawing.Point(160, 97)
+        Me.beca.Name = "beca"
+        Me.beca.Size = New System.Drawing.Size(64, 20)
+        Me.beca.TabIndex = 77
+        Me.beca.Text = "0,00"
+        Me.beca.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(168, 80)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 11)
+        Me.Label1.TabIndex = 78
+        Me.Label1.Text = "Beca"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'CMatricula
         '
         Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.beca)
         Me.Controls.Add(Me.ListBoxAdv1)
         Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.cuaderno)
@@ -569,6 +596,7 @@ Public Class CMatricula
         bingo.Text = ""
         MonedaTextBox2.Text = "0,00"
         cuaderno.Text = ""
+        beca.Text = "0,00"
 
         ErrorProvider1.SetError(ComboBox1, "")
         ErrorProvider1.SetError(ComboBox2, "")

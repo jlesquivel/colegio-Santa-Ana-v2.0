@@ -24,7 +24,14 @@ Public Class Notas
     End Sub
     Public Sub CreaNotasConv2()
         Try
-            conn.ejecuta(("EXEC crea_notas '5', '" & Year(Now) & "'"))
+            Dim año As String = ""
+            Select Case Month(Now)
+                Case 1, 2, 3, 4
+                    año = Year(Now) - 1
+                Case Else
+                    año = Year(Now)
+            End Select
+            conn.ejecuta(("EXEC crea_notas '5', '" & año & "'"))
             MessageBox.Show(" Notas Presentación Generadas ", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show(ex.Message)

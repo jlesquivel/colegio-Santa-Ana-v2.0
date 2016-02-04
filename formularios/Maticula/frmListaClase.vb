@@ -6,7 +6,7 @@ Public Class frmListaClase
     Dim partes As String()
     Public conn As New conexionSQL
     Friend WithEvents MenuItem13 As MenuItem
-    Public frmReporte As New frmReporte()
+    ''Public frmReporte As New frmReporte()
 
 
 #Region " Código generado por el Diseñador de Windows Forms "
@@ -310,8 +310,8 @@ Public Class frmListaClase
         '
         'SqlConnection3
         '
-        Me.SqlConnection3.ConnectionString = "workstation id=""EG-HPZE5547"";packet size=4096;integrated security=SSPI;data sourc" &
-    "e=SERVIDOR_BD;persist security info=False;initial catalog=colegio"
+        Me.SqlConnection3.ConnectionString = "Data Source=servidor-bd;Initial Catalog=colegio;Persist Security Info=True;User I" &
+    "D=sa;Password=123"
         Me.SqlConnection3.FireInfoMessageEventOnUserErrors = False
         '
         'SqlSelectCommand3
@@ -387,7 +387,6 @@ Public Class frmListaClase
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.TreeViewSQL1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.Name = "frmListaClase"
         Me.Text = "Lista Clase"
