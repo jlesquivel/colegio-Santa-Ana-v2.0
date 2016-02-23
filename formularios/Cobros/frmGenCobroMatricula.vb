@@ -385,6 +385,8 @@ Public Class frmGenCobroMatricula
 
         cob.cobros_Matricula(anno, val1, ("Matricula " & anno_descrip), 2, BuscaEstud1.seleccionado)
         cob.cobros_Matricula(anno, val2, ("Prematricula " & anno_descrip), 3, BuscaEstud1.seleccionado)
+
+        CEstadoCuenta1.buscar(BuscaEstud1.seleccionado)
     End Sub
 
     Private Sub BuscaEstud1_selecionado(sender As Object, e As SeleccionadoEventArgs) Handles BuscaEstud1.selecionado

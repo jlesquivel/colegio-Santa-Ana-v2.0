@@ -459,6 +459,7 @@ Public Class frmMatriculaV
                     CMatricula1.Enabled = True
                     CMatricula1.buscar(carnet, NumericUpDown1.Text)
             End Select
+
         End If
     End Sub
 

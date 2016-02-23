@@ -27,6 +27,7 @@ Partial Class frmCobrosAnual
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.bw = New System.ComponentModel.BackgroundWorker()
+        Me.chkMora = New DevComponents.DotNetBar.Controls.CheckBoxX()
         Me.SuspendLayout()
         '
         'CircularProgress1
@@ -66,12 +67,27 @@ Partial Class frmCobrosAnual
         'bw
         '
         '
+        'chkMora
+        '
+        '
+        '
+        '
+        Me.chkMora.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.chkMora.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkMora.Location = New System.Drawing.Point(141, 106)
+        Me.chkMora.Name = "chkMora"
+        Me.chkMora.Size = New System.Drawing.Size(100, 23)
+        Me.chkMora.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.chkMora.TabIndex = 2
+        Me.chkMora.Text = "Mora"
+        '
         'frmCobrosAnual
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(339, 156)
+        Me.Controls.Add(Me.chkMora)
         Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.CircularProgress1)
         Me.DoubleBuffered = True
@@ -89,4 +105,5 @@ Partial Class frmCobrosAnual
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents Timer1 As Timer
     Friend WithEvents bw As System.ComponentModel.BackgroundWorker
+    Friend WithEvents chkMora As DevComponents.DotNetBar.Controls.CheckBoxX
 End Class

@@ -196,6 +196,7 @@ Public Class frmCancelaCobros
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(362, 251)
         Me.ListView1.SmallImageList = Me.ImageList2
+        Me.ListView1.Sorting = System.Windows.Forms.SortOrder.Ascending
         Me.ListView1.TabIndex = 2
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -463,7 +464,9 @@ Public Class frmCancelaCobros
         Dim fila As DataRow
         For Each fila In GenCobro1.Tables("pendientes").Rows
 
-            etiqueta = fila("concepto")
+            Dim fecha As Date = fila("generado")
+
+            etiqueta = fecha.Year.ToString & " " & fila("concepto") & " " & CInt(fila("mes")).ToString("D2")
 
             Dim nuevo As New ListViewItem(etiqueta, 0)
             nuevo.Checked = True

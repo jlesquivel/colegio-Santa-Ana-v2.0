@@ -28,7 +28,12 @@ Public Class frmCobrosAnual
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles bw.DoWork
         Dim oCobros As cCobros = New cCobros
-        oCobros.cobros_anual(True)
+        If chkMora.CheckState = CheckState.Checked Then
+            oCobros.cobros_anual(True)       '  GENERA COBROS ANUAL y CALCULA MOROSIDAD
+        Else
+            oCobros.cobros_anual(False)       '  GENERA COBROS ANUAL
+        End If
+
     End Sub
 
     Private Sub bw_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bw.RunWorkerCompleted

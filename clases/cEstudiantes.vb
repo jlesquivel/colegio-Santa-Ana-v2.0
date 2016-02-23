@@ -45,6 +45,21 @@
     Public Function TRPendientesCant() As Integer
         TRPendientesCant = TRecibosPendientes.Rows.Count
     End Function
+
+    Public Function Traslado() As Integer
+        'TODO hacer translado y eliminar cobros a parti de la fecha indicada
+
+        Return 0
+    End Function
+
+    Public Function CambioGrupo() As Integer
+        'TODO hacer cambio de grupo y actualizar monto de cobro si es necesario
+        Return 0
+    End Function
+
+
+
+
 #End Region
 
 End Class
