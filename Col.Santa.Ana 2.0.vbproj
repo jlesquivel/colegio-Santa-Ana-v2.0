@@ -953,7 +953,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties IncrementInformational="False" IncrementOnRebuild="False" IncrementOnBuild="False" IncrementAction="2" Versioning="1" StartAt="635830560000000000" />
+      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
