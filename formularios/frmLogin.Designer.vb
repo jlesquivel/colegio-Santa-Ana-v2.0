@@ -107,7 +107,7 @@ Partial Class frmLogin
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.ForeColor = System.Drawing.Color.Black
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 24)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(149, 148)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -159,6 +159,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.TextBoxX1)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"

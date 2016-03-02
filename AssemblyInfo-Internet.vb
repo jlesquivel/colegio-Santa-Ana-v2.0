@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("Sistema Colegio")>
-<Assembly: AssemblyDescription("Sistema de Administración Academica")>
+<Assembly: AssemblyDescription("Sistema de Administraci�n Academica")>
 <Assembly: AssemblyCompany("Software Esquivel")>
 <Assembly: AssemblyProduct("Sistema Colegio")>
-<Assembly: AssemblyCopyright("Software Esquivel 2016")>
+<Assembly: AssemblyCopyright("Software Esquivel 2014")>
 <Assembly: AssemblyTrademark("Sistema Colegio")>
 <Assembly: CLSCompliant(True)>
 
@@ -29,7 +29,8 @@ Imports System.Runtime.InteropServices
 ' Puede especificar todos los valores o usar los valores predeterminados (n�mero de versi�n de compilaci�n y de revisi�n) 
 ' usando el s�mbolo '*' como se muestra a continuaci�n:
 
-<Assembly: AssemblyVersion("2.0.34.0")>
-<Assembly: AssemblyFileVersion("2.0.34.0")>
+<Assembly: AssemblyVersion("2.0.13.1")>
+
+<Assembly: AssemblyFileVersion("2.0.13.1")>
 <Assembly: NeutralResourcesLanguage("es-CR")>
 <Assembly: ComVisible(False)>
