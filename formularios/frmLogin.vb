@@ -22,8 +22,9 @@
         Else
             Dim info As NetworkInformation = NetworkInformation.LocalComputer
             If info.Status = NetworkInformation.JoinStatus.Domain Then
-                Visible = False
-                frmPrincipal2.ShowDialog()
+                Me.Hide()
+                ' Visible = False
+                frmPrincipal2.Show()
                 Close()
             End If
         End If
@@ -34,8 +35,9 @@
         My.Settings.conexionSQL = sqlcon.strConn
 
         If sqlcon.conexionOK Then
-            Visible = False
-            frmPrincipal2.ShowDialog()
+            Me.Hide()
+            'Visible = False
+            frmPrincipal2.Show()
             Close()
         Else
             MessageBox.Show("Usuario o clave incorrecta", "SQL Error!",

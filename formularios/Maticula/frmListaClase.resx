@@ -118,28 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="ContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>162, 57</value>
+    <value>154, 56</value>
   </metadata>
   <metadata name="SqlConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 57</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="SqlDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>813, 17</value>
+    <value>769, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>552, 57</value>
+    <value>525, 56</value>
   </metadata>
   <metadata name="SqlConnection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>407, 57</value>
+    <value>388, 56</value>
   </metadata>
   <metadata name="DsArbol1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>301, 57</value>
+    <value>286, 56</value>
   </metadata>
   <metadata name="DsListaClase1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>341, 17</value>
+    <value>323, 17</value>
   </metadata>
   <metadata name="SqlDataAdapter2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>189, 17</value>
+    <value>179, 17</value>
   </metadata>
   <metadata name="SqlInsertCommand2.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -151,7 +151,7 @@
     <value>False</value>
   </metadata>
   <metadata name="SqlConnection3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>842, 57</value>
+    <value>799, 56</value>
   </metadata>
   <metadata name="SqlSelectCommand3.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -163,90 +163,95 @@
     <value>False</value>
   </metadata>
   <data name="SqlSelectCommand3.CommandText" xml:space="preserve">
-    <value>SELECT   estudiantes.carnet, estudiantes.apellido1, estudiantes.apellido2, estudiantes.nombre, CASE WHEN cuenta_matriculas.Expr1 = 1 THEN 'nuevo' ELSE '' END AS Nuevo
-FROM      matricula INNER JOIN
-                estudiantes ON matricula.carnet = estudiantes.carnet INNER JOIN
-                cuenta_matriculas ON estudiantes.carnet = cuenta_matriculas.carnet
-WHERE   (matricula.ano = @ano) AND (matricula.nivel = @nivel) AND (matricula.grupo = @grupo)
+    <value>SELECT     estudiantes.carnet, estudiantes.apellido1, estudiantes.apellido2, estudiantes.nombre, CASE WHEN cuenta_matriculas.Expr1 = 1 THEN 'nuevo' ELSE '' END AS Nuevo
+FROM        matricula INNER JOIN
+                  estudiantes ON matricula.carnet = estudiantes.carnet INNER JOIN
+                  cuenta_matriculas ON estudiantes.carnet = cuenta_matriculas.carnet
+WHERE     (matricula.ano = @ano) AND (matricula.nivel = @nivel) AND (matricula.grupo = @grupo) AND (estudiantes.estado = 'ACTIVO')
 ORDER BY estudiantes.apellido1, estudiantes.apellido2</value>
   </data>
   <metadata name="SqlInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="SqlSelectCommand2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>639, 17</value>
+    <value>605, 17</value>
   </metadata>
   <data name="SqlSelectCommand2.CommandText" xml:space="preserve">
-    <value>SELECT estudiantes.carnet, estudiantes.apellido1, estudiantes.apellido2, estudiantes.nombre, CASE WHEN cuenta_matriculas.Expr1 = 1 THEN 'nuevo' ELSE '' END AS Nuevo FROM matricula INNER JOIN estudiantes ON matricula.carnet = estudiantes.carnet INNER JOIN cuenta_matriculas ON estudiantes.carnet = cuenta_matriculas.carnet WHERE (matricula.ano = @ano) AND (matricula.nivel = @nivel) AND (matricula.grupo = @grupo) ORDER BY estudiantes.apellido1, estudiantes.apellido2</value>
+    <value>SELECT     estudiantes.carnet, estudiantes.apellido1, estudiantes.apellido2, estudiantes.nombre, CASE WHEN cuenta_matriculas.Expr1 = 1 THEN 'nuevo' ELSE '' END AS Nuevo
+FROM        matricula INNER JOIN
+                  estudiantes ON matricula.carnet = estudiantes.carnet INNER JOIN
+                  cuenta_matriculas ON estudiantes.carnet = cuenta_matriculas.carnet
+WHERE     (matricula.ano = @ano) AND (matricula.nivel = @nivel) AND (matricula.grupo = @grupo) AND (estudiantes.estado = 'ACTIVO')
+ORDER BY estudiantes.apellido1, estudiantes.apellido2</value>
   </data>
   <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>726, 57</value>
+    <value>689, 56</value>
   </metadata>
   <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAg
-        DwAAAk1TRnQBSQFMAgEBBQEAAXwBAAF8AQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABIAMAAQEBAAEgBgABIBIAAwQBBgNKAY0DWAHnAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
-        Af8DAAH/AwAB/wNYAecDSgGNAwQBBsAAA0gBhwMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A0oBisAAA1QB6gMAAf8DLgFIKAADLgFIAwAB/wNUAerDAAH/
+        DwAAAk1TRnQBSQFMAgEBBQEAAZwBAAGcAQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEgBgABIBIAAwQBBgNKAY0DXAHnAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMA
+        Af8DAAH/AwAB/wNcAecDSgGNAwQBBsAAA0gBhwMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A0oBisAAA1UB6gMAAf8DLgFIKAADLgFIAwAB/wNVAerDAAH/
         AwAB/wcAAf8DAAH/AwAB/wMAAf8DAAH/GwAB/wMAAf/DAAH/AwAB/zMAAf8DAAH/wwAB/wMAAf8HAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/BwAB/wMAAf/DAAH/AwAB/zMAAf8DAAH/
         wwAB/wMAAf8HAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/BwAB/wMAAf/DAAH/
         AwAB/zMAAf8DAAH/wwAB/wMAAf8HAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
         BwAB/wMAAf/DAAH/AwAB/zMAAf8DAAH/wwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/8MAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf/AAANLAfADAAH/A0MBeAQAA0MBeAMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wNDAXgEAANDAXgDAAH/A0sB8MAAA0oBigMAAf8DBAEGA1sB4QMEAQYDAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf/AAANOAfADAAH/A0MBeAQAA0MBeAMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wNDAXgEAANDAXgDAAH/A04B8MAAA0oBigMAAf8DBAEGA1sB4QMEAQYDAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DBAEGA1sB4QMEAQYDAAH/A0oBjcAAAwIBAwNIAYcHAAH/BwAB/wMA
-        Af8DAAH/AwAB/wMAAf8DAAH/BwAB/wQAA0gBhwMCAQP/AAEAAwQBBgNKAY0DWAHnAwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNYAecDSgGNAwQBBgMEAQYDSgGNA1gB5wMAAf8DAAH/
-        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DWAHnA0oBjQMEAQYDBAEGA0oBjQNYAecDAAH/
-        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1gB5wNKAY0DBAEGQAADSAGHAwAB/wMA
+        Af8DAAH/AwAB/wMAAf8DAAH/BwAB/wQAA0gBhwMCAQP/AAEAAwQBBgNKAY0DXAHnAwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNcAecDSgGNAwQBBgMEAQYDSgGNA1wB5wMAAf8DAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DXAHnA0oBjQMEAQYDBAEGA0oBjQNcAecDAAH/
+        AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1wB5wNKAY0DBAEGQAADSAGHAwAB/wMA
         Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DSgGKA0gBhwMA
         Af8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A0oBigNI
         AYcDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wNK
-        AYoEAAEqASwBqQH/AVABUQGWAf8CbgGEAf8DhwH/LAADVAHqAwAB/wMuAUgoAAMuAUgDAAH/A1QB6gNU
-        AeoDAAH/Ay4BSCgAAy4BSAMAAf8DVAHqA1QB6gMAAf8DLgFIKAADLgFIAwAB/wNUAeoEAAEkASUBpQH/
-        ARQBGQGhAf8BGQEfAacB/wE+AUIBiwH/Am4BhAH/A4kB/ycAAf8DAAH/MwAB/wMAAf8DAAH/AwAB/zMA
-        Af8DAAH/AwAB/wMAAf8zAAH/AwAB/wQAAScBKAGqAf8BFAEZAaEB/wESARoBogH/ARIBHQGqAf8BGAEl
-        AaoB/wE/AUYBjgH/Am4BhAH/A4kB/x8AAf8DAAH/CwAB/wMAAf8HAAH/AwAB/wcAAf8DAAH/CwAB/wMA
+        AYoEAAEmASgBqQH/AUwBTQGWAf8CagGEAf8DhwH/LAADVQHqAwAB/wMuAUgoAAMuAUgDAAH/A1UB6gNV
+        AeoDAAH/Ay4BSCgAAy4BSAMAAf8DVQHqA1UB6gMAAf8DLgFIKAADLgFIAwAB/wNVAeoEAAEgASEBpQH/
+        ARABFQGhAf8BFQEbAacB/wE6AT4BiwH/AmoBhAH/A4kB/ycAAf8DAAH/MwAB/wMAAf8DAAH/AwAB/zMA
+        Af8DAAH/AwAB/wMAAf8zAAH/AwAB/wQAASMBJAGqAf8BEAEVAaEB/wEOARYBogH/AQ4BGQGqAf8BFAEh
+        AaoB/wE7AUIBjgH/AmoBhAH/A4kB/x8AAf8DAAH/CwAB/wMAAf8HAAH/AwAB/wcAAf8DAAH/CwAB/wMA
         Af8DAAH/AwAB/wsAAf8DAAH/AwAB/x8AAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wcAAf8DAAH/AwAB/wMA
-        Af8DAAH/CwAB/wMAAf8EAAEnASgBqgH/ARQBGQGhAf8BGQEfAacB/wERAR0BpwH/ARQBIwGvAf8BEgEd
-        AaoB/wEYASUBqgH/AUUBTQGRAf8CbgGEAf8DiQH/FwAB/wMAAf8LAAH/AwAB/wcAAf8DAAH/BwAB/wMA
+        Af8DAAH/CwAB/wMAAf8EAAEjASQBqgH/ARABFQGhAf8BFQEbAacB/wENARkBpwH/ARABHwGvAf8BDgEZ
+        AaoB/wEUASEBqgH/AUEBSQGRAf8CagGEAf8DiQH/FwAB/wMAAf8LAAH/AwAB/wcAAf8DAAH/BwAB/wMA
         Af8LAAH/AwAB/wMAAf8DAAH/CwAB/wcAAf8HAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8DAAH/AwAB/wsA
-        Af8DAAH/BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAASIBIwGhAf8BEgEWAZwB/wESARoBogH/
-        ARIBHQGqAf8BEQEdAacB/wESASQBsAH/ARQBKQG2Af8BFAEtAbsB/wEcATYBugH/AUUBTQGRAf8CgQGE
+        Af8DAAH/BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAAR4BHwGhAf8BDgESAZwB/wEOARYBogH/
+        AQ4BGQGqAf8BDQEZAacB/wEOASABsAH/ARABJQG2Af8BEAEpAbsB/wEYATIBugH/AUEBSQGRAf8CgQGE
         Af8DiQH/DwAB/wMAAf8zAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8DAAH/HwAB/wMAAf8DAAH/AwAB/zMA
-        Af8DAAH/BAABJAElAaUB/wEVARkBngH/ARIBGgGiAf8BFAEjAa8B/wESAR0BqgH/ARIBJAGwAf8BEgEk
-        AbAB/wEUAS0BuwH/ARMBMAG/Af8BGAE4AcQB/wEcATYBugH/AUkBUAGNAf8DhwH/CwAB/wMAAf8LAAH/
+        Af8DAAH/BAABIAEhAaUB/wERARUBngH/AQ4BFgGiAf8BEAEfAa8B/wEOARkBqgH/AQ4BIAGwAf8BDgEg
+        AbAB/wEQASkBuwH/AQ8BLAG/Af8BFAE0AcQB/wEYATIBugH/AUUBTAGNAf8DhwH/CwAB/wMAAf8LAAH/
         AwAB/wcAAf8DAAH/BwAB/wMAAf8LAAH/AwAB/wMAAf8DAAH/MwAB/wMAAf8DAAH/AwAB/wsAAf8DAAH/
-        BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAASoBLAGpAf8BKgEsAakB/wEqASwBqQH/AS4BOAGy
-        Af8BLgE4AbIB/wExAUEBvAH/ATEBRAHBAf8BLAFCAcEB/wElAT8BwgH/ASUBPwHCAf8BIgE+AcQB/wEc
-        AToBwwH/AR8BNQG0Af8LAAH/AwAB/wsAAf8DAAH/BwAB/wMAAf8HAAH/AwAB/wsAAf8DAAH/AwAB/wMA
-        Af8zAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8HAAH/AwAB/wMAAf8DAAH/AwAB/wsAAf8DAAH/BAABOwE8
-        AbQB/wFcAV8BvwH/AWcBbAHGAf8BcAGCAcwB/wGBAYkB0gH/AYABhwHSAf8BagGEAdIB/wFcAWwBzwH/
-        AU4BZAHQAf8BOwFTAcgB/wEiAT4BxAH/AVMBYAG0Af8PAAH/AwAB/zMAAf8DAAH/AwAB/wMAAf8LAAH/
-        AwAB/wMAAf8fAAH/AwAB/wMAAf8DAAH/MwAB/wMAAf8EAAFDAUQBswH/AZABkgHPAf8BnwGiAdgB/wGl
-        AakB3AH/AaUBqQHcAf8BlgGeAdsB/wGEAZEB2AH/AV0BbwHTAf8BLQFHAcgB/wFNAVsBtgH/FwAB/wMA
+        BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAASYBKAGpAf8BJgEoAakB/wEmASgBqQH/ASoBNAGy
+        Af8BKgE0AbIB/wEtAT0BvAH/AS0BQAHBAf8BKAE+AcEB/wEhATsBwgH/ASEBOwHCAf8BHgE6AcQB/wEY
+        ATYBwwH/ARsBMQG0Af8LAAH/AwAB/wsAAf8DAAH/BwAB/wMAAf8HAAH/AwAB/wsAAf8DAAH/AwAB/wMA
+        Af8zAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8HAAH/AwAB/wMAAf8DAAH/AwAB/wsAAf8DAAH/BAABNwE4
+        AbQB/wFYAVsBvwH/AWMBaAHGAf8BbAGCAcwB/wGBAYkB0gH/AYABhwHSAf8BZgGEAdIB/wFYAWgBzwH/
+        AUoBYAHQAf8BNwFPAcgB/wEeAToBxAH/AU8BXAG0Af8PAAH/AwAB/zMAAf8DAAH/AwAB/wMAAf8LAAH/
+        AwAB/wMAAf8fAAH/AwAB/wMAAf8DAAH/MwAB/wMAAf8EAAE/AUABswH/AZABkgHPAf8BnwGiAdgB/wGl
+        AakB3AH/AaUBqQHcAf8BlgGeAdsB/wGEAZEB2AH/AVkBawHTAf8BKQFDAcgB/wFJAVcBtgH/FwAB/wMA
         Af8zAAH/AwAB/wMAAf8DAAH/CwAB/wcAAf8HAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8DAAH/AwAB/wsA
-        Af8DAAH/BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAAUsBTAG1Af8BrAGuAdsB/wGuAbEB3gH/
-        Aa4BsQHeAf8BqAGuAeAB/wGLAZQB1wH/AUIBVAHIAf8BSwFXAbMB/x8AAf8DAAH/AwAB/wMAAf8DAAH/
+        Af8DAAH/BwAB/wMAAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wQAAUcBSAG1Af8BrAGuAdsB/wGuAbEB3gH/
+        Aa4BsQHeAf8BqAGuAeAB/wGLAZQB1wH/AT4BUAHIAf8BRwFTAbMB/x8AAf8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wsAAf8DAAH/
-        AwAB/x8AAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wcAAf8DAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8EAAJO
-        AboB/wGsAa4B2wH/AaUBqQHcAf8BlgGbAdYB/wFQAVoBwwH/AUsBTAG1Af8nAAH/AwAB/wMAAf8DAAH/
+        AwAB/x8AAf8DAAH/AwAB/wMAAf8LAAH/AwAB/wcAAf8DAAH/AwAB/wMAAf8DAAH/CwAB/wMAAf8EAAJK
+        AboB/wGsAa4B2wH/AaUBqQHcAf8BlgGbAdYB/wFMAVYBwwH/AUcBSAG1Af8nAAH/AwAB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8zAAH/
-        AwAB/wMAAf8DAAH/MwAB/wMAAf8EAAFEAUYBtQH/AYEBgwHJAf8BTwFUAbwB/wFLAUwBtQH/LAADSwHw
-        AwAB/wNDAXgEAANDAXgDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DQwF4BAADQwF4AwAB/wNLAfADVAHq
-        AwAB/wMrAUIoAAMrAUIDAAH/A1QB6gNUAeoDAAH/AysBQigAAysBQgMAAf8DVAHqBAABLwEwAawB/wFE
-        AUYBtQH/NAADSgGKAwAB/wMEAQYDWwHhAwQBBgMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMEAQYDWwHh
+        AwAB/wMAAf8DAAH/MwAB/wMAAf8EAAFAAUIBtQH/AYEBgwHJAf8BSwFQAbwB/wFHAUgBtQH/LAADTgHw
+        AwAB/wNDAXgEAANDAXgDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DQwF4BAADQwF4AwAB/wNOAfADVQHq
+        AwAB/wMrAUIoAAMrAUIDAAH/A1UB6gNVAeoDAAH/AysBQigAAysBQgMAAf8DVQHqBAABKwEsAawB/wFA
+        AUIBtQH/NAADSgGKAwAB/wMEAQYDWwHhAwQBBgMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMEAQYDWwHh
         AwQBBgMAAf8DSgGNA0gBhwMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/A0gBhwNIAYcDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wMAAf8DAAH/AwAB/wNIAYdAAAMCAQMDSAGHBwAB/wcAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wcA
-        Af8EAANIAYcDAgEDAwQBBgNIAYQDWQHkAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wNZAeQDSAGEAwQBBgMEAQYDSAGEA1kB5AMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
-        AwAB/wMAAf8DWQHkA0gBhAMEAQYBQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEBFgAD/xEA
+        Af8EAANIAYcDAgEDAwQBBgNIAYQDWgHkAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wNaAeQDSAGEAwQBBgMEAQYDSAGEA1oB5AMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/
+        AwAB/wMAAf8DWgHkA0gBhAMEAQYBQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEBFgAD/xEA
         AR8B+AYAASAB/AYAAT8B/AYAASABBAYAAT8B/AYAASABBAYAAT8B/AYAASABBAYAAT8B/BYAARABCA4A
         ASgBFAYAAv8GAAL/BgABhwH/AR8B+AEfAfgBHwH4AYEB/wE/AfwBPwH8AT8B/AGAAX8BMgFMATEB/AEy
         AQwBgAEfATIBTAE1AQwBMgEMAYABBwE/AfwBMQH8AT8B/AGAAQMBMgFMAT8B/AEyAQwBgAEDATIBTAE/
@@ -255,9 +260,9 @@ ORDER BY estudiantes.apellido1, estudiantes.apellido2</value>
 </value>
   </data>
   <metadata name="SqlFamiliaApellidos.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 17</value>
+    <value>448, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>98</value>
+    <value>143</value>
   </metadata>
 </root>

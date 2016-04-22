@@ -1,5 +1,11 @@
 
+CLAVES
+===================================================
+
 correo: csa.cobros@gmail.com   clave:  csa.liberia
+servidor bd  == Liber1a
+
+
 
 Servidor DNS preferido 200.91.75.5
 Servidor DNS alternativo 200.91.75.6

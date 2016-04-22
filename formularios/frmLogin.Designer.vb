@@ -30,8 +30,8 @@ Partial Class frmLogin
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.SymbolBox1 = New DevComponents.DotNetBar.Controls.SymbolBox()
-        Me.SymbolBox2 = New DevComponents.DotNetBar.Controls.SymbolBox()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,11 +46,12 @@ Partial Class frmLogin
         Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX1.Location = New System.Drawing.Point(184, 24)
+        Me.TextBoxX1.Location = New System.Drawing.Point(184, 37)
         Me.TextBoxX1.Name = "TextBoxX1"
         Me.TextBoxX1.PreventEnterBeep = True
         Me.TextBoxX1.Size = New System.Drawing.Size(183, 29)
         Me.TextBoxX1.TabIndex = 2
+        Me.TextBoxX1.WatermarkImage = CType(resources.GetObject("TextBoxX1.WatermarkImage"), System.Drawing.Image)
         Me.TextBoxX1.WatermarkText = "Usuario"
         '
         'TextBoxX2
@@ -64,12 +65,13 @@ Partial Class frmLogin
         Me.TextBoxX2.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX2.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX2.Location = New System.Drawing.Point(184, 78)
+        Me.TextBoxX2.Location = New System.Drawing.Point(184, 91)
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxX2.PreventEnterBeep = True
         Me.TextBoxX2.Size = New System.Drawing.Size(183, 29)
         Me.TextBoxX2.TabIndex = 3
+        Me.TextBoxX2.WatermarkImage = CType(resources.GetObject("TextBoxX2.WatermarkImage"), System.Drawing.Image)
         Me.TextBoxX2.WatermarkText = "Clave"
         '
         'ButtonX1
@@ -114,35 +116,29 @@ Partial Class frmLogin
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'SymbolBox1
-        '
-        Me.SymbolBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        'LabelX1
         '
         '
         '
-        Me.SymbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.SymbolBox1.ForeColor = System.Drawing.Color.Black
-        Me.SymbolBox1.Location = New System.Drawing.Point(154, 24)
-        Me.SymbolBox1.Name = "SymbolBox1"
-        Me.SymbolBox1.Size = New System.Drawing.Size(24, 29)
-        Me.SymbolBox1.Symbol = ""
-        Me.SymbolBox1.TabIndex = 9
-        Me.SymbolBox1.Text = "SymbolBox1"
         '
-        'SymbolBox2
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(184, 72)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(75, 18)
+        Me.LabelX1.TabIndex = 11
+        Me.LabelX1.Text = "Contraseña"
         '
-        Me.SymbolBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        'LabelX2
         '
         '
         '
-        Me.SymbolBox2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.SymbolBox2.ForeColor = System.Drawing.Color.Black
-        Me.SymbolBox2.Location = New System.Drawing.Point(154, 78)
-        Me.SymbolBox2.Name = "SymbolBox2"
-        Me.SymbolBox2.Size = New System.Drawing.Size(24, 29)
-        Me.SymbolBox2.Symbol = ""
-        Me.SymbolBox2.TabIndex = 10
-        Me.SymbolBox2.Text = "SymbolBox2"
+        '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Location = New System.Drawing.Point(184, 17)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.Size = New System.Drawing.Size(75, 19)
+        Me.LabelX2.TabIndex = 12
+        Me.LabelX2.Text = "Usuario"
         '
         'frmLogin
         '
@@ -151,15 +147,14 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ButtonX2
         Me.ClientSize = New System.Drawing.Size(379, 206)
-        Me.Controls.Add(Me.SymbolBox2)
-        Me.Controls.Add(Me.SymbolBox1)
+        Me.Controls.Add(Me.LabelX2)
+        Me.Controls.Add(Me.LabelX1)
         Me.Controls.Add(Me.ButtonX2)
         Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.TextBoxX2)
         Me.Controls.Add(Me.TextBoxX1)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"
@@ -173,6 +168,6 @@ Partial Class frmLogin
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
-    Friend WithEvents SymbolBox1 As DevComponents.DotNetBar.Controls.SymbolBox
-    Friend WithEvents SymbolBox2 As DevComponents.DotNetBar.Controls.SymbolBox
+    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
 End Class

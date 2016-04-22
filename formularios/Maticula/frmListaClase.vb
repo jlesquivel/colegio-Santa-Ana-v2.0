@@ -213,8 +213,7 @@ Public Class frmListaClase
         '
         'SqlConnection2
         '
-        Me.SqlConnection2.ConnectionString = "workstation id=ESCRITORIO;packet size=4096;integrated security=SSPI;data source=e" &
-    "scritorio;persist security info=False;initial catalog=colegio"
+        Me.SqlConnection2.ConnectionString = "Data Source=servidor-bd;Initial Catalog=colegio;User ID=sa"
         Me.SqlConnection2.FireInfoMessageEventOnUserErrors = False
         '
         'DsArbol1
@@ -387,6 +386,7 @@ Public Class frmListaClase
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.TreeViewSQL1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
         Me.Name = "frmListaClase"
         Me.Text = "Lista Clase"
@@ -434,32 +434,36 @@ Public Class frmListaClase
         MenuItem10.Enabled = False   'Lista becados
         MenuItem11.Enabled = False   'Lista becados
         MenuItem12.Enabled = False
+        If partes IsNot Nothing Then
 
-        Select Case partes.Length
-            Case 2
-                Imprimir.Enabled = True
+
+            Select Case partes.Length
+                Case 2
+                    Imprimir.Enabled = True
+                    MenuItem1.Enabled = True
+                    MenuItem2.Enabled = True
+                    MenuItem5.Enabled = True
+                    MenuItem7.Enabled = True   'ingresos x matricula
+                    MenuItem8.Enabled = True   'Lista bingo
+                    MenuItem9.Enabled = True   'Lista x familia
+                    MenuItem10.Enabled = True   'Lista becados
+                    MenuItem11.Enabled = True   'Lista becados
+                Case 4
+                    Imprimir.Enabled = True
+                    MenuItem1.Enabled = True  ' lista clase
+                    MenuItem12.Enabled = True
+
+            End Select
+
+
+            If DataGrid1.CurrentRowIndex >= 0 Then
+                If DataGrid1.IsSelected(DataGrid1.CurrentRowIndex) Then
+                    MenuItem4.Enabled = True
+                    MenuItem6.Enabled = True
+                End If
                 MenuItem1.Enabled = True
-                MenuItem2.Enabled = True
-                MenuItem5.Enabled = True
-                MenuItem7.Enabled = True   'ingresos x matricula
-                MenuItem8.Enabled = True   'Lista bingo
-                MenuItem9.Enabled = True   'Lista x familia
-                MenuItem10.Enabled = True   'Lista becados
-                MenuItem11.Enabled = True   'Lista becados
-            Case 4
-                Imprimir.Enabled = True
-                MenuItem1.Enabled = True  ' lista clase
-                MenuItem12.Enabled = True
-
-        End Select
-
-
-        If DataGrid1.CurrentRowIndex >= 0 Then
-            If DataGrid1.IsSelected(DataGrid1.CurrentRowIndex) Then
-                MenuItem4.Enabled = True
-                MenuItem6.Enabled = True
             End If
-            MenuItem1.Enabled = True
+
         End If
     End Sub
 

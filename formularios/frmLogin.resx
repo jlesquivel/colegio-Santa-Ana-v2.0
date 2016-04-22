@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TextBoxX1.WatermarkImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAACrSURBVDhPpdLBCcJQEATQgB3k
+        GhA8CTaaGtKBIHhNGdYQ8CoELOA7s0QddTMRHXgQ/v4d0KQqpfzl+fCaBvZwnvCZZ4+4gi1cgIeKZzuI
+        uIID6KI6QsQVjKBL6goRV6ALmYgryH7/HWcRV+D+A84irmADc2+Bs4grWEELukw84ywyV7CGE+ii4ox3
+        0oIaBs4W8E6dFXTThW90WYH7gN6NWUEvF5b0HwW/KdUNgFZ2Bd4kD2kAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="TextBoxX2.WatermarkImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAACqSURBVDhPrZJBCsIwEEW78gwF
+        7yEIgrfxDJ6k93AluBIKnkRw221BqP+1HRhCJ6TSBw8mzeSnTVo5zvIm37PUPCviKodA5rKwy1c+5WGW
+        2gKYO8mQVtJYj6MJagtAAkM6SdN+HE1Q+wB6QizgLtkZqYsD7BNyPmSIHeLSwtSQ3DV6s9iP9JE0p+eA
+        jdzJYtIAfEl/5UWkIbzlUa7Gh/TyIlfhA8y/2CqgGn5irmOsqv/xiwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="StyleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
