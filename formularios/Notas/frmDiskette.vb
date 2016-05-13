@@ -3,6 +3,8 @@ Imports Microsoft.Office.Interop
 Imports System.Runtime.InteropServices
 Imports System.Drawing
 Imports System.ComponentModel
+Imports System.Diagnostics
+
 
 Public Class frmDiskette
     Inherits DevComponents.DotNetBar.Metro.MetroForm
@@ -10,6 +12,8 @@ Public Class frmDiskette
     Dim vPeriodo As String = "1"
     Dim conn As New conexionSQL
     Dim aPartes As String()
+    Dim ultima As Integer
+
     Friend WithEvents SqlDeleteCommand As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlInsertCommand As System.Data.SqlClient.SqlCommand
     Friend WithEvents SqlUpdateCommand As System.Data.SqlClient.SqlCommand
@@ -23,7 +27,7 @@ Public Class frmDiskette
     Friend WithEvents CheckBoxX1 As DevComponents.DotNetBar.Controls.CheckBoxX
     Friend WithEvents ProgressBarX1 As DevComponents.DotNetBar.Controls.ProgressBarX
     Friend WithEvents ProgressBarX2 As DevComponents.DotNetBar.Controls.ProgressBarX
-    Dim ultima As Integer
+
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -498,8 +502,6 @@ Public Class frmDiskette
     Dim hojas As Excel.Sheets
 
     Private Sub frmDiskette_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        m_excel = New Excel.Application
-        m_excel.Visible = False
 
         SqlConnection1.ConnectionString = conn.strConn
         SqlConnection2.ConnectionString = conn.strConn
@@ -514,37 +516,37 @@ Public Class frmDiskette
         SqlConnection3.ConnectionString = conn2.strConn
         SqlDataAdapter4.Fill(DsDisco1, "empleados")
 
-        Dim anno As String = DateTime.Now.Year.ToString
-        Dim profesores As ArrayList
-
-        profesores = conn.llena("exec profesores " & anno & "," & vPeriodo)
-
-        Dim carga As CargarLista = New CargarLista
-        'carga.DatosLista(DsDisco1.Tables("empleados"), Me.CheckedListBox1, "id_emp", "nombre")
-        carga.DatosLista(profesores, CheckedListBox1, "id_emp", "nombre")
+        Dim pProcess As Process() = Process.GetProcessesByName("excel")
+        If pProcess.Length > 0 Then
+            If MsgBox("Existen procesos de Excel Abiertos,Desea cerrarlos", MsgBoxStyle.YesNo, "Excel Abierto") = MsgBoxResult.Yes Then
+                For Each p As Process In pProcess
+                    p.Kill()
+                Next
+            End If
+        End If
     End Sub
     Private Sub frmDiskette_Closing(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
 
-
         If Me.Cursor = Cursors.Default Then
-            m_excel.Quit()
-            m_excel = Nothing
-
-            releaseObject(objHojaExcel)
-            releaseObject(objLibroExcel)
-            releaseObject(hojas)
-            releaseObject(m_excel)
+            Dim pProcess As Process() = Process.GetProcessesByName("excel")
+            For Each p As Process In pProcess
+                p.Kill()
+            Next
         Else
             e.Cancel = True
         End If
-
-
-
     End Sub
     Public Sub crear_grupo(ByVal paPartes As String())
         'Me.OpenFileDialog1.ShowDialog()
         aPartes = paPartes
         archBase = My.Application.Info.DirectoryPath & "\baseNotas.xls"
+
+        Dim pdest As String = archBase.Replace(".xls", "1.xls")
+        FileCopy(archBase, pdest)
+        archBase = pdest
+
+        m_excel = New Excel.Application
+        m_excel.Visible = False
 
         objLibroExcel = m_excel.Workbooks.Open(archBase)
         objHojaExcel = objLibroExcel.Worksheets(1)
@@ -579,6 +581,15 @@ Public Class frmDiskette
 
     Sub crea_profesor(ByVal pid_emp As Integer, ByVal _periodo As String, ByVal _ano As Integer)
         ReDim aPartes(5)
+        archBase = My.Application.Info.DirectoryPath & "\baseNotas.xls"
+
+        Dim pdest As String = archBase.Replace(".xls", "1.xls")
+        FileCopy(archBase, pdest)
+        archBase = pdest
+
+        m_excel = New Excel.Application
+        m_excel.Visible = False
+
         objLibroExcel = m_excel.Workbooks.Open(archBase)
         Dim fila, empleado As DataRow
 
@@ -650,7 +661,6 @@ Public Class frmDiskette
         End If
 
         objLibroExcel.Close()
-
     End Sub
 
     Sub llena_hoja(ByRef _hoja As Object, ByVal part As String())
@@ -727,7 +737,6 @@ Public Class frmDiskette
             objHojaExcel.Range("A3").Value = aPartes(2)
             objHojaExcel.Range("B3").Value = regis.Item("Expr1")
             objHojaExcel.Range("C3").Value = regis.Item("nombre")
-
 
             objHojaExcel.Copy(objHojaExcel)
         Next
@@ -845,6 +854,13 @@ Public Class frmDiskette
             BackgroundWorker1.ReportProgress(contador1 + 100)
         Next
 
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        Me.ProgressBarX1.Value = 0
+        Me.ProgressBarX2.Value = 0
+        Me.ProgressBarX1.Refresh()
+        Me.ProgressBarX2.Refresh()
     End Sub
 
 
@@ -1010,5 +1026,6 @@ Public Class frmDiskette
             Me.Cursor = Cursors.Default
         End If
     End Sub
+
 End Class
 
