@@ -126,6 +126,7 @@ Partial Class frmPrincipal2
         Me.RibbonMatricula = New DevComponents.DotNetBar.RibbonTabItem()
         Me.RibbonCobros = New DevComponents.DotNetBar.RibbonTabItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ButtonItem14 = New DevComponents.DotNetBar.ButtonItem()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
@@ -370,8 +371,8 @@ Partial Class frmPrincipal2
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CanCustomize = False
         Me.RibbonControl1.CaptionVisible = True
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ApplicationButton1, Me.RibbonMatricula, Me.RibbonCobros})
@@ -425,6 +426,7 @@ Partial Class frmPrincipal2
         '
         Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel2.TabIndex = 2
+        Me.RibbonPanel2.Visible = False
         '
         'RibbonBar6
         '
@@ -744,7 +746,6 @@ Partial Class frmPrincipal2
         '
         Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel1.TabIndex = 1
-        Me.RibbonPanel1.Visible = False
         '
         'RibbonBar5
         '
@@ -761,7 +762,7 @@ Partial Class frmPrincipal2
         Me.RibbonBar5.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar5.DragDropSupport = True
         Me.RibbonBar5.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem35, Me.ButtonItem37})
-        Me.RibbonBar5.Location = New System.Drawing.Point(460, 0)
+        Me.RibbonBar5.Location = New System.Drawing.Point(540, 0)
         Me.RibbonBar5.Name = "RibbonBar5"
         Me.RibbonBar5.Size = New System.Drawing.Size(145, 98)
         Me.RibbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -809,7 +810,7 @@ Partial Class frmPrincipal2
         Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar4.DragDropSupport = True
         Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem31, Me.ButtonItem32, Me.ButtonItem30, Me.ItemContainer5})
-        Me.RibbonBar4.Location = New System.Drawing.Point(178, 0)
+        Me.RibbonBar4.Location = New System.Drawing.Point(258, 0)
         Me.RibbonBar4.Name = "RibbonBar4"
         Me.RibbonBar4.Size = New System.Drawing.Size(282, 98)
         Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -881,10 +882,10 @@ Partial Class frmPrincipal2
         Me.RibbonBar1.ContainerControlProcessDialogKey = True
         Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar1.DragDropSupport = True
-        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem21})
+        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem14, Me.ButtonItem21})
         Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(175, 98)
+        Me.RibbonBar1.Size = New System.Drawing.Size(255, 98)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 0
         Me.RibbonBar1.Text = "Pasos para matricular"
@@ -925,7 +926,8 @@ Partial Class frmPrincipal2
         Me.ButtonItem21.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonItem21.Name = "ButtonItem21"
         Me.ButtonItem21.SubItemsExpandWidth = 14
-        Me.ButtonItem21.Symbol = ""
+        Me.ButtonItem21.Symbol = ""
+        Me.ButtonItem21.SymbolSize = 32.0!
         Me.ButtonItem21.Text = "Lista de Clases"
         '
         'ApplicationButton1
@@ -1130,19 +1132,30 @@ Partial Class frmPrincipal2
         '
         'RibbonMatricula
         '
+        Me.RibbonMatricula.Checked = True
         Me.RibbonMatricula.Name = "RibbonMatricula"
         Me.RibbonMatricula.Panel = Me.RibbonPanel1
         Me.RibbonMatricula.Text = "Secretaría"
         '
         'RibbonCobros
         '
-        Me.RibbonCobros.Checked = True
         Me.RibbonCobros.Name = "RibbonCobros"
         Me.RibbonCobros.Panel = Me.RibbonPanel2
         Me.RibbonCobros.Text = "Administración"
         '
         'BackgroundWorker1
         '
+        '
+        'ButtonItem14
+        '
+        Me.ButtonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem14.Name = "ButtonItem14"
+        Me.ButtonItem14.NotificationMarkPosition = DevComponents.DotNetBar.eNotificationMarkPosition.TopLeft
+        Me.ButtonItem14.SubItemsExpandWidth = 14
+        Me.ButtonItem14.Symbol = "57675"
+        Me.ButtonItem14.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
+        Me.ButtonItem14.SymbolSize = 32.0!
+        Me.ButtonItem14.Text = "Matricula Denegada"
         '
         'frmPrincipal2
         '
@@ -1248,4 +1261,5 @@ Partial Class frmPrincipal2
     Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
     Friend WithEvents SuperTabItem1 As DevComponents.DotNetBar.SuperTabItem
     Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents ButtonItem14 As DevComponents.DotNetBar.ButtonItem
 End Class

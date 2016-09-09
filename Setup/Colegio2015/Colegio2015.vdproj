@@ -845,15 +845,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Colegio"
-        "ProductCode" = "8:{238FF65D-8FFD-44CD-9E49-CB860CF215D6}"
-        "PackageCode" = "8:{E7B897DF-6DB2-4AB6-BB3F-F854670EBDC0}"
+        "ProductCode" = "8:{7BD23E72-596D-4534-8E8A-7A9DE996DA27}"
+        "PackageCode" = "8:{B4013970-83F4-43BD-94B2-33E5C6B2C719}"
         "UpgradeCode" = "8:{719F8DE0-4E3B-4BDD-BCD9-69344510E183}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0.39"
+        "ProductVersion" = "8:2.0.41"
         "Manufacturer" = "8:SE"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1255,7 +1255,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D0D78706A4664E7B9B36F13C8F75C215"
             {
-            "SourcePath" = "8:..\\..\\obj\\Release\\colegio.exe"
+            "SourcePath" = "8:..\\..\\obj\\Debug\\colegio.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_891A2E8E54894DD7BDA6C47B247886BE"

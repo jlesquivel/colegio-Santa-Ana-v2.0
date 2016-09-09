@@ -127,10 +127,12 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.6.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.4, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
     <Reference Include="DirectShowLib-2010">
       <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\DirectShowLib-2010.dll</HintPath>
     </Reference>
@@ -230,6 +232,9 @@
     <Content Include="_Notas\_Historico Cambios.txt" />
     <None Include="formularios\Cobros\dsCuotas.xss">
       <DependentUpon>dsCuotas.xsd</DependentUpon>
+    </None>
+    <None Include="formularios\Maticula\dsArbol.xss">
+      <DependentUpon>dsArbol.xsd</DependentUpon>
     </None>
     <None Include="Plantillas\autDepositoBNCR.docx" />
     <None Include="Plantillas\baseNotas.xls" />
@@ -922,12 +927,12 @@
   <ItemGroup>
     <PublishFile Include="iconos\Imagenes\cielo.bmp">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
@@ -953,7 +958,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties IncrementInformational="False" IncrementOnRebuild="False" IncrementOnBuild="False" IncrementAction="2" Versioning="1" StartAt="635830560000000000" />
+      <UserProperties StartAt="635830560000000000" Versioning="1" IncrementAction="2" IncrementOnBuild="False" IncrementOnRebuild="False" IncrementInformational="False" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

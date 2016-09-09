@@ -268,5 +268,8 @@ Public Class frmPrincipal2
         End If
     End Sub
 
+    Private Sub ButtonItem14_Click(sender As Object, e As EventArgs) Handles ButtonItem14.Click
+        oVentana.cargarVentana(New frmMatriculaBloquea, Me)
+    End Sub
 End Class
 

@@ -774,6 +774,9 @@ Public Class frmDiskette
             Dim vid_mat As Integer
             Dim vnota As Decimal
 
+            m_excel = New Excel.Application
+            m_excel.Visible = False
+
             Dim vPeriodo, vmateria, vProf As String
             SqlConnection1.Open()
             objLibroExcel = m_excel.Workbooks.Open(arch)
@@ -812,7 +815,17 @@ Public Class frmDiskette
             Next
             SqlConnection1.Close()
             objLibroExcel.Close()
+            objLibroExcel = Nothing
+            m_excel.Quit()
+            m_excel = Nothing
+
             Environment.CurrentDirectory = rutaActual
+
+            'Dim pProcess As Process() = Process.GetProcessesByName("excel")
+            'For Each p As Process In pProcess
+            '    p.Kill()
+            'Next
+
             MessageBox.Show("Archivo se cargo satisfactoriamente")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
