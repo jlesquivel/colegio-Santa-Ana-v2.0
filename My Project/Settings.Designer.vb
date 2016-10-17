@@ -223,7 +223,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("95000")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("97500")>  _
         Public Property matricula() As Decimal
             Get
                 Return CType(Me("matricula"),Decimal)
@@ -235,7 +235,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("95000")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("97500")>  _
         Public Property prematricula() As Decimal
             Get
                 Return CType(Me("prematricula"),Decimal)
