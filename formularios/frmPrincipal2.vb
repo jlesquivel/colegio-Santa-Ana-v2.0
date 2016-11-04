@@ -59,6 +59,10 @@ Public Class frmPrincipal2
 
         RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
         'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
+
+        'TODO configurar para que solo los asistente administrativo vean
+        RibbonAsistAdm.Visible = True
+
         Refresh()
         With MicroChartItem1.PieChartStyle.SliceColors
             .Item(0) = .Item(4)
@@ -270,6 +274,10 @@ Public Class frmPrincipal2
 
     Private Sub ButtonItem14_Click(sender As Object, e As EventArgs) Handles ButtonItem14.Click
         oVentana.cargarVentana(New frmMatriculaBloquea, Me)
+    End Sub
+
+    Private Sub ButtonItem15_Click(sender As Object, e As EventArgs) Handles ButtonItem15.Click
+        oVentana.cargarVentana(New frmCtrlArchCobros, Me)
     End Sub
 End Class
 

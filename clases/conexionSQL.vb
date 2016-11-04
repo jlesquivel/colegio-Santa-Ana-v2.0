@@ -11,8 +11,8 @@ Public Class conexionSQL
 
 
 #If DEBUG Then
-    ' Private vServidor As String = "(LocalDB)\v11.0"
-    Private vServidor As String = "servidor-bd"
+    Private vServidor As String = "(LocalDB)\v13.0"
+    'Private vServidor As String = "servidor-bd"
 #Else
     Private vServidor As String = "servidor-bd"
 #End If
@@ -327,8 +327,8 @@ Public Class conexionSQL
                      ";persist security info=TRUE" &
                      ";packet size=8000"
         Else
-            If vServidor = "(localdb)\v11.0" Then
-                vstrConn = "Data Source=(localdb)\v11.0;" & _
+            If vServidor = "(localdb)\v13.0" Then
+                vstrConn = "Data Source=(localdb)\v13.0;" &
                     "AttachDbFilename=C:\SQLServer\colegio_Data.MDF;Integrated Security=True"
             Else
                 vstrConn = "data source=" & vServidor &
