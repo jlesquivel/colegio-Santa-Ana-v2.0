@@ -29,7 +29,7 @@ Imports System.Runtime.InteropServices
 ' Puede especificar todos los valores o usar los valores predeterminados (n�mero de versi�n de compilaci�n y de revisi�n) 
 ' usando el s�mbolo '*' como se muestra a continuaci�n:
 
-<Assembly: AssemblyVersion("2.0.42.0")>
-<Assembly: AssemblyFileVersion("2.0.42.0")>
+<Assembly: AssemblyVersion("2.0.43.0")>
+<Assembly: AssemblyFileVersion("2.0.43.0")>
 <Assembly: NeutralResourcesLanguage("es-CR")>
 <Assembly: ComVisible(False)>

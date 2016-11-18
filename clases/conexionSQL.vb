@@ -11,8 +11,8 @@ Public Class conexionSQL
 
 
 #If DEBUG Then
-    Private vServidor As String = "(LocalDB)\v13.0"
-    'Private vServidor As String = "servidor-bd"
+    'Private vServidor As String = "(LocalDB)\v13.0"
+    Private vServidor As String = "servidor-bd"
 #Else
     Private vServidor As String = "servidor-bd"
 #End If
@@ -352,6 +352,8 @@ Public Class conexionSQL
 
         Return retorno
     End Function
+
+
 
 
 

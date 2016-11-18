@@ -400,9 +400,7 @@
     <None Include="formularios\Notas\dstemp.xsx">
       <DependentUpon>dstemp.xsd</DependentUpon>
     </None>
-    <None Include="My Project\app.manifest">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>SettingsSingleFileGenerator</Generator>

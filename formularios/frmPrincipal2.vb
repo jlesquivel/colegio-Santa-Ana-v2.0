@@ -44,24 +44,24 @@ Public Class frmPrincipal2
         Text = My.Settings.institucion
         AppImp = New Printing.PrinterSettings
         RibbonMatricula.Select()
+
+        Dim sqlcon As New conexionSQL
+        RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
+        'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
+        RibbonAsistAdm.Visible = sqlcon.verifica_seguridad("colegio", "cargar_pagos")
+        'Me.LabelItem1.Text = sqlcon.servidor
+        LabelItem1.Text = sqlcon.servidor
     End Sub
 
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        Dim sqlcon As New conexionSQL
+
 
         LabelItem3.Text = WindowsIdentity.GetCurrent.Name
         LabelItem2.Text = Format(Now.Date, "D")
-        'Me.LabelItem1.Text = sqlcon.servidor
-        LabelItem1.Text = sqlcon.servidor
+
 
         ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
         ButtonItem41.Enabled = (DateTime.Now.Month = 1 Or DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
-
-        RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
-        'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
-
-        'TODO configurar para que solo los asistente administrativo vean
-        RibbonAsistAdm.Visible = True
 
         Refresh()
         With MicroChartItem1.PieChartStyle.SliceColors
@@ -71,6 +71,21 @@ Public Class frmPrincipal2
         LabelX1.Text = My.Application.Info.Version.ToString()
 
     End Sub
+
+    Function GetUserDomain() As String
+        If TypeOf My.User.CurrentPrincipal Is
+      Security.Principal.WindowsPrincipal Then
+            ' My.User is using Windows authentication.
+            ' The name format is DOMAIN\USERNAME.
+            Dim parts() As String = Split(My.User.Name, "\")
+            Dim domain As String = parts(0)
+            Return domain
+        Else
+            ' My.User is using custom authentication.
+            Return ""
+        End If
+    End Function
+
 
     Private Sub frmPrincipal2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit()
