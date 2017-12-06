@@ -17,7 +17,7 @@ Public Class conexionSQL
     Private vServidor As String = "servidor-bd"
 #End If
     Private seguridadIntegrada As Boolean = True
-    Public vEspera As String = "6"   '' teimpo de de espera en segundos al servidor
+    Public vEspera As String = "15"   '' teimpo de de espera en segundos al servidor
     Private vbd As String = "colegio"
     Public vusuario As String = ""
     Public vpassword As String = ""
@@ -79,8 +79,8 @@ Public Class conexionSQL
         ' carga el archivo de password general
         Try
 
-            Dim musuario As Match = Regex.Match(My.Settings.conexionSQL, "User id=([A-Za-z0-9_.]+)", RegexOptions.IgnoreCase)
-            Dim mpass As Match = Regex.Match(My.Settings.conexionSQL, "Password=([A-Za-z0-9_.]+)", RegexOptions.IgnoreCase)
+            Dim musuario As Match = Regex.Match(My.Settings.conexionSQL, "User id=([A-Za-z0-9_$.]+)", RegexOptions.IgnoreCase)
+            Dim mpass As Match = Regex.Match(My.Settings.conexionSQL, "Password=([A-Za-z0-9_$.]+)", RegexOptions.IgnoreCase)
             vusuario = musuario.Groups(1).Value
             vpassword = mpass.Groups(1).Value
 
@@ -274,8 +274,8 @@ Public Class conexionSQL
 
         Dim myCommand As New SqlCommand(comando)
         myCommand.Connection = colegioConnection
-        If colegioConnection.State = ConnectionState.Closed Then
-            colegioConnection.Open()
+        If myCommand.Connection.State = ConnectionState.Closed Then
+            myCommand.Connection.Open()
         End If
         myCommand.ExecuteNonQuery()
         myCommand.Connection.Close()
@@ -285,7 +285,7 @@ Public Class conexionSQL
         'Variables para abrir el archivo en modo de escritura  
         Dim strStreamW As Stream = File.OpenWrite(FilePath)
 
-        Dim strStreamWriter As StreamWriter = New StreamWriter(strStreamW, _
+        Dim strStreamWriter As StreamWriter = New StreamWriter(strStreamW,
                      System.Text.Encoding.ASCII)
 
         Try

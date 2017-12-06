@@ -253,12 +253,12 @@ Public Class Estudiantes
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
-        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
-        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel2 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem2 = New DevComponents.DotNetBar.SuperTabItem()
+        Me.SuperTabControlPanel4 = New DevComponents.DotNetBar.SuperTabControlPanel()
+        Me.SuperTabItem4 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel5 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.SuperTabItem5 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel6 = New DevComponents.DotNetBar.SuperTabControlPanel()
@@ -275,9 +275,9 @@ Public Class Estudiantes
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
-        Me.SuperTabControlPanel4.SuspendLayout()
         Me.SuperTabControlPanel3.SuspendLayout()
         Me.SuperTabControlPanel2.SuspendLayout()
+        Me.SuperTabControlPanel4.SuspendLayout()
         Me.SuperTabControlPanel5.SuspendLayout()
         Me.SuperTabControlPanel6.SuspendLayout()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,7 +299,7 @@ Public Class Estudiantes
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.carnet", True))
         Me.TextBox1.Location = New System.Drawing.Point(93, 16)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(144, 22)
         Me.TextBox1.TabIndex = 0
         '
         'DataSet11
@@ -324,7 +324,7 @@ Public Class Estudiantes
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.nombre", True))
         Me.TextBox2.Location = New System.Drawing.Point(93, 41)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(144, 22)
         Me.TextBox2.TabIndex = 1
         '
         'Label4
@@ -353,7 +353,7 @@ Public Class Estudiantes
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido2", True))
         Me.TextBox4.Location = New System.Drawing.Point(93, 91)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(144, 22)
         Me.TextBox4.TabIndex = 3
         '
         'Label3
@@ -372,7 +372,7 @@ Public Class Estudiantes
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.apellido1", True))
         Me.TextBox3.Location = New System.Drawing.Point(93, 66)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(144, 22)
         Me.TextBox3.TabIndex = 2
         '
         'TextBox14
@@ -380,7 +380,7 @@ Public Class Estudiantes
         Me.TextBox14.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular", True))
         Me.TextBox14.Location = New System.Drawing.Point(93, 194)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox14.Size = New System.Drawing.Size(144, 22)
         Me.TextBox14.TabIndex = 51
         '
         'Label18
@@ -459,7 +459,7 @@ Public Class Estudiantes
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker2.Location = New System.Drawing.Point(93, 143)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(144, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(144, 22)
         Me.DateTimePicker2.TabIndex = 42
         '
         'Label15
@@ -478,7 +478,7 @@ Public Class Estudiantes
         Me.ComboBox3.Items.AddRange(New Object() {"ACTIVO", "REPROBADO", "TRASLADADO", "EGRESADO", "EXPULSADO", "INACTIVO"})
         Me.ComboBox3.Location = New System.Drawing.Point(93, 167)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox3.Size = New System.Drawing.Size(144, 24)
         Me.ComboBox3.TabIndex = 40
         '
         'GroupBox2
@@ -567,7 +567,7 @@ Public Class Estudiantes
         Me.ComboBox9.FormattingEnabled = True
         Me.ComboBox9.Location = New System.Drawing.Point(101, 104)
         Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox9.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox9.TabIndex = 3
         '
         'ComboBox8
@@ -577,7 +577,7 @@ Public Class Estudiantes
         Me.ComboBox8.FormattingEnabled = True
         Me.ComboBox8.Location = New System.Drawing.Point(101, 76)
         Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox8.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox8.TabIndex = 2
         '
         'ComboBox7
@@ -587,7 +587,7 @@ Public Class Estudiantes
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Location = New System.Drawing.Point(101, 48)
         Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox7.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox7.TabIndex = 1
         '
         'ComboBox6
@@ -597,7 +597,7 @@ Public Class Estudiantes
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Location = New System.Drawing.Point(101, 20)
         Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox6.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox6.TabIndex = 0
         '
         'Label20
@@ -615,7 +615,7 @@ Public Class Estudiantes
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Location = New System.Drawing.Point(307, 43)
         Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox5.Size = New System.Drawing.Size(144, 24)
         Me.ComboBox5.TabIndex = 44
         '
         'Label19
@@ -635,7 +635,7 @@ Public Class Estudiantes
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Location = New System.Drawing.Point(124, 43)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox4.Size = New System.Drawing.Size(144, 24)
         Me.ComboBox4.TabIndex = 42
         '
         'DateTimePicker1
@@ -646,7 +646,7 @@ Public Class Estudiantes
         Me.DateTimePicker1.Location = New System.Drawing.Point(124, 17)
         Me.DateTimePicker1.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(144, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(144, 22)
         Me.DateTimePicker1.TabIndex = 40
         '
         'Label13
@@ -664,7 +664,7 @@ Public Class Estudiantes
         Me.TextBox21.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.trabajo2", True))
         Me.TextBox21.Location = New System.Drawing.Point(268, 128)
         Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(194, 20)
+        Me.TextBox21.Size = New System.Drawing.Size(194, 22)
         Me.TextBox21.TabIndex = 44
         '
         'TextBox18
@@ -672,7 +672,7 @@ Public Class Estudiantes
         Me.TextBox18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.trabajo", True))
         Me.TextBox18.Location = New System.Drawing.Point(274, 17)
         Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(188, 20)
+        Me.TextBox18.Size = New System.Drawing.Size(188, 22)
         Me.TextBox18.TabIndex = 41
         '
         'Label29
@@ -690,7 +690,7 @@ Public Class Estudiantes
         Me.TextBox17.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular2", True))
         Me.TextBox17.Location = New System.Drawing.Point(262, 176)
         Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(88, 20)
+        Me.TextBox17.Size = New System.Drawing.Size(88, 22)
         Me.TextBox17.TabIndex = 38
         '
         'Label28
@@ -728,7 +728,7 @@ Public Class Estudiantes
         Me.TextBox16.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.celular1", True))
         Me.TextBox16.Location = New System.Drawing.Point(262, 65)
         Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(88, 20)
+        Me.TextBox16.Size = New System.Drawing.Size(88, 22)
         Me.TextBox16.TabIndex = 34
         '
         'Label9
@@ -776,7 +776,7 @@ Public Class Estudiantes
         Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.direccion", True))
         Me.TextBox7.Location = New System.Drawing.Point(86, 41)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(264, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(264, 22)
         Me.TextBox7.TabIndex = 2
         '
         'TextBox8
@@ -784,7 +784,7 @@ Public Class Estudiantes
         Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.telefono", True))
         Me.TextBox8.Location = New System.Drawing.Point(86, 65)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(117, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(117, 22)
         Me.TextBox8.TabIndex = 3
         '
         'TextBox12
@@ -792,7 +792,7 @@ Public Class Estudiantes
         Me.TextBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.email2", True))
         Me.TextBox12.Location = New System.Drawing.Point(78, 201)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(184, 20)
+        Me.TextBox12.Size = New System.Drawing.Size(184, 22)
         Me.TextBox12.TabIndex = 9
         '
         'TextBox9
@@ -800,7 +800,7 @@ Public Class Estudiantes
         Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.direccion2", True))
         Me.TextBox9.Location = New System.Drawing.Point(78, 152)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(272, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(272, 22)
         Me.TextBox9.TabIndex = 7
         '
         'TextBox11
@@ -808,7 +808,7 @@ Public Class Estudiantes
         Me.TextBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.telefono2", True))
         Me.TextBox11.Location = New System.Drawing.Point(78, 176)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(125, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(125, 22)
         Me.TextBox11.TabIndex = 8
         '
         'TextBox6
@@ -816,7 +816,7 @@ Public Class Estudiantes
         Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.encargado2", True))
         Me.TextBox6.Location = New System.Drawing.Point(78, 128)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(184, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(184, 22)
         Me.TextBox6.TabIndex = 5
         '
         'Label7
@@ -842,11 +842,11 @@ Public Class Estudiantes
         'ComboBox1
         '
         Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.relacion", True))
-        Me.ComboBox1.ItemHeight = 13
+        Me.ComboBox1.ItemHeight = 16
         Me.ComboBox1.Items.AddRange(New Object() {"PADRE", "MADRE"})
         Me.ComboBox1.Location = New System.Drawing.Point(356, 43)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(106, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(106, 24)
         Me.ComboBox1.TabIndex = 1
         '
         'TextBox10
@@ -854,7 +854,7 @@ Public Class Estudiantes
         Me.TextBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.email", True))
         Me.TextBox10.Location = New System.Drawing.Point(86, 91)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(264, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(264, 22)
         Me.TextBox10.TabIndex = 4
         '
         'TextBox5
@@ -862,17 +862,17 @@ Public Class Estudiantes
         Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.encargado1", True))
         Me.TextBox5.Location = New System.Drawing.Point(86, 17)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(184, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(184, 22)
         Me.TextBox5.TabIndex = 0
         '
         'ComboBox2
         '
         Me.ComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.relacion2", True))
-        Me.ComboBox2.ItemHeight = 13
+        Me.ComboBox2.ItemHeight = 16
         Me.ComboBox2.Items.AddRange(New Object() {"PADRE", "MADRE"})
         Me.ComboBox2.Location = New System.Drawing.Point(356, 152)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(106, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(106, 24)
         Me.ComboBox2.TabIndex = 6
         '
         'TextBox23
@@ -880,7 +880,7 @@ Public Class Estudiantes
         Me.TextBox23.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.porcentaje", True))
         Me.TextBox23.Location = New System.Drawing.Point(72, 77)
         Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox23.Size = New System.Drawing.Size(100, 22)
         Me.TextBox23.TabIndex = 5
         '
         'TextBox22
@@ -888,7 +888,7 @@ Public Class Estudiantes
         Me.TextBox22.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.beca", True))
         Me.TextBox22.Location = New System.Drawing.Point(73, 50)
         Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox22.Size = New System.Drawing.Size(100, 22)
         Me.TextBox22.TabIndex = 4
         '
         'Label34
@@ -897,7 +897,7 @@ Public Class Estudiantes
         Me.Label34.BackColor = System.Drawing.Color.Transparent
         Me.Label34.Location = New System.Drawing.Point(9, 77)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(58, 13)
+        Me.Label34.Size = New System.Drawing.Size(76, 17)
         Me.Label34.TabIndex = 3
         Me.Label34.Text = "Porcentaje"
         '
@@ -907,7 +907,7 @@ Public Class Estudiantes
         Me.Label33.BackColor = System.Drawing.Color.Transparent
         Me.Label33.Location = New System.Drawing.Point(35, 50)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(32, 13)
+        Me.Label33.Size = New System.Drawing.Size(40, 17)
         Me.Label33.TabIndex = 2
         Me.Label33.Text = "Beca"
         '
@@ -917,7 +917,7 @@ Public Class Estudiantes
         Me.Label32.BackColor = System.Drawing.Color.Transparent
         Me.Label32.Location = New System.Drawing.Point(16, 22)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(51, 13)
+        Me.Label32.Size = New System.Drawing.Size(66, 17)
         Me.Label32.TabIndex = 1
         Me.Label32.Text = "Dia Pago"
         '
@@ -927,7 +927,7 @@ Public Class Estudiantes
         Me.ComboBox10.FormattingEnabled = True
         Me.ComboBox10.Location = New System.Drawing.Point(72, 19)
         Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox10.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox10.TabIndex = 0
         '
         'CEstadoCuenta1
@@ -942,6 +942,7 @@ Public Class Estudiantes
         '
         Me.CNotasEstudiante1.BackColor = System.Drawing.Color.Transparent
         Me.CNotasEstudiante1.Location = New System.Drawing.Point(3, 3)
+        Me.CNotasEstudiante1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CNotasEstudiante1.Name = "CNotasEstudiante1"
         Me.CNotasEstudiante1.Size = New System.Drawing.Size(450, 253)
         Me.CNotasEstudiante1.TabIndex = 0
@@ -1098,9 +1099,9 @@ Public Class Estudiantes
         Me.SuperTabControlPanel1.Controls.Add(Me.Label4)
         Me.SuperTabControlPanel1.Controls.Add(Me.TextBox3)
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel1.Location = New System.Drawing.Point(0, 26)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(535, 410)
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -1110,7 +1111,7 @@ Public Class Estudiantes
         Me.TextBox13.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataSet11, "estudiantes.familia", True))
         Me.TextBox13.Location = New System.Drawing.Point(93, 117)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(144, 20)
+        Me.TextBox13.Size = New System.Drawing.Size(144, 22)
         Me.TextBox13.TabIndex = 52
         Me.SuperValidator1.SetValidator1(Me.TextBox13, Me.RequiredFieldValidator1)
         '
@@ -1130,29 +1131,6 @@ Public Class Estudiantes
         Me.SuperTabItem1.GlobalItem = False
         Me.SuperTabItem1.Name = "SuperTabItem1"
         Me.SuperTabItem1.Text = "Estudiante"
-        '
-        'SuperTabControlPanel4
-        '
-        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox23)
-        Me.SuperTabControlPanel4.Controls.Add(Me.ComboBox10)
-        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox22)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label32)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label34)
-        Me.SuperTabControlPanel4.Controls.Add(Me.Label33)
-        Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 23)
-        Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
-        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(535, 413)
-        Me.SuperTabControlPanel4.TabIndex = 0
-        Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
-        '
-        'SuperTabItem4
-        '
-        Me.SuperTabItem4.AttachedControl = Me.SuperTabControlPanel4
-        Me.SuperTabItem4.GlobalItem = False
-        Me.SuperTabItem4.Name = "SuperTabItem4"
-        Me.SuperTabItem4.Text = "Pago"
-        Me.SuperTabItem4.Visible = False
         '
         'SuperTabControlPanel3
         '
@@ -1216,6 +1194,29 @@ Public Class Estudiantes
         Me.SuperTabItem2.GlobalItem = False
         Me.SuperTabItem2.Name = "SuperTabItem2"
         Me.SuperTabItem2.Text = "Domicilio"
+        '
+        'SuperTabControlPanel4
+        '
+        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox23)
+        Me.SuperTabControlPanel4.Controls.Add(Me.ComboBox10)
+        Me.SuperTabControlPanel4.Controls.Add(Me.TextBox22)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label32)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label34)
+        Me.SuperTabControlPanel4.Controls.Add(Me.Label33)
+        Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(0, 23)
+        Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
+        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(535, 413)
+        Me.SuperTabControlPanel4.TabIndex = 0
+        Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
+        '
+        'SuperTabItem4
+        '
+        Me.SuperTabItem4.AttachedControl = Me.SuperTabControlPanel4
+        Me.SuperTabItem4.GlobalItem = False
+        Me.SuperTabItem4.Name = "SuperTabItem4"
+        Me.SuperTabItem4.Text = "Pago"
+        Me.SuperTabItem4.Visible = False
         '
         'SuperTabControlPanel5
         '
@@ -1287,11 +1288,11 @@ Public Class Estudiantes
         Me.SuperTabControl1.ResumeLayout(False)
         Me.SuperTabControlPanel1.ResumeLayout(False)
         Me.SuperTabControlPanel1.PerformLayout()
-        Me.SuperTabControlPanel4.ResumeLayout(False)
-        Me.SuperTabControlPanel4.PerformLayout()
         Me.SuperTabControlPanel3.ResumeLayout(False)
         Me.SuperTabControlPanel3.PerformLayout()
         Me.SuperTabControlPanel2.ResumeLayout(False)
+        Me.SuperTabControlPanel4.ResumeLayout(False)
+        Me.SuperTabControlPanel4.PerformLayout()
         Me.SuperTabControlPanel5.ResumeLayout(False)
         Me.SuperTabControlPanel6.ResumeLayout(False)
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1330,6 +1331,7 @@ Public Class Estudiantes
             ' Me.controlesAbre(True)
             BindingContext(DataSet11, bd).EndCurrentEdit()
             BindingContext(DataSet11, bd).AddNew()
+            pcarnet = ""
             ComboBox3.Text = "ACTIVO"
             UserControl21.salvar.Enabled = True
             Label17.Text = "1"
@@ -1365,7 +1367,6 @@ Public Class Estudiantes
 
                     UserControl21.salvar.Enabled = False
                 End If
-
             End If
         Catch ex As SqlClient.SqlException
             Select Case ex.Number
@@ -1515,7 +1516,9 @@ Public Class Estudiantes
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
         Try
-            mostrar_imagen()
+            If pcarnet <> "" Then
+                mostrar_imagen()
+            End If
         Catch ex As Exception
             PictureBox1.Image = Nothing
         End Try
@@ -1598,5 +1601,9 @@ Public Class Estudiantes
         buscar(BuscaEstudiante1.seleccionado)
     End Sub
 
-
+    Private Sub TextBox1_Leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
+        If pcarnet = "" Then
+            pcarnet = TextBox1.Text
+        End If
+    End Sub
 End Class

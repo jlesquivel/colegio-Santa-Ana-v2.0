@@ -35,7 +35,7 @@
 #Region "Pendiente incluye cobros matricula"
     Public Function TRecibosPendientes() As DataTable
         Dim dt As DataTable
-        dt = conn.llenaTabla("exec RecibosPendientesTodos " & acarnet)
+        dt = conn.llenaTabla("exec RecibosPendientesTodos '" & acarnet & "'")
         TRecibosPendientes = dt
     End Function
     Public Function TRPendientes() As Boolean

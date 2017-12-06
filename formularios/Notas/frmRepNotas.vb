@@ -46,6 +46,7 @@ Public Class frmRepNotas
     Friend WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents ButtonItem4 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -55,6 +56,7 @@ Public Class frmRepNotas
         Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem4 = New DevComponents.DotNetBar.ButtonItem()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.ExplorerBar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +66,7 @@ Public Class frmRepNotas
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(10, 95)
+        Me.ComboBox1.Location = New System.Drawing.Point(10, 117)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(123, 21)
         Me.ComboBox1.TabIndex = 3
@@ -119,7 +121,7 @@ Public Class frmRepNotas
         Me.ExplorerBarGroupItem1.Expanded = True
         Me.ExplorerBarGroupItem1.Name = "ExplorerBarGroupItem1"
         Me.ExplorerBarGroupItem1.StockStyle = DevComponents.DotNetBar.eExplorerBarStockStyle.SystemColors
-        Me.ExplorerBarGroupItem1.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem2, Me.ButtonItem3, Me.ControlContainerItem1})
+        Me.ExplorerBarGroupItem1.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem2, Me.ButtonItem3, Me.ButtonItem4, Me.ControlContainerItem1})
         Me.ExplorerBarGroupItem1.Text = "Listados"
         '
         '
@@ -174,6 +176,17 @@ Public Class frmRepNotas
         Me.ButtonItem3.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
         Me.ButtonItem3.Name = "ButtonItem3"
         Me.ButtonItem3.Text = "Notas Grupo Anual"
+        '
+        'ButtonItem4
+        '
+        Me.ButtonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonItem4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.ButtonItem4.HotFontUnderline = True
+        Me.ButtonItem4.HotForeColor = System.Drawing.Color.FromArgb(CType(CType(66, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ButtonItem4.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.None
+        Me.ButtonItem4.Name = "ButtonItem4"
+        Me.ButtonItem4.Text = "Fórmula 14"
         '
         'ControlContainerItem1
         '
@@ -270,7 +283,7 @@ Public Class frmRepNotas
     Private Sub frmCobros_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MaximizeBox = True
         Dim i As Integer
-        For i = Date.Now.Year To (Date.Now.Year - 8) Step -1
+        For i = Date.Now.Year To (Date.Now.Year - 11) Step -1
             ComboBox1.Items.Add(i.ToString)
         Next
         ComboBox1.SelectedIndex = 0

@@ -87,7 +87,7 @@
     <WarningsAsErrors>
     </WarningsAsErrors>
     <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -117,8 +117,9 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET">
-      <HintPath>..\_Herramientas\AutoUpdater.NET 1.3.1\Signed\AutoUpdater.NET.dll</HintPath>
+    <Reference Include="AutoUpdater.NET, Version=1.3.1.0, Culture=neutral, PublicKeyToken=942f95247e354701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Herramientas\AutoUpdater.NET 1.3.2\AutoUpdater.NET\.net4.0\AutoUpdater.NET.dll</HintPath>
     </Reference>
     <Reference Include="Camera_NET">
       <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\Camera_NET.dll</HintPath>
@@ -231,7 +232,6 @@
       <LastGenOutput>dstemp.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="JavaScript1.js" />
     <Content Include="_Manual\correo cobros csa.txt" />
     <Content Include="_Notas\_ POR HACER.txt" />
     <Content Include="_Notas\_Historico Cambios.txt" />
@@ -732,6 +732,12 @@
     <Compile Include="formularios\Notas\frmRepNotas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Notas\frmTrimestres.Designer.vb">
+      <DependentUpon>frmTrimestres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Notas\frmTrimestres.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -922,6 +928,9 @@
     <EmbeddedResource Include="formularios\Notas\frmRepNotas.resx">
       <DependentUpon>frmRepNotas.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Notas\frmTrimestres.resx">
+      <DependentUpon>frmTrimestres.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
