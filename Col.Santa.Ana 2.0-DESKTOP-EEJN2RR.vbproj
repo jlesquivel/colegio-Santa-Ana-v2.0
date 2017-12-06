@@ -123,10 +123,14 @@
     <Reference Include="Camera_NET">
       <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\Camera_NET.dll</HintPath>
     </Reference>
+    <Reference Include="CircularProgressBar">
+      <HintPath>..\CSA_Planilla\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.6.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.6.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -172,32 +176,32 @@
       <LastGenOutput>genCobro.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\DataSet1.xsd">
+    <Content Include="formularios\Matricula\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\DataSet2.xsd">
+    <Content Include="formularios\Matricula\DataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\DataSet42.xsd">
+    <Content Include="formularios\Matricula\DataSet42.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet42.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\dsArbol.xsd">
+    <Content Include="formularios\Matricula\dsArbol.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsArbol.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\dsListaClase.xsd">
+    <Content Include="formularios\Matricula\dsListaClase.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsListaClase.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="formularios\Maticula\dsNiveles.xsd">
+    <Content Include="formularios\Matricula\dsNiveles.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsNiveles.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
@@ -233,7 +237,7 @@
     <None Include="formularios\Cobros\dsCuotas.xss">
       <DependentUpon>dsCuotas.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsArbol.xss">
+    <None Include="formularios\Matricula\dsArbol.xss">
       <DependentUpon>dsArbol.xsd</DependentUpon>
     </None>
     <None Include="Plantillas\autDepositoBNCR.docx" />
@@ -245,13 +249,13 @@
     <None Include="formularios\Cobros\dsCarnet.xss">
       <DependentUpon>dsCarnet.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet1.xss">
+    <None Include="formularios\Matricula\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsListaClase.xss">
+    <None Include="formularios\Matricula\dsListaClase.xss">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsNiveles.xss">
+    <None Include="formularios\Matricula\dsNiveles.xss">
       <DependentUpon>dsNiveles.xsd</DependentUpon>
     </None>
     <None Include="iconos\Imagenes\estudiante_logo.psd" />
@@ -291,7 +295,7 @@
     <None Include="formularios\Cobros\genCobro.xss">
       <DependentUpon>genCobro.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet2.xss">
+    <None Include="formularios\Matricula\DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="formularios\Notas\dsMaterias.xsc">
@@ -326,40 +330,40 @@
     <None Include="formularios\Cobros\genCobro.xsx">
       <DependentUpon>genCobro.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet1.xsc">
+    <None Include="formularios\Matricula\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet1.xsx">
+    <None Include="formularios\Matricula\DataSet1.xsx">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet2.xsc">
+    <None Include="formularios\Matricula\DataSet2.xsc">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet2.xsx">
+    <None Include="formularios\Matricula\DataSet2.xsx">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet42.xsc">
+    <None Include="formularios\Matricula\DataSet42.xsc">
       <DependentUpon>DataSet42.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\DataSet42.xsx">
+    <None Include="formularios\Matricula\DataSet42.xsx">
       <DependentUpon>DataSet42.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsArbol.xsc">
+    <None Include="formularios\Matricula\dsArbol.xsc">
       <DependentUpon>dsArbol.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsArbol.xsx">
+    <None Include="formularios\Matricula\dsArbol.xsx">
       <DependentUpon>dsArbol.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsListaClase.xsc">
+    <None Include="formularios\Matricula\dsListaClase.xsc">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsListaClase.xsx">
+    <None Include="formularios\Matricula\dsListaClase.xsx">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsNiveles.xsc">
+    <None Include="formularios\Matricula\dsNiveles.xsc">
       <DependentUpon>dsNiveles.xsd</DependentUpon>
     </None>
-    <None Include="formularios\Maticula\dsNiveles.xsx">
+    <None Include="formularios\Matricula\dsNiveles.xsx">
       <DependentUpon>dsNiveles.xsd</DependentUpon>
     </None>
     <None Include="formularios\Notas\dsDisco.xsc">
@@ -395,7 +399,9 @@
     <None Include="formularios\Notas\dstemp.xsx">
       <DependentUpon>dstemp.xsd</DependentUpon>
     </None>
-    <None Include="My Project\app.manifest" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Settings.settings">
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -439,6 +445,12 @@
     <Compile Include="formularios\Cobros\dsCarnet.vb">
       <DependentUpon>dsCarnet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="formularios\Cobros\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\Cobros\frmBecas.Designer.vb">
       <DependentUpon>frmBecas.vb</DependentUpon>
     </Compile>
@@ -451,6 +463,12 @@
     <Compile Include="formularios\Cobros\frmCobrosAnual.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMorosos.Designer.vb">
+      <DependentUpon>frmCobrosMorosos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCobrosMorosos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formularios\Cobros\frmCobrosMsj.designer.vb">
       <DependentUpon>frmCobrosMsj.vb</DependentUpon>
     </Compile>
@@ -461,6 +479,12 @@
       <DependentUpon>frmCobrosMsjCorreo.vb</DependentUpon>
     </Compile>
     <Compile Include="formularios\Cobros\frmCobrosMsjCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCtrlArchCobros.Designer.vb">
+      <DependentUpon>frmCtrlArchCobros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Cobros\frmCtrlArchCobros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Cobros\frmRecibos.Designer.vb">
@@ -546,19 +570,25 @@
     <Compile Include="formularios\frmPruebas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\frmWebCam2.Designer.vb">
-      <DependentUpon>frmWebCam2.vb</DependentUpon>
+    <Compile Include="formularios\Matricula\frmMatriculaBloquea.Designer.vb">
+      <DependentUpon>frmMatriculaBloquea.vb</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\frmWebCam2.vb">
+    <Compile Include="formularios\Matricula\frmMatriculaBloquea.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\dsListaClase.vb">
+    <Compile Include="formularios\Matricula\frmWebCam2.Designer.vb">
+      <DependentUpon>frmWebCam2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Matricula\frmWebCam2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Matricula\dsListaClase.vb">
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\Form1.Designer.vb">
+    <Compile Include="formularios\Matricula\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\Form1.vb">
+    <Compile Include="formularios\Matricula\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Notas\dsMaterias.Designer.vb">
@@ -604,49 +634,49 @@
     <Compile Include="formularios\frmReporte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\DataSet1.Designer.vb">
+    <Compile Include="formularios\Matricula\DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\DataSet2.Designer.vb">
+    <Compile Include="formularios\Matricula\DataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\DataSet42.Designer.vb">
+    <Compile Include="formularios\Matricula\DataSet42.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet42.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\dsArbol.Designer.vb">
+    <Compile Include="formularios\Matricula\dsArbol.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsArbol.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\dsListaClase.Designer.vb">
+    <Compile Include="formularios\Matricula\dsListaClase.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsListaClase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\dsNiveles.Designer.vb">
+    <Compile Include="formularios\Matricula\dsNiveles.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsNiveles.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formularios\Maticula\frmEstudiantes.vb">
+    <Compile Include="formularios\Matricula\frmEstudiantes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\frmListaClase.vb">
+    <Compile Include="formularios\Matricula\frmListaClase.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\frmMatriculaV.vb">
+    <Compile Include="formularios\Matricula\frmMatriculaV.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\frmNiveles.vb">
+    <Compile Include="formularios\Matricula\frmNiveles.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\Maticula\frmTrasladoGrupo.vb">
+    <Compile Include="formularios\Matricula\frmTrasladoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Notas\dsDisco.Designer.vb">
@@ -699,6 +729,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Notas\frmRepNotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Notas\frmTrimestres.Designer.vb">
+      <DependentUpon>frmTrimestres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Notas\frmTrimestres.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Application.Designer.vb">
@@ -758,6 +794,9 @@
     <EmbeddedResource Include="formularios\CISA.resx">
       <DependentUpon>CISA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmBecas.resx">
       <DependentUpon>frmBecas.vb</DependentUpon>
     </EmbeddedResource>
@@ -780,6 +819,9 @@
     <EmbeddedResource Include="formularios\Cobros\frmCobrosAnual.resx">
       <DependentUpon>frmCobrosAnual.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmCobrosMorosos.resx">
+      <DependentUpon>frmCobrosMorosos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmCobrosMsj.resx">
       <DependentUpon>frmCobrosMsj.vb</DependentUpon>
     </EmbeddedResource>
@@ -789,6 +831,9 @@
     <EmbeddedResource Include="formularios\Cobros\frmConvenios.resx">
       <DependentUpon>frmConvenios.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Cobros\frmCtrlArchCobros.resx">
+      <DependentUpon>frmCtrlArchCobros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Cobros\frmCuotas.resx">
       <DependentUpon>frmCuotas.vb</DependentUpon>
@@ -823,30 +868,33 @@
       <DependentUpon>frmReporte.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\Form1.resx">
+    <EmbeddedResource Include="formularios\Matricula\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmEstudiantes.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmEstudiantes.resx">
       <DependentUpon>frmEstudiantes.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmListaClase.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmListaClase.resx">
       <DependentUpon>frmListaClase.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmMatriculaV.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmMatriculaBloquea.resx">
+      <DependentUpon>frmMatriculaBloquea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Matricula\frmMatriculaV.resx">
       <DependentUpon>frmMatriculaV.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmNiveles.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmNiveles.resx">
       <DependentUpon>frmNiveles.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmTrasladoGrupo.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmTrasladoGrupo.resx">
       <DependentUpon>frmTrasladoGrupo.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\Maticula\frmWebCam2.resx">
+    <EmbeddedResource Include="formularios\Matricula\frmWebCam2.resx">
       <DependentUpon>frmWebCam2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Notas\frmAsignaProfesor.resx">
@@ -879,6 +927,9 @@
     <EmbeddedResource Include="formularios\Notas\frmRepNotas.resx">
       <DependentUpon>frmRepNotas.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Notas\frmTrimestres.resx">
+      <DependentUpon>frmTrimestres.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -927,12 +978,12 @@
   <ItemGroup>
     <PublishFile Include="iconos\Imagenes\cielo.bmp">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

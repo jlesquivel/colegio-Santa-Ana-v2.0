@@ -339,7 +339,7 @@ Public Class frmGenCobroMatricula
         NumericUpDown1.Maximum = Now.Year
 
         Select Case Now.Month
-            Case 1, 2, 3, 4, 5, 6, 7
+            Case 1, 2, 3, 4, 5, 6, 7, 8
                 NumericUpDown1.Value = Now.Year - 1
             Case Else
                 NumericUpDown1.Value = Now.Year

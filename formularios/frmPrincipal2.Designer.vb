@@ -71,10 +71,22 @@ Partial Class frmPrincipal2
         Me.ButtonItem41 = New DevComponents.DotNetBar.ButtonItem()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
-        Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
-        Me.RibbonBar9 = New DevComponents.DotNetBar.RibbonBar()
-        Me.btCtlPagos = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem15 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar10 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem33 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar5 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem35 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem37 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem32 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ItemContainer5 = New DevComponents.DotNetBar.ItemContainer()
+        Me.RibbonBar1 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem19 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem20 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem14 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem21 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar6 = New DevComponents.DotNetBar.RibbonBar()
         Me.ServCobros = New DevComponents.DotNetBar.ButtonItem()
@@ -96,20 +108,10 @@ Partial Class frmPrincipal2
         Me.ButtonItem34 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem24 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem27 = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
-        Me.RibbonBar5 = New DevComponents.DotNetBar.RibbonBar()
-        Me.ButtonItem35 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem37 = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
-        Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem32 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ItemContainer5 = New DevComponents.DotNetBar.ItemContainer()
-        Me.RibbonBar1 = New DevComponents.DotNetBar.RibbonBar()
-        Me.ButtonItem19 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem20 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem14 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem21 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar9 = New DevComponents.DotNetBar.RibbonBar()
+        Me.btCtlPagos = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem15 = New DevComponents.DotNetBar.ButtonItem()
         Me.ApplicationButton1 = New DevComponents.DotNetBar.ApplicationButton()
         Me.ItemContainer1 = New DevComponents.DotNetBar.ItemContainer()
         Me.ItemContainer2 = New DevComponents.DotNetBar.ItemContainer()
@@ -132,14 +134,15 @@ Partial Class frmPrincipal2
         Me.RibbonMatricula = New DevComponents.DotNetBar.RibbonTabItem()
         Me.RibbonCobros = New DevComponents.DotNetBar.RibbonTabItem()
         Me.RibbonAsistAdm = New DevComponents.DotNetBar.RibbonTabItem()
+        Me.QatCustomizeItem1 = New DevComponents.DotNetBar.QatCustomizeItem()
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabControl1.SuspendLayout()
         Me.SuperTabControlPanel1.SuspendLayout()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RibbonControl1.SuspendLayout()
-        Me.RibbonPanel3.SuspendLayout()
-        Me.RibbonPanel2.SuspendLayout()
         Me.RibbonPanel1.SuspendLayout()
+        Me.RibbonPanel2.SuspendLayout()
+        Me.RibbonPanel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'SuperTabControl1
@@ -169,11 +172,12 @@ Partial Class frmPrincipal2
         Me.SuperTabControl1.ItemPadding.Right = 4
         Me.SuperTabControl1.ItemPadding.Top = 4
         Me.SuperTabControl1.Location = New System.Drawing.Point(1, 1)
+        Me.SuperTabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControl1.Name = "SuperTabControl1"
         Me.SuperTabControl1.ReorderTabsEnabled = False
         Me.SuperTabControl1.SelectedTabFont = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.SuperTabControl1.SelectedTabIndex = 6
-        Me.SuperTabControl1.Size = New System.Drawing.Size(1198, 724)
+        Me.SuperTabControl1.Size = New System.Drawing.Size(1575, 996)
         Me.SuperTabControl1.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left
         Me.SuperTabControl1.TabFont = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabControl1.TabHorizontalSpacing = 16
@@ -189,8 +193,9 @@ Partial Class frmPrincipal2
         Me.SuperTabControlPanel1.Controls.Add(Me.LabelX1)
         Me.SuperTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(236, 0)
+        Me.SuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(962, 724)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(1339, 996)
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -201,9 +206,10 @@ Partial Class frmPrincipal2
         '
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(58, 48)
+        Me.LabelX2.Location = New System.Drawing.Point(37, 32)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(2)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(75, 23)
+        Me.LabelX2.Size = New System.Drawing.Size(46, 15)
         Me.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.LabelX2.TabIndex = 1
         Me.LabelX2.Text = "Versión"
@@ -216,10 +222,11 @@ Partial Class frmPrincipal2
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(139, 48)
+        Me.LabelX1.Location = New System.Drawing.Point(87, 32)
+        Me.LabelX1.Margin = New System.Windows.Forms.Padding(2)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.SingleLineColor = System.Drawing.Color.Transparent
-        Me.LabelX1.Size = New System.Drawing.Size(119, 23)
+        Me.LabelX1.Size = New System.Drawing.Size(74, 15)
         Me.LabelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.LabelX1.TabIndex = 0
         Me.LabelX1.Text = "LabelX1"
@@ -236,9 +243,10 @@ Partial Class frmPrincipal2
         Me.SuperTabControlPanel4.BackgroundImage = CType(resources.GetObject("SuperTabControlPanel4.BackgroundImage"), System.Drawing.Image)
         Me.SuperTabControlPanel4.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.BottomRight
         Me.SuperTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(143, 28)
+        Me.SuperTabControlPanel4.Location = New System.Drawing.Point(99, 20)
+        Me.SuperTabControlPanel4.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanel4.Name = "SuperTabControlPanel4"
-        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(1055, 696)
+        Me.SuperTabControlPanel4.Size = New System.Drawing.Size(650, 471)
         Me.SuperTabControlPanel4.TabIndex = 4
         Me.SuperTabControlPanel4.TabItem = Me.SuperTabItem4
         '
@@ -308,9 +316,10 @@ Partial Class frmPrincipal2
         Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1, Me.LabelItem4, Me.LabelItem2, Me.LabelItem5, Me.LabelItem3})
-        Me.Bar1.Location = New System.Drawing.Point(5, 699)
+        Me.Bar1.Location = New System.Drawing.Point(5, 736)
+        Me.Bar1.Margin = New System.Windows.Forms.Padding(2)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(1190, 24)
+        Me.Bar1.Size = New System.Drawing.Size(1286, 22)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 3
@@ -372,24 +381,26 @@ Partial Class frmPrincipal2
         '
         'RibbonControl1
         '
+        Me.RibbonControl1.AutoScroll = True
         Me.RibbonControl1.BackColor = System.Drawing.Color.GhostWhite
         Me.RibbonControl1.BackgroundImage = CType(resources.GetObject("RibbonControl1.BackgroundImage"), System.Drawing.Image)
         '
         '
         '
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonControl1.CanCustomize = False
         Me.RibbonControl1.CaptionVisible = True
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ApplicationButton1, Me.RibbonMatricula, Me.RibbonCobros, Me.RibbonAsistAdm})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
+        Me.RibbonControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonControl1.Name = "RibbonControl1"
-        Me.RibbonControl1.Size = New System.Drawing.Size(1190, 156)
+        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.QatCustomizeItem1})
+        Me.RibbonControl1.Size = New System.Drawing.Size(1286, 156)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -410,410 +421,20 @@ Partial Class frmPrincipal2
         Me.RibbonControl1.TabIndex = 0
         Me.RibbonControl1.Text = "RibbonControl1"
         '
-        'RibbonPanel3
-        '
-        Me.RibbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel3.Controls.Add(Me.RibbonBar9)
-        Me.RibbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel3.Location = New System.Drawing.Point(0, 56)
-        Me.RibbonPanel3.Name = "RibbonPanel3"
-        Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
-        Me.RibbonPanel3.Size = New System.Drawing.Size(1190, 100)
-        '
-        '
-        '
-        Me.RibbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel3.TabIndex = 3
-        '
-        'RibbonBar9
-        '
-        Me.RibbonBar9.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar9.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar9.ContainerControlProcessDialogKey = True
-        Me.RibbonBar9.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar9.DragDropSupport = True
-        Me.RibbonBar9.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btCtlPagos, Me.ButtonItem15})
-        Me.RibbonBar9.Location = New System.Drawing.Point(3, 0)
-        Me.RibbonBar9.Name = "RibbonBar9"
-        Me.RibbonBar9.Size = New System.Drawing.Size(332, 98)
-        Me.RibbonBar9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar9.TabIndex = 0
-        Me.RibbonBar9.Text = "Controles"
-        '
-        '
-        '
-        Me.RibbonBar9.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar9.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'btCtlPagos
-        '
-        Me.btCtlPagos.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.btCtlPagos.Name = "btCtlPagos"
-        Me.btCtlPagos.SubItemsExpandWidth = 14
-        Me.btCtlPagos.Symbol = ""
-        Me.btCtlPagos.SymbolSize = 32.0!
-        Me.btCtlPagos.Text = "Pagos"
-        '
-        'ButtonItem15
-        '
-        Me.ButtonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem15.Name = "ButtonItem15"
-        Me.ButtonItem15.SubItemsExpandWidth = 14
-        Me.ButtonItem15.Symbol = ""
-        Me.ButtonItem15.SymbolSize = 32.0!
-        Me.ButtonItem15.Text = "Arch Banco"
-        '
-        'RibbonPanel2
-        '
-        Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel2.Controls.Add(Me.RibbonBar6)
-        Me.RibbonPanel2.Controls.Add(Me.RibbonBar8)
-        Me.RibbonPanel2.Controls.Add(Me.RibbonBar7)
-        Me.RibbonPanel2.Controls.Add(Me.RibbonBar3)
-        Me.RibbonPanel2.Controls.Add(Me.RibbonBar2)
-        Me.RibbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel2.Location = New System.Drawing.Point(0, 56)
-        Me.RibbonPanel2.Name = "RibbonPanel2"
-        Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
-        Me.RibbonPanel2.Size = New System.Drawing.Size(1190, 100)
-        '
-        '
-        '
-        Me.RibbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel2.TabIndex = 2
-        Me.RibbonPanel2.Visible = False
-        '
-        'RibbonBar6
-        '
-        Me.RibbonBar6.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar6.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar6.ContainerControlProcessDialogKey = True
-        Me.RibbonBar6.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar6.DragDropSupport = True
-        Me.RibbonBar6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ServCobros})
-        Me.RibbonBar6.Location = New System.Drawing.Point(947, 0)
-        Me.RibbonBar6.Name = "RibbonBar6"
-        Me.RibbonBar6.Size = New System.Drawing.Size(122, 98)
-        Me.RibbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar6.TabIndex = 4
-        Me.RibbonBar6.Text = "Indicadores"
-        '
-        '
-        '
-        Me.RibbonBar6.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar6.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'ServCobros
-        '
-        Me.ServCobros.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ServCobros.Name = "ServCobros"
-        Me.ServCobros.SubItemsExpandWidth = 14
-        Me.ServCobros.Symbol = "59447"
-        Me.ServCobros.SymbolColor = System.Drawing.Color.Gainsboro
-        Me.ServCobros.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
-        Me.ServCobros.SymbolSize = 24.0!
-        Me.ServCobros.Text = "Servidor <br/> Cobros"
-        '
-        'RibbonBar8
-        '
-        Me.RibbonBar8.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar8.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar8.ContainerControlProcessDialogKey = True
-        Me.RibbonBar8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar8.DragDropSupport = True
-        Me.RibbonBar8.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem29, Me.ButtonItem42, Me.ButtonItem28})
-        Me.RibbonBar8.Location = New System.Drawing.Point(757, 0)
-        Me.RibbonBar8.Name = "RibbonBar8"
-        Me.RibbonBar8.Size = New System.Drawing.Size(190, 98)
-        Me.RibbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar8.TabIndex = 3
-        Me.RibbonBar8.Text = "Reportes"
-        '
-        '
-        '
-        Me.RibbonBar8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'ButtonItem29
-        '
-        Me.ButtonItem29.Image = Global.colegio.My.Resources.Resources.paper_roll
-        Me.ButtonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem29.Name = "ButtonItem29"
-        Me.ButtonItem29.SubItemsExpandWidth = 14
-        Me.ButtonItem29.Text = "Recibos"
-        '
-        'ButtonItem42
-        '
-        Me.ButtonItem42.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem42.Name = "ButtonItem42"
-        Me.ButtonItem42.SubItemsExpandWidth = 14
-        Me.ButtonItem42.Symbol = ""
-        Me.ButtonItem42.SymbolSize = 24.0!
-        Me.ButtonItem42.Text = "Estados Cuenta"
-        '
-        'ButtonItem28
-        '
-        Me.ButtonItem28.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem28.Name = "ButtonItem28"
-        Me.ButtonItem28.SubItemsExpandWidth = 14
-        Me.ButtonItem28.Symbol = ""
-        Me.ButtonItem28.SymbolSize = 24.0!
-        Me.ButtonItem28.Text = "Const Pago"
-        '
-        'RibbonBar7
-        '
-        Me.RibbonBar7.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar7.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar7.ContainerControlProcessDialogKey = True
-        Me.RibbonBar7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar7.DragDropSupport = True
-        Me.RibbonBar7.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MicroChartItem1, Me.ButtonItem38})
-        Me.RibbonBar7.Location = New System.Drawing.Point(602, 0)
-        Me.RibbonBar7.Name = "RibbonBar7"
-        Me.RibbonBar7.Size = New System.Drawing.Size(155, 98)
-        Me.RibbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar7.TabIndex = 2
-        Me.RibbonBar7.Text = "controles"
-        '
-        '
-        '
-        Me.RibbonBar7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'MicroChartItem1
-        '
-        Me.MicroChartItem1.ChartHeight = 48
-        Me.MicroChartItem1.ChartType = DevComponents.DotNetBar.eMicroChartType.Pie
-        Me.MicroChartItem1.Name = "MicroChartItem1"
-        Me.MicroChartItem1.Text = "cobros"
-        Me.MicroChartItem1.TextPosition = DevComponents.DotNetBar.eMicroChartTextPosition.Bottom
-        '
-        'ButtonItem38
-        '
-        Me.ButtonItem38.Image = Global.colegio.My.Resources.Resources.mail
-        Me.ButtonItem38.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem38.Name = "ButtonItem38"
-        Me.ButtonItem38.SubItemsExpandWidth = 14
-        Me.ButtonItem38.Symbol = ""
-        Me.ButtonItem38.SymbolSize = 24.0!
-        Me.ButtonItem38.Text = "Cobros x Correo"
-        '
-        'RibbonBar3
-        '
-        Me.RibbonBar3.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar3.ContainerControlProcessDialogKey = True
-        Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar3.DragDropSupport = True
-        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem25, Me.ButtonItem26, Me.ButtonItem43, Me.ButtonItem44})
-        Me.RibbonBar3.Location = New System.Drawing.Point(328, 0)
-        Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(274, 98)
-        Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar3.TabIndex = 1
-        Me.RibbonBar3.Text = "Tablas"
-        '
-        '
-        '
-        Me.RibbonBar3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'ButtonItem25
-        '
-        Me.ButtonItem25.Image = CType(resources.GetObject("ButtonItem25.Image"), System.Drawing.Image)
-        Me.ButtonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem25.Name = "ButtonItem25"
-        Me.ButtonItem25.SubItemsExpandWidth = 14
-        Me.ButtonItem25.Symbol = ""
-        Me.ButtonItem25.SymbolSize = 24.0!
-        Me.ButtonItem25.Text = "Convenios"
-        '
-        'ButtonItem26
-        '
-        Me.ButtonItem26.Image = CType(resources.GetObject("ButtonItem26.Image"), System.Drawing.Image)
-        Me.ButtonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem26.Name = "ButtonItem26"
-        Me.ButtonItem26.SubItemsExpandWidth = 14
-        Me.ButtonItem26.Symbol = ""
-        Me.ButtonItem26.SymbolSize = 24.0!
-        Me.ButtonItem26.Text = "Tabla cuotas"
-        '
-        'ButtonItem43
-        '
-        Me.ButtonItem43.Image = CType(resources.GetObject("ButtonItem43.Image"), System.Drawing.Image)
-        Me.ButtonItem43.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem43.Name = "ButtonItem43"
-        Me.ButtonItem43.SubItemsExpandWidth = 14
-        Me.ButtonItem43.Symbol = ""
-        Me.ButtonItem43.Text = "Materias"
-        '
-        'ButtonItem44
-        '
-        Me.ButtonItem44.Image = CType(resources.GetObject("ButtonItem44.Image"), System.Drawing.Image)
-        Me.ButtonItem44.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem44.Name = "ButtonItem44"
-        Me.ButtonItem44.SubItemsExpandWidth = 14
-        Me.ButtonItem44.Symbol = ""
-        Me.ButtonItem44.Text = "Niveles"
-        '
-        'RibbonBar2
-        '
-        Me.RibbonBar2.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar2.ContainerControlProcessDialogKey = True
-        Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar2.DragDropSupport = True
-        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem22, Me.ButtonItem23, Me.ButtonItem34, Me.ButtonItem24, Me.ButtonItem27})
-        Me.RibbonBar2.Location = New System.Drawing.Point(3, 0)
-        Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(325, 98)
-        Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar2.TabIndex = 0
-        Me.RibbonBar2.Text = "Cobros"
-        '
-        '
-        '
-        Me.RibbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        'ButtonItem22
-        '
-        Me.ButtonItem22.Image = CType(resources.GetObject("ButtonItem22.Image"), System.Drawing.Image)
-        Me.ButtonItem22.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem22.Name = "ButtonItem22"
-        Me.ButtonItem22.SubItemsExpandWidth = 14
-        Me.ButtonItem22.Symbol = ""
-        Me.ButtonItem22.SymbolSize = 24.0!
-        Me.ButtonItem22.Text = "Genera Cobros"
-        '
-        'ButtonItem23
-        '
-        Me.ButtonItem23.Image = CType(resources.GetObject("ButtonItem23.Image"), System.Drawing.Image)
-        Me.ButtonItem23.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem23.Name = "ButtonItem23"
-        Me.ButtonItem23.SubItemsExpandWidth = 14
-        Me.ButtonItem23.Symbol = ""
-        Me.ButtonItem23.SymbolSize = 24.0!
-        Me.ButtonItem23.Text = "Genera Cobros Matricula"
-        '
-        'ButtonItem34
-        '
-        Me.ButtonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem34.Name = "ButtonItem34"
-        Me.ButtonItem34.SubItemsExpandWidth = 14
-        Me.ButtonItem34.Symbol = "59403"
-        Me.ButtonItem34.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
-        Me.ButtonItem34.SymbolSize = 26.0!
-        Me.ButtonItem34.Text = "CISA"
-        '
-        'ButtonItem24
-        '
-        Me.ButtonItem24.Image = CType(resources.GetObject("ButtonItem24.Image"), System.Drawing.Image)
-        Me.ButtonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem24.Name = "ButtonItem24"
-        Me.ButtonItem24.SubItemsExpandWidth = 14
-        Me.ButtonItem24.Symbol = ""
-        Me.ButtonItem24.SymbolSize = 24.0!
-        Me.ButtonItem24.Text = "Cobros Cancela"
-        '
-        'ButtonItem27
-        '
-        Me.ButtonItem27.Image = CType(resources.GetObject("ButtonItem27.Image"), System.Drawing.Image)
-        Me.ButtonItem27.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
-        Me.ButtonItem27.Name = "ButtonItem27"
-        Me.ButtonItem27.SubItemsExpandWidth = 14
-        Me.ButtonItem27.Symbol = ""
-        Me.ButtonItem27.SymbolSize = 24.0!
-        Me.ButtonItem27.Text = "Cobros adelantado"
-        Me.ButtonItem27.Visible = False
-        '
         'RibbonPanel1
         '
+        Me.RibbonPanel1.AutoSize = True
         Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel1.Controls.Add(Me.RibbonBar10)
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar5)
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar4)
         Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
         Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RibbonPanel1.Location = New System.Drawing.Point(0, 56)
+        Me.RibbonPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 2)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(1190, 100)
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(1286, 100)
         '
         '
         '
@@ -827,7 +448,45 @@ Partial Class frmPrincipal2
         '
         Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel1.TabIndex = 1
-        Me.RibbonPanel1.Visible = False
+        '
+        'RibbonBar10
+        '
+        Me.RibbonBar10.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar10.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar10.ContainerControlProcessDialogKey = True
+        Me.RibbonBar10.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar10.DragDropSupport = True
+        Me.RibbonBar10.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33})
+        Me.RibbonBar10.Location = New System.Drawing.Point(621, 0)
+        Me.RibbonBar10.Name = "RibbonBar10"
+        Me.RibbonBar10.Size = New System.Drawing.Size(100, 98)
+        Me.RibbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar10.TabIndex = 2
+        Me.RibbonBar10.Text = "Parámetros"
+        '
+        '
+        '
+        Me.RibbonBar10.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar10.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ButtonItem33
+        '
+        Me.ButtonItem33.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem33.Name = "ButtonItem33"
+        Me.ButtonItem33.SubItemsExpandWidth = 14
+        Me.ButtonItem33.Symbol = ""
+        Me.ButtonItem33.SymbolSize = 16.0!
+        Me.ButtonItem33.Text = "Trimestres"
         '
         'RibbonBar5
         '
@@ -844,9 +503,10 @@ Partial Class frmPrincipal2
         Me.RibbonBar5.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar5.DragDropSupport = True
         Me.RibbonBar5.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem35, Me.ButtonItem37})
-        Me.RibbonBar5.Location = New System.Drawing.Point(540, 0)
+        Me.RibbonBar5.Location = New System.Drawing.Point(489, 0)
+        Me.RibbonBar5.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar5.Name = "RibbonBar5"
-        Me.RibbonBar5.Size = New System.Drawing.Size(145, 98)
+        Me.RibbonBar5.Size = New System.Drawing.Size(132, 98)
         Me.RibbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar5.TabIndex = 1
         Me.RibbonBar5.Text = "Reportes"
@@ -892,9 +552,10 @@ Partial Class frmPrincipal2
         Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar4.DragDropSupport = True
         Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem31, Me.ButtonItem32, Me.ButtonItem30, Me.ItemContainer5})
-        Me.RibbonBar4.Location = New System.Drawing.Point(258, 0)
+        Me.RibbonBar4.Location = New System.Drawing.Point(243, 0)
+        Me.RibbonBar4.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar4.Name = "RibbonBar4"
-        Me.RibbonBar4.Size = New System.Drawing.Size(282, 98)
+        Me.RibbonBar4.Size = New System.Drawing.Size(246, 98)
         Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar4.TabIndex = 0
         Me.RibbonBar4.Text = "Tareas"
@@ -965,9 +626,10 @@ Partial Class frmPrincipal2
         Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar1.DragDropSupport = True
         Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem14, Me.ButtonItem21})
-        Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
+        Me.RibbonBar1.Location = New System.Drawing.Point(2, 0)
+        Me.RibbonBar1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(255, 98)
+        Me.RibbonBar1.Size = New System.Drawing.Size(241, 98)
         Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar1.TabIndex = 0
         Me.RibbonBar1.Text = "Pasos para matricular"
@@ -983,7 +645,6 @@ Partial Class frmPrincipal2
         'ButtonItem19
         '
         Me.ButtonItem19.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem19.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonItem19.Image = CType(resources.GetObject("ButtonItem19.Image"), System.Drawing.Image)
         Me.ButtonItem19.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonItem19.Name = "ButtonItem19"
@@ -1005,11 +666,9 @@ Partial Class frmPrincipal2
         'ButtonItem14
         '
         Me.ButtonItem14.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem14.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonItem14.Image = CType(resources.GetObject("ButtonItem14.Image"), System.Drawing.Image)
         Me.ButtonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
         Me.ButtonItem14.Name = "ButtonItem14"
-        Me.ButtonItem14.NotificationMarkPosition = DevComponents.DotNetBar.eNotificationMarkPosition.TopLeft
         Me.ButtonItem14.SubItemsExpandWidth = 14
         Me.ButtonItem14.Symbol = "57675"
         Me.ButtonItem14.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
@@ -1025,6 +684,408 @@ Partial Class frmPrincipal2
         Me.ButtonItem21.Symbol = ""
         Me.ButtonItem21.SymbolSize = 32.0!
         Me.ButtonItem21.Text = "Lista de Clases"
+        '
+        'RibbonPanel2
+        '
+        Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel2.Controls.Add(Me.RibbonBar6)
+        Me.RibbonPanel2.Controls.Add(Me.RibbonBar8)
+        Me.RibbonPanel2.Controls.Add(Me.RibbonBar7)
+        Me.RibbonPanel2.Controls.Add(Me.RibbonBar3)
+        Me.RibbonPanel2.Controls.Add(Me.RibbonBar2)
+        Me.RibbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel2.Location = New System.Drawing.Point(0, 56)
+        Me.RibbonPanel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonPanel2.Name = "RibbonPanel2"
+        Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        Me.RibbonPanel2.Size = New System.Drawing.Size(1012, 100)
+        '
+        '
+        '
+        Me.RibbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel2.TabIndex = 2
+        Me.RibbonPanel2.Visible = False
+        '
+        'RibbonBar6
+        '
+        Me.RibbonBar6.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar6.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar6.ContainerControlProcessDialogKey = True
+        Me.RibbonBar6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar6.DragDropSupport = True
+        Me.RibbonBar6.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ServCobros})
+        Me.RibbonBar6.Location = New System.Drawing.Point(593, 0)
+        Me.RibbonBar6.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar6.Name = "RibbonBar6"
+        Me.RibbonBar6.Size = New System.Drawing.Size(76, 98)
+        Me.RibbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar6.TabIndex = 4
+        Me.RibbonBar6.Text = "Indicadores"
+        '
+        '
+        '
+        Me.RibbonBar6.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar6.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ServCobros
+        '
+        Me.ServCobros.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ServCobros.Name = "ServCobros"
+        Me.ServCobros.SubItemsExpandWidth = 14
+        Me.ServCobros.Symbol = "59447"
+        Me.ServCobros.SymbolColor = System.Drawing.Color.Gainsboro
+        Me.ServCobros.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
+        Me.ServCobros.SymbolSize = 24.0!
+        Me.ServCobros.Text = "Servidor <br/> Cobros"
+        '
+        'RibbonBar8
+        '
+        Me.RibbonBar8.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar8.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar8.ContainerControlProcessDialogKey = True
+        Me.RibbonBar8.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar8.DragDropSupport = True
+        Me.RibbonBar8.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem29, Me.ButtonItem42, Me.ButtonItem28})
+        Me.RibbonBar8.Location = New System.Drawing.Point(474, 0)
+        Me.RibbonBar8.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar8.Name = "RibbonBar8"
+        Me.RibbonBar8.Size = New System.Drawing.Size(119, 98)
+        Me.RibbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar8.TabIndex = 3
+        Me.RibbonBar8.Text = "Reportes"
+        '
+        '
+        '
+        Me.RibbonBar8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ButtonItem29
+        '
+        Me.ButtonItem29.Image = Global.colegio.My.Resources.Resources.paper_roll
+        Me.ButtonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem29.Name = "ButtonItem29"
+        Me.ButtonItem29.SubItemsExpandWidth = 14
+        Me.ButtonItem29.Text = "Recibos"
+        '
+        'ButtonItem42
+        '
+        Me.ButtonItem42.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem42.Name = "ButtonItem42"
+        Me.ButtonItem42.SubItemsExpandWidth = 14
+        Me.ButtonItem42.Symbol = ""
+        Me.ButtonItem42.SymbolSize = 24.0!
+        Me.ButtonItem42.Text = "Estados Cuenta"
+        '
+        'ButtonItem28
+        '
+        Me.ButtonItem28.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem28.Name = "ButtonItem28"
+        Me.ButtonItem28.SubItemsExpandWidth = 14
+        Me.ButtonItem28.Symbol = ""
+        Me.ButtonItem28.SymbolSize = 24.0!
+        Me.ButtonItem28.Text = "Const Pago"
+        '
+        'RibbonBar7
+        '
+        Me.RibbonBar7.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar7.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar7.ContainerControlProcessDialogKey = True
+        Me.RibbonBar7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar7.DragDropSupport = True
+        Me.RibbonBar7.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MicroChartItem1, Me.ButtonItem38})
+        Me.RibbonBar7.Location = New System.Drawing.Point(377, 0)
+        Me.RibbonBar7.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar7.Name = "RibbonBar7"
+        Me.RibbonBar7.Size = New System.Drawing.Size(97, 98)
+        Me.RibbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar7.TabIndex = 2
+        Me.RibbonBar7.Text = "controles"
+        '
+        '
+        '
+        Me.RibbonBar7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'MicroChartItem1
+        '
+        Me.MicroChartItem1.ChartHeight = 48
+        Me.MicroChartItem1.ChartType = DevComponents.DotNetBar.eMicroChartType.Pie
+        Me.MicroChartItem1.Name = "MicroChartItem1"
+        Me.MicroChartItem1.Text = "cobros"
+        Me.MicroChartItem1.TextPosition = DevComponents.DotNetBar.eMicroChartTextPosition.Bottom
+        '
+        'ButtonItem38
+        '
+        Me.ButtonItem38.Image = Global.colegio.My.Resources.Resources.mail
+        Me.ButtonItem38.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem38.Name = "ButtonItem38"
+        Me.ButtonItem38.SubItemsExpandWidth = 14
+        Me.ButtonItem38.Symbol = ""
+        Me.ButtonItem38.SymbolSize = 24.0!
+        Me.ButtonItem38.Text = "Cobros x Correo"
+        '
+        'RibbonBar3
+        '
+        Me.RibbonBar3.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar3.ContainerControlProcessDialogKey = True
+        Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar3.DragDropSupport = True
+        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem25, Me.ButtonItem26, Me.ButtonItem43, Me.ButtonItem44})
+        Me.RibbonBar3.Location = New System.Drawing.Point(205, 0)
+        Me.RibbonBar3.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar3.Name = "RibbonBar3"
+        Me.RibbonBar3.Size = New System.Drawing.Size(172, 98)
+        Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar3.TabIndex = 1
+        Me.RibbonBar3.Text = "Tablas"
+        '
+        '
+        '
+        Me.RibbonBar3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ButtonItem25
+        '
+        Me.ButtonItem25.Image = CType(resources.GetObject("ButtonItem25.Image"), System.Drawing.Image)
+        Me.ButtonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem25.Name = "ButtonItem25"
+        Me.ButtonItem25.SubItemsExpandWidth = 14
+        Me.ButtonItem25.Symbol = ""
+        Me.ButtonItem25.SymbolSize = 24.0!
+        Me.ButtonItem25.Text = "Convenios"
+        '
+        'ButtonItem26
+        '
+        Me.ButtonItem26.Image = CType(resources.GetObject("ButtonItem26.Image"), System.Drawing.Image)
+        Me.ButtonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem26.Name = "ButtonItem26"
+        Me.ButtonItem26.SubItemsExpandWidth = 14
+        Me.ButtonItem26.Symbol = ""
+        Me.ButtonItem26.SymbolSize = 24.0!
+        Me.ButtonItem26.Text = "Tabla cuotas"
+        '
+        'ButtonItem43
+        '
+        Me.ButtonItem43.Image = CType(resources.GetObject("ButtonItem43.Image"), System.Drawing.Image)
+        Me.ButtonItem43.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem43.Name = "ButtonItem43"
+        Me.ButtonItem43.SubItemsExpandWidth = 14
+        Me.ButtonItem43.Symbol = ""
+        Me.ButtonItem43.Text = "Materias"
+        '
+        'ButtonItem44
+        '
+        Me.ButtonItem44.Image = CType(resources.GetObject("ButtonItem44.Image"), System.Drawing.Image)
+        Me.ButtonItem44.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem44.Name = "ButtonItem44"
+        Me.ButtonItem44.SubItemsExpandWidth = 14
+        Me.ButtonItem44.Symbol = ""
+        Me.ButtonItem44.Text = "Niveles"
+        '
+        'RibbonBar2
+        '
+        Me.RibbonBar2.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar2.ContainerControlProcessDialogKey = True
+        Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar2.DragDropSupport = True
+        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem22, Me.ButtonItem23, Me.ButtonItem34, Me.ButtonItem24, Me.ButtonItem27})
+        Me.RibbonBar2.Location = New System.Drawing.Point(2, 0)
+        Me.RibbonBar2.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar2.Name = "RibbonBar2"
+        Me.RibbonBar2.Size = New System.Drawing.Size(203, 98)
+        Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar2.TabIndex = 0
+        Me.RibbonBar2.Text = "Cobros"
+        '
+        '
+        '
+        Me.RibbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'ButtonItem22
+        '
+        Me.ButtonItem22.Image = CType(resources.GetObject("ButtonItem22.Image"), System.Drawing.Image)
+        Me.ButtonItem22.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem22.Name = "ButtonItem22"
+        Me.ButtonItem22.SubItemsExpandWidth = 14
+        Me.ButtonItem22.Symbol = ""
+        Me.ButtonItem22.SymbolSize = 24.0!
+        Me.ButtonItem22.Text = "Genera Cobros"
+        '
+        'ButtonItem23
+        '
+        Me.ButtonItem23.Image = CType(resources.GetObject("ButtonItem23.Image"), System.Drawing.Image)
+        Me.ButtonItem23.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem23.Name = "ButtonItem23"
+        Me.ButtonItem23.SubItemsExpandWidth = 14
+        Me.ButtonItem23.Symbol = ""
+        Me.ButtonItem23.SymbolSize = 24.0!
+        Me.ButtonItem23.Text = "Genera Cobros Matricula"
+        '
+        'ButtonItem34
+        '
+        Me.ButtonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem34.Name = "ButtonItem34"
+        Me.ButtonItem34.SubItemsExpandWidth = 14
+        Me.ButtonItem34.Symbol = "59403"
+        Me.ButtonItem34.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
+        Me.ButtonItem34.SymbolSize = 26.0!
+        Me.ButtonItem34.Text = "CISA"
+        '
+        'ButtonItem24
+        '
+        Me.ButtonItem24.Image = CType(resources.GetObject("ButtonItem24.Image"), System.Drawing.Image)
+        Me.ButtonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem24.Name = "ButtonItem24"
+        Me.ButtonItem24.SubItemsExpandWidth = 14
+        Me.ButtonItem24.Symbol = ""
+        Me.ButtonItem24.SymbolSize = 24.0!
+        Me.ButtonItem24.Text = "Cobros Cancela"
+        '
+        'ButtonItem27
+        '
+        Me.ButtonItem27.Image = CType(resources.GetObject("ButtonItem27.Image"), System.Drawing.Image)
+        Me.ButtonItem27.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem27.Name = "ButtonItem27"
+        Me.ButtonItem27.SubItemsExpandWidth = 14
+        Me.ButtonItem27.Symbol = ""
+        Me.ButtonItem27.SymbolSize = 24.0!
+        Me.ButtonItem27.Text = "Cobros adelantado"
+        Me.ButtonItem27.Visible = False
+        '
+        'RibbonPanel3
+        '
+        Me.RibbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel3.Controls.Add(Me.RibbonBar9)
+        Me.RibbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel3.Location = New System.Drawing.Point(0, 46)
+        Me.RibbonPanel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonPanel3.Name = "RibbonPanel3"
+        Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
+        Me.RibbonPanel3.Size = New System.Drawing.Size(1252, 110)
+        '
+        '
+        '
+        Me.RibbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel3.TabIndex = 3
+        Me.RibbonPanel3.Visible = False
+        '
+        'RibbonBar9
+        '
+        Me.RibbonBar9.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar9.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar9.ContainerControlProcessDialogKey = True
+        Me.RibbonBar9.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar9.DragDropSupport = True
+        Me.RibbonBar9.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btCtlPagos, Me.ButtonItem15})
+        Me.RibbonBar9.Location = New System.Drawing.Point(2, 0)
+        Me.RibbonBar9.Margin = New System.Windows.Forms.Padding(2)
+        Me.RibbonBar9.Name = "RibbonBar9"
+        Me.RibbonBar9.Size = New System.Drawing.Size(207, 108)
+        Me.RibbonBar9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar9.TabIndex = 0
+        Me.RibbonBar9.Text = "Controles"
+        '
+        '
+        '
+        Me.RibbonBar9.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar9.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        'btCtlPagos
+        '
+        Me.btCtlPagos.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.btCtlPagos.Name = "btCtlPagos"
+        Me.btCtlPagos.SubItemsExpandWidth = 14
+        Me.btCtlPagos.Symbol = ""
+        Me.btCtlPagos.SymbolSize = 32.0!
+        Me.btCtlPagos.Text = "Pagos"
+        '
+        'ButtonItem15
+        '
+        Me.ButtonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem15.Name = "ButtonItem15"
+        Me.ButtonItem15.SubItemsExpandWidth = 14
+        Me.ButtonItem15.Symbol = ""
+        Me.ButtonItem15.SymbolSize = 32.0!
+        Me.ButtonItem15.Text = "Arch Banco"
         '
         'ApplicationButton1
         '
@@ -1228,6 +1289,7 @@ Partial Class frmPrincipal2
         '
         'RibbonMatricula
         '
+        Me.RibbonMatricula.Checked = True
         Me.RibbonMatricula.Name = "RibbonMatricula"
         Me.RibbonMatricula.Panel = Me.RibbonPanel1
         Me.RibbonMatricula.Text = "Secretaría"
@@ -1240,21 +1302,26 @@ Partial Class frmPrincipal2
         '
         'RibbonAsistAdm
         '
-        Me.RibbonAsistAdm.Checked = True
         Me.RibbonAsistAdm.Name = "RibbonAsistAdm"
         Me.RibbonAsistAdm.Panel = Me.RibbonPanel3
         Me.RibbonAsistAdm.Text = "Asistente Administativa"
         '
+        'QatCustomizeItem1
+        '
+        Me.QatCustomizeItem1.Name = "QatCustomizeItem1"
+        '
         'frmPrincipal2
         '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1200, 725)
+        Me.ClientSize = New System.Drawing.Size(1296, 760)
         Me.Controls.Add(Me.SuperTabControl1)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.RibbonControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
-        Me.MinimumSize = New System.Drawing.Size(1200, 726)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmPrincipal2"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1265,9 +1332,9 @@ Partial Class frmPrincipal2
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
-        Me.RibbonPanel3.ResumeLayout(False)
-        Me.RibbonPanel2.ResumeLayout(False)
         Me.RibbonPanel1.ResumeLayout(False)
+        Me.RibbonPanel2.ResumeLayout(False)
+        Me.RibbonPanel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1356,4 +1423,7 @@ Partial Class frmPrincipal2
     Friend WithEvents btCtlPagos As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem15 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents RibbonAsistAdm As DevComponents.DotNetBar.RibbonTabItem
+    Friend WithEvents QatCustomizeItem1 As DevComponents.DotNetBar.QatCustomizeItem
+    Friend WithEvents RibbonBar10 As DevComponents.DotNetBar.RibbonBar
+    Friend WithEvents ButtonItem33 As DevComponents.DotNetBar.ButtonItem
 End Class

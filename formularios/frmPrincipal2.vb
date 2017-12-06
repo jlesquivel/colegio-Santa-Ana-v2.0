@@ -30,7 +30,6 @@ Public Class frmPrincipal2
 
     Private Sub frmPrincipal2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-
         Dim myUri As New Uri(My.Settings.ServActilizacion)
         Dim host As String = myUri.Host
 
@@ -55,10 +54,8 @@ Public Class frmPrincipal2
 
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
-
         LabelItem3.Text = WindowsIdentity.GetCurrent.Name
         LabelItem2.Text = Format(Now.Date, "D")
-
 
         ButtonItem40.Enabled = (DateTime.Now.Month = 10 Or DateTime.Now.Month = 11 Or DateTime.Now.Month = 12)
         ButtonItem41.Enabled = (DateTime.Now.Month = 1 Or DateTime.Now.Month = 2 Or DateTime.Now.Month = 3)
@@ -192,8 +189,9 @@ Public Class frmPrincipal2
         End If
         ServCobros.SymbolColor = Color.Gray
 
-        BackgroundWorker1.RunWorkerAsync() ' ejecuta actualizacion de indicador de carga cobros del servidor
-
+        If Not BackgroundWorker1.IsBusy Then
+            BackgroundWorker1.RunWorkerAsync() ' ejecuta actualizacion de indicador de carga cobros del servidor
+        End If
     End Sub
 
     Private Sub ButtonItem39_Click(sender As Object, e As EventArgs) Handles ButtonItem39.Click
@@ -293,6 +291,10 @@ Public Class frmPrincipal2
 
     Private Sub ButtonItem15_Click(sender As Object, e As EventArgs) Handles ButtonItem15.Click
         oVentana.cargarVentana(New frmCtrlArchCobros, Me)
+    End Sub
+
+    Private Sub ButtonItem33_Click_1(sender As Object, e As EventArgs) Handles ButtonItem33.Click
+        oVentana.cargarVentana(New frmTrimestres, Me)
     End Sub
 End Class
 

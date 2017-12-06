@@ -94,6 +94,7 @@ Public Class cCobros
 
             anno = Now.Year
             mes = Now.Month
+
             concepto = "Mensualidad"
             Select Case mes
                 Case 1
@@ -101,7 +102,7 @@ Public Class cCobros
                 Case 12
                     mes = 11
                 Case Else
-                    mes = Now.Month
+                    mes = IIf(Now.Day <= 15, Now.Month, Now.Month + 1)
             End Select
 
             For Cmes As Integer = mes To 11

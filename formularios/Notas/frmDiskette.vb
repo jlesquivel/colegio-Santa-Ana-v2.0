@@ -134,9 +134,9 @@ Public Class frmDiskette
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(26, 59)
+        Me.Label1.Location = New System.Drawing.Point(32, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 27)
+        Me.Label1.Size = New System.Drawing.Size(122, 31)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Periodo"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -147,7 +147,7 @@ Public Class frmDiskette
         Me.LinkLabel3.ForeColor = System.Drawing.Color.Black
         Me.LinkLabel3.Location = New System.Drawing.Point(0, 0)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(170, 22)
+        Me.LinkLabel3.Size = New System.Drawing.Size(204, 25)
         Me.LinkLabel3.TabIndex = 0
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Cambiar Ruta archivos"
@@ -157,9 +157,9 @@ Public Class frmDiskette
         '
         Me.LinkLabel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.LinkLabel2.ForeColor = System.Drawing.Color.Black
-        Me.LinkLabel2.Location = New System.Drawing.Point(0, 22)
+        Me.LinkLabel2.Location = New System.Drawing.Point(0, 25)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(170, 23)
+        Me.LinkLabel2.Size = New System.Drawing.Size(204, 27)
         Me.LinkLabel2.TabIndex = 1
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Cargar Archivo Notas"
@@ -172,11 +172,11 @@ Public Class frmDiskette
         'StatusBar1
         '
         Me.StatusBar1.ForeColor = System.Drawing.Color.Black
-        Me.StatusBar1.Location = New System.Drawing.Point(0, 396)
+        Me.StatusBar1.Location = New System.Drawing.Point(0, 393)
         Me.StatusBar1.Name = "StatusBar1"
         Me.StatusBar1.Panels.AddRange(New System.Windows.Forms.StatusBarPanel() {Me.StatusBarPanel1})
         Me.StatusBar1.ShowPanels = True
-        Me.StatusBar1.Size = New System.Drawing.Size(603, 22)
+        Me.StatusBar1.Size = New System.Drawing.Size(603, 25)
         Me.StatusBar1.TabIndex = 3
         Me.StatusBar1.TabStop = True
         '
@@ -302,9 +302,9 @@ Public Class frmDiskette
         Me.CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckedListBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckedListBox1.Location = New System.Drawing.Point(170, 0)
+        Me.CheckedListBox1.Location = New System.Drawing.Point(204, 0)
         Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(433, 344)
+        Me.CheckedListBox1.Size = New System.Drawing.Size(399, 340)
         Me.CheckedListBox1.TabIndex = 1
         '
         'Button1
@@ -314,9 +314,9 @@ Public Class frmDiskette
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(170, 350)
+        Me.Button1.Location = New System.Drawing.Point(204, 340)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(433, 46)
+        Me.Button1.Size = New System.Drawing.Size(399, 53)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Generar Archivo"
         Me.Button1.UseVisualStyleBackColor = False
@@ -346,7 +346,7 @@ Public Class frmDiskette
         Me.Panel1.ForeColor = System.Drawing.Color.Black
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(170, 396)
+        Me.Panel1.Size = New System.Drawing.Size(204, 393)
         Me.Panel1.TabIndex = 0
         '
         'ProgressBarX2
@@ -356,9 +356,9 @@ Public Class frmDiskette
         '
         Me.ProgressBarX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ProgressBarX2.ForeColor = System.Drawing.Color.Black
-        Me.ProgressBarX2.Location = New System.Drawing.Point(12, 341)
+        Me.ProgressBarX2.Location = New System.Drawing.Point(14, 393)
         Me.ProgressBarX2.Name = "ProgressBarX2"
-        Me.ProgressBarX2.Size = New System.Drawing.Size(143, 23)
+        Me.ProgressBarX2.Size = New System.Drawing.Size(172, 27)
         Me.ProgressBarX2.TabIndex = 12
         Me.ProgressBarX2.TextVisible = True
         '
@@ -369,9 +369,9 @@ Public Class frmDiskette
         '
         Me.ProgressBarX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ProgressBarX1.ForeColor = System.Drawing.Color.Black
-        Me.ProgressBarX1.Location = New System.Drawing.Point(12, 366)
+        Me.ProgressBarX1.Location = New System.Drawing.Point(14, 422)
         Me.ProgressBarX1.Name = "ProgressBarX1"
-        Me.ProgressBarX1.Size = New System.Drawing.Size(143, 23)
+        Me.ProgressBarX1.Size = New System.Drawing.Size(172, 27)
         Me.ProgressBarX1.TabIndex = 11
         Me.ProgressBarX1.Text = "ProgressBarX1"
         '
@@ -384,9 +384,9 @@ Public Class frmDiskette
         Me.CheckBoxX5.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX5.CheckSignSize = New System.Drawing.Size(15, 15)
         Me.CheckBoxX5.ForeColor = System.Drawing.Color.Black
-        Me.CheckBoxX5.Location = New System.Drawing.Point(29, 233)
+        Me.CheckBoxX5.Location = New System.Drawing.Point(34, 269)
         Me.CheckBoxX5.Name = "CheckBoxX5"
-        Me.CheckBoxX5.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX5.Size = New System.Drawing.Size(120, 34)
         Me.CheckBoxX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX5.TabIndex = 10
         Me.CheckBoxX5.Text = "Convocatoria 2"
@@ -400,9 +400,9 @@ Public Class frmDiskette
         Me.CheckBoxX4.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX4.CheckSignSize = New System.Drawing.Size(15, 15)
         Me.CheckBoxX4.ForeColor = System.Drawing.Color.Black
-        Me.CheckBoxX4.Location = New System.Drawing.Point(29, 197)
+        Me.CheckBoxX4.Location = New System.Drawing.Point(34, 227)
         Me.CheckBoxX4.Name = "CheckBoxX4"
-        Me.CheckBoxX4.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX4.Size = New System.Drawing.Size(120, 35)
         Me.CheckBoxX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX4.TabIndex = 9
         Me.CheckBoxX4.Text = "Convocatoria 1"
@@ -416,9 +416,9 @@ Public Class frmDiskette
         Me.CheckBoxX3.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX3.CheckSignSize = New System.Drawing.Size(15, 15)
         Me.CheckBoxX3.ForeColor = System.Drawing.Color.Black
-        Me.CheckBoxX3.Location = New System.Drawing.Point(29, 161)
+        Me.CheckBoxX3.Location = New System.Drawing.Point(34, 186)
         Me.CheckBoxX3.Name = "CheckBoxX3"
-        Me.CheckBoxX3.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX3.Size = New System.Drawing.Size(120, 34)
         Me.CheckBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX3.TabIndex = 8
         Me.CheckBoxX3.Text = "3er Trimestres"
@@ -432,9 +432,9 @@ Public Class frmDiskette
         Me.CheckBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX2.CheckSignSize = New System.Drawing.Size(15, 15)
         Me.CheckBoxX2.ForeColor = System.Drawing.Color.Black
-        Me.CheckBoxX2.Location = New System.Drawing.Point(29, 125)
+        Me.CheckBoxX2.Location = New System.Drawing.Point(34, 144)
         Me.CheckBoxX2.Name = "CheckBoxX2"
-        Me.CheckBoxX2.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX2.Size = New System.Drawing.Size(120, 35)
         Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX2.TabIndex = 7
         Me.CheckBoxX2.Text = "2do Trimestres"
@@ -451,9 +451,9 @@ Public Class frmDiskette
         Me.CheckBoxX1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBoxX1.CheckValue = "Y"
         Me.CheckBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBoxX1.Location = New System.Drawing.Point(29, 89)
+        Me.CheckBoxX1.Location = New System.Drawing.Point(34, 103)
         Me.CheckBoxX1.Name = "CheckBoxX1"
-        Me.CheckBoxX1.Size = New System.Drawing.Size(100, 30)
+        Me.CheckBoxX1.Size = New System.Drawing.Size(120, 34)
         Me.CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX1.TabIndex = 6
         Me.CheckBoxX1.Text = "1er Trimestres"
@@ -470,14 +470,13 @@ Public Class frmDiskette
         '
         'frmDiskette
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
         Me.ClientSize = New System.Drawing.Size(603, 418)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusBar1)
         Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDiskette"
         Me.Text = "Crea y Carga Archivo Excel"
@@ -764,6 +763,14 @@ Public Class frmDiskette
         ProgressBarX2.Value = e.ProgressPercentage
     End Sub
     Sub cargar_archivoBD()
+        Dim ActComentario As New SqlCommand
+        ActComentario.Parameters.Add("@comentario", SqlDbType.VarChar, 250)
+        ActComentario.Parameters.Add("@id_mat", SqlDbType.Decimal, 9)
+        ActComentario.Parameters.Add("@periodo", SqlDbType.VarChar, 1)
+
+        ActComentario.CommandText = "UPDATE notas_comentario SET comentario = @comentario WHERE (id_mat = @id_mat) AND (periodo = @periodo)"
+        ActComentario.Connection = Me.SqlConnection1
+
         Try
             Dim arch As String = OpenFileDialog1.FileName
             Dim rutaActual As String = Environment.CurrentDirectory
@@ -777,7 +784,7 @@ Public Class frmDiskette
             m_excel = New Excel.Application
             m_excel.Visible = False
 
-            Dim vPeriodo, vmateria, vProf As String
+            Dim vPeriodo, vmateria, vProf, vcomentario As String
             SqlConnection1.Open()
             objLibroExcel = m_excel.Workbooks.Open(arch)
 
@@ -796,6 +803,7 @@ Public Class frmDiskette
 
                     vnota = m_excel.Evaluate(hoja.Range("L" & conta).Formula)
                     vid_mat = hoja.Range("M" & conta).Value()
+                    vcomentario = hoja.Range("S" & conta).Value()
 
                     ActualizaNota.Parameters("@id_mat").Value = vid_mat
                     ActualizaNota.Parameters("@periodo").Value = vPeriodo
@@ -804,8 +812,14 @@ Public Class frmDiskette
                     ActualizaNota.Parameters("@nota").Value = vnota
                     ActualizaNota.Parameters("@prof").Value = vProf
 
+                    '' parametros tabla comentario
+                    ActComentario.Parameters("@id_mat").Value = vid_mat
+                    ActComentario.Parameters("@periodo").Value = vPeriodo
+                    ActComentario.Parameters("@comentario").Value = IIf(vcomentario = Nothing, "", vcomentario)
+
                     If vnota > 0 Then
                         ActualizaNota.ExecuteNonQuery()   'Actualiza en BD
+                        ActComentario.ExecuteNonQuery()
                     End If
                     conta = conta + 1
                 End While

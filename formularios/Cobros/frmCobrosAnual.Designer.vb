@@ -37,12 +37,13 @@ Partial Class frmCobrosAnual
         '
         '
         Me.CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CircularProgress1.Location = New System.Drawing.Point(12, 12)
+        Me.CircularProgress1.Location = New System.Drawing.Point(10, 10)
+        Me.CircularProgress1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CircularProgress1.Name = "CircularProgress1"
         Me.CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot
         Me.CircularProgress1.ProgressColor = System.Drawing.Color.SteelBlue
         Me.CircularProgress1.ProgressText = "Generando"
-        Me.CircularProgress1.Size = New System.Drawing.Size(100, 100)
+        Me.CircularProgress1.Size = New System.Drawing.Size(83, 83)
         Me.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP
         Me.CircularProgress1.TabIndex = 0
         Me.CircularProgress1.Value = 100
@@ -51,10 +52,11 @@ Partial Class frmCobrosAnual
         '
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb
-        Me.ButtonX1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX1.Location = New System.Drawing.Point(141, 32)
+        Me.ButtonX1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonX1.Location = New System.Drawing.Point(117, 11)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(175, 68)
+        Me.ButtonX1.Size = New System.Drawing.Size(185, 73)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.Symbol = ""
         Me.ButtonX1.SymbolSize = 36.0!
@@ -74,25 +76,27 @@ Partial Class frmCobrosAnual
         '
         Me.chkMora.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.chkMora.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkMora.Location = New System.Drawing.Point(141, 106)
+        Me.chkMora.Location = New System.Drawing.Point(117, 88)
+        Me.chkMora.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.chkMora.Name = "chkMora"
-        Me.chkMora.Size = New System.Drawing.Size(100, 23)
+        Me.chkMora.Size = New System.Drawing.Size(83, 19)
         Me.chkMora.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.chkMora.TabIndex = 2
         Me.chkMora.Text = "Mora"
         '
         'frmCobrosAnual
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(339, 156)
+        Me.ClientSize = New System.Drawing.Size(374, 157)
         Me.Controls.Add(Me.chkMora)
         Me.Controls.Add(Me.ButtonX1)
         Me.Controls.Add(Me.CircularProgress1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCobrosAnual"
@@ -102,8 +106,8 @@ Partial Class frmCobrosAnual
     End Sub
 
     Friend WithEvents CircularProgress1 As DevComponents.DotNetBar.Controls.CircularProgress
-    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents Timer1 As Timer
     Friend WithEvents bw As System.ComponentModel.BackgroundWorker
-    Friend WithEvents chkMora As DevComponents.DotNetBar.Controls.CheckBoxX
+    Private WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
+    Private WithEvents chkMora As DevComponents.DotNetBar.Controls.CheckBoxX
 End Class
