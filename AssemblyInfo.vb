@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyProduct("Sistema Colegio")>
 <Assembly: AssemblyCopyright("Software Esquivel 2016")>
 <Assembly: AssemblyTrademark("Sistema Colegio")>
-<Assembly: CLSCompliant(True)>
+<Assembly: System.CLSCompliant(True)>
 
 'El siguiente GUID sirve como identificador de la biblioteca de tipos si este proyecto se expone a COM
 <Assembly: Guid("5FEF6012-DB5B-4688-B493-77737C7EE3D0")>
@@ -29,7 +29,7 @@ Imports System.Runtime.InteropServices
 ' Puede especificar todos los valores o usar los valores predeterminados (n�mero de versi�n de compilaci�n y de revisi�n) 
 ' usando el s�mbolo '*' como se muestra a continuaci�n:
 
-<Assembly: AssemblyVersion("2.0.47.0")>
-<Assembly: AssemblyFileVersion("2.0.47.0")>
+<Assembly: AssemblyVersion("2.0.94")>
+<Assembly: AssemblyFileVersion("2.0.94")>
 <Assembly: NeutralResourcesLanguage("es-CR")>
 <Assembly: ComVisible(False)>

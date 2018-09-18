@@ -62,7 +62,7 @@ Public Class frmRecibos
     Sub Actualiza_niveles()
 
         ListBoxAdv2.Items.Clear()
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         Dim resultado As New ArrayList
         Dim año As String = Now.Year.ToString
         Dim mes As String = ListBoxAdv1.SelectedItem.Tag

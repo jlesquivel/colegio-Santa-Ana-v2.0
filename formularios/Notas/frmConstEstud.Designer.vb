@@ -505,7 +505,6 @@ Partial Class frmConstEstud
         Me.Controls.Add(Me.SuperTabControl1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "frmConstEstud"
         Me.Text = "Constancia de estudio"
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).EndInit()

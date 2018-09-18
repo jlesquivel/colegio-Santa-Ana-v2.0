@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -115,7 +115,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property paper_roll() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("paper-roll", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("paper_roll", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -125,7 +125,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property paragraph_justify_2() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("paragraph-justify-2", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("paragraph_justify_2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

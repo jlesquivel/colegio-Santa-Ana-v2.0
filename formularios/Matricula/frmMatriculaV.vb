@@ -415,7 +415,7 @@ Public Class frmMatriculaV
 #End Region
 
     Private Sub frmMatriculaV_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         If Now.Month <= 8 Then
             NumericUpDown1.Text = Now.Year
         Else

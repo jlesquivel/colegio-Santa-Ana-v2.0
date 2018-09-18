@@ -46,10 +46,11 @@ Partial Class frmLogin
         Me.TextBoxX1.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX1.Location = New System.Drawing.Point(184, 37)
+        Me.TextBoxX1.Location = New System.Drawing.Point(245, 46)
+        Me.TextBoxX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBoxX1.Name = "TextBoxX1"
         Me.TextBoxX1.PreventEnterBeep = True
-        Me.TextBoxX1.Size = New System.Drawing.Size(183, 29)
+        Me.TextBoxX1.Size = New System.Drawing.Size(244, 34)
         Me.TextBoxX1.TabIndex = 2
         Me.TextBoxX1.WatermarkImage = CType(resources.GetObject("TextBoxX1.WatermarkImage"), System.Drawing.Image)
         Me.TextBoxX1.WatermarkText = "Usuario"
@@ -65,11 +66,12 @@ Partial Class frmLogin
         Me.TextBoxX2.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX2.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX2.Location = New System.Drawing.Point(184, 91)
+        Me.TextBoxX2.Location = New System.Drawing.Point(245, 112)
+        Me.TextBoxX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxX2.PreventEnterBeep = True
-        Me.TextBoxX2.Size = New System.Drawing.Size(183, 29)
+        Me.TextBoxX2.Size = New System.Drawing.Size(244, 34)
         Me.TextBoxX2.TabIndex = 3
         Me.TextBoxX2.WatermarkImage = CType(resources.GetObject("TextBoxX2.WatermarkImage"), System.Drawing.Image)
         Me.TextBoxX2.WatermarkText = "Clave"
@@ -79,9 +81,10 @@ Partial Class frmLogin
         Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX1.Location = New System.Drawing.Point(184, 127)
+        Me.ButtonX1.Location = New System.Drawing.Point(245, 156)
+        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(85, 45)
+        Me.ButtonX1.Size = New System.Drawing.Size(113, 55)
         Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX1.TabIndex = 7
         Me.ButtonX1.Text = "Ingresar"
@@ -92,9 +95,10 @@ Partial Class frmLogin
         Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX2.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ButtonX2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX2.Location = New System.Drawing.Point(282, 127)
+        Me.ButtonX2.Location = New System.Drawing.Point(376, 156)
+        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(85, 45)
+        Me.ButtonX2.Size = New System.Drawing.Size(113, 55)
         Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX2.TabIndex = 8
         Me.ButtonX2.Text = "cancelar"
@@ -109,9 +113,10 @@ Partial Class frmLogin
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.ForeColor = System.Drawing.Color.Black
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 30)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(149, 148)
+        Me.PictureBox1.Size = New System.Drawing.Size(199, 182)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -122,9 +127,10 @@ Partial Class frmLogin
         '
         '
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Location = New System.Drawing.Point(184, 72)
+        Me.LabelX1.Location = New System.Drawing.Point(245, 89)
+        Me.LabelX1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(75, 18)
+        Me.LabelX1.Size = New System.Drawing.Size(100, 22)
         Me.LabelX1.TabIndex = 11
         Me.LabelX1.Text = "Contraseña"
         '
@@ -134,19 +140,20 @@ Partial Class frmLogin
         '
         '
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(184, 17)
+        Me.LabelX2.Location = New System.Drawing.Point(245, 21)
+        Me.LabelX2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(75, 19)
+        Me.LabelX2.Size = New System.Drawing.Size(100, 23)
         Me.LabelX2.TabIndex = 12
         Me.LabelX2.Text = "Usuario"
         '
         'frmLogin
         '
         Me.AcceptButton = Me.ButtonX1
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.CancelButton = Me.ButtonX2
-        Me.ClientSize = New System.Drawing.Size(379, 206)
+        Me.ClientSize = New System.Drawing.Size(505, 254)
         Me.Controls.Add(Me.LabelX2)
         Me.Controls.Add(Me.LabelX1)
         Me.Controls.Add(Me.ButtonX2)
@@ -155,6 +162,8 @@ Partial Class frmLogin
         Me.Controls.Add(Me.TextBoxX1)
         Me.Controls.Add(Me.PictureBox1)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Autenticación"

@@ -10,7 +10,7 @@ Public Class CEstadoCuenta
 
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlConnection1.ConnectionString = conn.strConn
 
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
@@ -255,7 +255,7 @@ Public Class CEstadoCuenta
     End Sub
 
 #End Region
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Dim carnet As String
     Public pendiente As Boolean = False
 

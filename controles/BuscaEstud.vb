@@ -3,8 +3,8 @@ Imports System.Data.SqlClient
 Public Class BuscaEstud
     Inherits System.Windows.Forms.UserControl
 
-    Private tabla_todos = "estudiantes"
-    Private tabla_activos = "estudiantes_activos"
+    Private tabla_todos As String = "estudiantes"
+    Private tabla_activos As String = "estudiantes_activos"
 
     Private tabla As String = tabla_activos
     Private campos As String = "carnet, apellido1 +' '+ apellido2 +' '+ nombre  as nombres"
@@ -178,7 +178,7 @@ Public Class BuscaEstud
     Sub cargar()
         If Not (DesignMode) Then
 
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
             tabla = IIf(SwitchButton1.Value, tabla_todos, tabla_activos)
 
             If Not (conn.conexion Is Nothing) Then

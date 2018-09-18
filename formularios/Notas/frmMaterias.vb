@@ -612,7 +612,7 @@ Public Class frmMaterias
 
     Private Sub frmMaterias_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlConnection1.ConnectionString = conn.strConn
         SqlConnection2.ConnectionString = conn.strConn
 

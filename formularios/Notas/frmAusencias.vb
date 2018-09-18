@@ -2,7 +2,7 @@ Public Class frmAusencias
      Inherits DevComponents.DotNetBar.Metro.MetroForm
 
     Dim afectadas As Integer
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
 #Region " Código generado por el Diseñador de Windows Forms "
 

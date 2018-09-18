@@ -261,7 +261,7 @@
 
     Private Sub frmCuotas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
             SqlConnection1.ConnectionString = conn.strConn
 
             UserControl21.Imprimir.Visible = False

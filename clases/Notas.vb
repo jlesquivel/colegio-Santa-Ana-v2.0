@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Notas
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
     Public Sub CreaNotasBD()
         Try

@@ -1,7 +1,7 @@
 Imports System.Data.SqlClient
 Public Class CNotasEstudiante
 
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Dim carnet As String
 
 

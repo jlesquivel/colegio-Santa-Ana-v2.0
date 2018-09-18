@@ -6,7 +6,7 @@ Public Class CMatricula
     Dim bd As String = "matricula"
     Dim carnet As String
     Public dsNiveles As New DataSet
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
     Dim datosCobros As New ArrayList
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
@@ -739,7 +739,7 @@ Public Class CMatricula
     Sub CargarPagoMatricula(ByVal pcarnet As String, ByVal pano As String)
         Try
 
-            Dim connCobros As New conexionSQL
+            Dim connCobros As New ConexionSQL
         datosCobrosTotal = connCobros.llena("EXEC cobroMatriculaTotal '" & pcarnet & "' ," & pano)
             datosCobros = connCobros.llena("EXEC cobroMatriculaConsulta '" & pcarnet & "' ," & pano)
             If datosCobros.Count > 0 Then   '' cobros generados

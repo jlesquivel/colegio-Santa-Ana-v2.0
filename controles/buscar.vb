@@ -272,7 +272,7 @@ Public Class buscar
             DataGrid1.Width = Width
 
             'Parámetros para la consulta
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
             Dim conexion As New SqlConnection
             conexion = conn.conexion
             conexion.Open()

@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class frmAusenciasRep
      Inherits DevComponents.DotNetBar.Metro.MetroForm
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -34,7 +34,6 @@ Public Class frmAusenciasRep
     'Puede modificarse utilizando el Diseñador de Windows Forms. 
     'No lo modifique con el editor de código.
     Friend WithEvents Splitter1 As System.Windows.Forms.Splitter
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents BuscaEstud1 As colegio.BuscaEstud
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
@@ -42,163 +41,167 @@ Public Class frmAusenciasRep
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
+    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents Label2 As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        BuscaEstud1 = New colegio.BuscaEstud
-        Label2 = New System.Windows.Forms.Label
-        Label1 = New System.Windows.Forms.Label
-        DateTimePicker2 = New System.Windows.Forms.DateTimePicker
-        DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        LinkLabel1 = New System.Windows.Forms.LinkLabel
-        Splitter1 = New System.Windows.Forms.Splitter
-        CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer
-        PanelEx1 = New DevComponents.DotNetBar.PanelEx
-        ExpandablePanel1 = New DevComponents.DotNetBar.ExpandablePanel
-        PanelEx1.SuspendLayout()
-        ExpandablePanel1.SuspendLayout()
-        SuspendLayout()
+        Me.BuscaEstud1 = New colegio.BuscaEstud()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
+        Me.ExpandablePanel1 = New DevComponents.DotNetBar.ExpandablePanel()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
+        Me.PanelEx1.SuspendLayout()
+        Me.ExpandablePanel1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'BuscaEstud1
         '
-        BuscaEstud1.BackColor = System.Drawing.Color.Transparent
-        BuscaEstud1.Dock = System.Windows.Forms.DockStyle.Fill
-        BuscaEstud1.Location = New System.Drawing.Point(0, 111)
-        BuscaEstud1.Name = "BuscaEstud1"
-        BuscaEstud1.Size = New System.Drawing.Size(200, 375)
-        BuscaEstud1.TabIndex = 0
+        Me.BuscaEstud1.BackColor = System.Drawing.Color.Transparent
+        Me.BuscaEstud1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BuscaEstud1.Location = New System.Drawing.Point(0, 116)
+        Me.BuscaEstud1.Name = "BuscaEstud1"
+        Me.BuscaEstud1.Size = New System.Drawing.Size(233, 370)
+        Me.BuscaEstud1.TabIndex = 0
         '
         'Label2
         '
-        Label2.BackColor = System.Drawing.Color.Transparent
-        Label2.Location = New System.Drawing.Point(27, 64)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(56, 16)
-        Label2.TabIndex = 4
-        Label2.Text = "Inicio"
-        Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(27, 33)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Inicio"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
-        Label1.BackColor = System.Drawing.Color.Transparent
-        Label1.Location = New System.Drawing.Point(123, 64)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(56, 16)
-        Label1.TabIndex = 3
-        Label1.Text = "Fin"
-        Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(123, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 16)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Fin"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DateTimePicker2
         '
-        DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        DateTimePicker2.Location = New System.Drawing.Point(107, 80)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New System.Drawing.Size(88, 20)
-        DateTimePicker2.TabIndex = 2
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(107, 49)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(88, 20)
+        Me.DateTimePicker2.TabIndex = 2
         '
         'DateTimePicker1
         '
-        DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        DateTimePicker1.Location = New System.Drawing.Point(11, 80)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New System.Drawing.Size(88, 20)
-        DateTimePicker1.TabIndex = 1
-        '
-        'LinkLabel1
-        '
-        LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LinkLabel1.Location = New System.Drawing.Point(3, 33)
-        LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New System.Drawing.Size(192, 23)
-        LinkLabel1.TabIndex = 0
-        LinkLabel1.TabStop = True
-        LinkLabel1.Text = "por grupo"
-        LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(11, 49)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(88, 20)
+        Me.DateTimePicker1.TabIndex = 1
         '
         'Splitter1
         '
-        Splitter1.Location = New System.Drawing.Point(0, 0)
-        Splitter1.Name = "Splitter1"
-        Splitter1.Size = New System.Drawing.Size(3, 486)
-        Splitter1.TabIndex = 2
-        Splitter1.TabStop = False
+        Me.Splitter1.Location = New System.Drawing.Point(0, 0)
+        Me.Splitter1.Name = "Splitter1"
+        Me.Splitter1.Size = New System.Drawing.Size(3, 486)
+        Me.Splitter1.TabIndex = 2
+        Me.Splitter1.TabStop = False
         '
         'CrystalReportViewer1
         '
-        CrystalReportViewer1.ActiveViewIndex = -1
-        CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        CrystalReportViewer1.Location = New System.Drawing.Point(3, 0)
-        CrystalReportViewer1.Name = "CrystalReportViewer1"
-        CrystalReportViewer1.SelectionFormula = ""
-        CrystalReportViewer1.Size = New System.Drawing.Size(677, 486)
-        CrystalReportViewer1.TabIndex = 3
-        CrystalReportViewer1.ViewTimeSelectionFormula = ""
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(236, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.SelectionFormula = ""
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(638, 486)
+        Me.CrystalReportViewer1.TabIndex = 3
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.CrystalReportViewer1.ViewTimeSelectionFormula = ""
         '
         'PanelEx1
         '
-        PanelEx1.CanvasColor = System.Drawing.SystemColors.Control
-        PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        PanelEx1.Controls.Add(BuscaEstud1)
-        PanelEx1.Controls.Add(ExpandablePanel1)
-        PanelEx1.Dock = System.Windows.Forms.DockStyle.Left
-        PanelEx1.Location = New System.Drawing.Point(3, 0)
-        PanelEx1.Name = "PanelEx1"
-        PanelEx1.Size = New System.Drawing.Size(200, 486)
-        PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
-        PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        PanelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        PanelEx1.Style.GradientAngle = 90
-        PanelEx1.TabIndex = 4
-        PanelEx1.Text = "PanelEx1"
+        Me.PanelEx1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx1.Controls.Add(Me.BuscaEstud1)
+        Me.PanelEx1.Controls.Add(Me.ExpandablePanel1)
+        Me.PanelEx1.DisabledBackColor = System.Drawing.Color.Empty
+        Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelEx1.Location = New System.Drawing.Point(3, 0)
+        Me.PanelEx1.Name = "PanelEx1"
+        Me.PanelEx1.Size = New System.Drawing.Size(233, 486)
+        Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx1.Style.GradientAngle = 90
+        Me.PanelEx1.TabIndex = 4
+        Me.PanelEx1.Text = "PanelEx1"
         '
         'ExpandablePanel1
         '
-        ExpandablePanel1.CanvasColor = System.Drawing.SystemColors.Control
-        ExpandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        ExpandablePanel1.Controls.Add(LinkLabel1)
-        ExpandablePanel1.Controls.Add(Label2)
-        ExpandablePanel1.Controls.Add(Label1)
-        ExpandablePanel1.Controls.Add(DateTimePicker1)
-        ExpandablePanel1.Controls.Add(DateTimePicker2)
-        ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Top
-        ExpandablePanel1.HideControlsWhenCollapsed = True
-        ExpandablePanel1.Location = New System.Drawing.Point(0, 0)
-        ExpandablePanel1.Name = "ExpandablePanel1"
-        ExpandablePanel1.Size = New System.Drawing.Size(200, 111)
-        ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
-        ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        ExpandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        ExpandablePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder
-        ExpandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
-        ExpandablePanel1.Style.GradientAngle = 90
-        ExpandablePanel1.TabIndex = 0
-        ExpandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center
-        ExpandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        ExpandablePanel1.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        ExpandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner
-        ExpandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        ExpandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        ExpandablePanel1.TitleStyle.GradientAngle = 90
-        ExpandablePanel1.TitleText = "Periodo"
+        Me.ExpandablePanel1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.ExpandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ExpandablePanel1.Controls.Add(Me.ButtonX1)
+        Me.ExpandablePanel1.Controls.Add(Me.Label2)
+        Me.ExpandablePanel1.Controls.Add(Me.Label1)
+        Me.ExpandablePanel1.Controls.Add(Me.DateTimePicker1)
+        Me.ExpandablePanel1.Controls.Add(Me.DateTimePicker2)
+        Me.ExpandablePanel1.DisabledBackColor = System.Drawing.Color.Empty
+        Me.ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ExpandablePanel1.HideControlsWhenCollapsed = True
+        Me.ExpandablePanel1.Location = New System.Drawing.Point(0, 0)
+        Me.ExpandablePanel1.Name = "ExpandablePanel1"
+        Me.ExpandablePanel1.Size = New System.Drawing.Size(233, 116)
+        Me.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.ExpandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
+        Me.ExpandablePanel1.Style.GradientAngle = 90
+        Me.ExpandablePanel1.TabIndex = 0
+        Me.ExpandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center
+        Me.ExpandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.ExpandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner
+        Me.ExpandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.ExpandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.ExpandablePanel1.TitleStyle.GradientAngle = 90
+        Me.ExpandablePanel1.TitleText = "Periodo"
+        '
+        'ButtonX1
+        '
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb
+        Me.ButtonX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonX1.Location = New System.Drawing.Point(11, 75)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(186, 30)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.TabIndex = 4
+        Me.ButtonX1.Text = "Por Grupo"
         '
         'frmAusenciasRep
         '
-        AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        ClientSize = New System.Drawing.Size(680, 486)
-        Controls.Add(PanelEx1)
-        Controls.Add(CrystalReportViewer1)
-        Controls.Add(Splitter1)
-        Name = "frmAusenciasRep"
-        Text = "Reporte Ausencias"
-        WindowState = System.Windows.Forms.FormWindowState.Maximized
-        PanelEx1.ResumeLayout(False)
-        ExpandablePanel1.ResumeLayout(False)
-        ResumeLayout(False)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(874, 486)
+        Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.Controls.Add(Me.PanelEx1)
+        Me.Controls.Add(Me.Splitter1)
+        Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Black
+        Me.Name = "frmAusenciasRep"
+        Me.Text = "Reporte Ausencias"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.PanelEx1.ResumeLayout(False)
+        Me.ExpandablePanel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
 
     End Sub
 
@@ -225,13 +228,15 @@ Public Class frmAusenciasRep
         Try
             Dim tbCurrent As CrystalDecisions.CrystalReports.Engine.Table
             Dim tliCurrent As CrystalDecisions.Shared.TableLogOnInfo
+
+
             For Each tbCurrent In oreporte.Database.Tables
                 tliCurrent = tbCurrent.LogOnInfo
                 With tliCurrent.ConnectionInfo
-                    .ServerName = conn.servidor
+                    .ServerName = conn.Servidor
                     .UserID = conn.vusuario
                     .Password = conn.vpassword
-                    .DatabaseName = conn.bd
+                    .DatabaseName = conn.Bd
                 End With
                 tbCurrent.ApplyLogOnInfo(tliCurrent)
             Next tbCurrent
@@ -244,16 +249,27 @@ Public Class frmAusenciasRep
                 CrystalReportViewer1.ReportSource = oreporte
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Imprimir", _
+            MessageBox.Show(ex.Message, "Imprimir",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub frmCobros_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MaximizeBox = True
-        DateTimePicker2.Value = DateAdd(DateInterval.Day, 30, DateTimePicker1.Value)
+        DateTimePicker1.Value = New DateTime(Now.Year, 2, 1)
+        DateTimePicker2.Value = Now
     End Sub
-    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+    Private Sub BuscaEstud1_selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs) Handles BuscaEstud1.selecionado
+        Dim rpAu As New rptAusenciaEst
+        rpAu.SummaryInfo.ReportComments = "Reporte de Asistencia"
+        inserta_parametro(rpAu, "@carnet", BuscaEstud1.seleccionado)
+        inserta_parametro(rpAu, "@fini", DateTimePicker1.Value)
+        inserta_parametro(rpAu, "@ffin", DateTimePicker2.Value)
+        imprimir(rpAu, False, ParentForm)
+    End Sub
+
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         Dim rpAu As New rptAusenciaGrupo
         inserta_parametro(rpAu, "@ini1", CStr(Year(DateTimePicker1.Value)))
         inserta_parametro(rpAu, "@ini", DateTimePicker1.Value.Date)
@@ -261,14 +277,6 @@ Public Class frmAusenciasRep
         rpAu.SummaryInfo.ReportComments = "Reporte de Asistencia"
         imprimir(rpAu, False, ParentForm)
     End Sub
-
-    Private Sub BuscaEstud1_selecionado(ByVal sender As Object, ByVal e As SeleccionadoEventArgs) Handles BuscaEstud1.selecionado
-        Dim rpAu As New rptAusenciaEst
-        rpAu.SummaryInfo.ReportComments = "Reporte de Asistencia"
-        inserta_parametro(rpAu, "@carnet", BuscaEstud1.seleccionado)
-        imprimir(rpAu, False, ParentForm)
-    End Sub
-
 End Class
 
 

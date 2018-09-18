@@ -30,7 +30,7 @@
     <MyType>WindowsForms</MyType>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <ManifestCertificateThumbprint>C3E544C6EAE9F6EBDBBFB71CABA47C4D00BEB0CF</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C8B86054E1291687B63605F580BB2AE8B983ABF0</ManifestCertificateThumbprint>
     <ManifestKeyFile>Col.Santa.Ana 2.0_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>false</GenerateManifests>
     <SignManifests>false</SignManifests>
@@ -43,9 +43,14 @@
     <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
     <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
     <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
-    <AssemblyVersionSettings>None.None.Increment.Increment</AssemblyVersionSettings>
-    <AssemblyFileVersionSettings>None.None.Increment.Increment</AssemblyFileVersionSettings>
-    <AssemblyInfoVersionSettings>None.None.Increment.Increment</AssemblyInfoVersionSettings>
+    <AssemblyVersionSettings>None.None.IncrementOnDemand.None</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>None.None.IncrementOnDemand.None</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>None.None.IncrementOnDemand.None</AssemblyInfoVersionSettings>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
     <PublishUrl>ftp://ftp.csalib.org/colegio/</PublishUrl>
     <Install>false</Install>
     <InstallFrom>Web</InstallFrom>
@@ -116,6 +121,12 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoUpdater.NET, Version=1.3.1.0, Culture=neutral, PublicKeyToken=942f95247e354701, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -127,17 +138,15 @@
     <Reference Include="CircularProgressBar">
       <HintPath>..\CSA_Planilla\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.6.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.6.0.4, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.4, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
     <Reference Include="DirectShowLib-2010">
       <HintPath>..\_Herramientas\Camera_NET\Camera_Net Library. Compiled.NET35. (v1.1.2)\DirectShowLib-2010.dll</HintPath>
     </Reference>
@@ -235,6 +244,7 @@
     <Content Include="_Manual\correo cobros csa.txt" />
     <Content Include="_Notas\_ POR HACER.txt" />
     <Content Include="_Notas\_Historico Cambios.txt" />
+    <None Include="Col.Santa.Ana 2.0_TemporaryKey.pfx" />
     <None Include="formularios\Cobros\dsCuotas.xss">
       <DependentUpon>dsCuotas.xsd</DependentUpon>
     </None>
@@ -243,7 +253,6 @@
     </None>
     <None Include="Plantillas\autDepositoBNCR.docx" />
     <None Include="Plantillas\baseNotas.xls" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Plantillas\certNotas.docx" />
     <None Include="Plantillas\certTraslado.docx" />
     <None Include="Plantillas\constEstud.docx" />
@@ -979,12 +988,12 @@
   <ItemGroup>
     <PublishFile Include="iconos\Imagenes\cielo.bmp">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

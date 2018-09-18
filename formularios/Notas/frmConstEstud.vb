@@ -7,6 +7,7 @@ Public Class frmConstEstud
     Dim nivel As String = ""
     Dim ano As String = ""
     Dim pendiente As Boolean
+    Dim rutaDefault As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
 
 
     Private Sub frmConstEstud_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,7 +29,7 @@ Public Class frmConstEstud
     Public Function añoCursa(carnet As String) As String
         añoCursa = ""
 
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         Dim res As New ArrayList
 
         res = conn.llena("exec annoCursa " & carnet)
@@ -122,7 +123,7 @@ Public Class frmConstEstud
 
     Private Sub contancia_Click(sender As Object, e As EventArgs) Handles contancia.Click
 
-        Dim wdDoc As New cWord(My.Application.Info.DirectoryPath & "\constEstud.docx")
+        Dim wdDoc As New cWord(rutaDefault & "\SE\constEstud.docx")
 
         Dim param As New ArrayList                    ' valora e sustituir en el documento , deben esta los bookmarks
         param.Add({"NO", TextBoxX1.Text})
@@ -150,7 +151,7 @@ Public Class frmConstEstud
 
     Private Sub certificacion_Click(sender As Object, e As EventArgs) Handles certificacion.Click
 
-        Dim wdDoc As New cWord(My.Application.Info.DirectoryPath & "\certNotas.docx")
+        Dim wdDoc As New cWord(rutaDefault & "\SE\certNotas.docx")
 
         Dim param As New ArrayList                    ' valora e sustituir en el documento , deben esta los bookmarks
         param.Add({"NO", TextBoxX1.Text})
@@ -183,7 +184,7 @@ Public Class frmConstEstud
     Private Sub traslado_Click(sender As Object, e As EventArgs) Handles traslado.Click
 
 
-        Dim wdDoc As New cWord(My.Application.Info.DirectoryPath & "\certTraslado.docx")
+        Dim wdDoc As New cWord(rutaDefault & "\SE\certTraslado.docx")
 
         Dim param As New ArrayList                    ' valora e sustituir en el documento , deben esta los bookmarks
         param.Add({"NO", TextBoxX1.Text})
@@ -227,15 +228,15 @@ Public Class frmConstEstud
     Private Function tablaNotas(carnet As String) As ArrayList
         tablaNotas = New ArrayList
 
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         tablaNotas = conn.llena("EXEC NotasEstudAño " & BuscaEstud1.seleccionado & "," & año)
 
     End Function
 
     Private Sub llenaAñosCombobox()
         If BuscaEstud1.seleccionado <> "" Then
-            Dim conn As New conexionSQL
-            Dim res As ArrayList = conn.llena("exec matriculasEst " & BuscaEstud1.seleccionado)
+            Dim conn As New ConexionSQL
+            Dim res As ArrayList = conn.llena("exec matriculasEst '" & BuscaEstud1.seleccionado & "'")
 
             ComboBoxEx1.Items.Clear()
             For Each oAño As Object In res
@@ -243,7 +244,10 @@ Public Class frmConstEstud
             Next
 
             ComboBoxEx1.Tag = res
-            ComboBoxEx1.SelectedIndex = 0
+            If ComboBoxEx1.Items.Count > 0 Then
+                ComboBoxEx1.SelectedIndex = 0
+            End If
+
         End If
 
     End Sub
@@ -256,7 +260,7 @@ Public Class frmConstEstud
     End Sub
 
     Sub cambiaEstadoEstud()
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
 
         Dim inst As String = String.Format("exec InsertaTraslado '{0}','{1}'", BuscaEstud1.seleccionado, TextBoxX1.Text)
         conn.ejecuta(inst)

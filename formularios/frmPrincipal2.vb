@@ -33,10 +33,16 @@ Public Class frmPrincipal2
         Dim myUri As New Uri(My.Settings.ServActilizacion)
         Dim host As String = myUri.Host
 
-        If My.Computer.Network.Ping(host, 400) Then
-            AddHandler AutoUpdater.CheckForUpdateEvent, AddressOf AutoUpdaterRevisarEvent
-            AutoUpdater.Start(My.Settings.ServActilizacion)
-        End If
+
+        Try
+            If My.Computer.Network.Ping(host, 400) Then
+                AddHandler AutoUpdater.CheckForUpdateEvent, AddressOf AutoUpdaterRevisarEvent
+                AutoUpdater.Start(My.Settings.ServActilizacion)
+            End If
+        Catch ex As Exception
+
+        End Try
+
 
         institucion = My.Settings.institucion
         organizacion = My.Settings.institucion
@@ -44,12 +50,12 @@ Public Class frmPrincipal2
         AppImp = New Printing.PrinterSettings
         RibbonMatricula.Select()
 
-        Dim sqlcon As New conexionSQL
+        Dim sqlcon As New ConexionSQL
         RibbonCobros.Visible = sqlcon.verifica_seguridad("colegio", "bncr")
         'ButtonItem20.Enabled = sqlcon.verifica_seguridad("colegio", "cuotas")
         RibbonAsistAdm.Visible = sqlcon.verifica_seguridad("colegio", "cargar_pagos")
         'Me.LabelItem1.Text = sqlcon.servidor
-        LabelItem1.Text = sqlcon.servidor
+        LabelItem1.Text = sqlcon.Servidor
     End Sub
 
     Private Sub frmPrincipal2_Shown(sender As Object, e As EventArgs) Handles Me.Shown
@@ -177,7 +183,7 @@ Public Class frmPrincipal2
 
     Private Sub RibbonCobros_Click(sender As Object, e As EventArgs) Handles RibbonCobros.Click
         Dim resultado As ArrayList
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
 
         resultado = conn.llena("select * from cobros_cancelado_pendientes")
         If resultado.Count > 0 Then
@@ -249,9 +255,9 @@ Public Class frmPrincipal2
     ''' <param name="e"></param>
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Dim serv As New cProcesosRemotos
-        Dim conn2 As New conexionSQL
+        Dim conn2 As New ConexionSQL
 
-        proceso = serv.isProceso(conn2.servidor, "ApPagos.exe", "AdmBD", "Liber1a")
+        proceso = serv.isProceso(conn2.Servidor, "ApPagos.exe", "AdmBD", "Liber1a")
     End Sub
     ''' <summary>
     ''' aactualiza color de boton
@@ -295,6 +301,14 @@ Public Class frmPrincipal2
 
     Private Sub ButtonItem33_Click_1(sender As Object, e As EventArgs) Handles ButtonItem33.Click
         oVentana.cargarVentana(New frmTrimestres, Me)
+    End Sub
+
+    Private Sub ButtonItem36_Click(sender As Object, e As EventArgs) Handles ButtonItem36.Click
+        'cumpleano
+        Dim orepo As New Reportes
+        Dim cumples As New colegioReportes.rptCumpleanos
+
+        orepo.imprimir(cumples, False, Me)
     End Sub
 End Class
 

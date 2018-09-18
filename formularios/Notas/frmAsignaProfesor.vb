@@ -148,11 +148,11 @@ Public Class frmAsignaProfesor
         Try
 
 
-            Dim connPlani As New conexionSQL
-            connPlani.bd = "planilla"
+            Dim connPlani As New ConexionSQL
+            connPlani.Bd = "planilla"
 
-            Dim connCol As New conexionSQL
-            connCol.bd = "colegio"
+            Dim connCol As New ConexionSQL
+            connCol.Bd = "colegio"
 
             connCol.ejecuta("EXEC listaProfesores " & Now.Year)
 
@@ -178,7 +178,7 @@ Public Class frmAsignaProfesor
 
         ActualizaProfesor.Parameters("@cedula").Value = ListBox1.SelectedValue
 
-        Dim conx As New conexionSQL
+        Dim conx As New ConexionSQL
         ActualizaProfesor.Connection.ConnectionString = conx.strConn
 
         ActualizaProfesor.Connection.Open()

@@ -74,6 +74,7 @@ Partial Class frmPrincipal2
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar10 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem33 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar5 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem35 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem37 = New DevComponents.DotNetBar.ButtonItem()
@@ -177,7 +178,7 @@ Partial Class frmPrincipal2
         Me.SuperTabControl1.ReorderTabsEnabled = False
         Me.SuperTabControl1.SelectedTabFont = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.SuperTabControl1.SelectedTabIndex = 6
-        Me.SuperTabControl1.Size = New System.Drawing.Size(1575, 996)
+        Me.SuperTabControl1.Size = New System.Drawing.Size(1799, 1143)
         Me.SuperTabControl1.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left
         Me.SuperTabControl1.TabFont = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SuperTabControl1.TabHorizontalSpacing = 16
@@ -195,7 +196,7 @@ Partial Class frmPrincipal2
         Me.SuperTabControlPanel1.Location = New System.Drawing.Point(236, 0)
         Me.SuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.SuperTabControlPanel1.Name = "SuperTabControlPanel1"
-        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(1339, 996)
+        Me.SuperTabControlPanel1.Size = New System.Drawing.Size(1563, 1143)
         Me.SuperTabControlPanel1.TabIndex = 0
         Me.SuperTabControlPanel1.TabItem = Me.SuperTabItem1
         '
@@ -316,10 +317,10 @@ Partial Class frmPrincipal2
         Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.LabelItem1, Me.LabelItem4, Me.LabelItem2, Me.LabelItem5, Me.LabelItem3})
-        Me.Bar1.Location = New System.Drawing.Point(5, 736)
+        Me.Bar1.Location = New System.Drawing.Point(5, 733)
         Me.Bar1.Margin = New System.Windows.Forms.Padding(2)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(1286, 22)
+        Me.Bar1.Size = New System.Drawing.Size(1242, 21)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 3
@@ -330,6 +331,8 @@ Partial Class frmPrincipal2
         '
         Me.LabelItem1.Image = CType(resources.GetObject("LabelItem1.Image"), System.Drawing.Image)
         Me.LabelItem1.Name = "LabelItem1"
+        Me.LabelItem1.Symbol = ""
+        Me.LabelItem1.SymbolSize = 10.0!
         Me.LabelItem1.Text = "LabelItem1"
         '
         'LabelItem4
@@ -342,6 +345,8 @@ Partial Class frmPrincipal2
         '
         Me.LabelItem2.Image = CType(resources.GetObject("LabelItem2.Image"), System.Drawing.Image)
         Me.LabelItem2.Name = "LabelItem2"
+        Me.LabelItem2.Symbol = ""
+        Me.LabelItem2.SymbolSize = 10.0!
         Me.LabelItem2.Text = "LabelItem2"
         '
         'LabelItem5
@@ -353,6 +358,8 @@ Partial Class frmPrincipal2
         '
         Me.LabelItem3.Image = CType(resources.GetObject("LabelItem3.Image"), System.Drawing.Image)
         Me.LabelItem3.Name = "LabelItem3"
+        Me.LabelItem3.Symbol = ""
+        Me.LabelItem3.SymbolSize = 12.0!
         Me.LabelItem3.Text = "LabelItem3"
         '
         'ButtonItem39
@@ -400,7 +407,7 @@ Partial Class frmPrincipal2
         Me.RibbonControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.QatCustomizeItem1})
-        Me.RibbonControl1.Size = New System.Drawing.Size(1286, 156)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1242, 156)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -434,7 +441,7 @@ Partial Class frmPrincipal2
         Me.RibbonPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.RibbonPanel1.Name = "RibbonPanel1"
         Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 2, 2)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(1286, 100)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(1242, 100)
         '
         '
         '
@@ -463,10 +470,10 @@ Partial Class frmPrincipal2
         Me.RibbonBar10.ContainerControlProcessDialogKey = True
         Me.RibbonBar10.Dock = System.Windows.Forms.DockStyle.Left
         Me.RibbonBar10.DragDropSupport = True
-        Me.RibbonBar10.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33})
+        Me.RibbonBar10.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem33, Me.ButtonItem36})
         Me.RibbonBar10.Location = New System.Drawing.Point(621, 0)
         Me.RibbonBar10.Name = "RibbonBar10"
-        Me.RibbonBar10.Size = New System.Drawing.Size(100, 98)
+        Me.RibbonBar10.Size = New System.Drawing.Size(149, 98)
         Me.RibbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar10.TabIndex = 2
         Me.RibbonBar10.Text = "Parámetros"
@@ -487,6 +494,14 @@ Partial Class frmPrincipal2
         Me.ButtonItem33.Symbol = ""
         Me.ButtonItem33.SymbolSize = 16.0!
         Me.ButtonItem33.Text = "Trimestres"
+        '
+        'ButtonItem36
+        '
+        Me.ButtonItem36.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top
+        Me.ButtonItem36.Name = "ButtonItem36"
+        Me.ButtonItem36.SubItemsExpandWidth = 14
+        Me.ButtonItem36.Symbol = ""
+        Me.ButtonItem36.Text = "Cumpleanos"
         '
         'RibbonBar5
         '
@@ -672,7 +687,7 @@ Partial Class frmPrincipal2
         Me.ButtonItem14.SubItemsExpandWidth = 14
         Me.ButtonItem14.Symbol = "57675"
         Me.ButtonItem14.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material
-        Me.ButtonItem14.SymbolSize = 32.0!
+        Me.ButtonItem14.SymbolSize = 30.0!
         Me.ButtonItem14.Text = "Matricula Denegada"
         '
         'ButtonItem21
@@ -682,7 +697,7 @@ Partial Class frmPrincipal2
         Me.ButtonItem21.Name = "ButtonItem21"
         Me.ButtonItem21.SubItemsExpandWidth = 14
         Me.ButtonItem21.Symbol = ""
-        Me.ButtonItem21.SymbolSize = 32.0!
+        Me.ButtonItem21.SymbolSize = 28.0!
         Me.ButtonItem21.Text = "Lista de Clases"
         '
         'RibbonPanel2
@@ -1312,10 +1327,10 @@ Partial Class frmPrincipal2
         '
         'frmPrincipal2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(1296, 760)
+        Me.ClientSize = New System.Drawing.Size(1252, 756)
         Me.Controls.Add(Me.SuperTabControl1)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.RibbonControl1)
@@ -1326,6 +1341,7 @@ Partial Class frmPrincipal2
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Colegio"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.SuperTabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SuperTabControl1.ResumeLayout(False)
         Me.SuperTabControlPanel1.ResumeLayout(False)
@@ -1426,4 +1442,5 @@ Partial Class frmPrincipal2
     Friend WithEvents QatCustomizeItem1 As DevComponents.DotNetBar.QatCustomizeItem
     Friend WithEvents RibbonBar10 As DevComponents.DotNetBar.RibbonBar
     Friend WithEvents ButtonItem33 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem36 As DevComponents.DotNetBar.ButtonItem
 End Class

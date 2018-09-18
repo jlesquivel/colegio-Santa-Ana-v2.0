@@ -194,7 +194,7 @@ Public Class frmGenCobro
     End Sub
 
 #End Region
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Dim arch As String
 
     Private Sub frmGenCobro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

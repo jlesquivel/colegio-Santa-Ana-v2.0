@@ -130,7 +130,7 @@ Public Class frmCarneCobros
 #End Region
 
     Private Sub frmCarneCobros_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlConnection1.ConnectionString = conn.strConn
         SqlDataAdapter1.SelectCommand.Parameters.Item("@anno").Value = anno
 

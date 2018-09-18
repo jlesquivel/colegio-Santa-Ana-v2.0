@@ -5,7 +5,7 @@ Imports System.Drawing.Printing
 
 Public Class Reportes
 
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Public Sub inserta_parametro(ByRef reporte As Object, ByVal param As String, ByVal valor As String)
         Try
             Dim pvCollection As New CrystalDecisions.Shared.ParameterValues
@@ -38,7 +38,7 @@ Public Class Reportes
             For Each tbCurrent In oreporte.Database.Tables
                 tliCurrent = tbCurrent.LogOnInfo
                 With tliCurrent.ConnectionInfo
-                    .ServerName = conn.servidor
+                    .ServerName = conn.Servidor
                     .UserID = conn.vusuario
                     .Password = conn.vpassword
                     '.DatabaseName = conn.bd
@@ -77,10 +77,10 @@ Public Class Reportes
             For Each tbCurrent In oreporte.Database.Tables
                 tliCurrent = tbCurrent.LogOnInfo
                 With tliCurrent.ConnectionInfo
-                    .ServerName = conn.servidor
+                    .ServerName = conn.Servidor
                     .UserID = conn.vusuario
                     .Password = conn.vpassword
-                    .DatabaseName = conn.bd
+                    .DatabaseName = conn.Bd
                     If conn.vusuario <> "" Then
                         .IntegratedSecurity = False
                     End If

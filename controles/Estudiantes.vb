@@ -73,7 +73,7 @@ Public Class Estudiantes
 
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlConnection1.ConnectionString = conn.strConn
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
 
@@ -84,7 +84,7 @@ Public Class Estudiantes
         'El Diseñador de Windows Forms requiere esta llamada.
         InitializeComponent()
         'Agregar cualquier inicialización después de la llamada a InitializeComponent()
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlConnection1.ConnectionString = conn.strConn
         pcarnet = carnet
         buscar(pcarnet)
@@ -1485,7 +1485,7 @@ Public Class Estudiantes
         If DesignMode Then
             ' The component is in design mode
         Else
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
 
             SqlConnection1.ConnectionString = conn.strConn
             UserControl21.salvar.Enabled = False

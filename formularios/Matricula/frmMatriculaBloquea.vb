@@ -10,12 +10,11 @@ Public Class frmMatriculaBloquea
         'TODO: esta línea de código carga datos en la tabla 'DataSet2.matricula_bloqueados' Puede moverla o quitarla según sea necesario.
         Me.Matricula_bloqueadosTableAdapter.Fill(Me.DataSet2.matricula_bloqueados)
 
-
-
     End Sub
 
     Private Sub frmMatriculaBloquea_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         guarda()
+        Bloqueados_verDataGridViewX.Dispose()
     End Sub
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click

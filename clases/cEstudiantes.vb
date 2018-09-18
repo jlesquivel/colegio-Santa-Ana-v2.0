@@ -1,7 +1,7 @@
 ﻿Public Class cEstudiantes
 
     Private acarnet As String
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
     Sub New(pcarnet As String)
         acarnet = pcarnet

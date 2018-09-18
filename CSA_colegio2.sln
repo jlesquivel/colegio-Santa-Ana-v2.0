@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Col.Santa.Ana 2.0", "Col.Santa.Ana 2.0.vbproj", "{9F7C6D8C-C9F4-4AFA-A105-8B5F12476C9C}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCD7BD22-3922-40A0-A6D2-07F701733EA7}
 	EndGlobalSection
 EndGlobal

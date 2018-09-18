@@ -3,7 +3,7 @@ Public Class frmTrasladoGrupo
     Dim lista As ArrayList
     Dim partes As String()
     Dim ds As New DataSet
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
 
 #Region " Código generado por el Diseñador de Windows Forms "

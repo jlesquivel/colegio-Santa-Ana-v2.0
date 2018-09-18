@@ -13,7 +13,7 @@ Public Class frmCobrosMsjCorreo
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles Impreso.Click
 
-        Dim oCorreo As New cCorreo
+        Dim oCorreo As New CCorreo
         oCorreo.Enviar_Cobros_correo()
 
         DialogResult = DialogResult.OK

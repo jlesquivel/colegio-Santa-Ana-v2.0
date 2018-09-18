@@ -405,7 +405,7 @@ Public Class frmCancelaCobros
 
     Private Sub frmCancelaCobros_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
             SqlConnection1.ConnectionString = conn.strConn
             SqlConnection2.ConnectionString = conn.strConn
             ComboBox1.SelectedIndex = 0
@@ -449,12 +449,12 @@ Public Class frmCancelaCobros
         GenCobro1.Tables("pendientes").Rows.Clear()
         SqlDataAdapter1.SelectCommand.Parameters("@carnet").Value = TextBox1.Text
 
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         SqlDataAdapter1.SelectCommand.Connection = conn.conexion
 
         SqlDataAdapter1.Fill(GenCobro1, "pendientes")
 
-        Dim conex As New conexionSQL  ' busca el nombre en estudiantes
+        Dim conex As New ConexionSQL  ' busca el nombre en estudiantes
         Dim SQLInst As String = "select carnet,(nombre+' '+apellido1+' '+apellido2)as nombre from estudiantes where carnet='" & TextBox1.Text & "'"
         conex.llena(GenCobro1, "estud", SQLInst)
         TextBox2.Text = GenCobro1.Tables("estud").Rows(0).Item("nombre")

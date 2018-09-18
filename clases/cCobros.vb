@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class cCobros
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Dim arch As String
     Dim GenCobro1 As colegio.genCobro = New colegio.genCobro()
 

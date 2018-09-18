@@ -1,5 +1,6 @@
 
 Imports System.Collections
+Imports System.Data
 
 Public Class CargarLista
     ' declaro la clase Carga, para solo ser usada dentro de la clase CargarLista

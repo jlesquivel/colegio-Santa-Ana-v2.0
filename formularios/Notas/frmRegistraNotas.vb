@@ -94,6 +94,7 @@ Public Class frmRegistraNotas
         Me.MenuItem2 = New System.Windows.Forms.MenuItem()
         Me.MenuItem3 = New System.Windows.Forms.MenuItem()
         Me.MenuItem4 = New System.Windows.Forms.MenuItem()
+        Me.MenuItem5 = New System.Windows.Forms.MenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.tree = New System.Data.SqlClient.SqlCommand()
         Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
@@ -137,7 +138,6 @@ Public Class frmRegistraNotas
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
         Me.LabelItem1 = New DevComponents.DotNetBar.LabelItem()
         Me.TreeViewSQL1 = New colegio.TreeViewSQL()
-        Me.MenuItem5 = New System.Windows.Forms.MenuItem()
         CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsNotas1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,9 +147,9 @@ Public Class frmRegistraNotas
         '
         'Splitter1
         '
-        Me.Splitter1.Location = New System.Drawing.Point(410, 0)
+        Me.Splitter1.Location = New System.Drawing.Point(256, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(4, 673)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 661)
         Me.Splitter1.TabIndex = 2
         Me.Splitter1.TabStop = False
         '
@@ -176,6 +176,11 @@ Public Class frmRegistraNotas
         '
         Me.MenuItem4.Index = 3
         Me.MenuItem4.Text = "Lista Profesores"
+        '
+        'MenuItem5
+        '
+        Me.MenuItem5.Index = 4
+        Me.MenuItem5.Text = "Asigna Prof..período anterior"
         '
         'ImageList1
         '
@@ -371,10 +376,10 @@ Public Class frmRegistraNotas
         Me.DataGrid1.DataSource = Me.DsNotas1.notas
         Me.DataGrid1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText
-        Me.DataGrid1.Location = New System.Drawing.Point(414, 0)
+        Me.DataGrid1.Location = New System.Drawing.Point(259, 0)
         Me.DataGrid1.Name = "DataGrid1"
         Me.DataGrid1.RowHeadersVisible = False
-        Me.DataGrid1.Size = New System.Drawing.Size(604, 673)
+        Me.DataGrid1.Size = New System.Drawing.Size(525, 661)
         Me.DataGrid1.TabIndex = 3
         Me.DataGrid1.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.DataGridTableStyle1})
         '
@@ -459,9 +464,9 @@ Public Class frmRegistraNotas
         Me.Bar1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Bar1.IsMaximized = False
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem2, Me.LabelItem1})
-        Me.Bar1.Location = New System.Drawing.Point(414, 0)
+        Me.Bar1.Location = New System.Drawing.Point(259, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(604, 33)
+        Me.Bar1.Size = New System.Drawing.Size(525, 25)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 10
@@ -492,18 +497,13 @@ Public Class frmRegistraNotas
         TreeNode1.Text = "Notas"
         Me.TreeViewSQL1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1})
         Me.TreeViewSQL1.SelectedImageIndex = 6
-        Me.TreeViewSQL1.Size = New System.Drawing.Size(410, 673)
+        Me.TreeViewSQL1.Size = New System.Drawing.Size(256, 661)
         Me.TreeViewSQL1.TabIndex = 4
-        '
-        'MenuItem5
-        '
-        Me.MenuItem5.Index = 4
-        Me.MenuItem5.Text = "Asigna Prof..período anterior"
         '
         'frmRegistraNotas
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(8, 19)
-        Me.ClientSize = New System.Drawing.Size(1018, 673)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.ClientSize = New System.Drawing.Size(784, 661)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.DataGrid1)
         Me.Controls.Add(Me.Splitter1)
@@ -511,8 +511,8 @@ Public Class frmRegistraNotas
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Black
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1280, 1023)
-        Me.MinimumSize = New System.Drawing.Size(1040, 729)
+        Me.MaximumSize = New System.Drawing.Size(800, 700)
+        Me.MinimumSize = New System.Drawing.Size(650, 499)
         Me.Name = "frmRegistraNotas"
         Me.Text = "Registra Notas"
         CType(Me.DataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -525,7 +525,7 @@ Public Class frmRegistraNotas
     End Sub
 
 #End Region
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
     Protected Friend WithEvents txtbox5 As New TextBox
     Dim partes As String()
     Dim asigno As Boolean = False       ' bandera para controlar si asigno profesor y actualizar lista
@@ -549,8 +549,8 @@ Public Class frmRegistraNotas
             SqlDataAdapter1.SelectCommand = SqlCommand1
             SqlDataAdapter2.Fill(DsNotas1, "materia")
 
-            Dim conn2 As New conexionSQL
-            conn2.bd = "planilla"
+            Dim conn2 As New ConexionSQL
+            conn2.Bd = "planilla"
 
             SqlConnection3.ConnectionString = conn2.strConn
             SqlDataAdapter4.Fill(DsNotas1, "empleados")
@@ -705,6 +705,19 @@ Public Class frmRegistraNotas
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub MenuItem5_Click(sender As Object, e As EventArgs) Handles MenuItem5.Click
+
+        Dim conn As New ConexionSQL
+        Dim comando As String = ""
+
+        If (partes(2) = 2) Or (partes(2) = 3) Then
+            If partes(1) = 2 Then
+                comando = "EXEC [copiaProfesore] 1, 2, " & partes(1).ToString
+            Else
+                comando = "EXEC [copiaProfesore] 2, 3, " & partes(1).ToString
+            End If
+
+            conn.ejecuta(comando)
+        End If
 
     End Sub
 End Class

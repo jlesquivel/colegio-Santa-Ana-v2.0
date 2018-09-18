@@ -1,7 +1,7 @@
 ﻿Public Class frmLogin
     Inherits DevComponents.DotNetBar.Metro.MetroForm
 
-    Dim conn As conexionSQL
+    Dim conn As ConexionSQL
     Public Sub New()
         ' Llamada necesaria para el diseñador.
         InitializeComponent()
@@ -10,7 +10,7 @@
     End Sub
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-        conn = New conexionSQL("servidor-bd", "colegio", "sa", "123")
+        conn = New ConexionSQL("servidor-bd", "colegio", "sa", "123")
 
         If Not conn.conexionOK Then
             Text = "Sin conexion al servidor"
@@ -31,7 +31,7 @@
     End Sub
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
 
-        Dim sqlcon As New conexionSQL("SERVIDOR-BD", "colegio", TextBoxX1.Text, TextBoxX2.Text)
+        Dim sqlcon As New ConexionSQL("SERVIDOR-BD", "colegio", TextBoxX1.Text, TextBoxX2.Text)
         My.Settings.conexionSQL = sqlcon.strConn
 
         If sqlcon.conexionOK Then

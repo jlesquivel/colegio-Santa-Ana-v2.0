@@ -3,7 +3,7 @@ Imports colegioReportes
 
 Public Class frmCobros
      Inherits DevComponents.DotNetBar.Metro.MetroForm
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
 #Region " Código generado por el Diseñador de Windows Forms "
 
@@ -238,10 +238,10 @@ Public Class frmCobros
             For Each tbCurrent In oreporte.Database.Tables
                 tliCurrent = tbCurrent.LogOnInfo
                 With tliCurrent.ConnectionInfo
-                    .ServerName = conn.servidor
+                    .ServerName = conn.Servidor
                     .UserID = conn.vusuario
                     .Password = conn.vpassword
-                    .DatabaseName = conn.bd
+                    .DatabaseName = conn.Bd
                 End With
                 tbCurrent.ApplyLogOnInfo(tliCurrent)
             Next tbCurrent

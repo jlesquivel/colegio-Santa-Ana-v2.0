@@ -4,7 +4,7 @@ Public Class frmListaClase
      Inherits DevComponents.DotNetBar.Metro.MetroForm
     Dim dvLista As DataView
     Dim partes As String()
-    Public conn As New conexionSQL
+    Public conn As New ConexionSQL
     Friend WithEvents MenuItem13 As MenuItem
     ''Public frmReporte As New frmReporte()
 
@@ -523,7 +523,7 @@ Public Class frmListaClase
             Dim condicion As String = "(" & pcarnet & pano & pnivel & pgrupo & ")"
 
             Dim comando As String = "DELETE FROM matricula  WHERE " & condicion
-            Dim conn As New conexionSQL
+            Dim conn As New ConexionSQL
             conn.ejecuta(comando)           ' borrar registro
             llenar_grid()                   ' actualiza grid
         End If

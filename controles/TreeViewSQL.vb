@@ -80,8 +80,8 @@ Public Class TreeViewSQL
 
     Sub llenar(ByVal base As String)
         Try
-            Dim conexion1 As New conexionSQL
-            conexion1.bd = base
+            Dim conexion1 As New ConexionSQL
+            conexion1.Bd = base
             Dim DataSet1 As New DataSet("DataSet1")
             DataSet1.Tables.Add("tree")
 

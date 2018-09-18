@@ -6,8 +6,11 @@ Imports System.Configuration
 Imports System.Collections
 Imports System.Threading
 Imports System.Text.RegularExpressions
+Imports System
+Imports System.Windows.Forms
+Imports System.Data
 
-Public Class conexionSQL
+Public Class ConexionSQL
 
 
 #If DEBUG Then
@@ -28,11 +31,11 @@ Public Class conexionSQL
     Private colegioConnection As SqlConnection
 
 
-    Shared ThreadProcConn As Data.SqlClient.SqlConnection
+    Shared ThreadProcConn As System.Data.SqlClient.SqlConnection
     Shared connectSuccess As Boolean = False
 
 #Region " Propiedades "
-    Public Property servidor() As String
+    Public Property Servidor() As String
         Get
             Return vServidor
         End Get
@@ -42,7 +45,7 @@ Public Class conexionSQL
         End Set
     End Property
 
-    Public Property bd() As String
+    Public Property Bd() As String
         Get
             Return vbd
         End Get
@@ -258,8 +261,9 @@ Public Class conexionSQL
     ''' <remarks></remarks>
     Public Sub ejecuta(ByVal comando As String)
         Try
-            Dim myCommand As New SqlCommand(comando)
-            myCommand.Connection = colegioConnection
+            Dim myCommand As New SqlCommand(comando) With {
+                .Connection = colegioConnection
+            }
             If colegioConnection.State = ConnectionState.Closed Then
                 colegioConnection.Open()
             End If
@@ -271,9 +275,9 @@ Public Class conexionSQL
     End Sub
 
     Public Sub ejecuta_sinerror(ByVal comando As String)
-
-        Dim myCommand As New SqlCommand(comando)
-        myCommand.Connection = colegioConnection
+        Dim myCommand As New SqlCommand(comando) With {
+            .Connection = colegioConnection
+        }
         If myCommand.Connection.State = ConnectionState.Closed Then
             myCommand.Connection.Open()
         End If
@@ -313,7 +317,7 @@ Public Class conexionSQL
             Return ("El archivo se generó con éxito")
         Catch ex As Exception
             strStreamWriter.Close()
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message)
             Return ("El archivo se generó con ERROR")
         End Try
     End Function

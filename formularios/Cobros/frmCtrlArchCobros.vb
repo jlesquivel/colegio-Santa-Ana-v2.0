@@ -5,7 +5,7 @@ Imports DevComponents.Schedule.Model
 Public Class frmCtrlArchCobros
 
     Dim _Model As New CalendarModel()
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
     Dim fechaAno As Integer = Now.Year
     Dim fechaMes As Integer = Now.Month

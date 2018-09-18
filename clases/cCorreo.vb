@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.Net.Mail 'referencia
 
-Public Class cCorreo
+Public Class CCorreo
     Dim servidor As String = "smtp.gmail.com"
     Dim puerto As Integer = 587
     Dim ssl As Boolean = True
@@ -11,14 +11,14 @@ Public Class cCorreo
     Dim contrasena As String = "5269349"
 
     Public Sub New(pDe As String, pPara As String, pasunto As String, pmsj As String)
-        enviar_mail(pDe, pPara, pasunto, pmsj)
+        Enviar_mail(pDe, pPara, pasunto, pmsj)
     End Sub
 
     Sub New()
 
     End Sub
 
-    Public Sub enviar_mail(ByVal i_de As String, ByVal i_para As String, ByVal asunto As String, ByVal mensaje As String)
+    Public Sub Enviar_mail(ByVal i_de As String, ByVal i_para As String, ByVal asunto As String, ByVal mensaje As String)
 
         Dim insMail As New MailMessage(i_de, i_para)
 
@@ -32,12 +32,13 @@ Public Class cCorreo
 
         End With
 
-        Dim smtp As New System.Net.Mail.SmtpClient
-        smtp.Host = servidor
-        smtp.Port = puerto
-        smtp.EnableSsl = ssl
-        smtp.UseDefaultCredentials = credenciales
-        smtp.Credentials = New System.Net.NetworkCredential(cuenta, contrasena)
+        Dim smtp As New SmtpClient With {
+            .Host = servidor,
+            .Port = puerto,
+            .EnableSsl = ssl,
+            .UseDefaultCredentials = credenciales,
+            .Credentials = New System.Net.NetworkCredential(cuenta, contrasena)
+        }
 
         Try
             smtp.Send(insMail)
@@ -50,9 +51,9 @@ Public Class cCorreo
 
     Public Sub Enviar_Cobros_correo()
 
-        Dim administrador As String = "Hna Dinora"
+        Dim Administrador As String = "Hna Dinora"
 
-        Dim conn As New conexionSQL
+        Dim conn As New ConexionSQL
         Dim dataset1 As New DataSet()
         dataset1.Tables.Add("Morosos")
         conn.llena(dataset1, "Morosos", "select carnet,id_mat,pendientes from estudiantes_morosos")
@@ -67,15 +68,15 @@ Public Class cCorreo
         Dim contador As Integer = 1
 
         For Each row As DataRow In dataset1.Tables(0).Rows
-            contacto = contactoPadres(row("carnet"))
+            contacto = ContactoPadres(row("carnet"))
 
             body = bodyOriginal
             body = body.Replace("{fecha}", DateTime.Now().ToString("dd/MM/yyyy"))
             body = body.Replace("{padre}", contacto("encargado1"))
-            body = body.Replace("{reporte}", reporteMorosidad(row("carnet")))
-            body = body.Replace("{administrador}", administrador)
+            body = body.Replace("{reporte}", ReporteMorosidad(row("carnet")))
+            body = body.Replace("{administrador}", Administrador)
 
-            enviar_mail("joseluis.esquivelgarnier@gmail.com", "joseluis@esquivel.com", "CSA aviso", body)
+            Enviar_mail("joseluis.esquivelgarnier@gmail.com", "joseluis@esquivel.com", "CSA aviso", body)
 
             If contador = 2 Then ' control para que solo envie 2 correos ya salga
                 Exit For
@@ -87,8 +88,8 @@ Public Class cCorreo
     End Sub
 
 
-    Function reporteMorosidad(vcarnet As String) As String
-        Dim conn As New conexionSQL
+    Function ReporteMorosidad(vcarnet As String) As String
+        Dim conn As New ConexionSQL
         Dim resultado As String = ""
 
         Dim dataset1 As New DataSet()
@@ -102,8 +103,8 @@ Public Class cCorreo
         Return resultado
     End Function
 
-    Function contactoPadres(vcarnet As String) As DataRow
-        Dim conn As New conexionSQL
+    Function ContactoPadres(vcarnet As String) As DataRow
+        Dim conn As New ConexionSQL
 
         Dim dataset1 As New DataSet()
         dataset1.Tables.Add("tmp")

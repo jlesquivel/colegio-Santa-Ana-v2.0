@@ -4,7 +4,7 @@ Imports colegioReportes
 
 Public Class frmRepNotas
     Inherits DevComponents.DotNetBar.Metro.MetroForm
-    Dim conn As New conexionSQL
+    Dim conn As New ConexionSQL
 
 
 
@@ -254,10 +254,10 @@ Public Class frmRepNotas
             For Each tbCurrent In oreporte.Database.Tables
                 tliCurrent = tbCurrent.LogOnInfo
                 With tliCurrent.ConnectionInfo
-                    .ServerName = conn.servidor
+                    .ServerName = conn.Servidor
                     .UserID = conn.vusuario
                     .Password = conn.vpassword
-                    .DatabaseName = conn.bd
+                    .DatabaseName = conn.Bd
                     If conn.vusuario <> "" Then
                         .IntegratedSecurity = False
                     End If
